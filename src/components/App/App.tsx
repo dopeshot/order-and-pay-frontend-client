@@ -1,9 +1,13 @@
-import React, { useEffect } from 'react';
-import { useActions, useAppState } from '../../overmind';
-import { Post } from '../../overmind/example/state';
+import { useEffect } from 'react';
+import {
+  BrowserRouter as Router, Route, Switch
+} from 'react-router-dom';
+import { useActions } from '../../overmind';
+import { Example } from '../Example/Example';
+import { Home } from '../Home/Home';
+import { Navigation } from '../Navigation/Navigation';
 
 export const App: React.FunctionComponent = () => {
-  const { posts, isLoadingPosts } = useAppState().example
   const { loadApp } = useActions().example
 
   useEffect(() => {
@@ -11,13 +15,12 @@ export const App: React.FunctionComponent = () => {
   }, [loadApp])
 
   return (
-    <div className="container mx-auto">
-      <h3 className="text-xl font-bold pb-4 bg-red-100">Hello World!</h3>
-      {isLoadingPosts ? <p>Loading posts...</p> : (
-        <ul>
-          {posts.map((post: Post, index) => (<li key={index}>{post.title}</li>))}
-        </ul>
-      )}
-    </div>
-  );
+    <Router>
+      <Navigation />
+      <Switch>
+        <Route exact path="/example" component={Example} />
+        <Route exact path="/" component={Home} />
+      </Switch>
+    </Router>
+  )
 }
