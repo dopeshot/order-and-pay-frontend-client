@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import { App } from './components/App/App';
 import { config } from './overmind';
 import reportWebVitals from './reportWebVitals';
+import './index.css';
 
 const overmind = createOvermind(config, {
   devtools: true
