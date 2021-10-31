@@ -1,6 +1,6 @@
 import React from 'react';
-import { useAppState } from '../../../overmind';
-import { Post } from '../../../overmind/example/state';
+import { useAppState } from '../../overmind';
+import { Post } from '../../overmind/example/state';
 
 export const Example: React.FunctionComponent = () => {
   const { posts, isLoadingPosts } = useAppState().example
