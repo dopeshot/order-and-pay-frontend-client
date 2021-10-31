@@ -2,7 +2,7 @@ import { createOvermind } from 'overmind';
 import { Provider } from 'overmind-react';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { App } from './components/App/App';
+import { Client } from './components/Client/Client';
 import { config } from './overmind';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
@@ -14,7 +14,7 @@ const overmind = createOvermind(config, {
 ReactDOM.render(
   <React.StrictMode>
     <Provider value={overmind}>
-      <App />
+      <Client />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
