@@ -11,7 +11,7 @@ const postStub: Post = {
 const postsStub = [postStub]
 
 describe('Example Actions', () => {
-    describe('loadApp', () => {
+    describe('loadClient', () => {
         test('should get posts with title and body', async () => {
             const overmind = createOvermindMock(config, {
                 example: {
@@ -23,7 +23,7 @@ describe('Example Actions', () => {
             expect(overmind.state.example.isLoadingPosts).toBe(false)
             expect(overmind.state.example.posts).toStrictEqual([])
 
-            await overmind.actions.example.loadApp()
+            await overmind.actions.example.loadClient()
 
             expect(overmind.state.example.posts).toStrictEqual(postsStub)
             expect(overmind.state.example.isLoadingPosts).toBe(false)
