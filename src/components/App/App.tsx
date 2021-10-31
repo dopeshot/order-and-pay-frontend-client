@@ -4,6 +4,7 @@ import {
 import { Admin } from '../../admin/Admin';
 import { Client } from '../../client/Client';
 
+// Combines the Admin and Client Routes
 export const App: React.FunctionComponent = () => {
   return (
     <Router>

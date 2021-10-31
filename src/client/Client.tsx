@@ -5,6 +5,7 @@ import { useActions } from "../overmind"
 import { Example } from "./pages/Example/Example"
 import { Home } from "./pages/Home/Home"
 
+// Client Frontend with Routes for Client
 export const Client = () => {
     const { loadClient } = useActions().example
 
