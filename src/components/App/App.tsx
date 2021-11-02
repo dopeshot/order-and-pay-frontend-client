@@ -5,12 +5,10 @@ import {
 import { useActions } from '../../overmind';
 import { Example } from '../../pages/Example/Example';
 import { Home } from '../../pages/Home/Home';
-import { Menu } from '../../pages/Menu/Menu';
 import { Navigation } from '../Navigation/Navigation';
 
 export const App: React.FunctionComponent = () => {
-  //const { loadClient } = useActions().example
-  const { loadClient } = useActions().menu
+  const { loadClient } = useActions().example
 
     useEffect(() => {
       loadClient()
@@ -21,7 +19,7 @@ export const App: React.FunctionComponent = () => {
       <Navigation />
       <Switch>
         <Route exact path="/example" component={Example} />
-        <Route exact path="/menu" component={Menu} />
+        <Route exact path="/" component={Home} />
       </Switch>
     </Router>
   )
