@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { useEffect } from 'react'
 import { useActions, useAppState } from '../../overmind'
+import { Searchbar } from '../../components/MenuComponents/Searchbar';
 
 
 
@@ -23,6 +24,7 @@ export const Menu: React.FunctionComponent = () => {
         <div>
         <button onClick={() => actions.nameChanger( "Wert")}>changename</button>
         <h3 className="text-lg font-bold">{state.name}Menu</h3>
+        <div><Searchbar/></div>
         <div>{dishes}</div>
         </div>
         
