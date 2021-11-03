@@ -1,9 +1,15 @@
 import { Context } from ".."
 
 
-export const loadClient = async ({ state, effects }: Context) => {
-    state.menu.isLoadingPosts = true
-    state.menu.posts = await effects.menu.jsonPlaceholder.getPosts()
-    state.menu.isLoadingPosts = true
-    console.log(state.menu.isLoadingPosts)
+
+//load Menu from Backend via effect
+export const loadMenu = async ({ state, effects }: Context) => {
+    state.menu.isLoadingMenu = true
+    state.menu.menu = await effects.menu.backend.getCurrentMenu()
+    state.menu.isLoadingMenu = false
+    //console.log(state.menu.isLoadingMenu)
+}
+
+export const nameChanger = ({state}: Context, name : string) =>{
+    state.menu.name = name
 }

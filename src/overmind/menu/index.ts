@@ -6,5 +6,5 @@ import * as effects from './effects'
 export {
     state,
     actions,
-   effects
+    effects
 }

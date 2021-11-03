@@ -10,11 +10,11 @@ import { Navigation } from '../Navigation/Navigation';
 
 export const App: React.FunctionComponent = () => {
   //const { loadClient } = useActions().example
-  const { loadClient } = useActions().menu
+  const { loadMenu } = useActions().menu
 
     useEffect(() => {
-      loadClient()
-    }, [loadClient])
+      loadMenu()
+    })
   
   return (
     <Router>
