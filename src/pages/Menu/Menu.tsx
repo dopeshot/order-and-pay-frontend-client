@@ -5,6 +5,7 @@ import { Searchbar } from '../../components/MenuComponents/Searchbar';
 
 
 
+
 export const Menu: React.FunctionComponent = () => {
     const state = useAppState().menu
     const actions = useActions().menu
