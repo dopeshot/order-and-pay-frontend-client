@@ -6,12 +6,20 @@ export type Dish = {
     name: string,
     price: string
 }
+
+//Category
+//TODO: Change Types?
+export type Category = {
+    name: string
+    
+}
 //Full menu
 //TODO: Complete Menu Object
 export type Menu = {
     title: string,
     colorscheme: number,
-    dishes: Dish[]
+    dishes: Dish[],
+    categories: Category[]
 }
 
 
@@ -27,6 +35,7 @@ export const state: State = {
     isLoadingMenu: false,
     menu: { title: "",
             colorscheme:1,
-            dishes:[] },
+            dishes:[],
+            categories:[] },
     name: "Testname"
 }

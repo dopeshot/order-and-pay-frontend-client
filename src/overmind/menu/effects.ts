@@ -6,7 +6,7 @@ export const backend = {
     //Fetch Current Menu
     //TODO: placeholder ersetzen
     getCurrentMenu: async (): Promise<Menu> => {
-        const response = await fetch('https://mocki.io/v1/42db91e2-831f-42d3-a8b8-5da6316ff4cd ')
+        const response = await fetch('https://mocki.io/v1/84d06b29-3641-494c-8d99-f60503dc8e2b')
         return await response.json()
     },
     //Fetch Dish by ID
@@ -15,4 +15,6 @@ export const backend = {
         const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
         return await response.json()
     }
+
+
 }
