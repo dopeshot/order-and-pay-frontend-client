@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { useEffect } from 'react'
 import { useActions, useAppState } from '../../overmind'
+import { Searchbar } from '../../components/MenuComponents/Searchbar';
+
 
 
 
@@ -19,6 +21,7 @@ export const Menu: React.FunctionComponent = () => {
     </div>
     ))
     
+
     return ( 
         <div className="h-screen flex grid grid-rows-6 grid-cols-1 border-solid table-auto">
             <div>
@@ -31,6 +34,8 @@ export const Menu: React.FunctionComponent = () => {
                 <button className="bg-gray-300 h-auto flex-auto">Bestellung anzeigen</button>
                 <button className="bg-gray-300 flex-auto">Für XXX bestellen</button>
                 </div>
+
+   
         </div>
         
     )

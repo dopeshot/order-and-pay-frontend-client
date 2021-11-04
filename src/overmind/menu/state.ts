@@ -14,6 +14,7 @@ export type Menu = {
     dishes: Dish[]
 }
 
+
 export type State = {
     isLoadingDishes: boolean,
     isLoadingMenu: boolean,
