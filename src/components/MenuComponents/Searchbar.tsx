@@ -22,7 +22,7 @@ export class Searchbar extends React.Component{
     render(){
     return (
 
-      <div>
+      <div className="flex items-center">
         <div  className="flex items-center">
         <div className=" relative mx-auto text-gray-600">
         <button type="submit" className="absolute left-3 top-0 mt-2 mr-4">
