@@ -36,7 +36,7 @@ export const Menu: React.FunctionComponent = () => {
         <div className="h-screen flex grid grid-rows-6 grid-cols-1 border-solid table-auto">
             <div>
                 <div className="row-span-1 flex-auto overflow-hidden table-row">Menu</div>
-                <div className="flex-auto overflow-hidden table-row">Search</div>
+                <div className="flex-auto overflow-hidden table-row"><Searchbar/></div>
                 <div className="flex-auto overflow-hidden table-row">Categories</div>
             </div>
             <div className="row-span-4 flex-auto overflow-y-auto table-row">{dishes} {dishes} {dishes} {dishes} {dishes}</div>

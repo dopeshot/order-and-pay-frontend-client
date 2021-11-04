@@ -4,13 +4,15 @@
 //TODO: Complete Dish Object
 export type Dish = {
     name: string,
-    price: string
+    price: string,
+    id: number
 }
 
 //Category
 //TODO: Change Types?
 export type Category = {
-    name: string
+    name: string,
+    dishesIndex: number[]
     
 }
 //Full menu
@@ -21,7 +23,6 @@ export type Menu = {
     dishes: Dish[],
     categories: Category[]
 }
-
 
 export type State = {
     isLoadingDishes: boolean,
