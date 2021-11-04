@@ -18,7 +18,6 @@ export const App: React.FunctionComponent = () => {
   
   return (
     <Router>
-      <Navigation />
       <Switch>
         <Route exact path="/example" component={Example} />
         <Route exact path="/menu" component={Menu} />
