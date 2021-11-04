@@ -22,6 +22,7 @@ export type Menu = {
     categories: Category[]
 }
 
+
 export type State = {
     isLoadingDishes: boolean,
     isLoadingMenu: boolean,

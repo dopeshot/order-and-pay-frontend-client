@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 export const Navigation: React.FunctionComponent = () => {
     return (
-        <div>
+        <div className="">
             <ul className="flex justify-around">
                 <li>
                     <Link to="/menu">Menu</Link>
