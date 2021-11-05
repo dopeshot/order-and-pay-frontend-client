@@ -10,6 +10,9 @@ export const loadMenu = async ({ state, effects }: Context) => {
     //console.log(state.menu.isLoadingMenu)
 }
 
-export const nameChanger = ({state}: Context, name : string) =>{
-    state.menu.name = name
+export const closeDropDown = ({state}: Context) =>{
+    state.menu.dropdownOpen = false
+}
+export const openDropDown = ({state}: Context) =>{
+    state.menu.dropdownOpen = true
 }

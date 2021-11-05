@@ -15,7 +15,7 @@ export class Dish extends React.Component<{name: string, description: string, pr
                 <div className="grid grid-cols-2 gap-1">
                     <div className="text-lg font-semibold text-green-400">{this.props.price}€</div>
                     <div className="grid grid-cols-3 gap-1">
-                        <button className=" bottom-1 text-black text-xl font-semibold bg-gray-100 rounded-lg">-</button>
+                        <button className="text-black text-xl font-semibold bg-gray-100 rounded-lg">-</button>
                         <div className="text-center font-semibold ">0</div>
                         <button className=" text-white text-lg font-semibold bg-green-400 rounded-lg">+</button>
                     </div>

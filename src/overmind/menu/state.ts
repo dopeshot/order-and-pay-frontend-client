@@ -28,7 +28,8 @@ export type State = {
     isLoadingDishes: boolean,
     isLoadingMenu: boolean,
     menu: Menu,
-    name: string
+    dropdownOpen: boolean
+    
 }
 
 export const state: State = {
@@ -38,5 +39,6 @@ export const state: State = {
             colorscheme:1,
             dishes:[],
             categories:[] },
-    name: "Testname"
+    dropdownOpen: false
+    
 }

@@ -5,16 +5,16 @@
 @layer utilities {
     #leftButton {
         background-color: white;
-        color: #4CAF50;
+        color: #34d399;
     }
 
     #rightButton {
-        background-color: #4CAF50;
+        background-color: #34d399;
         color: white;
     }
 
     .menuButton {
-        border: 2px solid #4CAF50;
+        border: 2px solid #34d399;
         display: inline-block;
         text-align: center;
         border-radius: 8px;
