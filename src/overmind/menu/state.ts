@@ -27,9 +27,9 @@ export type Menu = {
 export type State = {
     isLoadingDishes: boolean,
     isLoadingMenu: boolean,
-    menu: Menu,
-    dropdownOpen: boolean,
-    order: number[]
+    menu: Menu
+    
+    
     
 }
 
@@ -39,8 +39,8 @@ export const state: State = {
     menu: { title: "",
             colorscheme:1,
             dishes:[],
-            categories:[] },
-    dropdownOpen: false,
-    order: []
+            categories:[] }
+   
+    
     
 }

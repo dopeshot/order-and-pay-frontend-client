@@ -36,7 +36,7 @@ export const Searchbar: React.FunctionComponent = () => {
       
       </div>
       <div className="">
-      { state.dropdownOpen ? <DropDown /> : null}
+      { state.dropdownOpen ? null: null}
       </div>
       </div>
       

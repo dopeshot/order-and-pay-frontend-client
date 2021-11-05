@@ -15,7 +15,7 @@ export const Menu: React.FunctionComponent = () => {
 
     const dishes = state.menu.dishes.map(dish => (
     <div className="">
-        <a className="block p-4"><DishCard dish={dish} state={state} actions={actions}/></a>
+       
     </div>
     
     ))
@@ -32,7 +32,7 @@ export const Menu: React.FunctionComponent = () => {
         //@ts-ignore
         const dishes = category.dishIndex.map(index =>(
         <div className="block p-2">
-            <DishCard dish={state.menu.dishes[index]} state={state} actions={actions}/>
+            <DishCard name = {state.menu.dishes[index].name}  price = {state.menu.dishes[index].price}/>
         </div>
         ))
         return dishes
@@ -57,7 +57,7 @@ export const Menu: React.FunctionComponent = () => {
             <div className="p-4 row-span-4 flex-auto overflow-y-auto table-row">{categories}</div>
             <div className="grid grid-cols-2 flex-auto flex-grow overflow-hidden table-row place-content-evenly">
                 <div className="flex flex-auto place-self-center"><button className="menuButton h-auto" id="leftButton">Bestellung anzeigen</button></div>
-                <div className="flex flex-auto place-self-center"><button className="menuButton h-auto" id="rightButton">Für {actions.getPrice()} bestellen</button></div>
+                <div className="flex flex-auto place-self-center"><button className="menuButton h-auto" id="rightButton">Für zu viel geld bestellen</button></div>
             </div>
         </div>
 
