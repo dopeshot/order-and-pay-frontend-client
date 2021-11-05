@@ -4,7 +4,7 @@
 //TODO: Complete Dish Object
 export type Dish = {
     name: string,
-    price: string,
+    price: number,
     id: number
 }
 
@@ -28,7 +28,8 @@ export type State = {
     isLoadingDishes: boolean,
     isLoadingMenu: boolean,
     menu: Menu,
-    dropdownOpen: boolean
+    dropdownOpen: boolean,
+    order: number[]
     
 }
 
@@ -39,6 +40,7 @@ export const state: State = {
             colorscheme:1,
             dishes:[],
             categories:[] },
-    dropdownOpen: false
+    dropdownOpen: false,
+    order: []
     
 }

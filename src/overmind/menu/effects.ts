@@ -6,7 +6,7 @@ export const backend = {
     //Fetch Current Menu
     //TODO: placeholder ersetzen
     getCurrentMenu: async (): Promise<Menu> => {
-        const response = await fetch('https://mocki.io/v1/ac5373b1-59b0-48bb-af79-695df6dd063d')
+        const response = await fetch('https://mocki.io/v1/5db6a88a-917c-4d11-9c17-f32edc0ef36a')
         return await response.json()
     },
     //Fetch Dish by ID
