@@ -34,7 +34,7 @@ export const Menu: React.FunctionComponent = () => {
             <div className="grid grid-rows-3">
                 <div className="row-span-1 flex-auto overflow-hidden table-row">Menu</div>
                 <div className="flex justify-center"><Searchbar/></div>
-                <div className="flex-auto overflow-hidden table-row">Categories</div>
+                <div className="flex-auto overflow-hidden table-row">{categories}</div>
             </div>
             <div className="row-span-4 flex-auto overflow-y-auto table-row">{dishes} {dishes} {dishes} {dishes} {dishes}</div>
             <div className="grid grid-cols-2 flex-auto flex-grow overflow-hidden table-row place-content-evenly">
