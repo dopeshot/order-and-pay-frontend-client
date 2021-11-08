@@ -11,10 +11,11 @@ import { ShowAll } from '../../pages/Menu/ShowAll';
 
 export const App: React.FunctionComponent = () => {
   //const { loadClient } = useActions().example
-  const { loadMenu } = useActions().menu
+  const { loadMenu, fillDishIndexArray } = useActions().menu
 
     useEffect(() => {
       loadMenu()
+      fillDishIndexArray()
     })
   
   return (

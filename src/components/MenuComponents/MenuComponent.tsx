@@ -27,7 +27,7 @@ export const MenuComponent: React.FunctionComponent = () => {
     // Maps all dishes of a category under said category
     function dishIndexMap(category: any) {
         
-        const dishes = category.dishIndex.map((index : number) => (
+        const dishes = category.dishesIndex.map((index : number) => (
             <div className="block pb-2">
                 <DishCard name={state.menu.dishes[index].name} price={state.menu.dishes[index].price} />
             </div>
