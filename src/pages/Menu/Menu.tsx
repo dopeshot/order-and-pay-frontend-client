@@ -1,44 +1,12 @@
 import * as React from 'react'
-import { useEffect } from 'react'
-import { useActions, useAppState } from '../../overmind'
 import { Searchbar } from '../../components/MenuComponents/Searchbar';
-import { DishCard } from '../../components/MenuComponents/DishCard';
 import { Categories } from '../../components/MenuComponents/Categories';
+import { MenuComponent } from '../../components/MenuComponents/MenuComponent';
 
 
 
 
 export const Menu: React.FunctionComponent = () => {
-    const state = useAppState().menu
-    const actions = useActions().menu
-
-
-    const dishes = state.menu.dishes.map(dish => (
-        <div className="">
-
-        </div>
-
-    ))
-
-    const categories = state.menu.categories.map(category => (
-        <div>
-            {category.name}
-            {dishIndexMap(category)}
-        </div>
-
-    ))
-
-    function dishIndexMap(category: any) {
-        //@ts-ignore
-        const dishes = category.dishIndex.map(index => (
-            <div className="block p-2">
-                <DishCard name={state.menu.dishes[index].name} price={state.menu.dishes[index].price} />
-            </div>
-        ))
-        return dishes
-    }
-
-
     return (
         <div className="h-screen flex grid grid-rows-7 grid-cols-1 border-solid table-auto">
             <div className="grid grid-rows-6">
@@ -54,7 +22,7 @@ export const Menu: React.FunctionComponent = () => {
 
                 <div className=" row-span-3 flex-auto overflow-hidden table-row"> <Categories /> </div>
             </div>
-            <div className="p-4 flex-auto overflow-y-auto table-row">{categories}</div>
+            <div className="flex-auto overflow-y-auto table-row"><MenuComponent/></div>
             <div className="row-span-1 grid grid-cols-2 table-row place-content-evenly flex flex-auto place-self-center cursor-pointer">
 
                 <button className="menuButton h-auto rounded-lg text-green-400 text-center text-sm border border-solid border-green-400 py-4 px-8 my-4 mx-2">Bestellung anzeigen</button>
