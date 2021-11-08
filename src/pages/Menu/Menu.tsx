@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Searchbar } from '../../components/MenuComponents/Searchbar';
 import { Categories } from '../../components/MenuComponents/Categories';
 import { MenuComponent } from '../../components/MenuComponents/MenuComponent';
-
+import { Link } from "react-router-dom"
 
 
 
@@ -17,18 +17,15 @@ export const Menu: React.FunctionComponent = () => {
                 <div className="pt-4 row-span-1 flex justify-center"><Searchbar /></div>
                 <div className="grid grid-cols-2">
                     <div className="pt-4 text-2xl pl-2 font-semibold">Kategorien</div>
-                    <div className="pt-7 text-sm text-right pr-5 text-green-400 font-bold">Alle Anzeigen</div>
+                    <Link to="/categories" className="pt-7 text-sm text-right pr-5 text-green-400 font-bold">Alle Anzeigen</Link>
                 </div>
 
                 <div className=" row-span-3 flex-auto overflow-hidden table-row"> <Categories /> </div>
             </div>
             <div className="flex-auto overflow-y-auto table-row"><MenuComponent/></div>
-            <div className="row-span-1 grid grid-cols-2 table-row place-content-evenly flex flex-auto place-self-center cursor-pointer">
-
-                <button className="menuButton h-auto rounded-lg text-green-400 text-center text-sm border border-solid border-green-400 py-4 px-8 my-4 mx-2">Bestellung anzeigen</button>
-
-                <button className="menuButton h-auto bg-green-400 text-white rounded-lg text-center text-sm py-4 px-8 my-4 mx-2">Für zu viel geld bestellen</button>
-
+            <div className="row-span-1 grid grid-cols-2 table-row place-content-evenly flex flex-auto place-self-center ">
+                <button className="menuButton h-auto rounded-lg text-green-400 text-center text-sm border border-solid border-green-400 py-4 px-8 my-4 mx-2 cursor-pointer">Bestellung anzeigen</button>
+                <button className="menuButton h-auto bg-green-400 text-white rounded-lg text-center text-sm py-4 px-8 my-4 mx-2 cursor-pointer">Für zu viel geld bestellen</button>
             </div>
         </div>
 
