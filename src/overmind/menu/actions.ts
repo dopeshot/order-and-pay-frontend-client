@@ -27,10 +27,7 @@ export const loadMenu = async ({ state, effects }: Context) => {
     
 }
 
-export const fillDishIndexArray = ({state} : Context) => {
 
-    
-}
 
 
 

@@ -6,27 +6,31 @@ import { Dish } from '../../overmind/menu/state'
 
 // Defines the properties of the dishcard 
 type DishProps = {
-    name: string,
-    price: number
+    dish : Dish
+    
 }
 
 // Dish items with limited information that are shown in the menu view
-export const DishCard : React.FunctionComponent<DishProps> = ({name, price}) =>  {
+export const DishCard : React.FunctionComponent<DishProps> = ({dish}) =>  {
+
+    function priceToLocal(price : number)   {
+        return new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(price/100)
+    }
 
     return (
           <div className="grid grid-cols-5 gap-2 pl-4">
             <div className="col-span-3">
                 {/* Name of the dish */}
                 <div className="text-lg font-semibold">
-                    {name}
+                    {dish.name}
                 </div>
                 {/* Dishcription TODO: Platzhalter austauschen */}
                 <div className="text-xs text-gray-600">
-                    {name} schmeckt meistens ganz lecker
+                    {dish.description}
                 </div>
                 {/* Price of the dish */}
                 <div className="grid grid-cols-2 gap-1 text-lg font-semibold text-green-400">
-                    {price}€
+                    {priceToLocal(dish.price)}
                 </div>
             </div>
                 {/* Image of the dish */}

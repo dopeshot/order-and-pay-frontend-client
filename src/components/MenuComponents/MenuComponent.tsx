@@ -16,7 +16,7 @@ export const MenuComponent: React.FunctionComponent = () => {
                 </div>
                 {/* Description of category */}
                 <div className="text-sm text-gray-200">
-                    {category.name}n gibts nur wenn man auch was richtiges isst!
+                    {category.description}
                 </div>
             </div>
             {/* Dishes of current category */}
@@ -29,7 +29,7 @@ export const MenuComponent: React.FunctionComponent = () => {
         
         const dishes = category.dishesIndex.map((index : number) => (
             <div className="block pb-2">
-                <DishCard name={state.menu.dishes[index].name} price={state.menu.dishes[index].price} />
+                <DishCard dish={state.menu.dishes[index]} />
             </div>
         ))
         return dishes
