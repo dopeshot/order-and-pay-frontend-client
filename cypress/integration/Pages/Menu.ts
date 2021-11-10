@@ -3,9 +3,14 @@
 import cypress from "cypress"
 
 describe("Renders homepage", () => {
-    it("renders correctly", () => {
+    it("Renders correctly", () => {
         cy.visit("/menu");
         cy.get("#container").should("exist")
+    })
+    it("Opens the 'Alles Anzeigen' page ", () => {
+        cy.visit("/menu")
+        cy.get('#showAll').click();
+        cy.url().should('eq', 'http://localhost:3000/categories')
     })
 })
   
