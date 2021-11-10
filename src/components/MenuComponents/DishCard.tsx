@@ -2,20 +2,16 @@
 import React, {Component} from 'react'
 import { Context } from '../../overmind'
 import { Dish } from '../../overmind/menu/state'
+import { priceToLocal } from '../../services/utilities'
 
 
 // Defines the properties of the dishcard 
 type DishProps = {
     dish : Dish
-    
 }
 
 // Dish items with limited information that are shown in the menu view
 export const DishCard : React.FunctionComponent<DishProps> = ({dish}) =>  {
-
-    function priceToLocal(price : number)   {
-        return new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(price/100)
-    }
 
     return (
           <div className="grid grid-cols-5 gap-2 pl-4">

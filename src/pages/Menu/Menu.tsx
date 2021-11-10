@@ -8,15 +8,15 @@ import { Link } from "react-router-dom"
 
 export const Menu: React.FunctionComponent = () => {
     return (
-        <div className="h-screen flex grid grid-rows-7 grid-cols-1 border-solid table-auto">
+        <div id="container" className="h-screen flex grid grid-rows-7 grid-cols-1 border-solid table-auto">
             <div className="grid grid-rows-6">
                 <div className="row-span-2 grid grid-cols-2 flex-auto overflow-hidden table-row">
-                    <div className="pt-14 text-4xl pl-2 font-semibold" >Menü</div>
+                    <h1 className="pt-14 text-4xl pl-2 font-semibold" >Menü</h1>
                     <button className="pb-8 pr-3 text-4xl pl-2 text-gray-600 text-right">=</button>
                 </div>
                 <div className="pt-4 row-span-1 flex justify-center"><Searchbar /></div>
                 <div className="grid grid-cols-2">
-                    <div className="pt-4 text-2xl pl-2 font-semibold">Kategorien</div>
+                    <h2 className="pt-4 text-2xl pl-2 font-semibold">Kategorien</h2>
                     <Link to="/categories" className="pt-7 text-sm text-right pr-5 text-green-400 font-bold">Alle Anzeigen</Link>
                 </div>
 
