@@ -26,7 +26,8 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "craco test",
+    "test": "cypress open",
+    "craco:test": "craco test",
     "eject": "react-scripts eject",
     "cypress:open": "cypress open"
   },
