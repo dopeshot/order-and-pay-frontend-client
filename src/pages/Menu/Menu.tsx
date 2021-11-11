@@ -8,8 +8,8 @@ import { Link } from "react-router-dom"
 
 export const Menu: React.FunctionComponent = () => {
     return (
-        <div id="container" className="h-screen flex grid grid-rows-7 grid-cols-1 border-solid table-auto">
-            <div className="grid grid-rows-6">
+        <div id="page" className="h-screen flex grid grid-rows-7 grid-cols-1 border-solid table-auto">
+            <div className="grid grid-rows-6 p-2">
                 <div className="row-span-2 grid grid-cols-2 flex-auto overflow-hidden table-row">
                     <h1 className="pt-14 text-4xl pl-2 font-semibold" >Menü</h1>
                     <button className="pb-8 pr-3 text-4xl pl-2 text-gray-600 text-right">=</button>
