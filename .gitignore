@@ -24,3 +24,4 @@ yarn-error.log*
 
 #remove mirror from mirrored repo
 .github/workflows/mirror.yaml
+.env

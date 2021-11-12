@@ -1,0 +1,10 @@
+services:
+       oap-frontend-client:
+           container_name: oap-frontend-client
+           image: oap-frontend-client
+           restart: always
+           env_file:
+            docker.env
+           build: .
+           ports:
+             - "${DOCKER_PORT_OUT}:${DOCKER_PORT_IN}"
