@@ -5,8 +5,8 @@ In the project directory, you can run:
 1. `npm i`
 2. `npm run start`
 
-To run the project using docker containers:
-`docker-compose -f docker-compose.dev.yaml`
+To run the project using docker containers:<br> 
+`docker-compose -f docker-compose.dev.yaml`<br>
 You might need to delete your node_modules folder beforehand.
 This will run both `npm run start` as well as `npm run test:watch`.
 To run these in the background add the -d argument to the docker comose command. 
