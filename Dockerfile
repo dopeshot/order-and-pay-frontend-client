@@ -1,6 +1,8 @@
-FROM node:16
+FROM node:16 AS dev
 
-# Create app directory
+EXPOSE 3000
+
+FROM node:12 AS full
 WORKDIR /usr/src/app
 
 #copy package.json and package-lock.json
@@ -11,7 +13,3 @@ RUN npm install
 
 #copy source
 COPY . .
-
-EXPOSE 3000
-
-CMD [ "npm", "run", "start" ]

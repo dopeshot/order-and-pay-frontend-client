@@ -2,7 +2,11 @@ services:
        oap-frontend-client-test:
           container_name: client-test
           image: oap-client-test
-          build: .
+          working_dir: /usr/src/app/client-test
+          build: 
+              context: ./
+              dockerfile: Dockerfile
+              target: full
           ports:
             - "${DOCKER_PORT_OUT}:${DOCKER_PORT_IN}"
-          command: ["npm", "run", "test"]
+          command: sh -c "npm run test"
