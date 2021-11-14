@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { useActions, useAppState } from '../../overmind'
+import { scrollTo } from '../../services/utilities'
 
 
 
@@ -10,18 +11,7 @@ export const Categories: React.FunctionComponent = () => {
     
     const state = useAppState().menu
 
- const scrollTo  = (id : string) => {
-
-
-     console.log('AUSGEFÜHRT');
-     console.log(id);
-     //@ts-ignore
-     document.getElementById(id).scrollIntoView({
-         behavior : 'smooth'
-         
-         
-     })
- }
+ 
 
      
 
