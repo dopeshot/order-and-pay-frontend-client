@@ -3,10 +3,18 @@ import { Searchbar } from '../../components/MenuComponents/Searchbar';
 import { Categories } from '../../components/MenuComponents/Categories';
 import { MenuComponent } from '../../components/MenuComponents/MenuComponent';
 import { Link } from "react-router-dom"
+import { useRef } from 'react';
+import { useAppState } from '../../overmind';
 
 
 
 export const Menu: React.FunctionComponent = () => {
+
+
+    const state = useAppState().menu
+
+
+
     return (
         <div id="page" className="h-screen flex grid grid-rows-7 grid-cols-1 border-solid table-auto">
             <div className="grid grid-rows-6 p-2">
