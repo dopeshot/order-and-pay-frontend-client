@@ -1,5 +1,8 @@
 import * as React from 'react'
+import { Link } from 'react-router-dom';
 import { useAppState } from '../../overmind';
+import { HashLink } from 'react-router-hash-link';
+
 
 export const ShowAll : React.FunctionComponent = () =>{
 
@@ -7,16 +10,16 @@ export const ShowAll : React.FunctionComponent = () =>{
 
     const categories = state.menu.categories.map(category => (
             
-            <div className=" row-span-1 block p-3 rounded-lg text-white bg-cover bg-gray-400 bg-blend-multiply bg-left" style={{backgroundImage:"url(https://www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg)"}}>
+            <HashLink to={`/menu#${category._id}`}  className="row-span-1 block p-3 rounded-lg text-white bg-cover bg-gray-400 bg-blend-multiply bg-left" style={{backgroundImage:"url(https://www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg)" }}>
                 <div className="text-lg font-semibold">
                     {category.name}
                 </div>
                 <div className="text-sm text-gray-200">
                     {category.description}
                 </div>
-            </div>
+            </HashLink>
            
-            
+           
         
 
     ))
