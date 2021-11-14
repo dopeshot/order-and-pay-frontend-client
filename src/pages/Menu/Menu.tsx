@@ -23,7 +23,11 @@ export const Menu: React.FunctionComponent = () => {
                 <div className=" row-span-3 flex-auto overflow-hidden table-row"> <Categories /> </div>
             </div>
             <div className="flex-auto overflow-y-auto table-row"><MenuComponent/></div>
-                <button className="menuButton h-auto bg-red text-white rounded-lg text-center text-sm py-4 px-8 my-4 mx-2 cursor-pointer">Warenkorb anzeigen</button>
+                <div className="menuButton h-auto bg-red text-white rounded-lg text-center text-sm py-4 px-8 my-4 mx-2 cursor-pointer grid grid-cols-3">
+                    <p className="fas fa-circle cols-span-1 text-left"></p>
+                    <button className="cols-span-1 text-left">Warenkorb anzeigen</button>
+                    <p className="text-right">5,60 €</p>
+                </div>
         </div>
 
     )
