@@ -1,8 +1,6 @@
 import * as React from 'react'
-import { Link } from 'react-router-dom';
 import { useAppState } from '../../overmind';
 import { HashLink } from 'react-router-hash-link';
-
 
 export const ShowAll : React.FunctionComponent = () =>{
 

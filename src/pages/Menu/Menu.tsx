@@ -4,15 +4,13 @@ import { Categories } from '../../components/MenuComponents/Categories';
 import { MenuComponent } from '../../components/MenuComponents/MenuComponent';
 import { OrderButton } from '../../components/MenuComponents/OrderButton';
 import { Link } from "react-router-dom"
-import { useRef } from 'react';
-import { useAppState } from '../../overmind';
 
 
 
 export const Menu: React.FunctionComponent = () => {
 
 
-    const state = useAppState().menu
+    
 
 
 

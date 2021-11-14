@@ -1,9 +1,6 @@
-
-import React, {Component} from 'react'
-import { Context } from '../../overmind'
+import React from 'react'
 import { Dish } from '../../overmind/menu/state'
 import { priceToLocal } from '../../services/utilities'
-
 
 // Defines the properties of the dishcard 
 type DishProps = {
@@ -37,7 +34,5 @@ export const DishCard : React.FunctionComponent<DishProps> = ({dish}) =>  {
             </div>
         </div>
     )
-    
-    
-    
+
 }
