@@ -10,12 +10,22 @@ export const ShowAll : React.FunctionComponent = () =>{
 
     const categories = state.menu.categories.map(category => (
             
-            <HashLink to={`/menu#${category._id}`}  className="row-span-1 block p-3 rounded-lg text-white bg-cover bg-gray-400 bg-blend-multiply bg-left" style={{backgroundImage:"url(https://www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg)" }}>
-                <div className="text-lg font-semibold">
-                    {category.name}
+            <HashLink to={`/menu#${category._id}`}  className="grid grid-cols-6 row-span-1 block p-3 rounded-lg text-white bg-cover bg-gray-400 bg-blend-multiply bg-left" style={{backgroundImage:"url(https://www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg)" }}>
+                
+                <div className="col-span-1">
+                    
                 </div>
-                <div className="text-sm text-gray-200">
+                <div className="col-span-4">
+            
+                <p className="text-lg font-semibold">
+                    {category.name}
+                </p>
+                <p className="text-sm text-gray-200 whitespace-nowrap overflow-hidden overflow-ellipsis">
                     {category.description}
+                </p>
+                </div>
+                <div>
+
                 </div>
             </HashLink>
            
