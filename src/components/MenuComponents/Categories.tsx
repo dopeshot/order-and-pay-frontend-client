@@ -11,7 +11,7 @@ export const Categories: React.FunctionComponent = () => {
     const categories = state.menu.categories.map(category => (
 
 
-        <div className="text-gray-600 text-center m-1 pt-14 h-20 w-20 shadow-md rounded-md overflow-hidden text-xs b-2">
+        <div className="text-red text-center m-1 pt-14 h-20 w-20 shadow-md rounded-md overflow-hidden text-xs b-2 font-sofia">
             {category.name}
         </div>
 
