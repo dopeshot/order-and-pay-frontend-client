@@ -27,7 +27,7 @@ export const Menu: React.FunctionComponent = () => {
                     <Link id="showAll" to="/categories" className="pt-7 text-sm text-right pr-5 text-red font-bold">Alle Anzeigen</Link>
                 </div>
 
-                <div className=" row-span-3 flex-auto overflow-hidden table-row"> <Categories /> </div>
+                <div className=" row-span-3 flex-auto overflow-hidden table-row pt-4"> <Categories /> </div>
             </div>
             <div className="flex-auto overflow-y-auto table-row"><MenuComponent/></div>
                 <OrderButton/>

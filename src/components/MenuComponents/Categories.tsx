@@ -4,10 +4,10 @@ import { scrollTo } from '../../services/utilities'
 // Category buttons that scroll to specific points in the menu
 export const Categories: React.FunctionComponent = () => {
     const state = useAppState().menu
-    
+
     // One Category
     const categories = state.menu.categories.map(category => (
-        <button  key = {category._id} className="text-gray-600 text-center m-1 pt-14 h-20 w-20 shadow-md rounded-md overflow-hidden text-xs b-2 "  onClick= { () => scrollTo(category._id)} >
+        <button  key = {category._id} className="text-red font-bold text-center m-1 pt-8 h-16 w-20 shadow-md rounded-md overflow-hidden text-xs b-2 focus:bg-red focus:text-white "  onClick= { () => scrollTo(category._id)} >
             {category.name} 
         </button>
     ))
