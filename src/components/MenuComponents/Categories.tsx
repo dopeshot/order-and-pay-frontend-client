@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  useAppState } from '../../overmind'
 import { scrollTo } from '../../services/utilities'
 
@@ -7,7 +8,10 @@ export const Categories: React.FunctionComponent = () => {
 
     // One Category
     const categories = state.menu.categories.map(category => (
-        <button  key = {category._id} className="text-red font-bold text-center m-1 pt-8 h-16 w-20 shadow-md rounded-md overflow-hidden text-xs b-2 focus:bg-red focus:text-white "  onClick= { () => scrollTo(category._id)} >
+        <button  key = {category._id+"_button"} className="text-red font-bold text-center m-1 h-16 w-20 shadow-md rounded-md overflow-hidden text-xs b-2 focus:bg-red focus:text-white "  onClick= { () => scrollTo(category._id)} >
+            <div className="text-2xl">
+            <FontAwesomeIcon icon="hamburger" />
+            </div>
             {category.name} 
         </button>
     ))

@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { useAppState } from '../../overmind';
 import { HashLink } from 'react-router-hash-link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const ShowAll : React.FunctionComponent = () =>{
 
@@ -8,10 +9,10 @@ export const ShowAll : React.FunctionComponent = () =>{
 
     const categories = state.menu.categories.map(category => (
             
-            <HashLink to={`/menu#${category._id}`}  className="grid grid-cols-6 row-span-1 block p-3 rounded-lg text-white bg-cover bg-gray-400 bg-blend-multiply bg-left" style={{backgroundImage:"url(https://www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg)" }}>
+            <HashLink key={category._id+"_showAll"} to={`/menu#${category._id}`}  className="grid grid-cols-6 row-span-1 block p-3 rounded-lg text-white bg-cover bg-gray-400 bg-blend-multiply bg-left" style={{backgroundImage:"url(https://www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg)" }}>
                 
-                <div className="col-span-1">
-                    
+                <div className="col-span-1 flex items-center justify-center pr-2 text-2xl">
+                <FontAwesomeIcon icon="hamburger" />
                 </div>
                 <div className="col-span-4">
             
@@ -22,8 +23,8 @@ export const ShowAll : React.FunctionComponent = () =>{
                     {category.description}
                 </p>
                 </div>
-                <div>
-
+                <div className="col-span-1 flex items-center justify-center pr-2 text-2xl">
+                <FontAwesomeIcon icon="chevron-right" />
                 </div>
             </HashLink>
            
