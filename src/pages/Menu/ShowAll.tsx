@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { useAppState } from '../../overmind';
 import { HashLink } from 'react-router-hash-link';
+import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const ShowAll: React.FunctionComponent = () => {
@@ -37,8 +38,8 @@ export const ShowAll: React.FunctionComponent = () => {
         <div id="page" className="h-screen flex grid grid-rows-7 grid-cols-1 border-solid table-auto">
             <div className="flow-root">
                 <button className="float-left p-4 pl-6 text-2xl  text-left">
-                    <FontAwesomeIcon icon="chevron-left" />
-                </button>
+                <Link id="mainMenu" to="/menu" ><FontAwesomeIcon icon="chevron-left" /></Link>
+                    </button>
                 <button className="float-right p-4 px-10  text-2xl pl-2 text-right">
                     <FontAwesomeIcon icon="bars" />
                 </button>
