@@ -3,50 +3,58 @@ import { useAppState } from '../../overmind';
 import { HashLink } from 'react-router-hash-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export const ShowAll : React.FunctionComponent = () =>{
+export const ShowAll: React.FunctionComponent = () => {
 
     const state = useAppState().menu
 
     const categories = state.menu.categories.map(category => (
-            
-            <HashLink key={category._id+"_showAll"} to={`/menu#${category._id}`}  className="grid grid-cols-6 row-span-1 block p-3 rounded-lg text-white bg-cover bg-gray-400 bg-blend-multiply bg-left" style={{backgroundImage:"url(https://www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg)" }}>
-                
-                <div className="col-span-1 flex items-center justify-center pr-2 text-2xl">
+
+        <HashLink key={category._id + "_showAll"} to={`/menu#${category._id}`} className=" grid grid-cols-6 row-span-1 block p-3 rounded-lg text-white bg-cover bg-gray-400 bg-blend-multiply bg-left" style={{ backgroundImage: "url(https://www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg)" }}>
+
+            <div className="col-span-1 flex items-center justify-center pr-2 text-2xl">
                 <FontAwesomeIcon icon="hamburger" />
-                </div>
-                <div className="col-span-4">
-            
-                <p className="text-lg font-semibold">
+            </div>
+            <div className="col-span-4">
+
+                <p className="text-lg font-sofia font-semibold">
                     {category.name}
                 </p>
-                <p className="text-sm text-gray-200 whitespace-nowrap overflow-hidden overflow-ellipsis">
+                <p className="text-sm font-sofia whitespace-nowrap overflow-hidden overflow-ellipsis">
                     {category.description}
                 </p>
-                </div>
-                <div className="col-span-1 flex items-center justify-center pr-2 text-2xl">
+            </div>
+            <div className="col-span-1 flex items-center justify-center pr-2 text-2xl">
                 <FontAwesomeIcon icon="chevron-right" />
-                </div>
-            </HashLink>
-           
-           
-        
+            </div>
+        </HashLink>
+
+
+
 
     ))
 
     return (
         <div id="page" className="h-screen flex grid grid-rows-7 grid-cols-1 border-solid table-auto">
-            
-            <div className="row-span-1 grid grid-rows-6 p-2">
+            <div className="flow-root">
+                <button className="float-left p-4 pl-6 text-2xl  text-left">
+                    <FontAwesomeIcon icon="chevron-left" />
+                </button>
+                <button className="float-right p-4 px-10  text-2xl pl-2 text-right">
+                    <FontAwesomeIcon icon="bars" />
+                </button>
+            </div>
+            <div className="grid grid-rows-6 p-2">
+
                 <div className="row-span-5 grid grid-cols-2 flex-auto  table-row">
-                    <h1 className="pt-14 text-4xl pl-2 font-semibold" >Kategorien</h1>
-                    <button className="pb-8 pr-3 text-4xl pl-2 text-gray-600 text-right">=</button>
+                    <h1 className="text-4xl pl-4 font-sofia font-bold" >Kategorien</h1>
+
                 </div>
             </div>
-            
-            <div className="row-span-6 flex-auto overflow-y-auto table-row space-y-6 p-6">
-                {categories}
+
+            <div className="flex-auto overflow-y-auto table-row space-y-6 p-6 pt-2">
+                {categories}{categories}{categories}
             </div>
-            
+
         </div>
 
     )

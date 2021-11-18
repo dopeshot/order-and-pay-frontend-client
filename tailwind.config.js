@@ -8,9 +8,13 @@ module.exports = {
     },
     extend: {
       colors: {
-        'red': '#FF3336',
-      }
-    }
+        'red': '#F64040',
+        'redshadow': '#FF7070',
+        'grey': '#9E9E9E',
+        'light-grey': '#F6F6F6',
+        'description-grey': '#EBEBEB'
+      },
+    },
   },
   variants: {
     extend: {},
