@@ -21,16 +21,16 @@ export const Menu: React.FunctionComponent = () => {
                     <h1 className="pt-14 text-4xl pl-2 font-semibold" >Menü</h1>
                     <button className="pb-8 pr-3 text-4xl pl-2 text-gray-600 text-right">=</button>
                 </div>
-                <div className="pt-4 row-span-1 flex justify-center"><Searchbar /></div>
+                <div id="searchbar" className="pt-4 row-span-1 flex justify-center"><Searchbar /></div>
                 <div className="grid grid-cols-2">
                     <h2 className="pt-4 text-2xl pl-2 font-semibold">Kategorien</h2>
                     <Link id="showAll" to="/categories" className="pt-7 text-sm text-right pr-5 text-red font-bold">Alle Anzeigen</Link>
                 </div>
 
-                <div className=" row-span-3 flex-auto overflow-hidden table-row pt-4"> <Categories /> </div>
+                <div id="categories" className=" row-span-3 flex-auto overflow-hidden table-row pt-4"> <Categories /> </div>
             </div>
-            <div className="flex-auto overflow-y-auto table-row"><MenuComponent/></div>
-                <OrderButton/>
+            <div id="menuComponent" className="flex-auto overflow-y-auto table-row"><MenuComponent/></div>
+                <OrderButton />
         </div>
 
     )
