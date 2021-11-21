@@ -8,7 +8,6 @@ export const MenuComponent: React.FunctionComponent = () => {
 
     const state = useAppState().menu
 
-
     // Main menu component showing all dishes by category
     const MenuComponent = state.menu.categories.map(category => (
         <div key={category._id} id={category._id} className="grid grid-rows-2 pt-2 ">
@@ -40,8 +39,6 @@ export const MenuComponent: React.FunctionComponent = () => {
 
     return (
         <div>{MenuComponent}</div>
-
-
     )
 
 }

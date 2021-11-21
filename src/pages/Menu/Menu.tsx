@@ -16,7 +16,7 @@ export const Menu: React.FunctionComponent = () => {
         <div id="page" className="container h-screen flex grid grid-rows-7 grid-cols-1 border-solid table-auto">
             <div>
                 <Head />
-                {scrollY > 200 ? <ScrollCats /> : null}
+                {scrollY > 300 ? <ScrollCats /> : null}
                 <div id="menuComponent" className="flex-auto overflow-y-auto table-row"><MenuComponent /></div>
             </div>
             <footer className="flex-grow fixed bottom-0"><OrderButton /></footer>

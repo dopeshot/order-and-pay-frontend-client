@@ -18,7 +18,7 @@ export const ScrollCats: React.FunctionComponent = () => {
 
     return (
         // All Categories
-        <div className='grid grid-flow-col auto-cols-max md:auto-cols-min flex flex-row gap-1 overflow-auto fixed top-0'>
+        <div className='grid grid-flow-col auto-cols-max md:auto-cols-min flex flex-row gap-1 overflow-auto fixed top-0 bg-white'>
             {categories}
         </div>
     )

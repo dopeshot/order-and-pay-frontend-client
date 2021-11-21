@@ -1,5 +1,9 @@
 import { Menu } from "@headlessui/react"
 import ReactDOM from "react-dom"
+import { Category } from "../overmind/menu/state"
+import { useAppState } from "../overmind"
+import { Categories } from "../components/MenuComponents/Categories"
+import { MenuComponent } from "../components/MenuComponents/MenuComponent"
 
 const options = {
     root: null,
@@ -42,3 +46,29 @@ export const change = () => {
     }
     return isItIntersecting
 }
+
+const categories = Categories
+const sections = MenuComponent.arguments.dishes
+
+function observerCallback(entries:any, observer:IntersectionObserver) {
+    entries.forEach((entry:any) => {
+      if (entry.isIntersecting) {
+        // get the nav item corresponding to the id of the section
+        // that is currently in view
+        const catItem = categories[entry.target.id];
+        // add 'active' class on the navItem
+        catItem.classList.add('bg-black');
+        // remove 'active' class from any navItem that is not
+        // same as 'navItem' defined above
+        Object.values(categories).forEach((item:any) => {
+          if (item != catItem) {
+            item.classList.remove('bg-black');
+          }
+        });
+      }
+    });
+  }
+  
+  const observer = new IntersectionObserver(observerCallback, options);
+  
+  sections.forEach((sec:any) => observer.observe(sec));
