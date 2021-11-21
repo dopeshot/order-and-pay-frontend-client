@@ -1,5 +1,10 @@
 import { Menu } from "@headlessui/react"
 
+const options = {
+    root: null,
+    threshold: 0
+}
+
 export const priceToLocal = (price: number) => {
     return new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(price / 100)
 }
@@ -12,20 +17,31 @@ export const scrollTo = (id: string) => {
 
 }
 
-export const isInViewport = (id: string) => {
-    const element = document.getElementById(id)
-    console.log(element, id)
-    //@ts-ignore
-    const rect = element.getBoundingClientRect();
-    console.log((
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)))
-    return(
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
+export const change = () => {
+    var isIntersecting = false
+    window.onload = function () {
+        const visi = document.getElementById("visibility")!
+        console.log('the element in onload utilities ' + visi)
+
+        const observer = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    console.log('not intersecting')
+                    isIntersecting = false
+                }
+                else {
+                    console.log('intersecting')
+                    isIntersecting = true
+                }
+            });
+        }, options)
+
+        observer.observe(visi)
+    }
+    if (isIntersecting) {
+        return true
+    }
+    else {
+        return false
+    }
 }
