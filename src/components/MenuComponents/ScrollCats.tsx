@@ -3,7 +3,7 @@ import { useAppState } from '../../overmind'
 import { scrollTo } from '../../services/utilities'
 
 // Category buttons that scroll to specific points in the menu
-export const Head: React.FunctionComponent = () => {
+export const ScrollCats: React.FunctionComponent = () => {
     const state = useAppState().menu
 
     // One Category

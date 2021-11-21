@@ -1,12 +1,12 @@
-import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Searchbar } from './Searchbar';
-import { Categories } from './Categories';
+import { useAppState } from '../../overmind'
+import { scrollTo } from '../../services/utilities'
 import { Link } from "react-router-dom"
+import { Searchbar } from '../../components/MenuComponents/Searchbar';
+import { Categories } from '../../components/MenuComponents/Categories';
 
-// Dish items with limited information that are shown in the menu view
-export const ScrollCats: React.FunctionComponent = () => {
-
+// Category buttons that scroll to specific points in the menu
+export const Head: React.FunctionComponent = () => {
     return (
         <div className="grid grid-rows-6 p-2" id="visibility">
                     <div className="row-span-2 grid grid-cols-2 flex-auto overflow-hidden table-row">
@@ -23,6 +23,8 @@ export const ScrollCats: React.FunctionComponent = () => {
 
                     <div id="categories" className=" row-span-3 flex-auto overflow-hidden table-row pt-4"> <Categories /> </div>
                 </div>
-    )
 
+    )
 }
+
+

@@ -1,4 +1,5 @@
 import { Menu } from "@headlessui/react"
+import ReactDOM from "react-dom"
 
 const options = {
     root: null,
@@ -18,8 +19,8 @@ export const scrollTo = (id: string) => {
 }
 
 export const change = () => {
-    var isIntersecting = false
-    window.onload = function () {
+    var isItIntersecting = window.onload = function () {
+        var isIntersecting = false
         const visi = document.getElementById("visibility")!
         console.log('the element in onload utilities ' + visi)
 
@@ -37,11 +38,7 @@ export const change = () => {
         }, options)
 
         observer.observe(visi)
+        return isIntersecting
     }
-    if (isIntersecting) {
-        return true
-    }
-    else {
-        return false
-    }
+    return isItIntersecting
 }
