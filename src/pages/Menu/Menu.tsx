@@ -20,7 +20,7 @@ export const Menu: React.FunctionComponent = () => {
             <div className="grid grid-rows-6 p-2">
                 <div className="row-span-2 grid grid-cols-2 flex-auto overflow-hidden table-row">
                     <h1 className="font-sofia font-bold pt-14 text-4xl pl-2 " >Menü</h1>
-                    <button className="pb-8 pr-3 text-2xl text-right">
+                    <button className="pb-8 pr-5 text-2xl text-right">
                         <FontAwesomeIcon icon="bars" />
                     </button>
                 </div>

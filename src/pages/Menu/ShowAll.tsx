@@ -37,23 +37,22 @@ export const ShowAll: React.FunctionComponent = () => {
     return (
         <div id="page" className="h-screen flex grid grid-rows-7 grid-cols-1 border-solid table-auto">
             <div className="flow-root">
-                <button className="float-left p-4 pl-6 text-2xl  text-left">
-                <Link id="mainMenu" to="/menu" ><FontAwesomeIcon icon="chevron-left" /></Link>
-                    </button>
-                <button className="float-right p-4 px-10  text-2xl pl-2 text-right">
+                <button className="float-left p-4 pl-4 text-2xl  text-left">
+                    <Link id="mainMenu" to="/menu" ><FontAwesomeIcon icon="chevron-left" /></Link>
+                </button>
+                <button className="float-right p-4 px-10  text-2xl pr-6 text-right">
                     <FontAwesomeIcon icon="bars" />
                 </button>
             </div>
-            <div className="grid grid-rows-6 p-2">
+            
 
-                <div className="row-span-5 grid grid-cols-2 flex-auto  table-row">
-                    <h1 className="text-4xl pl-4 font-sofia font-bold" >Kategorien</h1>
-
+                <div className="pb-5 row-start-2 row-span-1">
+                    <h1 className="text-4xl pl-4 font-sofia font-bold " >Kategorien</h1>
                 </div>
-            </div>
+            
 
-            <div className="flex-auto overflow-y-auto table-row space-y-6 p-6 pt-2">
-                {categories}{categories}{categories}
+            <div className=" row-span-8 row-start-3 flex-auto overflow-y-auto table-row space-y-6 p-6 pt-2 pl-4 ">
+                {categories}{categories}
             </div>
 
         </div>

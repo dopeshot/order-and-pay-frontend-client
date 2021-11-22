@@ -7,6 +7,9 @@ module.exports = {
       'sofia': ['sofia-pro']
     },
     extend: {
+      gridRow: {
+        'span-10': 'span 10 / span 10',
+       },
       colors: {
         'red': '#F64040',
         'red-shadow': '#FF7070',
