@@ -47,9 +47,6 @@ export const change = () => {
     return isItIntersecting
 }
 
-const categories = Categories
-const sections = MenuComponent.arguments.dishes
-
 function observerCallback(entries:any, observer:IntersectionObserver) {
     entries.forEach((entry:any) => {
       if (entry.isIntersecting) {
