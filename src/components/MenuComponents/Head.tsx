@@ -8,7 +8,7 @@ import { Categories } from '../../components/MenuComponents/Categories';
 // Category buttons that scroll to specific points in the menu
 export const Head: React.FunctionComponent = () => {
     return (
-        <div className="grid grid-rows-6 p-2" id="visibility">
+        <div className="grid grid-rows-6 p-2" id="head">
                     <div className="row-span-2 grid grid-cols-2 flex-auto overflow-hidden table-row">
                         <h1 className="font-sofia font-bold pt-14 text-4xl pl-2 " >Menü</h1>
                         <button className="pb-8 pr-3 text-2xl text-right">
