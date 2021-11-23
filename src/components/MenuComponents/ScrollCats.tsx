@@ -17,9 +17,11 @@ export const ScrollCats: React.FunctionComponent = () => {
 
     return (
         // All Categories
+        <div className="sticky top-0 bg-white">
         <header className='grid grid-flow-col auto-cols-max md:auto-cols-min flex flex-row gap-1 overflow-auto'>
             <button>S</button>
             {categories}
         </header>
+        </div>
     )
 }

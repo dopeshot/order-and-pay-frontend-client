@@ -30,7 +30,7 @@ export const MenuComponent: React.FunctionComponent = () => {
     function dishIndexMap(category: any) {
 
         const dishes = category.dishesIndex.map((index: number) => (
-            <div key={state.menu.dishes[index]._id} id={category._id} className="dis block pb-2 dish"  data-spy="scroll" data-target="#categories">
+            <div key={state.menu.dishes[index]._id} id={category._id} className="block pb-2 dish">
                 <DishCard dish={state.menu.dishes[index]} />
             </div>
         ))
