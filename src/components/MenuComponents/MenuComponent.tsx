@@ -1,10 +1,12 @@
 import { useAppState } from '../../overmind'
 import { DishCard } from '../../components/MenuComponents/DishCard';
-
-
-
+import { useScrollToNav } from '../../hooks/useScroll';
 
 export const MenuComponent: React.FunctionComponent = () => {
+    const [scrollRef, isVisible] = useScrollToNav({
+        root: null,
+        rootMargin: "0px"
+    })
 
     const state = useAppState().menu
 
@@ -30,7 +32,10 @@ export const MenuComponent: React.FunctionComponent = () => {
     function dishIndexMap(category: any) {
 
         const dishes = category.dishesIndex.map((index: number) => (
-            <div key={state.menu.dishes[index]._id} id={category._id} className="block pb-2 dish">
+            //@ts-ignore
+            <div key={state.menu.dishes[index]._id} id={category._id} className="block pb-2 dish" ref={scrollRef}>
+                {/*@ts-ignore */ }
+                {isVisible ? scrollTo("categoryScroll_4") : null}
                 <DishCard dish={state.menu.dishes[index]} />
             </div>
         ))

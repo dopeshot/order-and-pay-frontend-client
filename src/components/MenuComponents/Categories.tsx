@@ -15,7 +15,7 @@ export const Categories: React.FunctionComponent = () => {
             {category.name}
         </button>
     ))
-
+    console.log(document.getElementById('categoryButton_0'))
     return (
         // All Categories
         <div className='grid grid-flow-col auto-cols-max md:auto-cols-min flex flex-row gap-1 overflow-auto  bg-white top-0'>

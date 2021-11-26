@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Head } from '../../components/MenuComponents/Head';
 import { useElementOnScreen } from '../../hooks/useScroll'
 
-
 export const Menu: React.FunctionComponent = () => {
     //const scrollY = useWindowPosition();
 
@@ -16,8 +15,8 @@ export const Menu: React.FunctionComponent = () => {
     })
 
     return (
-        <div id="page" className="container h-screen flex grid grid-rows-7 grid-cols-1 border-solid table-auto">
-                {isVisible ? null : <ScrollCats />}
+        <div id="page" className="container flex grid grid-rows-7 grid-cols-1 border-solid table-auto">
+                <div className="sticky top-0 bg-white">{isVisible ? null : <ScrollCats />}</div>
             <div>
                 {/*@ts-ignore */ }
                 <div ref={containerRef} ><Head  /></div>
