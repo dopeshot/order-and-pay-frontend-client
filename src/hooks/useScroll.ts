@@ -11,7 +11,7 @@ export const useElementOnScreen = (options:any) => {
   }
 
   useEffect(() => {
-    console.log(containerRef.current)
+    //(containerRef.current)
     const observer = new IntersectionObserver(callBackFunction, options)
     if(containerRef.current) observer.observe(containerRef.current)
 
@@ -30,11 +30,11 @@ export const useScrollToNav = (options:any) => {
   const callBackFunction = (entries:any) => {
     const [ entry ] = entries
     setIsVisible(entry.isIntersecting)
-    console.log(entry.isIntersecting)
+    //console.log(entry.isIntersecting)
   }
 
   useEffect(() => {
-    console.log(scrollRef.current)
+    //console.log(scrollRef.current)
     const observer = new IntersectionObserver(callBackFunction, options)
     if(scrollRef.current) observer.observe(scrollRef.current)
 

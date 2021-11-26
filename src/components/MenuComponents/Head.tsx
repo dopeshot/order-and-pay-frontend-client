@@ -1,12 +1,18 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useAppState } from '../../overmind'
-import { scrollTo } from '../../services/utilities'
+//import { scrollTo } from '../../services/utilities'
 import { Link } from "react-router-dom"
 import { Searchbar } from '../../components/MenuComponents/Searchbar';
 import { Categories } from '../../components/MenuComponents/Categories';
+import { props } from 'cypress/types/bluebird';
 
 // Category buttons that scroll to specific points in the menu
-export const Head: React.FunctionComponent = () => {
+
+type PropTypes = {
+    scrollFC : (id: number) => void
+}
+
+export const Head: React.FunctionComponent<PropTypes> = (props: PropTypes) => {
     return (
         <div className="grid grid-rows-6 p-2" id="head">
                     <div className="row-span-2 grid grid-cols-2 flex-auto overflow-hidden table-row">
@@ -21,7 +27,7 @@ export const Head: React.FunctionComponent = () => {
                         <Link id="showAll" to="/categories" className="text-red font-sofia font-bold pt-7 text-sm text-right pr-5 ">Alle Anzeigen</Link>
                     </div>
 
-                    <div id="categories" className=" row-span-3 flex-auto overflow-hidden table-row pt-4"> <Categories /> </div>
+                    <div id="categories" className=" row-span-3 flex-auto overflow-hidden table-row pt-4"> <Categories scrollFC={props.scrollFC}/>{console.log(props.scrollFC)} </div>
                 </div>
 
     )

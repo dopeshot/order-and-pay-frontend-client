@@ -1,6 +1,9 @@
 
 
 //Single Menu Item
+
+import { Ref, useRef } from "react"
+
 //TODO: Complete Dish Object
 export type Dish = {
     labels: string[],
@@ -19,7 +22,8 @@ export type Category = {
     _id: string,
     name: string,
     description: string,
-    dishesIndex: number[]
+    dishesIndex: number[],
+    index: number
     
 }
 //Full menu
@@ -34,11 +38,15 @@ export type Menu = {
 export type State = {
     isLoadingDishes: boolean,
     isLoadingMenu: boolean,
-    menu: Menu
-    
-    
+    menu: Menu,
+    refs : any[]
     
 }
+
+
+
+    
+
 
 export const state: State = {
     isLoadingDishes: false,
@@ -46,7 +54,8 @@ export const state: State = {
     menu: { name: "",
             colorscheme:1,
             dishes:[],
-            categories:[] }
+            categories:[] },
+    refs : []
    
     
     
