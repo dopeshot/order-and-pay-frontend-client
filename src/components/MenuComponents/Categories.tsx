@@ -8,7 +8,7 @@ export const Categories: React.FunctionComponent = () => {
 
     // One Category
     const categories = state.menu.categories.map((category,index) => (
-        <button key={category._id + "_button"} id={"categoryButton_" + index} className="text-red font-sofia font-semibold text-center m-1 h-16 w-20 shadow-md  rounded-md overflow-hidden text-xs b-2 focus:bg-red focus:text-white "  onClick={() => scrollTo(category._id)} >
+        <button key={category._id + "_button"} id={"categoryButton_" + index} className="text-red font-sofia font-semibold text-center m-1 h-16 w-20 shadow-md  rounded-md overflow-hidden text-xs b-2 focus:bg-red focus:text-white focus:shadow-focus"  onClick={() => scrollTo(category._id)} >
             <div className="text-2xl ">
                 <FontAwesomeIcon icon="hamburger" />
             </div>
