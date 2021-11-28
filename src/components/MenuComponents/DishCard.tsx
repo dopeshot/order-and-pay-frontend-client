@@ -1,6 +1,7 @@
 import React from 'react'
 import { Dish } from '../../overmind/menu/state'
 import { priceToLocal } from '../../services/utilities'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Defines the properties of the dishcard 
 type DishProps = {
@@ -30,7 +31,9 @@ export const DishCard: React.FunctionComponent<DishProps> = ({ dish }) => {
             <img alt={dish.name} className="col-span-1 h-full w-full object-cover rounded-lg" src="https://www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg"></img>
             {/* More info button */}
             <div className="pr-1 flex justify-center items-center">
-                <button className="rounded-lg h-7 w-7 bg-red text-white font-bold flex justify-center">+</button>
+                <button className="rounded-lg h-7 w-7 bg-red text-white font-bold flex justify-center items-center text-xs">
+                <FontAwesomeIcon icon="plus" />
+                </button>
             </div>
         </div>
     )

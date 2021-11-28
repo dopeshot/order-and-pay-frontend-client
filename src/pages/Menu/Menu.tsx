@@ -32,14 +32,31 @@ export const Menu: React.FunctionComponent = () => {
 
    
     return (
+
         <div  id="page" className="container flex grid grid-rows-7 grid-cols-1 border-solid table-auto">
             
             
-      <div className="sticky top-0 bg-white">{isVisible ? null : <ScrollCats scrollFC={scroll} />}</div>
+      
+
+        <div className="sticky top-0 bg-white">{isVisible ? null : <ScrollCats scrollFC={scroll} />}</div>
             <div  >
                 {/*@ts-ignore */ }
                 <div ref={containerRef} ><Head scrollFC={scroll} /></div>
                 <div id="menuComponent" className="flex-auto overflow-y-auto table-row" ><MenuComponent ref={MenuRef}/></div>
+                <div className="row-span-2 grid grid-cols-2 flex-auto overflow-hidden table-row">
+                    <h1 className="font-sofia font-bold pt-14 text-4xl pl-2 " >Menü</h1>
+                    <button className="pb-8 pr-5 text-2xl text-right">
+                        <FontAwesomeIcon icon="bars" />
+                    </button>
+                </div>
+                <div id="searchbar" className="pt-4 row-span-1 flex justify-center"><Searchbar /></div>
+                <div className="grid grid-cols-2">
+                    <h2 className="font-sofia font-bold pt-4 text-2xl pl-2 ">Kategorien</h2>
+                    <Link id="showAll" to="/categories" className="text-red font-sofia font-bold pt-7 text-sm text-right pr-5 ">Alle Anzeigen</Link>
+                </div>
+
+                <div id="categories" className=" row-span-3 flex-auto overflow-hidden table-row pt-4"> <Categories /> </div>
+
             </div>
             
             
