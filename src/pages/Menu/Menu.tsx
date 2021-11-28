@@ -49,13 +49,9 @@ export const Menu: React.FunctionComponent = () => {
                         <FontAwesomeIcon icon="bars" />
                     </button>
                 </div>
-                <div id="searchbar" className="pt-4 row-span-1 flex justify-center"><Searchbar /></div>
-                <div className="grid grid-cols-2">
-                    <h2 className="font-sofia font-bold pt-4 text-2xl pl-2 ">Kategorien</h2>
-                    <Link id="showAll" to="/categories" className="text-red font-sofia font-bold pt-7 text-sm text-right pr-5 ">Alle Anzeigen</Link>
-                </div>
+            
 
-                <div id="categories" className=" row-span-3 flex-auto overflow-hidden table-row pt-4"> <Categories /> </div>
+               
 
             </div>
             

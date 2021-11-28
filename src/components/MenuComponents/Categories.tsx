@@ -26,7 +26,7 @@ export const Categories: React.FunctionComponent<PropTypes> = (props: PropTypes)
             </div>
             {category.name}
         </button>
-    ))
+    )
     return (
         // All Categories
         <div className='grid grid-flow-col auto-cols-max md:auto-cols-min flex flex-row gap-1 overflow-auto  bg-white top-0'>
