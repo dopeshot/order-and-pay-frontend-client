@@ -1,29 +1,68 @@
-import { useAppState } from '../../overmind'
+//@ts-nocheck
+import { useActions, useAppState } from '../../overmind'
 import { DishCard } from '../../components/MenuComponents/DishCard';
+import { useScrollToNav } from '../../hooks/useScroll';
+import { scrollTo } from '../../services/utilities'
+import { useRef,useEffect } from 'react';
+import React from 'react';
 
 
 
 
-export const MenuComponent: React.FunctionComponent = () => {
+
+const MenuComponentFC: React.FC = ((props, ref) => {
+    const [scrollRef, isVisible] = useScrollToNav({
+        root: null,
+        rootMargin: "0px"
+    })
+
 
     const state = useAppState().menu
+    const actions = useActions().menu
+
+
+
+    const refs = state.menu.categories.reduce((acc, value) => {
+        //@ts-ignore
+        acc[value.index] = React.createRef();
+        
+        return acc;
+      }, {});
+    
+      React.useImperativeHandle(ref, () => ({
+
+        handleClick(id: number) {
+            
+          //@ts-ignore
+       refs[id].current.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        })}
+    
+      }));
+
+    
+    
+     
 
 
     // Main menu component showing all dishes by category
-    const MenuComponent = state.menu.categories.map(category => (
-        <div key={category._id} id={category._id} className="grid grid-rows-2 pt-2 ">
+    const MenuComponent = state.menu.categories.map((category, index) => (
+        <div key={category._id+index} id={"section-" + (index+1)} className="grid grid-rows-2 pt-2 " ref={refs[index]}>
             {/* Category banner */}
             <div className="row-span-1 grid grid-rows-2 gap-2 p-3 text-white h-4/5 bg-cover bg-gray-400 bg-blend-multiply bg-left" style={{ backgroundImage: "url(https://www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg)" }}>
                 <p className="text-lg font-semibold" >
                     {category.name}
                 </p>
                 {/* Description of category */}
-                <p className="text-sm font-sofia text-description-grey ">
+                <p className="text-sm font-sofia text-description-grey "  >
                     {category.description}
                 </p>
-            </div>
+            </div >
+            
             {/* Dishes of current category */}
             {dishIndexMap(category)}
+           
         </div>
 
     ))
@@ -31,17 +70,22 @@ export const MenuComponent: React.FunctionComponent = () => {
     function dishIndexMap(category: any) {
 
         const dishes = category.dishesIndex.map((index: number) => (
-            <div key={state.menu.dishes[index]._id} className="block pb-2">
+            //@ts-ignore
+            <div key={state.menu.dishes[index]._id} id={category._id} className="block pb-2 dish">
                 <DishCard dish={state.menu.dishes[index]} />
             </div>
         ))
         return dishes
     }
+    
+    
 
     return (
-        <div>{MenuComponent}</div>
-
-
+        <div ref={ref}>{MenuComponent}</div>
     )
 
-}
+})
+
+const MenuComponent = React.forwardRef(MenuComponentFC)
+
+export default MenuComponent;
