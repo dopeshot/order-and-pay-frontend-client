@@ -32,7 +32,7 @@ const MenuComponentFC: React.FC = ((props, ref) => {
       React.useImperativeHandle(ref, () => ({
 
         handleClick(id: number) {
-            console.log(refs)
+            
           //@ts-ignore
        refs[id].current.scrollIntoView({
           behavior: 'smooth',
@@ -48,7 +48,7 @@ const MenuComponentFC: React.FC = ((props, ref) => {
 
     // Main menu component showing all dishes by category
     const MenuComponent = state.menu.categories.map((category, index) => (
-        <div key={category._id} id={category._id} className="grid grid-rows-2 pt-2 " ref={refs[index]}>
+        <div key={category._id+index} id={"section-" + (index+1)} className="grid grid-rows-2 pt-2 " ref={refs[index]}>
             {/* Category banner */}
             <div className="row-span-1 grid grid-rows-2 gap-2 p-3 text-white h-4/5 bg-cover bg-gray-400 bg-blend-multiply bg-left" style={{ backgroundImage: "url(https://www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg)" }}>
                 <p className="text-lg font-semibold" >
@@ -71,7 +71,7 @@ const MenuComponentFC: React.FC = ((props, ref) => {
 
         const dishes = category.dishesIndex.map((index: number) => (
             //@ts-ignore
-            <div key={state.menu.dishes[index]._id} id={category._id} className="block pb-2 dish" ref={scrollRef}>
+            <div key={state.menu.dishes[index]._id} id={category._id} className="block pb-2 dish">
                 <DishCard dish={state.menu.dishes[index]} />
             </div>
         ))

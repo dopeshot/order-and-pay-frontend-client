@@ -26,18 +26,7 @@ export const loadMenu = async ({ state, effects }: Context) => {
         
     });
 
-    
-    
-    
     state.menu.isLoadingMenu = false  
-}
-
-export const addRefs =({ state, effects }: Context, refs : any) => {
-    console.log("State")
-    console.log(refs)
-    console.log(state.menu)
-    console.log(refs[1])
-    
 }
 
 
