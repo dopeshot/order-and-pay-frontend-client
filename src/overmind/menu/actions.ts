@@ -1,7 +1,4 @@
-import React, { useRef } from "react"
 import { Context } from ".."
-import { state } from "../example"
-import { State } from "../example/state"
 
 // Load Menu from Backend via effect
 export const loadMenu = async ({ state, effects }: Context) => {

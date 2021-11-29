@@ -1,10 +1,8 @@
 //@ts-nocheck
-import { useActions, useAppState } from '../../overmind'
+import React from 'react';
 import { DishCard } from '../../components/MenuComponents/DishCard';
 import { useScrollToNav } from '../../hooks/useScroll';
-import { scrollTo } from '../../services/utilities'
-import { useRef,useEffect } from 'react';
-import React from 'react';
+import { useActions, useAppState } from '../../overmind';
 
 
 

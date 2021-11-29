@@ -2,8 +2,6 @@
 
 //Single Menu Item
 
-import { Ref, useRef } from "react"
-
 //TODO: Complete Dish Object
 export type Dish = {
     labels: string[],

@@ -1,10 +1,8 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useAppState } from '../../overmind'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import { scrollTo } from '../../services/utilities'
-import { Link } from "react-router-dom"
-import { Searchbar } from '../../components/MenuComponents/Searchbar';
+import { Link } from "react-router-dom";
 import { Categories } from '../../components/MenuComponents/Categories';
-import { props } from 'cypress/types/bluebird';
+import { Searchbar } from '../../components/MenuComponents/Searchbar';
 
 // Category buttons that scroll to specific points in the menu
 

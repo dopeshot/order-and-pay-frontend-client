@@ -1,9 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { props } from 'cypress/types/bluebird'
-import { createTypeReferenceDirectiveResolutionCache } from 'typescript'
-import { isNull } from 'util'
 import { useAppState } from '../../overmind'
-import { scrollTo as scrollToMyAss } from '../../services/utilities'
 
 type PropTypes = {
     scrollFC : (id: number) => void
