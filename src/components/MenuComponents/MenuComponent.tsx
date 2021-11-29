@@ -45,7 +45,6 @@ const MenuComponentFC: React.FC<any> = ((props, ref) => {
     function dishIndexMap(category: any) {
 
         const dishes = category.dishesIndex.map((index: number) => (
-            //@ts-ignore
             <div key={state.menu.dishes[index]._id} id={category._id} className="block pb-2 dish">
                 <DishCard dish={state.menu.dishes[index]} />
             </div>

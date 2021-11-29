@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react'
 
 
 export const useScrollToNav = (options: any) => {
-	const scrollRef = useRef<any>(null) as React.MutableRefObject<HTMLInputElement>
+	const scrollRef = useRef<any>(null)
 	const [isVisible, setIsVisible] = useState(true)
 
 	const callBackFunction = (entries: any) => {
