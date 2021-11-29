@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useRef } from 'react';
 import { Head } from '../../components/MenuComponents/Head';
 import MenuComponent from '../../components/MenuComponents/MenuComponent';

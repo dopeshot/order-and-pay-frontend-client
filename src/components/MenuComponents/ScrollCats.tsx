@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import { scrollTo } from '../../services/utilities'
 import Scrollspy from 'react-scrollspy';
 import { useAppState } from '../../overmind';
