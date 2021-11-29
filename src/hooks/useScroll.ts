@@ -1,27 +1,28 @@
 import React, { useState, useRef, useEffect } from 'react'
 
 
- 
+export const useScrollToNav = (options: any) => {
+	const scrollRef = useRef<any>(null) as React.MutableRefObject<HTMLInputElement>
+	const [isVisible, setIsVisible] = useState(true)
 
-export const useScrollToNav = (options:any) => {
-  const scrollRef = useRef<any>(null) as React.MutableRefObject<HTMLInputElement>
-  const [ isVisible, setIsVisible ] = useState(true)
+	const callBackFunction = (entries: any) => {
+		const [entry] = entries
+		setIsVisible(entry.isIntersecting)
+	}
 
-  const callBackFunction = (entries:any) => {
-    const [ entry ] = entries
-    setIsVisible(entry.isIntersecting)
-    console.log(entry.isIntersecting)
-  }
+	useEffect(() => {
+		let observerRerValue: HTMLInputElement | null = null
+		const observer = new IntersectionObserver(callBackFunction, options)
+		
+		if (scrollRef.current) {
+			observer.observe(scrollRef.current)
+			observerRerValue = scrollRef.current
+		}
 
-  useEffect(() => {
-    console.log(scrollRef.current)
-    const observer = new IntersectionObserver(callBackFunction, options)
-    if(scrollRef.current) observer.observe(scrollRef.current)
+		return () => {
+			if (observerRerValue) observer.unobserve(observerRerValue)
+		}
+	}, [scrollRef, options])
 
-    return () => {
-      if(scrollRef.current) observer.unobserve(scrollRef.current)
-    }
-  }, [scrollRef, options])
-
-  return [scrollRef, isVisible]
+	return [scrollRef, isVisible]
 }
