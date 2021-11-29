@@ -1,13 +1,11 @@
-import React, { createRef, useEffect, useRef, useState } from 'react';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useRef } from 'react';
+import { Head } from '../../components/MenuComponents/Head';
+import MenuComponent from '../../components/MenuComponents/MenuComponent';
 import { OrderButton } from '../../components/MenuComponents/OrderButton';
 import { ScrollCats } from '../../components/MenuComponents/ScrollCats';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Head } from '../../components/MenuComponents/Head';
-import {  useScrollToNav } from '../../hooks/useScroll'
-import  MenuComponent  from '../../components/MenuComponents/MenuComponent';
-import Scrollspy from 'react-scrollspy';
-import { scroller } from 'react-scroll';
+import { useScrollToNav } from '../../hooks/useScroll';
+
 
 
 
@@ -39,20 +37,10 @@ export const Menu: React.FunctionComponent = () => {
       
 
         <div className="sticky top-0 bg-white">{isVisible ? null : <ScrollCats scrollFC={scroll} />}</div>
-            <div  >
+            <div>
                 {/*@ts-ignore */ }
                 <div ref={containerRef} ><Head scrollFC={scroll} /></div>
-                <div id="menuComponent" className="flex-auto overflow-y-auto table-row" ><MenuComponent ref={MenuRef}/></div>
-                <div className="row-span-2 grid grid-cols-2 flex-auto overflow-hidden table-row">
-                    <h1 className="font-sofia font-bold pt-14 text-4xl pl-2 " >Menü</h1>
-                    <button className="pb-8 pr-5 text-2xl text-right">
-                        <FontAwesomeIcon icon="bars" />
-                    </button>
-                </div>
-            
-
-               
-
+                <div id="menuComponent" className="flex-auto overflow-y-auto pb-96" ><MenuComponent ref={MenuRef}/></div>
             </div>
             
             
