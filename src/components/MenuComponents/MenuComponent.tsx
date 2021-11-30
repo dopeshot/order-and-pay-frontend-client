@@ -48,7 +48,7 @@ const MenuComponentFC: React.FC<any> = ((props,ref) => {
     ))
     // Maps all dishes of a category under said category
     function dishIndexMap(category: any) {
-
+        //TODO: Key Warning
         const dishes = category.dishesIndex.map((index: number) => (
             <div key={state.menu.dishes[index]._id} id={category._id} className="block pb-2 dish">
                 <DishCard dish={state.menu.dishes[index]} />

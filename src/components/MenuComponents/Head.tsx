@@ -26,7 +26,7 @@ export const Head: React.FunctionComponent<PropTypes> = (props: PropTypes) => {
                 <Link id="showAll" to="/categories" className="text-red font-sofia font-bold pt-7 text-sm text-right pr-5 ">Alle Anzeigen</Link>
             </div>
 
-            <div id="categories" className=" row-span-3 flex-auto overflow-hidden table-row pt-4"> <Categories scrollFC={props.scrollFC} />{console.log(props.scrollFC)} </div>
+            <div id="categories" className=" row-span-3 flex-auto overflow-hidden table-row pt-4"> <Categories scrollFC={props.scrollFC} /> </div>
         </div>
 
     )
