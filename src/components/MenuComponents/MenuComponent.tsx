@@ -2,7 +2,7 @@ import React from 'react';
 import { DishCard } from '../../components/MenuComponents/DishCard';
 import { useAppState } from '../../overmind';
 
-const MenuComponentFC: React.FC<any> = ((props, ref) => {
+const MenuComponentFC: React.FC<any> = ((props,ref) => {
     const state = useAppState().menu
 
     const refs = state.menu.categories.reduce<any>((acc, value) => {
@@ -20,7 +20,6 @@ const MenuComponentFC: React.FC<any> = ((props, ref) => {
             window.scrollTo({
                 top: catY-mCY+300,
                 behavior: 'smooth',
-                
             })
         }
 
