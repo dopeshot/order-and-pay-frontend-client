@@ -13,9 +13,14 @@ const MenuComponentFC: React.FC<any> = ((props, ref) => {
 
     React.useImperativeHandle(ref, () => ({
         handleClick(id: number) {
-            refs[id].current.scrollIntoView({
+
+            const catY = refs[id].current.getBoundingClientRect().top
+            const mCY = document.querySelector("#menuComponent")!.getBoundingClientRect().top
+            
+            window.scrollTo({
+                top: catY-mCY+300,
                 behavior: 'smooth',
-                block: 'start',
+                
             })
         }
 
