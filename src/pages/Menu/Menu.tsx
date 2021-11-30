@@ -12,7 +12,6 @@ import { useScrollToNav } from '../../hooks/useScroll';
 
 export const Menu: React.FunctionComponent = () => {
 
-
     const [containerRef, isVisible] = useScrollToNav({
         root: null,
         rootMargin: "0px"
@@ -27,15 +26,14 @@ export const Menu: React.FunctionComponent = () => {
 
     return (
 
-        <div id="page" className="container flex grid grid-rows-7 grid-cols-1 border-solid table-auto">
+        <div id="page" className="flex grid grid-rows-7 grid-cols-1 border-solid table-auto w-full">
             <div className="sticky top-0 bg-white">{isVisible ? null : <ScrollCats scrollFC={scroll} />}</div>
-            <div>
+            <div className= "w-full">
                 {/*@ts-ignore */}
                 <div ref={containerRef} ><Head scrollFC={scroll} /></div>
-                <div id="menuComponent" className="flex-auto overflow-y-auto pb-96" ><MenuComponent ref={MenuRef} /></div>
+                <div id="menuComponent" className="flex-auto overflow-y-auto pb-96 w-full" ><MenuComponent ref={MenuRef} /></div>
             </div>
             <footer onClick={() => { }} className="flex-grow fixed bottom-0 w-full"><OrderButton /></footer>
-
         </div>
     )
 }

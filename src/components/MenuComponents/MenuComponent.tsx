@@ -6,6 +6,7 @@ const MenuComponentFC: React.FC<any> = ((props,ref) => {
     const state = useAppState().menu
 
     const refs = state.menu.categories.reduce<any>((acc, value) => {
+       //@ts-ignore
         acc[value.index] = React.createRef();
 
         return acc;

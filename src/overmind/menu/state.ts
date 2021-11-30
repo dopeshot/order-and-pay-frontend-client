@@ -41,10 +41,6 @@ export type State = {
 }
 
 
-
-    
-
-
 export const state: State = {
     isLoadingDishes: false,
     isLoadingMenu: false,
