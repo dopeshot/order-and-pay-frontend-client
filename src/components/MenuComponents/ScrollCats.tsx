@@ -39,7 +39,8 @@ export const ScrollCats: React.FunctionComponent<PropTypes> = (props: PropTypes)
 
         header.scrollTo({
             left: activeElements.getBoundingClientRect().left - scrollSpy.getBoundingClientRect().left,
-            behavior: 'smooth'
+            behavior: 'smooth',
+            
         })
     }
 
@@ -50,8 +51,8 @@ export const ScrollCats: React.FunctionComponent<PropTypes> = (props: PropTypes)
                 className="scrollspy grid grid-flow-col auto-cols-max md:auto-cols-min flex flex-row gap-1 overflow-auto"
                 items={sections}
                 currentClassName="bg-blue-700"
-                onUpdate={() => scrollToButton()}
-                offset={-50}
+                onUpdate={() => {scrollToButton()}}
+                offset={-100}
             >
                 {categories}
             </Scrollspy>
