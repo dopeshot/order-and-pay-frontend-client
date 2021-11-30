@@ -18,7 +18,7 @@ export const ScrollCats: React.FunctionComponent<PropTypes> = (props: PropTypes)
     const categories = state.menu.categories.map((category, index) => (
 
 
-        <button key={category._id + "_scrollButton" + index} id={"categoryScroll_" + index} className="text-red font-sofia font-bold text-center m-1 h-10 w-20 shadow-md rounded-md overflow-hidden text-xs b-2 focus:bg-red focus:text-white" onClick={() => props.scrollFC(index)}  >
+        <button key={category._id + "_scrollButton" + index} id={"categoryScroll_" + index} className="text-red font-sofia font-bold text-center m-1 h-10 w-20 shadow-md rounded-md overflow-hidden text-xs b-2 activeElement" onClick={() => props.scrollFC(index)}  >
             <div className="text-2xl ">
             </div>
             {category.name}
@@ -33,7 +33,7 @@ export const ScrollCats: React.FunctionComponent<PropTypes> = (props: PropTypes)
     });
 
     const scrollToButton = () => {
-        const activeElements = document.querySelector(".bg-blue-700")!
+        const activeElements = document.querySelector(".pseudoActiveElement")!
         const header = document.querySelector('#menu-header')!
         const scrollSpy = document.querySelector('.scrollspy')!
 
@@ -49,7 +49,7 @@ export const ScrollCats: React.FunctionComponent<PropTypes> = (props: PropTypes)
             <Scrollspy
                 className="scrollspy grid grid-flow-col auto-cols-max md:auto-cols-min flex flex-row gap-1 overflow-auto"
                 items={sections}
-                currentClassName="bg-blue-700"
+                currentClassName="pseudoActiveElement"
                 onUpdate={() => scrollToButton()}
                 offset={-50}
             >

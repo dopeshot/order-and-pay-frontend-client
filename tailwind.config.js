@@ -8,7 +8,7 @@ module.exports = {
     },
     extend: {
       gridRow: {
-        'span-10': 'span 10 / span 10',
+        'span-8': 'span 8 / span 8',
        },
       colors: {
         'red': '#F64040',

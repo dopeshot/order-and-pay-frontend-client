@@ -5,3 +5,16 @@
 .isCurrent{
     background-color: black;
 }
+
+.activeElement:focus{
+    background-color: #F64040;
+    color : white;
+    box-shadow: 0px 1px 8px 0.1px rgba(255, 112, 112, 1);
+}
+
+
+.pseudoActiveElement{
+    color: white;
+    background-color: #F64040;
+    box-shadow: 0px 1px 8px 0.1px rgba(255, 112, 112, 1);
+}
