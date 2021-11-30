@@ -8,7 +8,6 @@ import { useScrollToNav } from '../../hooks/useScroll';
 
 export const Menu: React.FunctionComponent = () => {
 
-
     const [containerRef, isVisible] = useScrollToNav({
         root: null,
         rootMargin: "0px"
@@ -23,7 +22,7 @@ export const Menu: React.FunctionComponent = () => {
 
     return (
 
-        <div id="page" className="container flex grid grid-rows-7 grid-cols-1 border-solid table-auto">
+        <div id="page" className="w-full flex grid grid-rows-7 grid-cols-1 border-solid table-auto">
             {/*@ts-ignore*/}
             <Transition show={!isVisible}
                 enter="transition ease-out duration-1"

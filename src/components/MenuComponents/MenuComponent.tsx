@@ -2,10 +2,11 @@ import React from 'react';
 import { DishCard } from '../../components/MenuComponents/DishCard';
 import { useAppState } from '../../overmind';
 
-const MenuComponentFC: React.FC<any> = ((props, ref) => {
+const MenuComponentFC: React.FC<any> = ((props,ref) => {
     const state = useAppState().menu
 
     const refs = state.menu.categories.reduce<any>((acc, value) => {
+       //@ts-ignore
         acc[value.index] = React.createRef();
 
         return acc;
@@ -20,7 +21,6 @@ const MenuComponentFC: React.FC<any> = ((props, ref) => {
             window.scrollTo({
                 top: catY-mCY+300,
                 behavior: 'smooth',
-                
             })
         }
 
@@ -48,7 +48,7 @@ const MenuComponentFC: React.FC<any> = ((props, ref) => {
     ))
     // Maps all dishes of a category under said category
     function dishIndexMap(category: any) {
-
+        //TODO: Key Warning
         const dishes = category.dishesIndex.map((index: number) => (
             <div key={state.menu.dishes[index]._id} id={category._id} className="block pb-2 dish">
                 <DishCard dish={state.menu.dishes[index]} />
