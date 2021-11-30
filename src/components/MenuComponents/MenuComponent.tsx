@@ -19,7 +19,7 @@ const MenuComponentFC: React.FC<any> = ((props,ref) => {
             const mCY = document.querySelector("#menuComponent")!.getBoundingClientRect().top
             
             window.scrollTo({
-                top: catY-mCY+300,
+                top: catY-mCY+250,
                 behavior: 'smooth',
             })
         }
