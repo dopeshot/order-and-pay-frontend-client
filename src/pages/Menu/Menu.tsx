@@ -36,7 +36,7 @@ export const Menu: React.FunctionComponent = () => {
             <div>
                 {/*@ts-ignore */}
                 <div ref={containerRef} ><Head scrollFC={scroll} /></div>
-                <div id="menuComponent" className="flex-auto overflow-y-auto pb-96" ><MenuComponent ref={MenuRef} /></div>
+                <div id="menuComponent" className="flex-auto pb-96" ><MenuComponent ref={MenuRef} /></div>
             </div>
 
             <footer onClick={() => { }} className="flex-grow fixed bottom-0 w-full"><OrderButton /></footer>

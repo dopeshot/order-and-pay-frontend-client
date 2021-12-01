@@ -23,7 +23,7 @@ export const DishCard: React.FunctionComponent<DishProps> = ({ dish }) => {
                     {dish.description}
                 </p>
                 {/* Price of the dish */}
-                <p className="grid grid-cols-2 gap-1 text-lg font-sofia font-bold text-red">
+                <p className="grid grid-cols-2 gap-1 text-base font-sofia font-bold text-red">
                     {priceToLocal(dish.price)}
                 </p>
             </div>
@@ -35,6 +35,7 @@ export const DishCard: React.FunctionComponent<DishProps> = ({ dish }) => {
                 <FontAwesomeIcon icon="plus" />
                 </button>
             </div>
+           
         </div>
     )
 

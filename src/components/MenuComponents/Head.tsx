@@ -13,10 +13,10 @@ type PropTypes = {
 
 export const Head: React.FunctionComponent<PropTypes> = (props: PropTypes) => {
     return (
-        <div className="grid grid-rows-6 p-2" id="head">
+        <div className="grid grid-rows-6 pl-2 pb-2 " id="head">
             <div className="row-span-2 grid grid-cols-2 flex-auto overflow-hidden table-row">
                 <h1 className="font-sofia font-bold pt-14 text-4xl pl-2 " >Menü</h1>
-                <button className="pb-8 pr-3 text-2xl text-right">
+                <button className="p-8 pt-0 text-2xl pr-6 text-right">
                     <FontAwesomeIcon icon="bars" />
                 </button>
             </div>

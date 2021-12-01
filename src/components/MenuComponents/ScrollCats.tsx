@@ -46,7 +46,7 @@ export const ScrollCats: React.FunctionComponent<PropTypes> = (props: PropTypes)
         <div id="scrollCats" className='col-span-9 grid grid-flow-col auto-cols-max md:auto-cols-min flex items-center flex-row gap-0 overflow-auto'>
             
             <Scrollspy
-                className="scrollspy grid grid-flow-col auto-cols-max md:auto-cols-min flex flex-row gap-1 overflow-auto"
+                className="scrollspy grid grid-flow-col auto-cols-max md:auto-cols-min flex flex-row gap-1 overflow-auto pl-2 pt-2 pb-1"
                 items={sections}
                 currentClassName="pseudoActiveElement"
                 onUpdate={() => { scrollToButton() }}
