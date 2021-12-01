@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useAppState } from '../../overmind'
 
 type PropTypes = {
-    //scrolling Function gets passes through
+    //scrolling Function gets passed through
     scrollFC: (id: number) => void
 }
 
@@ -19,7 +19,6 @@ export const Categories: React.FunctionComponent<PropTypes> = (props: PropTypes)
             {category.name}
         </button>
     )
-
     return (
         // All Categories
         <div className='grid grid-flow-col auto-cols-max md:auto-cols-min flex flex-row gap-1 overflow-auto  bg-white top-0'>

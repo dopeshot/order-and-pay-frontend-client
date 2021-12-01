@@ -32,10 +32,10 @@ export const DishCard: React.FunctionComponent<DishProps> = ({ dish }) => {
             {/* More info button */}
             <div className="pr-1 flex justify-center items-center">
                 <button className="rounded-lg h-7 w-7 bg-red text-white font-bold flex justify-center items-center text-xs">
-                <FontAwesomeIcon icon="plus" />
+                    <FontAwesomeIcon icon="plus" />
                 </button>
             </div>
-           
+
         </div>
     )
 

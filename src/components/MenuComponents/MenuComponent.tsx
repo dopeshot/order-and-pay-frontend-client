@@ -39,13 +39,8 @@ const MenuComponentFC: React.FC<any> = ((props, ref) => {
                     {category.description}
                 </p>
             </div >
-            
-                {/* Dishes of current category */}
-
-                {dishIndexMap(category)}
-           
-
-
+            {/* Dishes of current category */}
+            {dishIndexMap(category)}
         </div>
 
     ))
@@ -59,8 +54,6 @@ const MenuComponentFC: React.FC<any> = ((props, ref) => {
         ))
         return dishes
     }
-
-
 
     return (
         <div ref={ref}>{MenuComponent}</div>

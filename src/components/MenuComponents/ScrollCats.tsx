@@ -32,7 +32,7 @@ export const ScrollCats: React.FunctionComponent<PropTypes> = (props: PropTypes)
         const scrollSpy = document.querySelector('.scrollspy')!
 
         header.scrollTo({
-            left: activeElements.getBoundingClientRect().left - scrollSpy.getBoundingClientRect().left -4,
+            left: activeElements.getBoundingClientRect().left - scrollSpy.getBoundingClientRect().left - 4,
             behavior: 'smooth',
 
         })
@@ -40,22 +40,22 @@ export const ScrollCats: React.FunctionComponent<PropTypes> = (props: PropTypes)
 
     return (
         <header className="grid grid-cols-10 h-14">
-            <p  className="col-span-1 flex items-center justify-center text-xl text-grey font-light" >
-                <FontAwesomeIcon icon="search"/>
+            <p className="col-span-1 flex items-center justify-center text-xl text-grey font-light" >
+                <FontAwesomeIcon icon="search" />
             </p>
-        <div id="scrollCats" className='col-span-9 grid grid-flow-col auto-cols-max md:auto-cols-min flex items-center flex-row gap-0 overflow-auto'>
-            
-            <Scrollspy
-                className="scrollspy grid grid-flow-col auto-cols-max md:auto-cols-min flex flex-row gap-1 overflow-auto pl-2 pt-2 pb-1"
-                items={sections}
-                currentClassName="pseudoActiveElement"
-                onUpdate={() => { scrollToButton() }}
-                offset={-100}
-            >
-                {categories}
-            </Scrollspy>
-        </div>
+            <div id="scrollCats" className='col-span-9 grid grid-flow-col auto-cols-max md:auto-cols-min flex items-center flex-row gap-0 overflow-auto'>
+
+                <Scrollspy
+                    className="scrollspy grid grid-flow-col auto-cols-max md:auto-cols-min flex flex-row gap-1 overflow-auto pl-2 pt-2 pb-1"
+                    items={sections}
+                    currentClassName="pseudoActiveElement"
+                    onUpdate={() => { scrollToButton() }}
+                    offset={-100}
+                >
+                    {categories}
+                </Scrollspy>
+            </div>
         </header>
-        )
+    )
 
 }
