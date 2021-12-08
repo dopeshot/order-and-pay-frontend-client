@@ -14,7 +14,7 @@ describe("Renders ShowAll Page", () => {
     })
     it("Buttons work", () => {
         cy.get("#hashLink_1").click()
-        cy.url().should('eq',baseUrl+ '/menu#61895c84f403ce0b4087d8ca')
+        cy.url().should('eq',baseUrl+ '/menu#section-2')
     })
     
 
