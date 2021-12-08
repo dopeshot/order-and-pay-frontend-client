@@ -1,0 +1,120 @@
+{
+    "menu_current": {
+        "categories": [{
+                "_id": "61895c84f403ce0b4087d8c8",
+                "name": "NonAlcoholic",
+                "description": "liquids to drink"
+            },
+            {
+                "_id": "61895c84f403ce0b4087d8ca",
+                "name": "Desert",
+                "description": "stuff to get fat"
+            },
+            {
+                "_id": "61895c84f403ce0b4087d8cc",
+                "name": "Starter",
+                "description": "a full meal for some"
+            },
+            {
+                "_id": "61895c84f403ce0b4087d8ce",
+                "name": "MainCourse",
+                "description": "damn this stuff is tasty"
+            },
+            {
+                "_id": "61895c84f403ce0b4087d8d0",
+                "name": "Alcohol",
+                "description": "liquids to drink a lot"
+            }
+        ],
+        "dishes": [{
+                "labels": [
+                    "vegetarian"
+                ],
+                "allergens": [
+                    "sugar"
+                ],
+                "name": "coke",
+                "description": "soda",
+                "category": "61895c84f403ce0b4087d8c8",
+                "price": 150
+            },
+            {
+                "labels": [
+                    "vegetarian",
+                    "vegan",
+                    "glutenfree"
+                ],
+                "allergens": [],
+                "name": "water",
+                "description": "well water...",
+                "category": "61895c84f403ce0b4087d8c8",
+                "price": 100
+            },
+            {
+                "labels": [
+                    "vegetarian"
+                ],
+                "allergens": [
+                    "milk",
+                    "peanuts"
+                ],
+                "name": "tomato soup",
+                "description": "a liquid starter",
+                "category": "61895c84f403ce0b4087d8cc",
+                "price": 450
+            },
+            {
+                "labels": [],
+                "allergens": [],
+                "name": "burger",
+                "description": "no buns, just the patty",
+                "category": "61895c84f403ce0b4087d8ce",
+                "price": 800
+            },
+            {
+                "labels": [
+                    "vegetarian"
+                ],
+                "allergens": [
+                    "gluten",
+                    "egg"
+                ],
+                "name": "pasta",
+                "description": "very cool and complex dish",
+                "category": "61895c84f403ce0b4087d8ce",
+                "price": 799
+            },
+            {
+                "labels": [
+                    "vegetarian",
+                    "glutenfree"
+                ],
+                "allergens": [
+                    "milk"
+                ],
+                "name": "icecream",
+                "description": "sweet and cold",
+                "category": "61895c84f403ce0b4087d8ca",
+                "price": 350
+            },
+            {
+                "labels": [
+                    "vegetarian"
+                ],
+                "allergens": [
+                    "milk",
+                    "egg",
+                    "gluten"
+                ],
+                "name": "pancakes",
+                "description": "sweet",
+                "category": "61895c84f403ce0b4087d8ca",
+                "price": 400
+            }
+        ],
+        "name": "testMenu"
+    },
+    "dishes": [
+        { "id": 1, "message": "Not implemented yet!" }
+    ]
+}
