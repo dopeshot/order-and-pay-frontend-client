@@ -1,7 +1,5 @@
 
-import { useEffect } from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
-import { useActions } from '../../overmind';
 import { Example } from '../../pages/Example/Example';
 import { Menu } from '../../pages/Menu/Menu';
 import { ShowAll } from '../../pages/Menu/ShowAll';
