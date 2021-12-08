@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { useAppState } from '../../overmind';
 import { HashLink } from 'react-router-hash-link';
 import { Link } from "react-router-dom"
