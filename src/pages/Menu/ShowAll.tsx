@@ -47,8 +47,8 @@ export const ShowAll: React.FunctionComponent = () => {
             
 
 
-            <div id="categoryHashlinks" className="row-span-8 row-start-3 flex-auto overflow-y-auto table-row space-y-6 p-6 pt-2 pl-4 ">
-                {categories}{categories}{categories}{categories}{categories}
+            <div id="categoryHashlinks" className="row-span-8 row-start-3 flex-auto overflow-y-auto scrollbar-hide table-row space-y-6 p-6 pt-2 pl-4 ">
+                {categories}
             </div>
         </div>
 

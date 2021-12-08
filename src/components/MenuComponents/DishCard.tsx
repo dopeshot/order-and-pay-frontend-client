@@ -12,7 +12,7 @@ type DishProps = {
 export const DishCard: React.FunctionComponent<DishProps> = ({ dish }) => {
 
     return (
-        <div className="grid grid-cols-5 gap-2 pl-4" id="dishCard">
+        <div className="grid grid-cols-5 gap-2" id="dishCard">
             <div className="col-span-3">
                 {/* Name of the dish */}
                 <p className="text-lg font-sofia font-bold">

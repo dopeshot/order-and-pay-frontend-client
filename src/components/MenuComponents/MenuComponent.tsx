@@ -6,7 +6,7 @@ const MenuComponentFC: React.FC<any> = ((props, ref) => {
     const state = useAppState().menu
 
     const refs = state.menu.categories.reduce<any>((acc, value) => {
-        //@ts-ignore
+        
         acc[value.index] = React.createRef();
 
         return acc;
@@ -28,7 +28,7 @@ const MenuComponentFC: React.FC<any> = ((props, ref) => {
 
     // Main menu component showing all dishes by category
     const MenuComponent = state.menu.categories.map((category, index) => (
-        <div key={category._id + index} id={"section-" + (index + 1)} className="grid grid-rows-2 pt-2 divide-y divide-divider-grey " ref={refs[index]}>
+        <div key={category._id + index} id={"section-" + (index + 1)} className="grid pt-2  " ref={refs[index]}>
             {/* Category banner */}
             <div className="row-span-1 grid grid-rows-2 gap-2 p-3 text-white h-4/5 bg-cover bg-gray-400 bg-blend-multiply bg-left" style={{ backgroundImage: "url(https://www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg)" }}>
                 <p className="text-lg font-semibold " >
@@ -40,16 +40,20 @@ const MenuComponentFC: React.FC<any> = ((props, ref) => {
                 </p>
             </div >
             {/* Dishes of current category */}
+            <div className="px-5 divide-y divide-grey-400">
             {dishIndexMap(category)}
+            </div>
         </div>
 
     ))
     // Maps all dishes of a category under said category
     function dishIndexMap(category: any) {
-        //TODO: Key Warning
+        
         const dishes = category.dishesIndex.map((index: number) => (
-            <div key={state.menu.dishes[index]._id} id={category._id} className="block pb-2 pt-2 dish ">
-                <DishCard dish={state.menu.dishes[index]} />
+            //key will get changed to ID once backend has dish ids
+            <div key={index+"_dishcard"} id={index+"_dishCard_Id"} className="block pb-2 pt-2 dish ">
+                
+                <DishCard dish={state.menu.dishes[index]}  />
             </div>
         ))
         return dishes

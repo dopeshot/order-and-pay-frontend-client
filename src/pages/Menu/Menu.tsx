@@ -1,5 +1,5 @@
 import { Transition } from '@headlessui/react';
-import React, { Fragment, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Head } from '../../components/MenuComponents/Head';
 import MenuComponent from '../../components/MenuComponents/MenuComponent';
 import { OrderButton } from '../../components/MenuComponents/OrderButton';
@@ -8,22 +8,24 @@ import { useScrollToNav } from '../../hooks/useScroll';
 
 export const Menu: React.FunctionComponent = () => {
 
-    const [containerRef, isVisible] = useScrollToNav({
+    const [containerRef , isVisible]  = useScrollToNav({
         root: null,
         rootMargin: "0px"
-    })
+    }) 
 
-    const MenuRef = useRef()
+    const MenuRef  = useRef<typeof MenuComponent>(null)
 
     const scroll = (index: number) => {
-        //@ts-ignore
-        MenuRef.current.handleClick(index)
+            //@ts-ignore
+            MenuRef!.current!.handleClick(index)
+        
+        
     }
 
     return (
 
         <div id="page" className="w-full flex grid grid-rows-7 grid-cols-1 border-solid table-auto">
-            {/*@ts-ignore*/}
+           
             <Transition show={!isVisible}
                 enter="transition ease-out duration-1"
                 enterFrom="opacity-0"
@@ -32,9 +34,10 @@ export const Menu: React.FunctionComponent = () => {
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
             >
-                <div className="fixed top-0 bg-white"><ScrollCats scrollFC={scroll} /></div></Transition>
-            <div>
-                {/*@ts-ignore */}
+                <div className="fixed top-0 bg-white"><ScrollCats scrollFC={scroll} /></div>
+            </Transition>
+            <div className="w-full">
+                {/*@ts-ignore*/}
                 <div ref={containerRef} ><Head scrollFC={scroll} /></div>
                 <div id="menuComponent" className="flex-auto pb-96" ><MenuComponent ref={MenuRef} /></div>
             </div>

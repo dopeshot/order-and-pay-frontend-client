@@ -1,4 +1,4 @@
-//@ts-nocheck
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
@@ -10,13 +10,12 @@ export const Searchbar: React.FunctionComponent = () => {
 
   return (
 
-    <div className=" relative mx-auto text-gray-600 flex items-center">
-      {/* Search icon will be swapped out with "font-awesome" icon */}
-      <button type="submit" className="absolute left-3  mr-4 text-grey font-light">
+    <div className="w-full text-gray-600 flex justify- bg-light-grey rounded-lg  h-8 pl-3 ">
+      <button type="submit" className=" left-3  mr-4 text-grey font-light">
         <FontAwesomeIcon icon="search" />
       </button>
       {/* Searchbar object */}
-      <input id="searchbar" className=" bg-light-grey font-sofia h-8 px-9 rounded-lg text-sm text-grey focus:outline-none" style={{ width: '97vw' }} type="search" name="search" placeholder="Search..."></input>
+      <input id="searchbar" className="w-full bg-light-grey  font-sofia text-sm text-grey focus:outline-none " placeholder="Search..."></input>
     </div>
 
   )

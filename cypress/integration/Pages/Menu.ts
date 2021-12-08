@@ -14,25 +14,15 @@ describe("Renders homepage", () => {
         cy.get("#categories").should("be.visible")
         cy.get("#menuComponent").should("be.visible")
         cy.get("#orderButton").should("be.visible")
+        cy.get("#head").contains("Menü")
+        cy.get("#head").contains("Kategorien")
+        cy.get("#head").contains("Alle Anzeigen")
     })
     it("Opens the 'Alles Anzeigen' page ", () => {
         cy.get('#showAll').click();
         cy.url().should('eq',baseUrl+ '/categories')
-        cy.visit("/menu")
     })
 
-    it("Button Scolls work", function() {
-
-        cy.get("#categoryButton_2").click()
-        cy.get('#categoryButton_2').invoke('text').as('button2').then(() =>{
-            cy.get("#menuComponent").contains(this.button2).should("be.visible")
-        })
-        
-
-        cy.get("#categoryButton_0").click()
-        cy.get('#categoryButton_0').invoke('text').as('button0').then(() =>{
-            cy.get("#menuComponent").contains(this.button0).should("be.visible")
-        })
-    })
+   
 })
   

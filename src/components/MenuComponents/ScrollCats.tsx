@@ -11,6 +11,7 @@ type PropTypes = {
 export const ScrollCats: React.FunctionComponent<PropTypes> = (props: PropTypes) => {
 
     const state = useAppState().menu
+    let searchBarVisible : boolean = false
 
     const categories = state.menu.categories.map((category, index) => (
         <button key={category._id + "_scrollButton" + index} id={"categoryScroll_" + index} className="text-red font-sofia font-bold text-center m-1 h-8 w-20 shadow-md rounded-md overflow-hidden text-xs b-2 activeElement" onClick={() => props.scrollFC(index)}  >
@@ -26,6 +27,12 @@ export const ScrollCats: React.FunctionComponent<PropTypes> = (props: PropTypes)
         sections.push("section-" + (index + 1))
     });
 
+    const showSearchBar = () => {
+        console.log(searchBarVisible)
+        searchBarVisible = true
+        console.log(searchBarVisible)
+    }
+
     const scrollToButton = () => {
         const activeElements = document.querySelector(".pseudoActiveElement")!
         const header = document.querySelector('#scrollCats')!
@@ -40,13 +47,14 @@ export const ScrollCats: React.FunctionComponent<PropTypes> = (props: PropTypes)
 
     return (
         <header className="grid grid-cols-10 h-14">
-            <p className="col-span-1 flex items-center justify-center text-xl text-grey font-light" >
+            
+            <button className="col-span-1 flex items-center justify-center text-xl text-grey font-light" onClick={() => showSearchBar()} >
                 <FontAwesomeIcon icon="search" />
-            </p>
-            <div id="scrollCats" className='col-span-9 grid grid-flow-col auto-cols-max md:auto-cols-min flex items-center flex-row gap-0 overflow-auto'>
+            </button>
+            <div id="scrollCats" className='col-span-9 grid grid-flow-col auto-cols-max md:auto-cols-min flex items-center flex-row gap-0 overflow-x-auto scrollbar-hide '>
 
                 <Scrollspy
-                    className="scrollspy grid grid-flow-col auto-cols-max md:auto-cols-min flex flex-row gap-1 overflow-auto pl-2 pt-2 pb-1"
+                    className="scrollspy grid grid-flow-col auto-cols-max md:auto-cols-min flex flex-row gap-1  pl-2 pt-2 pb-1"
                     items={sections}
                     currentClassName="pseudoActiveElement"
                     onUpdate={() => { scrollToButton() }}
@@ -55,7 +63,9 @@ export const ScrollCats: React.FunctionComponent<PropTypes> = (props: PropTypes)
                     {categories}
                 </Scrollspy>
             </div>
+            
         </header>
+      
     )
 
 }
