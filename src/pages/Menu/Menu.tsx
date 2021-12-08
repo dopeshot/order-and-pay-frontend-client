@@ -31,8 +31,7 @@ export const Menu: React.FunctionComponent = () => {
                     <div id="menuComponent" className="flex-auto pb-96" ><MenuComponent ref={MenuRef} /></div>
                 </div>
             </div>
-
-            <footer onClick={() => { }} className="flex-grow fixed bottom-0 w-full menuButton bg-red bg-cover h-16 shadow-category "> <OrderButton /></footer>
+            <OrderButton />
         </>
     )
 }

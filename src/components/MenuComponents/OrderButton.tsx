@@ -5,10 +5,12 @@ export const OrderButton: React.FunctionComponent = () => {
     const totalPrice = '5,60€'
 
     return (
-        <button id="orderButton" className="container h-full flex justify-around items-center text-white font-bold">
-            <p className="rounded-full w-7 h-7 bg-white text-red" style={{lineHeight: '1.6rem'}}>{itemsCount}</p>
-            <p>Warenkorb anzeigen</p>
-            <p>{totalPrice}</p>
-        </button>
+        <footer className="fixed bottom-0 w-full h-16 bg-red shadow-category ">
+            <button id="orderButton" className="container h-full flex justify-around items-center text-white font-bold">
+                <p className="rounded-full w-7 h-7 bg-white text-red" style={{ lineHeight: '1.6rem' }}>{itemsCount}</p>
+                <p>Warenkorb anzeigen</p>
+                <p>{totalPrice}</p>
+            </button>
+        </footer>
     )
 }
