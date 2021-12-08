@@ -1,11 +1,18 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Head } from '../../components/MenuComponents/Head';
 import MenuComponent from '../../components/MenuComponents/MenuComponent';
 import { OrderButton } from '../../components/MenuComponents/OrderButton';
 import { ScrollCats } from '../../components/MenuComponents/ScrollCats';
 import { useScrollToNav } from '../../hooks/useScroll';
+import { useActions } from '../../overmind';
 
 export const Menu: React.FunctionComponent = () => {
+    const { loadMenu } = useActions().menu
+
+    // MC: Maybe put this inside MenuComponent completely? 
+    useEffect(() => {
+      loadMenu()
+    }, [loadMenu])
 
     const [containerRef, shouldDisplayCategoryNavbar] = useScrollToNav({
         root: null,
