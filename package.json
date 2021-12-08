@@ -10,6 +10,7 @@
         "@fortawesome/free-regular-svg-icons": "^5.15.4",
         "@fortawesome/free-solid-svg-icons": "^5.15.4",
         "@fortawesome/react-fontawesome": "^0.1.16",
+        "@makotot/ghostui": "^2.0.0",
         "@testing-library/jest-dom": "^5.14.1",
         "@testing-library/react": "^11.2.7",
         "@testing-library/user-event": "^12.8.3",
@@ -18,7 +19,6 @@
         "@types/react": "^17.0.33",
         "@types/react-dom": "^17.0.10",
         "@types/react-router-hash-link": "^2.4.4",
-        "jquery": "^3.6.0",
         "overmind": "^28.0.1",
         "overmind-react": "^29.0.1",
         "react": "^17.0.2",
@@ -26,9 +26,6 @@
         "react-router-dom": "^5.3.0",
         "react-router-hash-link": "^2.4.3",
         "react-scripts": "4.0.3",
-        "react-scroll": "^1.8.4",
-        "react-scrolling-nav": "^1.1.5",
-        "react-scrollspy": "^3.4.3",
         "tailwind-scrollbar-hide": "^1.1.6",
         "typescript": "^4.4.4",
         "web-vitals": "^1.1.2"
@@ -62,10 +59,7 @@
         ]
     },
     "devDependencies": {
-        "@types/jquery": "^3.5.9",
         "@types/react-router-dom": "^5.3.2",
-        "@types/react-scroll": "^1.8.3",
-        "@types/react-scrollspy": "^3.3.5",
         "autoprefixer": "^9.8.8",
         "cypress": "^9.0.0",
         "json-server": "^0.17.0",

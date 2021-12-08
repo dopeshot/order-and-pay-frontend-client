@@ -1,12 +1,12 @@
 import { Config } from "../../config.global";
 import { Dish } from "./state";
-import { Menu } from "./state"
+import { MenuType } from "./state"
 
 export const backend = {
 
     //Fetch current Menu
     //TODO: placeholder ersetzen
-    getCurrentMenu: async (): Promise<Menu> => {
+    getCurrentMenu: async (): Promise<MenuType> => {
         const response = await fetch(`${Config.api.baseApiUrl}/menu/current`)
         return await response.json()
     },

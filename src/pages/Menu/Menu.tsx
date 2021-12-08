@@ -1,41 +1,57 @@
-import React, { useEffect, useRef } from 'react';
+import React, { createRef, useRef } from 'react';
 import { Head } from '../../components/MenuComponents/Head';
-import MenuComponent from '../../components/MenuComponents/MenuComponent';
+import { MenuComponent } from '../../components/MenuComponents/MenuComponent';
 import { OrderButton } from '../../components/MenuComponents/OrderButton';
 import { ScrollCats } from '../../components/MenuComponents/ScrollCats';
 import { useScrollToNav } from '../../hooks/useScroll';
-import { useActions } from '../../overmind';
+import { MenuType } from '../../overmind/menu/state';
 
-export const Menu: React.FunctionComponent = () => {
-    const { loadMenu } = useActions().menu
-
-    // MC: Maybe put this inside MenuComponent completely? 
-    useEffect(() => {
-      loadMenu()
-    }, [loadMenu])
+export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
 
     const [containerRef, shouldDisplayCategoryNavbar] = useScrollToNav({
         root: null,
-        rootMargin: "0px"
+        rootMargin: "-50px"
     })
 
-    const MenuRef = useRef<typeof MenuComponent>(null)
+    const sectionRefs = useRef<React.RefObject<HTMLDivElement>[]>(menu.categories.map(() => createRef()))
+    
+    // MC: scrollToButton is not implemented yet. 
+    // eslint-disable-next-line 
+    const scrollToButton = async () => {
+        const activeElements = document.querySelector(".pseudoActiveElement")
+        const header = document.querySelector('#scrollCats')
+        const scrollSpy = document.querySelector('.scrollspy')
 
-    const scroll = (index: number) => {
-        //@ts-ignore
-        MenuRef!.current!.handleClick(index)
+        if (activeElements && header && scrollSpy)
+            header.scrollTo({
+                left: activeElements.getBoundingClientRect().left - scrollSpy.getBoundingClientRect().left - 4,
+                behavior: 'smooth',
+            })
+    }
 
+    const scrollToRef = (index: number) => {
+        const categoryTop = sectionRefs.current[index].current!.getBoundingClientRect().top
+        const menuComponentTop = document.querySelector("#menuComponent")!.getBoundingClientRect().top // MC: use reference here? 
+        const offset = 250
 
+        window.scrollTo({
+            top: categoryTop - menuComponentTop + offset,
+            behavior: 'smooth',
+        })
     }
 
     return (
         <>
             <div id="page" className="container w-full flex grid grid-rows-7 grid-cols-1 border-solid table-auto">
-                <div className={`fixed top-0 w-full bg-white transition-opacity duration-200 ${shouldDisplayCategoryNavbar ? ``: `opacity-0`} `}><ScrollCats scrollFC={scroll} /></div>
+                <ScrollCats sectionRefs={sectionRefs} shouldDisplayCategoryNavbar={shouldDisplayCategoryNavbar} scrollToRef={scrollToRef} />
                 <div className="w-full">
                     {/*@ts-ignore*/}
-                    <div ref={containerRef} ><Head scrollFC={scroll} /></div>
-                    <div id="menuComponent" className="flex-auto pb-96" ><MenuComponent ref={MenuRef} /></div>
+                    <div ref={containerRef} >
+                        <Head scrollToRef={scrollToRef} />
+                    </div>
+                    <div id="menuComponent" className="flex-auto pb-96" >
+                        <MenuComponent sectionRefs={sectionRefs} />
+                    </div>
                 </div>
             </div>
             <OrderButton />

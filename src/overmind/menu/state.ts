@@ -26,7 +26,7 @@ export type Category = {
 }
 //Full menu
 //TODO: Complete Menu Object
-export type Menu = {
+export type MenuType = {
     name: string,
     colorscheme: number,
     dishes: Dish[],
@@ -36,7 +36,7 @@ export type Menu = {
 export type State = {
     isLoadingDishes: boolean,
     isLoadingMenu: boolean,
-    menu: Menu
+    menu: MenuType
     
 }
 
