@@ -16,10 +16,10 @@ export const ShowAll: React.FunctionComponent = () => {
                 <FontAwesomeIcon icon="hamburger" />
             </div>
             <div className="col-span-4">
-                <p className="text-lg font-sofia font-semibold">
+                <p className="text-lg font-semibold">
                     {category.name}
                 </p>
-                <p className="text-sm font-sofia font-thin whitespace-nowrap overflow-hidden overflow-ellipsis">
+                <p className="text-sm font-thin whitespace-nowrap overflow-hidden overflow-ellipsis">
                     {category.description}
                 </p>
             </div>
@@ -41,7 +41,7 @@ export const ShowAll: React.FunctionComponent = () => {
                 </button>
             </div>
             <div className="pb-5 row-start-2 row-span-1">
-                <h1 className="text-4xl pl-4 font-sofia font-bold " >Kategorien</h1>
+                <h1 className="text-4xl pl-4 font-bold " >Kategorien</h1>
             </div>
             </div>
             

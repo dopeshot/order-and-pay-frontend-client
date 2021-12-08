@@ -12,7 +12,7 @@ export const Categories: React.FunctionComponent<PropTypes> = (props: PropTypes)
     const state = useAppState().menu
 
     const categories = state.menu.categories.map((category, index) =>
-        <button key={category._id + "_button" + index} id={"categoryButton_" + index} className="text-red font-sofia font-bold text-center m-1 h-16 w-20 shadow-md rounded-md overflow-hidden text-xs b-2 activeElement" onClick={() => props.scrollFC(index)} >
+        <button key={category._id + "_button" + index} id={"categoryButton_" + index} className="text-red font-bold text-center m-1 h-16 w-20 shadow-md rounded-md overflow-hidden text-xs b-2 activeElement" onClick={() => props.scrollFC(index)} >
             <div className="text-2xl ">
                 <FontAwesomeIcon icon="hamburger" />
             </div>

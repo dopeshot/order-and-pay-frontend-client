@@ -3,6 +3,13 @@ module.exports = {
   // MC: In production purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    container: {
+      center: true,
+      screens: {
+        sm: '640px',
+        md: '768px'
+      }
+    },
     fontFamily: {
       'sofia': ['sofia-pro']
     },

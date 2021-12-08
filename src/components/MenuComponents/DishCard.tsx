@@ -15,15 +15,15 @@ export const DishCard: React.FunctionComponent<DishProps> = ({ dish }) => {
         <div className="grid grid-cols-5 gap-2" id="dishCard">
             <div className="col-span-3">
                 {/* Name of the dish */}
-                <p className="text-lg font-sofia font-bold">
+                <p className="text-lg font-bold">
                     {dish.name}
                 </p>
                 {/* Dishcription TODO: Platzhalter austauschen */}
-                <p className="text-xs font-sofia text-grey">
+                <p className="text-xs text-grey">
                     {dish.description}
                 </p>
                 {/* Price of the dish */}
-                <p className="grid grid-cols-2 gap-1 text-base font-sofia font-bold text-red">
+                <p className="grid grid-cols-2 gap-1 text-base font-bold text-red">
                     {priceToLocal(dish.price)}
                 </p>
             </div>

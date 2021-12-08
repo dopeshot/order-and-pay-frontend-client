@@ -1,13 +1,13 @@
 export const OrderButton: React.FunctionComponent = () => {
 
     return (
-        <button id="orderButton" className="menuButton bg-red bg-cover text-white h-16 grid grid-cols-5 flex items-center shadow-category w-full">
+        <button id="orderButton" className=" container h-full flex justify-around items-center text-white">
             <div className="flex justify-center">
-                <p className="cols-span-1 text-red bg-white rounded-full pb-1 font-sofia font-bold w-7 h-7 flex items-center justify-center text-center">2</p>
+                <p className="cols-span-1 text-red bg-white rounded-full pb-1 font-bold w-7 h-7 flex items-center justify-center text-center">2</p>
             </div>
-            <p className="col-start-2 col-span-3 font-sofia font-bold">Warenkorb anzeigen</p>
+            <p className="col-start-2 col-span-3 font-bold">Warenkorb anzeigen</p>
             <div className="flex justify-center">
-                <p className="text-right font-sofia font-bold cols-span-1">5,60 €</p>
+                <p className="text-right  font-bold cols-span-1">5,60 €</p>
             </div>
         </button>
 

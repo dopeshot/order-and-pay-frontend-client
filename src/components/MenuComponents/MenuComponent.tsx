@@ -35,7 +35,7 @@ const MenuComponentFC: React.FC<any> = ((props, ref) => {
                     {category.name}
                 </p>
                 {/* Description of category */}
-                <p className="text-xs font-sofia text-description-grey "  >
+                <p className="text-xs text-description-grey "  >
                     {category.description}
                 </p>
             </div >

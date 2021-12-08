@@ -23,8 +23,8 @@ export const Menu: React.FunctionComponent = () => {
     }
 
     return (
-
-        <div id="page" className="w-full flex grid grid-rows-7 grid-cols-1 border-solid table-auto">
+<>
+        <div id="page" className="container w-full flex grid grid-rows-7 grid-cols-1 border-solid table-auto">
            
             <Transition show={!isVisible}
                 enter="transition ease-out duration-1"
@@ -42,9 +42,10 @@ export const Menu: React.FunctionComponent = () => {
                 <div id="menuComponent" className="flex-auto pb-96" ><MenuComponent ref={MenuRef} /></div>
             </div>
 
-            <footer onClick={() => { }} className="flex-grow fixed bottom-0 w-full"><OrderButton /></footer>
-
         </div>
+        
+            <footer onClick={() => { }} className="flex-grow fixed bottom-0 w-full menuButton bg-red bg-cover h-16 shadow-category "> <OrderButton /></footer>
+        </>
     )
 }
 

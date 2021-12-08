@@ -15,7 +15,7 @@ export const Searchbar: React.FunctionComponent = () => {
         <FontAwesomeIcon icon="search" />
       </button>
       {/* Searchbar object */}
-      <input id="searchbar" className="w-full bg-light-grey  font-sofia text-sm text-grey focus:outline-none " placeholder="Search..."></input>
+      <input id="searchbar" className="w-full bg-light-grey text-sm text-grey focus:outline-none " placeholder="Search..."></input>
     </div>
 
   )
