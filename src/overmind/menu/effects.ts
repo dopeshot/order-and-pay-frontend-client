@@ -1,19 +1,5 @@
-import { Config } from "../../config.global";
-import { Dish } from "./state";
-import { MenuType } from "./state"
+import { request } from "../../services/axios";
+import { Dish, MenuType } from "./state";
 
-export const backend = {
-
-    //Fetch current Menu
-    //TODO: placeholder ersetzen
-    getCurrentMenu: async (): Promise<MenuType> => {
-        const response = await fetch(`${Config.api.baseApiUrl}/menu/current`)
-        return await response.json()
-    },
-    //Fetch individual dish by ID
-    //TODO: placeholder ersetzen
-    getDishById: async (id: string): Promise<Dish> => {
-        const response = await fetch(`${Config.api.baseApiUrl}/dish/${id}`)
-        return await response.json()
-    }
-}
+export const getMenu = () => request.get<MenuType>('/menu/current')
+export const getDish = (id: string) => request.get<Dish>(`/dishes/${id}`)

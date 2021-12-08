@@ -1,34 +1,30 @@
-
-
-//Single Menu Item
-
-//TODO: Complete Dish Object
-export type Dish = {
-    labels: string[],
-    allergens: string[],
+export type Menu = {
     name: string,
-    description: string,
-    category: string,
-    price: number,
-    _id: number
-    
+    dishes: Dish[],
+    categories: Category[]
 }
 
-//Category
-//TODO: Change Types?
-export type Category = {
+export type Dish = {
     _id: string,
     name: string,
     description: string,
-    dishesIndex: number[],
-    index: number
-    
+    labels: string[],
+    allergens: string[],
+    category: string,
+    price: number
+}
+
+export type Category = {
+    _id: string,
+    name: string,
+    index: number,
+    description: string,
+    dishesIndex: number[],    
 }
 //Full menu
 //TODO: Complete Menu Object
 export type MenuType = {
     name: string,
-    colorscheme: number,
     dishes: Dish[],
     categories: Category[]
 }
@@ -37,18 +33,14 @@ export type State = {
     isLoadingDishes: boolean,
     isLoadingMenu: boolean,
     menu: MenuType
-    
 }
-
 
 export const state: State = {
     isLoadingDishes: false,
     isLoadingMenu: false,
-    menu: { name: "",
-            colorscheme:1,
-            dishes:[],
-            categories:[] }
-   
-    
-    
+    menu: {
+        name: "",
+        dishes: [],
+        categories: []
+    }
 }
