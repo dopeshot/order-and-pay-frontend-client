@@ -10,7 +10,7 @@ export const ShowAll: React.FunctionComponent = () => {
 
     const categories = state.menu.categories.map((category, index) => (
 
-        <HashLink key={category._id + "_showAll"} id={"hashLink_" + index} to={`/menu#${category._id}`} className=" grid grid-cols-6 row-span-1 block p-3 rounded-lg text-white bg-cover bg-gray-400 bg-blend-multiply bg-left shadow-whiteBox" style={{ backgroundImage: "url(https://www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg)" }}>
+        <HashLink key={category._id + "_showAll"} id={"hashLink_" + index} to={`/menu#${'section-' +(index +1 )}`} className=" grid grid-cols-6 row-span-1 block p-3 rounded-lg text-white bg-cover bg-gray-400 bg-blend-multiply bg-left shadow-whiteBox" style={{ backgroundImage: "url(https://www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg)" }}>
 
             <div className="col-span-1 flex items-center justify-center pr-2 text-2xl">
                 <FontAwesomeIcon icon="hamburger" />

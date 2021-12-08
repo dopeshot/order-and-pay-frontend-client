@@ -40,7 +40,7 @@ const MenuComponentFC: React.FC<any> = ((props, ref) => {
                 </p>
             </div >
             {/* Dishes of current category */}
-            <div className="px-5 divide-y divide-grey-400">
+            <div className="px-5 divide-y divide-dividergrey ">
             {dishIndexMap(category)}
             </div>
         </div>
