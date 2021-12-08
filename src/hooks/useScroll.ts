@@ -24,5 +24,5 @@ export const useScrollToNav = (options: any) => {
 		}
 	}, [scrollRef, options])
 
-	return [scrollRef, isVisible]
+	return [scrollRef, !isVisible]
 }
