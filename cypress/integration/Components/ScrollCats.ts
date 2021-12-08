@@ -19,4 +19,6 @@ describe("MenuComponent", () => {
         cy.scrollTo(0,1000)
         cy.get("#categoryScroll_4").should("have.class", "pseudoActiveElement")
     })
-});
+})
+
+export {}

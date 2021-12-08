@@ -14,4 +14,6 @@ describe("MenuComponent", () => {
         cy.contains("Alcohol").should("be.visible")
         cy.get("#scrollCats").should("be.visible")
     })
-});
+})
+
+export {}

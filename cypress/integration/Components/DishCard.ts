@@ -13,4 +13,6 @@ describe("DishCard", () => {
         cy.get("#0_dishCard_Id").contains("soda")
         cy.get("#0_dishCard_Id").contains("1,50 €")
     })
-});
+})
+
+export {}

@@ -21,3 +21,5 @@ describe("Category Buttons", () => {
         })
     })
 });
+
+export {}
