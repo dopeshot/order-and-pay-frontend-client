@@ -24,7 +24,7 @@ export const Menu: React.FunctionComponent = () => {
     return (
         <>
             <div id="page" className="container w-full flex grid grid-rows-7 grid-cols-1 border-solid table-auto">
-                <div className={`fixed top-0 bg-white transition-opacity duration-200 ${shouldDisplayCategoryNavbar ? ``: `opacity-0`} `}><ScrollCats scrollFC={scroll} /></div>
+                <div className={`fixed top-0 w-full bg-white transition-opacity duration-200 ${shouldDisplayCategoryNavbar ? ``: `opacity-0`} `}><ScrollCats scrollFC={scroll} /></div>
                 <div className="w-full">
                     {/*@ts-ignore*/}
                     <div ref={containerRef} ><Head scrollFC={scroll} /></div>
