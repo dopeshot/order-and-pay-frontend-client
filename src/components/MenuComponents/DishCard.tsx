@@ -28,7 +28,7 @@ export const DishCard: React.FunctionComponent<DishProps> = ({ dish }) => {
                 </p>
             </div>
             {/* Image of the dish */}
-            <img alt={dish.name} className="col-span-1 h-full w-full object-cover rounded-lg" src="https://www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg"></img>
+            <img alt={dish.name} className="col-span-1 h-16 w-full object-cover rounded-lg" src="https://www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg"></img>
             {/* More info button */}
             <div className="pr-1 flex justify-center items-center">
                 <button className="rounded-lg h-7 w-7 bg-red text-white font-bold flex justify-center items-center text-xs">
