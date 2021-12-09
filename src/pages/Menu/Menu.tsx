@@ -1,5 +1,4 @@
 import React, { createRef, useRef } from 'react';
-import { createNoSubstitutionTemplateLiteral } from 'typescript';
 import { Head } from '../../components/MenuComponents/Head';
 import { MenuComponent } from '../../components/MenuComponents/MenuComponent';
 import { OrderButton } from '../../components/MenuComponents/OrderButton';
