@@ -13,5 +13,4 @@ export const Searchbar: React.FunctionComponent = () => {
       <input id="searchbar" className="w-full bg-transparent text-sm text-grey focus:outline-none " placeholder="Search..."></input>
     </div>
   )
-
 }
