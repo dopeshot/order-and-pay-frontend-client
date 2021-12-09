@@ -22,6 +22,7 @@
   },
   "scripts": {
     "start": "craco start",
+    "start:prod": "craco start",
     "build": "craco build",
     "test": "craco test --watchAll=false",
     "test:watch": "craco test --watchAll=true",
