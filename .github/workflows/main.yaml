@@ -20,6 +20,6 @@ jobs:
           ENV_VALUES: ${{secrets.PIPELINE_DOCKER_ENV}}
       
       # run unit tests with docker container 
-      - name: docker-e2e
-        run: docker-compose -f docker-compose.test.yaml up --exit-code-from oap-frontend-client-test
+      #- name: docker-e2e
+      #  run: docker-compose -f docker-compose.test.yaml up --exit-code-from oap-frontend-client-test
     
