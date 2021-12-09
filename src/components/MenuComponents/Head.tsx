@@ -19,7 +19,7 @@ export const Head: React.FunctionComponent<PropTypes> = ({ scrollToRef }: PropTy
                     <FontAwesomeIcon icon="bars" />
                 </button>
             </div>
-            <div id="searchbar" className="pt-4 mx-1 row-span-1 flex justify-center"><Searchbar /></div>
+            <Searchbar />
             <div className="grid grid-cols-2">
                 <h2 className="font-bold pt-4 text-2xl pl-2 ">Kategorien</h2>
                 <Link id="showAll" to="/categories" className="text-red font-bold pt-7 text-sm text-right pr-5 ">Alle Anzeigen</Link>
