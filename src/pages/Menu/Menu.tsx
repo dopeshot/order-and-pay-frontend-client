@@ -15,23 +15,19 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
     })
 
     const sectionRefs = useRef<React.RefObject<HTMLDivElement>[]>(menu.categories.map(() => createRef()))
-    
-    // MC: scrollToButton is not implemented yet. 
-    // eslint-disable-next-line 
-    const scrollToButton = async () => {
-        const activeElements = document.querySelector(".pseudoActiveElement")
-        const header = document.querySelector('#scrollCats')
+
+    const scrollToButton = async (index: number) => {
+        // MC: Maybe use refs here? instead of selection via dom
+        const activeElements = document.getElementById(`categoryScroll_${index}`)
+        const header = document.getElementById('scrollCats')
         const scrollSpy = document.querySelector('.scrollspy')
 
-      
-
-        
         if (activeElements && header && scrollSpy)
             header.scrollTo({
                 left: activeElements.getBoundingClientRect().left - scrollSpy.getBoundingClientRect().left - 4,
                 behavior: 'smooth',
             })
-        
+
     }
 
     const scrollToRef = (index: number) => {
