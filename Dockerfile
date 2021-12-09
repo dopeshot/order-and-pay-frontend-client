@@ -13,3 +13,7 @@ RUN npm install
 
 #copy source
 COPY . .
+
+FROM full as depl
+
+CMD ["npm", "run" ,"start:prod"]
