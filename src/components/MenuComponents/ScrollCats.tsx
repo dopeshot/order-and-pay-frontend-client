@@ -15,6 +15,8 @@ export const ScrollCats: React.FunctionComponent<PropTypes> = ({sectionRefs, sho
     const { menu } = useAppState().menu
 
     let prevStatuses: boolean[] = []
+    let prevElement : HTMLElement | null = null
+    let currentElement : HTMLElement
 
     return (
         <div className={`fixed top-0 w-full bg-white transition-opacity duration-200 ${shouldDisplayCategoryNavbar ? `` : `opacity-0`} `}>
@@ -25,10 +27,16 @@ export const ScrollCats: React.FunctionComponent<PropTypes> = ({sectionRefs, sho
                 <div id="scrollCats" className='col-span-9 grid grid-flow-col auto-cols-max md:auto-cols-min flex items-center flex-row gap-0 overflow-x-auto scrollbar-hide '>
                     {sectionRefs.current.length > 0 && <Scrollspy offset={-60} sectionRefs={sectionRefs.current}>
                         {({ currentElementIndexInViewport, elementsStatusInViewport }) => {
-                            if(!equalArray(elementsStatusInViewport, prevStatuses)) {
+                            if(document.querySelector('.pseudoActiveElement') != null){
+                               currentElement = document.querySelector('.pseudoActiveElement')!
+                                console.log(currentElement)
+                            
+                            if( currentElement != prevElement) {
                                 scrollToButton()
-                                prevStatuses = elementsStatusInViewport
+                                
+                                prevElement = currentElement
                             }
+                        }
                                 
                             return <ul className="scrollspy grid grid-flow-col auto-cols-max md:auto-cols-min flex flex-row gap-1  pl-2 pt-2 pb-1">{
                                 menu.categories.map((category, index) => (

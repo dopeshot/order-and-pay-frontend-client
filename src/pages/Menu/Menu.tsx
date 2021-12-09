@@ -1,4 +1,5 @@
 import React, { createRef, useRef } from 'react';
+import { createNoSubstitutionTemplateLiteral } from 'typescript';
 import { Head } from '../../components/MenuComponents/Head';
 import { MenuComponent } from '../../components/MenuComponents/MenuComponent';
 import { OrderButton } from '../../components/MenuComponents/OrderButton';
@@ -22,11 +23,15 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
         const header = document.querySelector('#scrollCats')
         const scrollSpy = document.querySelector('.scrollspy')
 
+      
+
+        
         if (activeElements && header && scrollSpy)
             header.scrollTo({
                 left: activeElements.getBoundingClientRect().left - scrollSpy.getBoundingClientRect().left - 4,
                 behavior: 'smooth',
             })
+        
     }
 
     const scrollToRef = (index: number) => {
