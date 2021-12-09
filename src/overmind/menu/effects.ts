@@ -1,6 +1,5 @@
 import { request } from "../../services/axios";
-import { Dish, Menu } from "./state";
+import { Dish, MenuType } from "./state";
 
-export const getMenu = () => request.get<Menu>('/menu/current')
-
+export const getMenu = () => request.get<MenuType>('/menu/current')
 export const getDish = (id: string) => request.get<Dish>(`/dishes/${id}`)

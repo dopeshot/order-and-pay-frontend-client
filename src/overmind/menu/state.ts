@@ -19,13 +19,20 @@ export type Category = {
     name: string,
     index: number,
     description: string,
-    dishesIndex: number[]
+    dishesIndex: number[],    
+}
+//Full menu
+//TODO: Complete Menu Object
+export type MenuType = {
+    name: string,
+    dishes: Dish[],
+    categories: Category[]
 }
 
 export type State = {
     isLoadingDishes: boolean,
     isLoadingMenu: boolean,
-    menu: Menu
+    menu: MenuType
 }
 
 export const state: State = {
