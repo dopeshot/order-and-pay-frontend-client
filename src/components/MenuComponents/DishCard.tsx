@@ -12,29 +12,27 @@ type DishProps = {
 export const DishCard: React.FunctionComponent<DishProps> = ({ dish }) => {
 
     return (
-        <div className="grid grid-cols-5 gap-2" id="dishCard">
-            <div className="col-span-3">
+        <div className="flex gap-2 justify-center items-center" id="dishCard">
+            <div className="self-start flex-2/4">
                 {/* Name of the dish */}
                 <p className="text-lg font-bold">
                     {dish.name}
                 </p>
                 {/* Dishcription TODO: Platzhalter austauschen */}
-                <p className="text-xs text-grey">
+                <p className="self-start text-xs text-grey">
                     {dish.description}
                 </p>
                 {/* Price of the dish */}
-                <p className="grid grid-cols-2 gap-1 text-base font-bold text-red">
+                <p className="self-start gap-1 text-base font-bold text-red">
                     {priceToLocal(dish.price)}
                 </p>
             </div>
             {/* Image of the dish */}
-            <img alt={dish.name} className="col-span-1 h-16 w-full object-cover rounded-lg" src="https://www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg"></img>
+            <img alt={dish.name} className="self-center h-16 object-cover rounded-lg" src="https://www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg"></img>
             {/* More info button */}
-            <div className="pr-1 flex justify-center items-center">
-                <button className="rounded-lg h-7 w-7 bg-red text-white font-bold flex justify-center items-center text-xs">
-                    <FontAwesomeIcon icon="plus" />
-                </button>
-            </div>
+            <button className="rounded-lg h-7 w-7 bg-red text-white font-bold text-xs">
+                <FontAwesomeIcon icon="plus" />
+            </button>
 
         </div>
     )

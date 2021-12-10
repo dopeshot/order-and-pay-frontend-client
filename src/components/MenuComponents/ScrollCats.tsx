@@ -17,11 +17,11 @@ export const ScrollCats: React.FunctionComponent<PropTypes> = ({ sectionRefs, sh
     let prevStatuses: boolean[] = []
 
     return (
-        <header className={`flex fixed top-0 w-full bg-white transition-opacity duration-200 ${shouldDisplayCategoryNavbar ? `` : `opacity-0`} `}>
-            <button className="text-xl text-grey font-light" onClick={() => console.log("Searchicon clicked")} >
+        <div className={`flex top-0 fixed top-0 bg-white transition-opacity duration-200 content-center w-full ${shouldDisplayCategoryNavbar ? `` : `opacity-0`} `}>
+            <button className="text-xl text-grey font-light pl-4 pr-4" onClick={() => console.log("Searchicon clicked")} >
                 <FontAwesomeIcon icon="search" />
             </button>
-            <div id="scrollCats" className='gap-0 overflow-x-auto scrollbar-hide'>
+            <div id="scrollCats" className='flex gap-0 scrollbar-hide overflow-x-auto'>
                 {sectionRefs.current.length > 0 && <Scrollspy offset={-60} sectionRefs={sectionRefs.current}>
                     {({ currentElementIndexInViewport, elementsStatusInViewport }) => {
                         if (!equalArray(elementsStatusInViewport, prevStatuses)) {
@@ -29,9 +29,9 @@ export const ScrollCats: React.FunctionComponent<PropTypes> = ({ sectionRefs, sh
                             scrollToButton(currentElementIndexInViewport)
                         }
 
-                        return <ul className="scrollspy flex flex-row gap-1 min-w-min pl-2 pt-2 pb-1">{
+                        return <ul className="scrollspy flex gap-1 pl-2 pt-2 pb-1">{
                             menu.categories.map((category, index) => (
-                                <button onClick={() => scrollToRef(index)} key={category._id + "_scrollButton" + index} id={"categoryScroll_" + index} className={`font-sofia font-bold text-center m-1 h-8 min-w-min shadow-md rounded-md text-xs b-2 transition-colors duration-300 ${currentElementIndexInViewport === index ? `bg-red text-white pseudoActiveElement` : `text-red`}`} >
+                                <button onClick={() => scrollToRef(index)} key={category._id + "_scrollButton" + index} id={"categoryScroll_" + index} className={`font-sofia font-bold text-center m-1 min-h-min h-8 shadow-md rounded-md text-xs b-2 w-20 min-w-min transition-colors duration-300 ${currentElementIndexInViewport === index ? `bg-red text-white pseudoActiveElement` : `text-red`}`} >
                                     {category.name}
                                 </button>
                             ))}
@@ -39,6 +39,6 @@ export const ScrollCats: React.FunctionComponent<PropTypes> = ({ sectionRefs, sh
                     }}
                 </Scrollspy>}
             </div>
-        </header>
+        </div>
     )
 }

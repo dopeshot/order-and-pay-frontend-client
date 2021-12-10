@@ -43,7 +43,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
     return (
         <>
             <ScrollCats sectionRefs={sectionRefs} scrollToButton={scrollToButton} shouldDisplayCategoryNavbar={shouldDisplayCategoryNavbar} scrollToRef={scrollToRef} />
-            <div id="page" className="container w-full border-solid">
+            <div id="page" className="container w-full border-solid h-screen">
 
                 <div className="w-full">
                     {/*@ts-ignore*/}
