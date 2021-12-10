@@ -42,12 +42,12 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
 
     return (
         <>
+        <ScrollCats sectionRefs={sectionRefs} scrollToButton={scrollToButton} shouldDisplayCategoryNavbar={shouldDisplayCategoryNavbar} scrollToRef={scrollToRef} />
             <div id="page" className="container w-full flex grid grid-rows-7 grid-cols-1 border-solid table-auto">
-                <ScrollCats sectionRefs={sectionRefs} scrollToButton={scrollToButton} shouldDisplayCategoryNavbar={shouldDisplayCategoryNavbar} scrollToRef={scrollToRef} />
+                
                 <div className="w-full">
                     {/*@ts-ignore*/}
-                    <div ref={containerRef} >
-                        <Head scrollToRef={scrollToRef} />
+                    <div ref={containerRef} ><Head scrollToRef={scrollToRef} />
                     </div>
                     <div id="menuComponent" className="flex-auto pb-96" >
                         <MenuComponent sectionRefs={sectionRefs} />
