@@ -5,7 +5,7 @@ export const Navigation: React.FunctionComponent = () => {
         <div className="">
             <ul className="flex justify-around">
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/menu">Menu</Link>
                 </li>
                 <li>
                     <Link to="/example">Example</Link>

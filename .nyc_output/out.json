@@ -1,0 +1,3872 @@
+{
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\example\\state.ts": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\example\\state.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 11,
+          "column": 28
+        },
+        "end": {
+          "line": 14,
+          "column": 1
+        }
+      }
+    },
+    "fnMap": {},
+    "branchMap": {},
+    "s": {
+      "0": 14
+    },
+    "f": {},
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "010b8b9ef79a767ec983f0d0605c4727e57f0359"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\example\\actions.ts": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\example\\actions.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 3,
+          "column": 26
+        },
+        "end": {
+          "line": 7,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 4,
+          "column": 4
+        },
+        "end": {
+          "line": 4,
+          "column": 39
+        }
+      },
+      "2": {
+        "start": {
+          "line": 5,
+          "column": 4
+        },
+        "end": {
+          "line": 5,
+          "column": 74
+        }
+      },
+      "3": {
+        "start": {
+          "line": 6,
+          "column": 4
+        },
+        "end": {
+          "line": 6,
+          "column": 40
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 3,
+            "column": 26
+          },
+          "end": {
+            "line": 3,
+            "column": 27
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 65
+          },
+          "end": {
+            "line": 7,
+            "column": 1
+          }
+        },
+        "line": 3
+      }
+    },
+    "branchMap": {},
+    "s": {
+      "0": 14,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    "f": {
+      "0": 0
+    },
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "5dab2987afaff21c73729fdbed54b4612b52870d"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\example\\effects.ts": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\example\\effects.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 3,
+          "column": 31
+        },
+        "end": {
+          "line": 12,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 5,
+          "column": 25
+        },
+        "end": {
+          "line": 5,
+          "column": 82
+        }
+      },
+      "2": {
+        "start": {
+          "line": 6,
+          "column": 8
+        },
+        "end": {
+          "line": 6,
+          "column": 36
+        }
+      },
+      "3": {
+        "start": {
+          "line": 9,
+          "column": 25
+        },
+        "end": {
+          "line": 9,
+          "column": 88
+        }
+      },
+      "4": {
+        "start": {
+          "line": 10,
+          "column": 8
+        },
+        "end": {
+          "line": 10,
+          "column": 36
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 4,
+            "column": 14
+          },
+          "end": {
+            "line": 4,
+            "column": 15
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 43
+          },
+          "end": {
+            "line": 7,
+            "column": 5
+          }
+        },
+        "line": 4
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 8,
+            "column": 13
+          },
+          "end": {
+            "line": 8,
+            "column": 14
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 8,
+            "column": 50
+          },
+          "end": {
+            "line": 11,
+            "column": 5
+          }
+        },
+        "line": 8
+      }
+    },
+    "branchMap": {},
+    "s": {
+      "0": 14,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    "f": {
+      "0": 0,
+      "1": 0
+    },
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "3900f3538af0ab19321674d74bb10b55a0d65465"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\example\\index.ts": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\example\\index.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "87bffdf3dd72b4cf9741d15b729850eefbb17e92"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\menu\\state.ts": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\menu\\state.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 38,
+          "column": 28
+        },
+        "end": {
+          "line": 46,
+          "column": 1
+        }
+      }
+    },
+    "fnMap": {},
+    "branchMap": {},
+    "s": {
+      "0": 14
+    },
+    "f": {},
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "fe046788a92153eb31984e089988ad3b6bd3dc9f"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\menu\\actions.ts": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\menu\\actions.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 3,
+          "column": 24
+        },
+        "end": {
+          "line": 29,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 4,
+          "column": 4
+        },
+        "end": {
+          "line": 4,
+          "column": 35
+        }
+      },
+      "2": {
+        "start": {
+          "line": 6,
+          "column": 4
+        },
+        "end": {
+          "line": 26,
+          "column": 5
+        }
+      },
+      "3": {
+        "start": {
+          "line": 7,
+          "column": 25
+        },
+        "end": {
+          "line": 7,
+          "column": 53
+        }
+      },
+      "4": {
+        "start": {
+          "line": 8,
+          "column": 8
+        },
+        "end": {
+          "line": 8,
+          "column": 39
+        }
+      },
+      "5": {
+        "start": {
+          "line": 14,
+          "column": 8
+        },
+        "end": {
+          "line": 23,
+          "column": 11
+        }
+      },
+      "6": {
+        "start": {
+          "line": 15,
+          "column": 47
+        },
+        "end": {
+          "line": 15,
+          "column": 49
+        }
+      },
+      "7": {
+        "start": {
+          "line": 16,
+          "column": 12
+        },
+        "end": {
+          "line": 20,
+          "column": 15
+        }
+      },
+      "8": {
+        "start": {
+          "line": 17,
+          "column": 16
+        },
+        "end": {
+          "line": 19,
+          "column": 17
+        }
+      },
+      "9": {
+        "start": {
+          "line": 18,
+          "column": 20
+        },
+        "end": {
+          "line": 18,
+          "column": 48
+        }
+      },
+      "10": {
+        "start": {
+          "line": 21,
+          "column": 12
+        },
+        "end": {
+          "line": 21,
+          "column": 51
+        }
+      },
+      "11": {
+        "start": {
+          "line": 22,
+          "column": 12
+        },
+        "end": {
+          "line": 22,
+          "column": 34
+        }
+      },
+      "12": {
+        "start": {
+          "line": 25,
+          "column": 8
+        },
+        "end": {
+          "line": 25,
+          "column": 26
+        }
+      },
+      "13": {
+        "start": {
+          "line": 28,
+          "column": 4
+        },
+        "end": {
+          "line": 28,
+          "column": 36
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 3,
+            "column": 24
+          },
+          "end": {
+            "line": 3,
+            "column": 25
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 63
+          },
+          "end": {
+            "line": 29,
+            "column": 1
+          }
+        },
+        "line": 3
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 14,
+            "column": 43
+          },
+          "end": {
+            "line": 14,
+            "column": 44
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 14,
+            "column": 64
+          },
+          "end": {
+            "line": 23,
+            "column": 9
+          }
+        },
+        "line": 14
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": {
+          "start": {
+            "line": 16,
+            "column": 43
+          },
+          "end": {
+            "line": 16,
+            "column": 44
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 16,
+            "column": 60
+          },
+          "end": {
+            "line": 20,
+            "column": 13
+          }
+        },
+        "line": 16
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 17,
+            "column": 16
+          },
+          "end": {
+            "line": 19,
+            "column": 17
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 17,
+              "column": 16
+            },
+            "end": {
+              "line": 19,
+              "column": 17
+            }
+          },
+          {
+            "start": {
+              "line": 17,
+              "column": 16
+            },
+            "end": {
+              "line": 19,
+              "column": 17
+            }
+          }
+        ],
+        "line": 17
+      }
+    },
+    "s": {
+      "0": 14,
+      "1": 15,
+      "2": 15,
+      "3": 15,
+      "4": 15,
+      "5": 15,
+      "6": 180,
+      "7": 180,
+      "8": 14400,
+      "9": 1200,
+      "10": 180,
+      "11": 180,
+      "12": 0,
+      "13": 15
+    },
+    "f": {
+      "0": 15,
+      "1": 180,
+      "2": 14400
+    },
+    "b": {
+      "0": [
+        1200,
+        13200
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "2305054c02ecbb60eba945c1b6872e33f46ac4f6"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\config.global.ts": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\config.global.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 2,
+          "column": 22
+        },
+        "end": {
+          "line": 7,
+          "column": 1
+        }
+      }
+    },
+    "fnMap": {},
+    "branchMap": {},
+    "s": {
+      "0": 14
+    },
+    "f": {},
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "0605df11dbc936199484641ef1257a16a86fb18c"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\services\\axios.ts": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\services\\axios.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 4,
+          "column": 23
+        },
+        "end": {
+          "line": 6,
+          "column": 2
+        }
+      }
+    },
+    "fnMap": {},
+    "branchMap": {},
+    "s": {
+      "0": 14
+    },
+    "f": {},
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "17f200a09bed4db2f13e8052d76e82ea42f1fe73"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\menu\\effects.ts": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\menu\\effects.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 4,
+          "column": 23
+        },
+        "end": {
+          "line": 460,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 5,
+          "column": 24
+        },
+        "end": {
+          "line": 5,
+          "column": 29
+        }
+      },
+      "2": {
+        "start": {
+          "line": 7,
+          "column": 4
+        },
+        "end": {
+          "line": 459,
+          "column": 11
+        }
+      },
+      "3": {
+        "start": {
+          "line": 8,
+          "column": 8
+        },
+        "end": {
+          "line": 8,
+          "column": 53
+        }
+      },
+      "4": {
+        "start": {
+          "line": 10,
+          "column": 8
+        },
+        "end": {
+          "line": 459,
+          "column": 11
+        }
+      },
+      "5": {
+        "start": {
+          "line": 10,
+          "column": 40
+        },
+        "end": {
+          "line": 459,
+          "column": 10
+        }
+      },
+      "6": {
+        "start": {
+          "line": 461,
+          "column": 23
+        },
+        "end": {
+          "line": 461,
+          "column": 73
+        }
+      },
+      "7": {
+        "start": {
+          "line": 461,
+          "column": 39
+        },
+        "end": {
+          "line": 461,
+          "column": 73
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 4,
+            "column": 23
+          },
+          "end": {
+            "line": 4,
+            "column": 24
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 43
+          },
+          "end": {
+            "line": 460,
+            "column": 1
+          }
+        },
+        "line": 4
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 10,
+            "column": 27
+          },
+          "end": {
+            "line": 10,
+            "column": 28
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 10,
+            "column": 40
+          },
+          "end": {
+            "line": 459,
+            "column": 10
+          }
+        },
+        "line": 10
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": {
+          "start": {
+            "line": 461,
+            "column": 23
+          },
+          "end": {
+            "line": 461,
+            "column": 24
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 461,
+            "column": 39
+          },
+          "end": {
+            "line": 461,
+            "column": 73
+          }
+        },
+        "line": 461
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 4
+          },
+          "end": {
+            "line": 459,
+            "column": 11
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 7,
+              "column": 4
+            },
+            "end": {
+              "line": 459,
+              "column": 11
+            }
+          },
+          {
+            "start": {
+              "line": 7,
+              "column": 4
+            },
+            "end": {
+              "line": 459,
+              "column": 11
+            }
+          }
+        ],
+        "line": 7
+      }
+    },
+    "s": {
+      "0": 14,
+      "1": 15,
+      "2": 15,
+      "3": 15,
+      "4": 0,
+      "5": 0,
+      "6": 14,
+      "7": 0
+    },
+    "f": {
+      "0": 15,
+      "1": 0,
+      "2": 0
+    },
+    "b": {
+      "0": [
+        15,
+        0
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "a383ce74a1927fce0863b851e3fc705c275b844c"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\menu\\index.ts": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\menu\\index.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "9ec0b12868244619129cd2fb320f80ce124b2991"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\index.ts": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\index.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 7,
+          "column": 22
+        },
+        "end": {
+          "line": 10,
+          "column": 2
+        }
+      },
+      "1": {
+        "start": {
+          "line": 18,
+          "column": 27
+        },
+        "end": {
+          "line": 18,
+          "column": 53
+        }
+      },
+      "2": {
+        "start": {
+          "line": 19,
+          "column": 26
+        },
+        "end": {
+          "line": 19,
+          "column": 54
+        }
+      }
+    },
+    "fnMap": {},
+    "branchMap": {},
+    "s": {
+      "0": 14,
+      "1": 14,
+      "2": 14
+    },
+    "f": {},
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "9d2a7d067287fa0739b3215d2022752c43458b30"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\pages\\Example\\Example.tsx": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\pages\\Example\\Example.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 5,
+          "column": 48
+        },
+        "end": {
+          "line": 18,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 6,
+          "column": 36
+        },
+        "end": {
+          "line": 6,
+          "column": 57
+        }
+      },
+      "2": {
+        "start": {
+          "line": 8,
+          "column": 2
+        },
+        "end": {
+          "line": 17,
+          "column": 3
+        }
+      },
+      "3": {
+        "start": {
+          "line": 13,
+          "column": 45
+        },
+        "end": {
+          "line": 13,
+          "column": 78
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 5,
+            "column": 48
+          },
+          "end": {
+            "line": 5,
+            "column": 49
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 54
+          },
+          "end": {
+            "line": 18,
+            "column": 1
+          }
+        },
+        "line": 5
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 13,
+            "column": 21
+          },
+          "end": {
+            "line": 13,
+            "column": 22
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 13,
+            "column": 45
+          },
+          "end": {
+            "line": 13,
+            "column": 78
+          }
+        },
+        "line": 13
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 11,
+            "column": 7
+          },
+          "end": {
+            "line": 15,
+            "column": 7
+          }
+        },
+        "type": "cond-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 11,
+              "column": 24
+            },
+            "end": {
+              "line": 11,
+              "column": 47
+            }
+          },
+          {
+            "start": {
+              "line": 12,
+              "column": 8
+            },
+            "end": {
+              "line": 14,
+              "column": 13
+            }
+          }
+        ],
+        "line": 11
+      }
+    },
+    "s": {
+      "0": 14,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    "f": {
+      "0": 0,
+      "1": 0
+    },
+    "b": {
+      "0": [
+        0,
+        0
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "b1512cb7d90680ce1fc894d931b09538c1897d80"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\pages\\Menu\\ShowAll.tsx": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\pages\\Menu\\ShowAll.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 6,
+          "column": 48
+        },
+        "end": {
+          "line": 55,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 8,
+          "column": 18
+        },
+        "end": {
+          "line": 8,
+          "column": 36
+        }
+      },
+      "2": {
+        "start": {
+          "line": 10,
+          "column": 23
+        },
+        "end": {
+          "line": 29,
+          "column": 6
+        }
+      },
+      "3": {
+        "start": {
+          "line": 12,
+          "column": 8
+        },
+        "end": {
+          "line": 28,
+          "column": 19
+        }
+      },
+      "4": {
+        "start": {
+          "line": 31,
+          "column": 4
+        },
+        "end": {
+          "line": 54,
+          "column": 5
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 6,
+            "column": 48
+          },
+          "end": {
+            "line": 6,
+            "column": 49
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 6,
+            "column": 54
+          },
+          "end": {
+            "line": 55,
+            "column": 1
+          }
+        },
+        "line": 6
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 10,
+            "column": 49
+          },
+          "end": {
+            "line": 10,
+            "column": 50
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 12,
+            "column": 8
+          },
+          "end": {
+            "line": 28,
+            "column": 19
+          }
+        },
+        "line": 12
+      }
+    },
+    "branchMap": {},
+    "s": {
+      "0": 14,
+      "1": 8,
+      "2": 8,
+      "3": 96,
+      "4": 8
+    },
+    "f": {
+      "0": 8,
+      "1": 96
+    },
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "4c624def8300d43deae8ea651601bbb3b73574b5"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\pages\\Error\\NotFound.tsx": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\pages\\Error\\NotFound.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 4,
+          "column": 49
+        },
+        "end": {
+          "line": 12,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 6,
+          "column": 4
+        },
+        "end": {
+          "line": 11,
+          "column": 5
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 4,
+            "column": 49
+          },
+          "end": {
+            "line": 4,
+            "column": 50
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 55
+          },
+          "end": {
+            "line": 12,
+            "column": 1
+          }
+        },
+        "line": 4
+      }
+    },
+    "branchMap": {},
+    "s": {
+      "0": 14,
+      "1": 0
+    },
+    "f": {
+      "0": 0
+    },
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "015ffeed2e07742bb9fbdb96f706cc695b5beacd"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\components\\MenuComponents\\Categories.tsx": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\components\\MenuComponents\\Categories.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 11,
+          "column": 62
+        },
+        "end": {
+          "line": 28,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 13,
+          "column": 21
+        },
+        "end": {
+          "line": 13,
+          "column": 39
+        }
+      },
+      "2": {
+        "start": {
+          "line": 14,
+          "column": 18
+        },
+        "end": {
+          "line": 14,
+          "column": 125
+        }
+      },
+      "3": {
+        "start": {
+          "line": 16,
+          "column": 4
+        },
+        "end": {
+          "line": 27,
+          "column": 5
+        }
+      },
+      "4": {
+        "start": {
+          "line": 20,
+          "column": 16
+        },
+        "end": {
+          "line": 25,
+          "column": 25
+        }
+      },
+      "5": {
+        "start": {
+          "line": 20,
+          "column": 39
+        },
+        "end": {
+          "line": 20,
+          "column": 57
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 11,
+            "column": 62
+          },
+          "end": {
+            "line": 11,
+            "column": 63
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 11,
+            "column": 94
+          },
+          "end": {
+            "line": 28,
+            "column": 1
+          }
+        },
+        "line": 11
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 19,
+            "column": 33
+          },
+          "end": {
+            "line": 19,
+            "column": 34
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 20,
+            "column": 16
+          },
+          "end": {
+            "line": 25,
+            "column": 25
+          }
+        },
+        "line": 20
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": {
+          "start": {
+            "line": 20,
+            "column": 33
+          },
+          "end": {
+            "line": 20,
+            "column": 34
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 20,
+            "column": 39
+          },
+          "end": {
+            "line": 20,
+            "column": 57
+          }
+        },
+        "line": 20
+      }
+    },
+    "branchMap": {},
+    "s": {
+      "0": 14,
+      "1": 76,
+      "2": 76,
+      "3": 76,
+      "4": 912,
+      "5": 22
+    },
+    "f": {
+      "0": 76,
+      "1": 912,
+      "2": 22
+    },
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "9700bc453d9f030b2d562ab68c3ae7a8dc42fd6d"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\components\\MenuComponents\\Searchbar.tsx": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\components\\MenuComponents\\Searchbar.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 5,
+          "column": 50
+        },
+        "end": {
+          "line": 16,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 7,
+          "column": 2
+        },
+        "end": {
+          "line": 15,
+          "column": 3
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 5,
+            "column": 50
+          },
+          "end": {
+            "line": 5,
+            "column": 51
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 56
+          },
+          "end": {
+            "line": 16,
+            "column": 1
+          }
+        },
+        "line": 5
+      }
+    },
+    "branchMap": {},
+    "s": {
+      "0": 14,
+      "1": 74
+    },
+    "f": {
+      "0": 74
+    },
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "5b731474cbc40329c57451404a295ffdf296ca7c"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\components\\MenuComponents\\Head.tsx": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\components\\MenuComponents\\Head.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 13,
+          "column": 56
+        },
+        "end": {
+          "line": 28,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 14,
+          "column": 4
+        },
+        "end": {
+          "line": 27,
+          "column": 5
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 13,
+            "column": 56
+          },
+          "end": {
+            "line": 13,
+            "column": 57
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 13,
+            "column": 88
+          },
+          "end": {
+            "line": 28,
+            "column": 1
+          }
+        },
+        "line": 13
+      }
+    },
+    "branchMap": {},
+    "s": {
+      "0": 14,
+      "1": 74
+    },
+    "f": {
+      "0": 74
+    },
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "26c0cc179c8e2bdac0cd24c14090b09578ebec84"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\services\\utilities.ts": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\services\\utilities.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 1,
+          "column": 28
+        },
+        "end": {
+          "line": 3,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 2,
+          "column": 4
+        },
+        "end": {
+          "line": 2,
+          "column": 101
+        }
+      },
+      "2": {
+        "start": {
+          "line": 7,
+          "column": 24
+        },
+        "end": {
+          "line": 16,
+          "column": 1
+        }
+      },
+      "3": {
+        "start": {
+          "line": 19,
+          "column": 26
+        },
+        "end": {
+          "line": 21,
+          "column": 1
+        }
+      },
+      "4": {
+        "start": {
+          "line": 20,
+          "column": 4
+        },
+        "end": {
+          "line": 20,
+          "column": 101
+        }
+      },
+      "5": {
+        "start": {
+          "line": 20,
+          "column": 77
+        },
+        "end": {
+          "line": 20,
+          "column": 100
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 1,
+            "column": 28
+          },
+          "end": {
+            "line": 1,
+            "column": 29
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 47
+          },
+          "end": {
+            "line": 3,
+            "column": 1
+          }
+        },
+        "line": 1
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 7,
+            "column": 24
+          },
+          "end": {
+            "line": 7,
+            "column": 25
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 54
+          },
+          "end": {
+            "line": 16,
+            "column": 1
+          }
+        },
+        "line": 7
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": {
+          "start": {
+            "line": 19,
+            "column": 26
+          },
+          "end": {
+            "line": 19,
+            "column": 27
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 19,
+            "column": 69
+          },
+          "end": {
+            "line": 21,
+            "column": 1
+          }
+        },
+        "line": 19
+      },
+      "3": {
+        "name": "(anonymous_3)",
+        "decl": {
+          "start": {
+            "line": 20,
+            "column": 59
+          },
+          "end": {
+            "line": 20,
+            "column": 60
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 20,
+            "column": 77
+          },
+          "end": {
+            "line": 20,
+            "column": 100
+          }
+        },
+        "line": 20
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 20,
+            "column": 11
+          },
+          "end": {
+            "line": 20,
+            "column": 101
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 20,
+              "column": 11
+            },
+            "end": {
+              "line": 20,
+              "column": 42
+            }
+          },
+          {
+            "start": {
+              "line": 20,
+              "column": 46
+            },
+            "end": {
+              "line": 20,
+              "column": 101
+            }
+          }
+        ],
+        "line": 20
+      }
+    },
+    "s": {
+      "0": 14,
+      "1": 6080,
+      "2": 14,
+      "3": 14,
+      "4": 436,
+      "5": 4185
+    },
+    "f": {
+      "0": 6080,
+      "1": 0,
+      "2": 436,
+      "3": 4185
+    },
+    "b": {
+      "0": [
+        436,
+        398
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "6b8ff807fdc395e2879dd1aca1ec5261b2c30858"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\components\\MenuComponents\\DishCard.tsx": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\components\\MenuComponents\\DishCard.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 12,
+          "column": 60
+        },
+        "end": {
+          "line": 40,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 14,
+          "column": 4
+        },
+        "end": {
+          "line": 38,
+          "column": 5
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 12,
+            "column": 60
+          },
+          "end": {
+            "line": 12,
+            "column": 61
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 12,
+            "column": 74
+          },
+          "end": {
+            "line": 40,
+            "column": 1
+          }
+        },
+        "line": 12
+      }
+    },
+    "branchMap": {},
+    "s": {
+      "0": 14,
+      "1": 6080
+    },
+    "f": {
+      "0": 6080
+    },
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "db16db46596bf162b18976a10e9d4b195c5e5bad"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\components\\MenuComponents\\MenuComponent.tsx": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\components\\MenuComponents\\MenuComponent.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 9,
+          "column": 65
+        },
+        "end": {
+          "line": 36,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 10,
+          "column": 21
+        },
+        "end": {
+          "line": 10,
+          "column": 39
+        }
+      },
+      "2": {
+        "start": {
+          "line": 12,
+          "column": 4
+        },
+        "end": {
+          "line": 35,
+          "column": 8
+        }
+      },
+      "3": {
+        "start": {
+          "line": 14,
+          "column": 12
+        },
+        "end": {
+          "line": 33,
+          "column": 18
+        }
+      },
+      "4": {
+        "start": {
+          "line": 29,
+          "column": 24
+        },
+        "end": {
+          "line": 31,
+          "column": 30
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 9,
+            "column": 65
+          },
+          "end": {
+            "line": 9,
+            "column": 66
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 9,
+            "column": 97
+          },
+          "end": {
+            "line": 36,
+            "column": 1
+          }
+        },
+        "line": 9
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 13,
+            "column": 59
+          },
+          "end": {
+            "line": 13,
+            "column": 60
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 14,
+            "column": 12
+          },
+          "end": {
+            "line": 33,
+            "column": 18
+          }
+        },
+        "line": 14
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": {
+          "start": {
+            "line": 27,
+            "column": 46
+          },
+          "end": {
+            "line": 27,
+            "column": 47
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 29,
+            "column": 24
+          },
+          "end": {
+            "line": 31,
+            "column": 30
+          }
+        },
+        "line": 29
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 13,
+            "column": 9
+          },
+          "end": {
+            "line": 34,
+            "column": 10
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 13,
+              "column": 9
+            },
+            "end": {
+              "line": 13,
+              "column": 35
+            }
+          },
+          {
+            "start": {
+              "line": 13,
+              "column": 39
+            },
+            "end": {
+              "line": 34,
+              "column": 10
+            }
+          }
+        ],
+        "line": 13
+      }
+    },
+    "s": {
+      "0": 14,
+      "1": 76,
+      "2": 76,
+      "3": 912,
+      "4": 6080
+    },
+    "f": {
+      "0": 76,
+      "1": 912,
+      "2": 6080
+    },
+    "b": {
+      "0": [
+        76,
+        76
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "ce9e90b73365e108c731dbe2635fc57ce5eec24b"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\components\\MenuComponents\\OrderButton.tsx": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\components\\MenuComponents\\OrderButton.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 1,
+          "column": 52
+        },
+        "end": {
+          "line": 16,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 4,
+          "column": 23
+        },
+        "end": {
+          "line": 4,
+          "column": 24
+        }
+      },
+      "2": {
+        "start": {
+          "line": 5,
+          "column": 23
+        },
+        "end": {
+          "line": 5,
+          "column": 30
+        }
+      },
+      "3": {
+        "start": {
+          "line": 7,
+          "column": 4
+        },
+        "end": {
+          "line": 15,
+          "column": 5
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 1,
+            "column": 52
+          },
+          "end": {
+            "line": 1,
+            "column": 53
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 58
+          },
+          "end": {
+            "line": 16,
+            "column": 1
+          }
+        },
+        "line": 1
+      }
+    },
+    "branchMap": {},
+    "s": {
+      "0": 14,
+      "1": 74,
+      "2": 74,
+      "3": 74
+    },
+    "f": {
+      "0": 74
+    },
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "65b935f303fe4a48c5f41b1d686d4d2314bc0e4d"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\components\\MenuComponents\\ScrollCats.tsx": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\components\\MenuComponents\\ScrollCats.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 14,
+          "column": 62
+        },
+        "end": {
+          "line": 44,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 15,
+          "column": 21
+        },
+        "end": {
+          "line": 15,
+          "column": 39
+        }
+      },
+      "2": {
+        "start": {
+          "line": 17,
+          "column": 34
+        },
+        "end": {
+          "line": 17,
+          "column": 36
+        }
+      },
+      "3": {
+        "start": {
+          "line": 19,
+          "column": 4
+        },
+        "end": {
+          "line": 43,
+          "column": 5
+        }
+      },
+      "4": {
+        "start": {
+          "line": 21,
+          "column": 86
+        },
+        "end": {
+          "line": 21,
+          "column": 119
+        }
+      },
+      "5": {
+        "start": {
+          "line": 27,
+          "column": 24
+        },
+        "end": {
+          "line": 30,
+          "column": 25
+        }
+      },
+      "6": {
+        "start": {
+          "line": 28,
+          "column": 28
+        },
+        "end": {
+          "line": 28,
+          "column": 67
+        }
+      },
+      "7": {
+        "start": {
+          "line": 29,
+          "column": 28
+        },
+        "end": {
+          "line": 29,
+          "column": 73
+        }
+      },
+      "8": {
+        "start": {
+          "line": 32,
+          "column": 24
+        },
+        "end": {
+          "line": 38,
+          "column": 29
+        }
+      },
+      "9": {
+        "start": {
+          "line": 34,
+          "column": 32
+        },
+        "end": {
+          "line": 36,
+          "column": 41
+        }
+      },
+      "10": {
+        "start": {
+          "line": 34,
+          "column": 55
+        },
+        "end": {
+          "line": 34,
+          "column": 73
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 14,
+            "column": 62
+          },
+          "end": {
+            "line": 14,
+            "column": 63
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 14,
+            "column": 152
+          },
+          "end": {
+            "line": 44,
+            "column": 1
+          }
+        },
+        "line": 14
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 21,
+            "column": 80
+          },
+          "end": {
+            "line": 21,
+            "column": 81
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 21,
+            "column": 86
+          },
+          "end": {
+            "line": 21,
+            "column": 119
+          }
+        },
+        "line": 21
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": {
+          "start": {
+            "line": 26,
+            "column": 21
+          },
+          "end": {
+            "line": 26,
+            "column": 22
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 26,
+            "column": 86
+          },
+          "end": {
+            "line": 39,
+            "column": 21
+          }
+        },
+        "line": 26
+      },
+      "3": {
+        "name": "(anonymous_3)",
+        "decl": {
+          "start": {
+            "line": 33,
+            "column": 48
+          },
+          "end": {
+            "line": 33,
+            "column": 49
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 34,
+            "column": 32
+          },
+          "end": {
+            "line": 36,
+            "column": 41
+          }
+        },
+        "line": 34
+      },
+      "4": {
+        "name": "(anonymous_4)",
+        "decl": {
+          "start": {
+            "line": 34,
+            "column": 49
+          },
+          "end": {
+            "line": 34,
+            "column": 50
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 34,
+            "column": 55
+          },
+          "end": {
+            "line": 34,
+            "column": 73
+          }
+        },
+        "line": 34
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 20,
+            "column": 113
+          },
+          "end": {
+            "line": 20,
+            "column": 179
+          }
+        },
+        "type": "cond-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 20,
+              "column": 143
+            },
+            "end": {
+              "line": 20,
+              "column": 145
+            }
+          },
+          {
+            "start": {
+              "line": 20,
+              "column": 148
+            },
+            "end": {
+              "line": 20,
+              "column": 179
+            }
+          }
+        ],
+        "line": 20
+      },
+      "1": {
+        "loc": {
+          "start": {
+            "line": 25,
+            "column": 17
+          },
+          "end": {
+            "line": 40,
+            "column": 28
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 25,
+              "column": 17
+            },
+            "end": {
+              "line": 25,
+              "column": 47
+            }
+          },
+          {
+            "start": {
+              "line": 25,
+              "column": 51
+            },
+            "end": {
+              "line": 40,
+              "column": 28
+            }
+          }
+        ],
+        "line": 25
+      },
+      "2": {
+        "loc": {
+          "start": {
+            "line": 27,
+            "column": 24
+          },
+          "end": {
+            "line": 30,
+            "column": 25
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 27,
+              "column": 24
+            },
+            "end": {
+              "line": 30,
+              "column": 25
+            }
+          },
+          {
+            "start": {
+              "line": 27,
+              "column": 24
+            },
+            "end": {
+              "line": 30,
+              "column": 25
+            }
+          }
+        ],
+        "line": 27
+      },
+      "3": {
+        "loc": {
+          "start": {
+            "line": 34,
+            "column": 295
+          },
+          "end": {
+            "line": 34,
+            "column": 389
+          }
+        },
+        "type": "cond-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 34,
+              "column": 337
+            },
+            "end": {
+              "line": 34,
+              "column": 376
+            }
+          },
+          {
+            "start": {
+              "line": 34,
+              "column": 379
+            },
+            "end": {
+              "line": 34,
+              "column": 389
+            }
+          }
+        ],
+        "line": 34
+      }
+    },
+    "s": {
+      "0": 14,
+      "1": 76,
+      "2": 76,
+      "3": 76,
+      "4": 0,
+      "5": 436,
+      "6": 59,
+      "7": 59,
+      "8": 436,
+      "9": 5232,
+      "10": 5
+    },
+    "f": {
+      "0": 76,
+      "1": 0,
+      "2": 436,
+      "3": 5232,
+      "4": 5
+    },
+    "b": {
+      "0": [
+        30,
+        46
+      ],
+      "1": [
+        76,
+        76
+      ],
+      "2": [
+        59,
+        377
+      ],
+      "3": [
+        406,
+        4826
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "37f1e93ebe04b102ddc0b0f774c020092fbbf9a8"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\hooks\\useScroll.ts": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\hooks\\useScroll.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 4,
+          "column": 30
+        },
+        "end": {
+          "line": 28,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 5,
+          "column": 19
+        },
+        "end": {
+          "line": 5,
+          "column": 36
+        }
+      },
+      "2": {
+        "start": {
+          "line": 6,
+          "column": 35
+        },
+        "end": {
+          "line": 6,
+          "column": 49
+        }
+      },
+      "3": {
+        "start": {
+          "line": 8,
+          "column": 26
+        },
+        "end": {
+          "line": 11,
+          "column": 2
+        }
+      },
+      "4": {
+        "start": {
+          "line": 9,
+          "column": 18
+        },
+        "end": {
+          "line": 9,
+          "column": 25
+        }
+      },
+      "5": {
+        "start": {
+          "line": 10,
+          "column": 2
+        },
+        "end": {
+          "line": 10,
+          "column": 36
+        }
+      },
+      "6": {
+        "start": {
+          "line": 13,
+          "column": 1
+        },
+        "end": {
+          "line": 25,
+          "column": 25
+        }
+      },
+      "7": {
+        "start": {
+          "line": 14,
+          "column": 50
+        },
+        "end": {
+          "line": 14,
+          "column": 54
+        }
+      },
+      "8": {
+        "start": {
+          "line": 15,
+          "column": 19
+        },
+        "end": {
+          "line": 15,
+          "column": 70
+        }
+      },
+      "9": {
+        "start": {
+          "line": 17,
+          "column": 2
+        },
+        "end": {
+          "line": 20,
+          "column": 3
+        }
+      },
+      "10": {
+        "start": {
+          "line": 18,
+          "column": 3
+        },
+        "end": {
+          "line": 18,
+          "column": 38
+        }
+      },
+      "11": {
+        "start": {
+          "line": 19,
+          "column": 3
+        },
+        "end": {
+          "line": 19,
+          "column": 39
+        }
+      },
+      "12": {
+        "start": {
+          "line": 22,
+          "column": 2
+        },
+        "end": {
+          "line": 24,
+          "column": 3
+        }
+      },
+      "13": {
+        "start": {
+          "line": 23,
+          "column": 3
+        },
+        "end": {
+          "line": 23,
+          "column": 61
+        }
+      },
+      "14": {
+        "start": {
+          "line": 23,
+          "column": 25
+        },
+        "end": {
+          "line": 23,
+          "column": 61
+        }
+      },
+      "15": {
+        "start": {
+          "line": 27,
+          "column": 1
+        },
+        "end": {
+          "line": 27,
+          "column": 31
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 4,
+            "column": 30
+          },
+          "end": {
+            "line": 4,
+            "column": 31
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 48
+          },
+          "end": {
+            "line": 28,
+            "column": 1
+          }
+        },
+        "line": 4
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 8,
+            "column": 26
+          },
+          "end": {
+            "line": 8,
+            "column": 27
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 8,
+            "column": 44
+          },
+          "end": {
+            "line": 11,
+            "column": 2
+          }
+        },
+        "line": 8
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": {
+          "start": {
+            "line": 13,
+            "column": 11
+          },
+          "end": {
+            "line": 13,
+            "column": 12
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 13,
+            "column": 17
+          },
+          "end": {
+            "line": 25,
+            "column": 2
+          }
+        },
+        "line": 13
+      },
+      "3": {
+        "name": "(anonymous_3)",
+        "decl": {
+          "start": {
+            "line": 22,
+            "column": 9
+          },
+          "end": {
+            "line": 22,
+            "column": 10
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 22,
+            "column": 15
+          },
+          "end": {
+            "line": 24,
+            "column": 3
+          }
+        },
+        "line": 22
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 17,
+            "column": 2
+          },
+          "end": {
+            "line": 20,
+            "column": 3
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 17,
+              "column": 2
+            },
+            "end": {
+              "line": 20,
+              "column": 3
+            }
+          },
+          {
+            "start": {
+              "line": 17,
+              "column": 2
+            },
+            "end": {
+              "line": 20,
+              "column": 3
+            }
+          }
+        ],
+        "line": 17
+      },
+      "1": {
+        "loc": {
+          "start": {
+            "line": 23,
+            "column": 3
+          },
+          "end": {
+            "line": 23,
+            "column": 61
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 23,
+              "column": 3
+            },
+            "end": {
+              "line": 23,
+              "column": 61
+            }
+          },
+          {
+            "start": {
+              "line": 23,
+              "column": 3
+            },
+            "end": {
+              "line": 23,
+              "column": 61
+            }
+          }
+        ],
+        "line": 23
+      }
+    },
+    "s": {
+      "0": 14,
+      "1": 108,
+      "2": 108,
+      "3": 108,
+      "4": 52,
+      "5": 52,
+      "6": 108,
+      "7": 36,
+      "8": 36,
+      "9": 36,
+      "10": 36,
+      "11": 36,
+      "12": 36,
+      "13": 25,
+      "14": 25,
+      "15": 108
+    },
+    "f": {
+      "0": 108,
+      "1": 52,
+      "2": 36,
+      "3": 25
+    },
+    "b": {
+      "0": [
+        36,
+        0
+      ],
+      "1": [
+        25,
+        0
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "284b7f2490ca14fa62821b2f8503bc02a9550b6a"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\pages\\Menu\\Menu.tsx": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\pages\\Menu\\Menu.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 9,
+          "column": 65
+        },
+        "end": {
+          "line": 59,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 11,
+          "column": 56
+        },
+        "end": {
+          "line": 14,
+          "column": 6
+        }
+      },
+      "2": {
+        "start": {
+          "line": 16,
+          "column": 24
+        },
+        "end": {
+          "line": 16,
+          "column": 105
+        }
+      },
+      "3": {
+        "start": {
+          "line": 16,
+          "column": 92
+        },
+        "end": {
+          "line": 16,
+          "column": 103
+        }
+      },
+      "4": {
+        "start": {
+          "line": 18,
+          "column": 27
+        },
+        "end": {
+          "line": 30,
+          "column": 5
+        }
+      },
+      "5": {
+        "start": {
+          "line": 20,
+          "column": 31
+        },
+        "end": {
+          "line": 20,
+          "column": 81
+        }
+      },
+      "6": {
+        "start": {
+          "line": 21,
+          "column": 23
+        },
+        "end": {
+          "line": 21,
+          "column": 60
+        }
+      },
+      "7": {
+        "start": {
+          "line": 22,
+          "column": 26
+        },
+        "end": {
+          "line": 22,
+          "column": 62
+        }
+      },
+      "8": {
+        "start": {
+          "line": 24,
+          "column": 8
+        },
+        "end": {
+          "line": 28,
+          "column": 14
+        }
+      },
+      "9": {
+        "start": {
+          "line": 25,
+          "column": 12
+        },
+        "end": {
+          "line": 28,
+          "column": 14
+        }
+      },
+      "10": {
+        "start": {
+          "line": 32,
+          "column": 24
+        },
+        "end": {
+          "line": 41,
+          "column": 5
+        }
+      },
+      "11": {
+        "start": {
+          "line": 33,
+          "column": 28
+        },
+        "end": {
+          "line": 33,
+          "column": 91
+        }
+      },
+      "12": {
+        "start": {
+          "line": 34,
+          "column": 33
+        },
+        "end": {
+          "line": 34,
+          "column": 102
+        }
+      },
+      "13": {
+        "start": {
+          "line": 35,
+          "column": 23
+        },
+        "end": {
+          "line": 35,
+          "column": 26
+        }
+      },
+      "14": {
+        "start": {
+          "line": 37,
+          "column": 8
+        },
+        "end": {
+          "line": 40,
+          "column": 10
+        }
+      },
+      "15": {
+        "start": {
+          "line": 43,
+          "column": 4
+        },
+        "end": {
+          "line": 58,
+          "column": 5
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 9,
+            "column": 65
+          },
+          "end": {
+            "line": 9,
+            "column": 66
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 9,
+            "column": 79
+          },
+          "end": {
+            "line": 59,
+            "column": 1
+          }
+        },
+        "line": 9
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 16,
+            "column": 86
+          },
+          "end": {
+            "line": 16,
+            "column": 87
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 16,
+            "column": 92
+          },
+          "end": {
+            "line": 16,
+            "column": 103
+          }
+        },
+        "line": 16
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": {
+          "start": {
+            "line": 18,
+            "column": 27
+          },
+          "end": {
+            "line": 18,
+            "column": 28
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 18,
+            "column": 52
+          },
+          "end": {
+            "line": 30,
+            "column": 5
+          }
+        },
+        "line": 18
+      },
+      "3": {
+        "name": "(anonymous_3)",
+        "decl": {
+          "start": {
+            "line": 32,
+            "column": 24
+          },
+          "end": {
+            "line": 32,
+            "column": 25
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 32,
+            "column": 43
+          },
+          "end": {
+            "line": 41,
+            "column": 5
+          }
+        },
+        "line": 32
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 24,
+            "column": 8
+          },
+          "end": {
+            "line": 28,
+            "column": 14
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 24,
+              "column": 8
+            },
+            "end": {
+              "line": 28,
+              "column": 14
+            }
+          },
+          {
+            "start": {
+              "line": 24,
+              "column": 8
+            },
+            "end": {
+              "line": 28,
+              "column": 14
+            }
+          }
+        ],
+        "line": 24
+      },
+      "1": {
+        "loc": {
+          "start": {
+            "line": 24,
+            "column": 12
+          },
+          "end": {
+            "line": 24,
+            "column": 49
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 24,
+              "column": 12
+            },
+            "end": {
+              "line": 24,
+              "column": 26
+            }
+          },
+          {
+            "start": {
+              "line": 24,
+              "column": 30
+            },
+            "end": {
+              "line": 24,
+              "column": 36
+            }
+          },
+          {
+            "start": {
+              "line": 24,
+              "column": 40
+            },
+            "end": {
+              "line": 24,
+              "column": 49
+            }
+          }
+        ],
+        "line": 24
+      }
+    },
+    "s": {
+      "0": 14,
+      "1": 108,
+      "2": 108,
+      "3": 1296,
+      "4": 108,
+      "5": 59,
+      "6": 59,
+      "7": 59,
+      "8": 59,
+      "9": 59,
+      "10": 108,
+      "11": 27,
+      "12": 27,
+      "13": 27,
+      "14": 27,
+      "15": 108
+    },
+    "f": {
+      "0": 108,
+      "1": 1296,
+      "2": 59,
+      "3": 27
+    },
+    "b": {
+      "0": [
+        59,
+        0
+      ],
+      "1": [
+        59,
+        59,
+        59
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "b0e96266a3d609c12fc0ee10ceae2ecff702db2b"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\pages\\Menu\\LoadMenu.tsx": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\pages\\Menu\\LoadMenu.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 7,
+          "column": 52
+        },
+        "end": {
+          "line": 26,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 8,
+          "column": 25
+        },
+        "end": {
+          "line": 8,
+          "column": 42
+        }
+      },
+      "2": {
+        "start": {
+          "line": 9,
+          "column": 21
+        },
+        "end": {
+          "line": 9,
+          "column": 39
+        }
+      },
+      "3": {
+        "start": {
+          "line": 11,
+          "column": 4
+        },
+        "end": {
+          "line": 19,
+          "column": 18
+        }
+      },
+      "4": {
+        "start": {
+          "line": 12,
+          "column": 22
+        },
+        "end": {
+          "line": 12,
+          "column": 26
+        }
+      },
+      "5": {
+        "start": {
+          "line": 13,
+          "column": 8
+        },
+        "end": {
+          "line": 17,
+          "column": 9
+        }
+      },
+      "6": {
+        "start": {
+          "line": 14,
+          "column": 12
+        },
+        "end": {
+          "line": 14,
+          "column": 30
+        }
+      },
+      "7": {
+        "start": {
+          "line": 15,
+          "column": 12
+        },
+        "end": {
+          "line": 15,
+          "column": 22
+        }
+      },
+      "8": {
+        "start": {
+          "line": 18,
+          "column": 8
+        },
+        "end": {
+          "line": 18,
+          "column": 40
+        }
+      },
+      "9": {
+        "start": {
+          "line": 18,
+          "column": 23
+        },
+        "end": {
+          "line": 18,
+          "column": 38
+        }
+      },
+      "10": {
+        "start": {
+          "line": 21,
+          "column": 4
+        },
+        "end": {
+          "line": 23,
+          "column": 15
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 7,
+            "column": 52
+          },
+          "end": {
+            "line": 7,
+            "column": 53
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 58
+          },
+          "end": {
+            "line": 26,
+            "column": 1
+          }
+        },
+        "line": 7
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 11,
+            "column": 14
+          },
+          "end": {
+            "line": 11,
+            "column": 15
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 11,
+            "column": 20
+          },
+          "end": {
+            "line": 19,
+            "column": 5
+          }
+        },
+        "line": 11
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": {
+          "start": {
+            "line": 18,
+            "column": 15
+          },
+          "end": {
+            "line": 18,
+            "column": 16
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 18,
+            "column": 21
+          },
+          "end": {
+            "line": 18,
+            "column": 40
+          }
+        },
+        "line": 18
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 13,
+            "column": 8
+          },
+          "end": {
+            "line": 17,
+            "column": 9
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 13,
+              "column": 8
+            },
+            "end": {
+              "line": 17,
+              "column": 9
+            }
+          },
+          {
+            "start": {
+              "line": 13,
+              "column": 8
+            },
+            "end": {
+              "line": 17,
+              "column": 9
+            }
+          }
+        ],
+        "line": 13
+      },
+      "1": {
+        "loc": {
+          "start": {
+            "line": 21,
+            "column": 15
+          },
+          "end": {
+            "line": 23,
+            "column": 10
+          }
+        },
+        "type": "cond-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 21,
+              "column": 44
+            },
+            "end": {
+              "line": 21,
+              "column": 64
+            }
+          },
+          {
+            "start": {
+              "line": 21,
+              "column": 67
+            },
+            "end": {
+              "line": 23,
+              "column": 10
+            }
+          }
+        ],
+        "line": 21
+      }
+    },
+    "s": {
+      "0": 14,
+      "1": 61,
+      "2": 60,
+      "3": 60,
+      "4": 15,
+      "5": 15,
+      "6": 15,
+      "7": 15,
+      "8": 15,
+      "9": 4,
+      "10": 60
+    },
+    "f": {
+      "0": 61,
+      "1": 15,
+      "2": 4
+    },
+    "b": {
+      "0": [
+        15,
+        0
+      ],
+      "1": [
+        32,
+        28
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "7a0623715e3ae3ea355da5cc49b34c3471fb8c30"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\components\\App\\App.tsx": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\components\\App\\App.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 10,
+          "column": 0
+        },
+        "end": {
+          "line": 10,
+          "column": 16
+        }
+      },
+      "1": {
+        "start": {
+          "line": 13,
+          "column": 44
+        },
+        "end": {
+          "line": 28,
+          "column": 1
+        }
+      },
+      "2": {
+        "start": {
+          "line": 15,
+          "column": 2
+        },
+        "end": {
+          "line": 27,
+          "column": 3
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 13,
+            "column": 44
+          },
+          "end": {
+            "line": 13,
+            "column": 45
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 13,
+            "column": 50
+          },
+          "end": {
+            "line": 28,
+            "column": 1
+          }
+        },
+        "line": 13
+      }
+    },
+    "branchMap": {},
+    "s": {
+      "0": 14,
+      "1": 14,
+      "2": 28
+    },
+    "f": {
+      "0": 28
+    },
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "913ca8861a8bb9b74c09d6b5a4f17e509cebddb5"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\reportWebVitals.ts": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\reportWebVitals.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 3,
+          "column": 24
+        },
+        "end": {
+          "line": 13,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 4,
+          "column": 2
+        },
+        "end": {
+          "line": 12,
+          "column": 3
+        }
+      },
+      "2": {
+        "start": {
+          "line": 5,
+          "column": 4
+        },
+        "end": {
+          "line": 11,
+          "column": 7
+        }
+      },
+      "3": {
+        "start": {
+          "line": 6,
+          "column": 6
+        },
+        "end": {
+          "line": 6,
+          "column": 26
+        }
+      },
+      "4": {
+        "start": {
+          "line": 7,
+          "column": 6
+        },
+        "end": {
+          "line": 7,
+          "column": 26
+        }
+      },
+      "5": {
+        "start": {
+          "line": 8,
+          "column": 6
+        },
+        "end": {
+          "line": 8,
+          "column": 26
+        }
+      },
+      "6": {
+        "start": {
+          "line": 9,
+          "column": 6
+        },
+        "end": {
+          "line": 9,
+          "column": 26
+        }
+      },
+      "7": {
+        "start": {
+          "line": 10,
+          "column": 6
+        },
+        "end": {
+          "line": 10,
+          "column": 27
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 3,
+            "column": 24
+          },
+          "end": {
+            "line": 3,
+            "column": 25
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 57
+          },
+          "end": {
+            "line": 13,
+            "column": 1
+          }
+        },
+        "line": 3
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 5,
+            "column": 30
+          },
+          "end": {
+            "line": 5,
+            "column": 31
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 79
+          },
+          "end": {
+            "line": 11,
+            "column": 5
+          }
+        },
+        "line": 5
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 2
+          },
+          "end": {
+            "line": 12,
+            "column": 3
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 4,
+              "column": 2
+            },
+            "end": {
+              "line": 12,
+              "column": 3
+            }
+          },
+          {
+            "start": {
+              "line": 4,
+              "column": 2
+            },
+            "end": {
+              "line": 12,
+              "column": 3
+            }
+          }
+        ],
+        "line": 4
+      },
+      "1": {
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 6
+          },
+          "end": {
+            "line": 4,
+            "column": 52
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 4,
+              "column": 6
+            },
+            "end": {
+              "line": 4,
+              "column": 17
+            }
+          },
+          {
+            "start": {
+              "line": 4,
+              "column": 21
+            },
+            "end": {
+              "line": 4,
+              "column": 52
+            }
+          }
+        ],
+        "line": 4
+      }
+    },
+    "s": {
+      "0": 14,
+      "1": 14,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0
+    },
+    "f": {
+      "0": 14,
+      "1": 0
+    },
+    "b": {
+      "0": [
+        0,
+        14
+      ],
+      "1": [
+        14,
+        0
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "bb10fe1b0cf6722a010cf311be4fa25c9697c210"
+  },
+  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\index.tsx": {
+    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\index.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 10,
+          "column": 17
+        },
+        "end": {
+          "line": 12,
+          "column": 2
+        }
+      },
+      "1": {
+        "start": {
+          "line": 14,
+          "column": 0
+        },
+        "end": {
+          "line": 21,
+          "column": 2
+        }
+      },
+      "2": {
+        "start": {
+          "line": 26,
+          "column": 0
+        },
+        "end": {
+          "line": 26,
+          "column": 18
+        }
+      }
+    },
+    "fnMap": {},
+    "branchMap": {},
+    "s": {
+      "0": 14,
+      "1": 14,
+      "2": 14
+    },
+    "f": {},
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "c939b2baa73d84103e1188f3fac02ef963a62700"
+  }
+}
