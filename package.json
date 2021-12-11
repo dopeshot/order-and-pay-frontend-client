@@ -4,6 +4,7 @@
     "private": true,
     "dependencies": {
         "@craco/craco": "^6.4.0",
+        "@cypress/instrument-cra": "^1.4.0",
         "@cypress/react": "^5.10.3",
         "@fortawesome/fontawesome-svg-core": "^1.2.36",
         "@fortawesome/free-brands-svg-icons": "^5.15.4",
@@ -32,14 +33,16 @@
         "web-vitals": "^1.1.2"
     },
     "scripts": {
-        "start": "craco start",
+        "start": "craco -r @cypress/instrument-cra start",
         "mockserver": "json-server ./server/db.json --routes ./server/routes.json --port 3004",
         "mockserver:watch": "json-server --watch ./server/db.json --routes ./server/routes.json --port 3004",
         "build": "craco build",
         "test": "cypress open",
         "craco:test": "craco test",
         "eject": "react-scripts eject",
-        "cypress:open": "cypress open"
+        "cypress:open": "cypress open",
+        "cc:instrument": "nyc instrument --compact=false src instrumented",
+        "cc:report": "nyc report --reporter=text-summary"
     },
     "eslintConfig": {
         "extends": [

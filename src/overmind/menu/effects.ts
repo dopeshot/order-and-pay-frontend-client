@@ -2,7 +2,7 @@ import { request } from "../../services/axios";
 import { Dish, MenuType } from "./state";
 
 export const getMenu = (): Promise<any> => {
-    const dontUseHost = true
+    const dontUseHost = false
 
     if (!dontUseHost)
         return request.get<MenuType>('/menu/current') // MenuType is not correct! Here there is no index stuff???
@@ -79,7 +79,7 @@ export const getMenu = (): Promise<any> => {
                         "laktose"
                     ],
                     "_id": "617e6ccfb5661a79fd0d1a3d",
-                    "name": "Gebackener MOzzarella",
+                    "name": "Gebackener Mozzarella",
                     "description": "",
                     "category": "61aa702b02fc57c3ee72ff99",
                     "price": 650
