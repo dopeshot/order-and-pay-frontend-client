@@ -17,7 +17,7 @@ export const ScrollCats: React.FunctionComponent<PropTypes> = ({ sectionRefs, sh
     let prevStatuses: boolean[] = []
 
     return (
-        <div className={`flex top-0 fixed top-0 bg-white transition-opacity duration-200 content-center w-full ${shouldDisplayCategoryNavbar ? `` : `opacity-0`} `}>
+        <div className={`flex top-0 fixed top-0 bg-white transition-opacity duration-200 content-center w-full ${shouldDisplayCategoryNavbar ? `` : `opacity-0 pointer-events-none`} `}>
             <button className="text-xl text-grey font-light pl-4 pr-4" onClick={() => console.log("Searchicon clicked")} >
                 <FontAwesomeIcon icon="search" />
             </button>
