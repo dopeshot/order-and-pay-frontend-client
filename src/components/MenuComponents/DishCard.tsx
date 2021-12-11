@@ -33,8 +33,6 @@ export const DishCard: React.FunctionComponent<DishProps> = ({ dish }) => {
             <button className="rounded-lg h-7 w-7 bg-red text-white font-bold text-xs">
                 <FontAwesomeIcon icon="plus" />
             </button>
-
         </div>
     )
-
 }

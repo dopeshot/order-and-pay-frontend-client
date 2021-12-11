@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
 
-
 export const useScrollToNav = (options: any) => {
 	const scrollRef = useRef<any>(null)
 	const [isVisible, setIsVisible] = useState(true)

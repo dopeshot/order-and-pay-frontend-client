@@ -19,7 +19,7 @@ export type Category = {
     name: string,
     index: number,
     description: string,
-    dishesIndex: number[],    
+    dishesIndex: number[],
 }
 //Full menu
 //TODO: Complete Menu Object

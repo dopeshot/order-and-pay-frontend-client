@@ -26,5 +26,3 @@ export const Head: React.FunctionComponent<PropTypes> = ({ scrollToRef }: PropTy
         </div>
     )
 }
-
-
