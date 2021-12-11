@@ -5,7 +5,7 @@ import React from 'react'
 export const Searchbar: React.FunctionComponent = () => {
 
   return (
-    <div className="w-full text-gray-600 flex bg-light-grey rounded-lg h-8 pl-3">
+    <div className="w-full text-gray-600 self-start flex bg-light-grey rounded-lg h-8 pl-3">
       <button type="submit" className="left-3 mr-4 text-grey font-light">
         <FontAwesomeIcon icon={faSearch} />
       </button>
