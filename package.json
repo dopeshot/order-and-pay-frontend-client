@@ -61,11 +61,10 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "lint-staged",
-            "pre-stage": "npm run lint"
+            "pre-commit": "lint-staged"
         }
     },
     "lint-staged": {
-        "**/*.(t|j)s": "prettier --write"
+        "**/*.(t|j)s": "eslint --cache --fix"
     }
 }
