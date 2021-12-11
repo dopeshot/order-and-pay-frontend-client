@@ -5,15 +5,15 @@ before(() => {
 })
 describe("DishCard", () => {
     it('Exists', () => {
-    cy.get('#0_dishCard_Id').should("be.visible")
+        cy.get('#0_dishCard_Id').should("be.visible")
     })
 
-    it("Renders Correctly", function() {
+    it("Renders Correctly", function () {
         cy.get("#0_dishCard_Id").should("have.class", "dish")
-        cy.get("#0_dishCard_Id").contains("coke")
-        cy.get("#0_dishCard_Id").contains("soda")
-        cy.get("#0_dishCard_Id").contains("1,50 €")
+        cy.get("#0_dishCard_Id").contains("Gebackener Mozzarella")
+        cy.get("#0_dishCard_Id").contains("Mozzarella Käse im Teigmantel")
+        cy.get("#0_dishCard_Id").contains("6,50 €")
     })
 })
 
-export {}
+export { }
