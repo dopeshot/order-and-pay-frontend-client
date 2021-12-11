@@ -27,10 +27,3 @@ export const loadMenu = async ({ state, effects }: Context) => {
 
     state.menu.isLoadingMenu = false
 }
-
-
-
-
-
-
-

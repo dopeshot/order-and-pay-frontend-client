@@ -458,4 +458,5 @@ export const getMenu = (): Promise<any> => {
             }
         }))
 }
+
 export const getDish = (id: string) => request.get<Dish>(`/dishes/${id}`)

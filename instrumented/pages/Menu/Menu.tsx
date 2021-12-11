@@ -57,4 +57,3 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
         </>
     )
 }
-

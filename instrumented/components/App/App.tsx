@@ -9,17 +9,16 @@ import { LoadingMenu } from '../../pages/Menu/LoadMenu';
 
 library.add(fas)
 
-
 export const App: React.FunctionComponent = () => {
-  
+
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path="/example" component={Example} />
         <Route exact path="/menu" component={LoadingMenu} />
-        <Route exact path="/categories" component={ShowAll}/>
+        <Route exact path="/categories" component={ShowAll} />
         <Route exact path="/">
-          <Redirect to="/menu" /> 
+          <Redirect to="/menu" />
         </Route>
         <Route component={NotFound} />
       </Switch>
