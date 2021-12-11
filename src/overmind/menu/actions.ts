@@ -6,7 +6,7 @@ export const loadMenu = async ({ state, effects }: Context) => {
     try {
         const response = await effects.menu.getMenu()
         state.menu.menu = response.data
-        
+
         /* Pushes the indexes each dish has in the menu.dishes array
         * into a separate array called dishesIndexArray that each category has.
         * This array consisting of indexes is then used to properly display 

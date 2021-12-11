@@ -13,7 +13,7 @@ export const useScrollToNav = (options: any) => {
 	useEffect(() => {
 		let observerRerValue: HTMLInputElement | null = null
 		const observer = new IntersectionObserver(callBackFunction, options)
-		
+
 		if (scrollRef.current) {
 			observer.observe(scrollRef.current)
 			observerRerValue = scrollRef.current

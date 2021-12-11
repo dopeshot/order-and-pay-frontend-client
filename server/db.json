@@ -1,6 +1,7 @@
 {
     "menu_current": {
-        "categories": [{
+        "categories": [
+            {
                 "_id": "61aa702b02fc57c3ee72ff99",
                 "name": "Vorspeisen",
                 "description": "Erster Gang."
@@ -61,7 +62,8 @@
                 "description": "Getränke ohne Alkohol"
             }
         ],
-        "dishes": [{
+        "dishes": [
+            {
                 "labels": [
                     "vegetarian"
                 ],
@@ -70,7 +72,7 @@
                     "laktose"
                 ],
                 "_id": "617e6ccfb5661a79fd0d1a3d",
-                "name": "Gebackener MOzzarella",
+                "name": "Gebackener Mozzarella",
                 "description": "",
                 "category": "61aa702b02fc57c3ee72ff99",
                 "price": 650
@@ -443,12 +445,676 @@
                 "description": "",
                 "category": "61aa722602fc57c3ee72ff9d",
                 "price": 250
+            },
+            {
+                "labels": [
+                    ""
+                ],
+                "allergens": [
+                    "laktose",
+                    "gluten"
+                ],
+                "_id": "61b233c207daa5dc7eb2b776",
+                "name": "Pasta Lachs",
+                "description": "mit Tomaten-Sahnesauce ",
+                "category": "61aa71f602fc57c3ee72ff9b",
+                "price": 750
+            },
+            {
+                "labels": [
+                    "fisch"
+                ],
+                "allergens": [
+                    "laktose",
+                    "gluten"
+                ],
+                "_id": "61b233e607daa5dc7eb2b777",
+                "name": "Pasta Thunfisch",
+                "description": "mit Tomatensauce ",
+                "category": "61aa71f602fc57c3ee72ff9b",
+                "price": 700
+            },
+            {
+                "labels": [
+                    ""
+                ],
+                "allergens": [
+                    "laktose",
+                    "gluten",
+                    "krebstiere"
+                ],
+                "_id": "61b2341607daa5dc7eb2b778",
+                "name": "Pasta alla Giovanni",
+                "description": "mit Tomatensauce, Sahne, Shrimps und Spargel ",
+                "category": "61aa71f602fc57c3ee72ff9b",
+                "price": 700
+            },
+            {
+                "labels": [
+                    "vegetarian",
+                    "vegan"
+                ],
+                "allergens": [
+                    "laktose",
+                    "gluten"
+                ],
+                "_id": "61b2346407daa5dc7eb2b779",
+                "name": "Pasta Broccoli",
+                "description": "mit Tomatensauce und Broccoli ",
+                "category": "61aa71f602fc57c3ee72ff9b",
+                "price": 650
+            },
+            {
+                "labels": [],
+                "allergens": [
+                    "laktose",
+                    "gluten"
+                ],
+                "_id": "61b2349807daa5dc7eb2b77a",
+                "name": "Pasta Arrabbiata (scharf)",
+                "description": "mit Speck und Zwiebeln ",
+                "category": "61aa71f602fc57c3ee72ff9b",
+                "price": 650
+            },
+            {
+                "labels": [],
+                "allergens": [
+                    "laktose",
+                    "gluten",
+                    "krebstiere"
+                ],
+                "_id": "61b2359507daa5dc7eb2b77b",
+                "name": "Pasta Meeresfrüchten",
+                "description": "mit Meeresfrüchten und Tomatensauce",
+                "category": "61aa71f602fc57c3ee72ff9b",
+                "price": 750
+            },
+            {
+                "labels": [],
+                "allergens": [
+                    "laktose",
+                    "gluten",
+                    "krebstiere"
+                ],
+                "_id": "61b2361f07daa5dc7eb2b77c",
+                "name": "Pasta Vongole",
+                "description": "mit Tomatensauce und Muscheln",
+                "category": "61aa71f602fc57c3ee72ff9b",
+                "price": 800
+            },
+            {
+                "labels": [],
+                "allergens": [
+                    "laktose",
+                    "gluten"
+                ],
+                "_id": "61b2397407daa5dc7eb2b77d",
+                "name": "Pasta Carbonara",
+                "description": "mit Vorderschinken, Ei und Sahnesauce",
+                "category": "61aa71f602fc57c3ee72ff9b",
+                "price": 650
+            },
+            {
+                "labels": [],
+                "allergens": [
+                    "laktose",
+                    "gluten"
+                ],
+                "_id": "61b2399107daa5dc7eb2b77e",
+                "name": "Pasta Bolognese",
+                "description": "mit Hackfleischsauce",
+                "category": "61aa71f602fc57c3ee72ff9b",
+                "price": 650
+            },
+            {
+                "labels": [
+                    "vegetarian"
+                ],
+                "allergens": [
+                    "laktose",
+                    "gluten"
+                ],
+                "_id": "61b23a5007daa5dc7eb2b77f",
+                "name": "Pasta Tutti Gusti",
+                "description": "mit Erbsen, Karotten, Erbsen, Pilzen, Paprika und Sahne",
+                "category": "61aa71f602fc57c3ee72ff9b",
+                "price": 650
+            },
+            {
+                "labels": [],
+                "allergens": [
+                    "laktose",
+                    "gluten"
+                ],
+                "_id": "61b23e5507daa5dc7eb2b795",
+                "name": "Hausgemachte Lasagne",
+                "description": "mit Hackfleischsauce",
+                "category": "61b20e6b07daa5dc7eb2b650",
+                "price": 750
+            },
+            {
+                "labels": [
+                    "vegetarian"
+                ],
+                "allergens": [
+                    "laktose",
+                    "gluten"
+                ],
+                "_id": "61b23ec907daa5dc7eb2b796",
+                "name": "Hausgemachte Lasagne (vegetarisch)",
+                "description": "mit Napoli, frischen Pilzen ",
+                "category": "61b20e6b07daa5dc7eb2b650",
+                "price": 750
+            },
+            {
+                "labels": [
+                    "vegetarian"
+                ],
+                "allergens": [
+                    "laktose",
+                    "gluten"
+                ],
+                "_id": "61b23f1907daa5dc7eb2b797",
+                "name": "Rigatoni (vegetarisch)",
+                "description": "mit Napoli, frischen Pilzenm frischer Paprika und Erbsen",
+                "category": "61b20e6b07daa5dc7eb2b650",
+                "price": 700
+            },
+            {
+                "labels": [
+                    "vegetarian"
+                ],
+                "allergens": [
+                    "laktose",
+                    "gluten"
+                ],
+                "_id": "61b23f8907daa5dc7eb2b798",
+                "name": "Cannelloni",
+                "description": "mit Tomatensauce und Käseüberbacken",
+                "category": "61b20e6b07daa5dc7eb2b650",
+                "price": 700
+            },
+            {
+                "labels": [],
+                "allergens": [
+                    "laktose",
+                    "gluten"
+                ],
+                "_id": "61b23fd407daa5dc7eb2b799",
+                "name": "Rigatoni al Forno Napoli",
+                "description": "mit Schinken",
+                "category": "61b20e6b07daa5dc7eb2b650",
+                "price": 700
+            },
+            {
+                "labels": [
+                    "vegetarian"
+                ],
+                "allergens": [
+                    "laktose",
+                    "gluten"
+                ],
+                "_id": "61b2402207daa5dc7eb2b79a",
+                "name": "Gnocchi della Casa Napoli",
+                "description": "mit Mozzarella",
+                "category": "61b20e6b07daa5dc7eb2b650",
+                "price": 700
+            },
+            {
+                "labels": [],
+                "allergens": [
+                    "laktose",
+                    "gluten"
+                ],
+                "_id": "61b2404007daa5dc7eb2b79b",
+                "name": "Tortellini al Forno",
+                "description": "mit Bolognese und Schinken",
+                "category": "61b20e6b07daa5dc7eb2b650",
+                "price": 700
+            },
+            {
+                "labels": [
+                    "vegetarian"
+                ],
+                "allergens": [
+                    "laktose"
+                ],
+                "_id": "61b2423307daa5dc7eb2b7a6",
+                "name": "Kartoffelauflauf mit Broccoli",
+                "description": "mit Sahnesauce und Käse überbacken",
+                "category": "61b20eaf07daa5dc7eb2b651",
+                "price": 750
+            },
+            {
+                "labels": [],
+                "allergens": [
+                    "laktose"
+                ],
+                "_id": "61b2425b07daa5dc7eb2b7a7",
+                "name": "Kartoffelauflauf mit Vorderschinken",
+                "description": "mit Sahnesauce, Pilzen und Käse überbacken",
+                "category": "61b20eaf07daa5dc7eb2b651",
+                "price": 750
+            },
+            {
+                "labels": [
+                    "vegetarian"
+                ],
+                "allergens": [
+                    "laktose"
+                ],
+                "_id": "61b242a207daa5dc7eb2b7a8",
+                "name": "Kartoffelauflauf mit Pilzen",
+                "description": "mit Sahnesauce, Pilzen, Erbsen, Karotten und Käse überbacken",
+                "category": "61b20eaf07daa5dc7eb2b651",
+                "price": 750
+            },
+            {
+                "labels": [
+                    "vegetarian"
+                ],
+                "allergens": [
+                    "laktose"
+                ],
+                "_id": "61b242c807daa5dc7eb2b7a9",
+                "name": "Kartoffelauflauf mit Gorgonzola",
+                "description": "mit Sahnesauce, Spinat und Käse überbacken",
+                "category": "61b20eaf07daa5dc7eb2b651",
+                "price": 800
+            },
+            {
+                "labels": [
+                    "vegetarian"
+                ],
+                "allergens": [
+                    "sojabeans"
+                ],
+                "_id": "61b2438807daa5dc7eb2b7b0",
+                "name": "Gebratener Eierreis",
+                "description": "mit verschiedenem Gemüse",
+                "category": "61b20edf07daa5dc7eb2b652",
+                "price": 800
+            },
+            {
+                "labels": [],
+                "allergens": [
+                    "sojabeans"
+                ],
+                "_id": "61b243b807daa5dc7eb2b7b1",
+                "name": "Gebratener Eierreis mit Hühnerfleisch und Gemüse",
+                "description": "mit verschiedenem Gemüsecund Hühnerfleisch",
+                "category": "61b20edf07daa5dc7eb2b652",
+                "price": 850
+            },
+            {
+                "labels": [],
+                "allergens": [
+                    "sojabeans"
+                ],
+                "_id": "61b243e907daa5dc7eb2b7b2",
+                "name": "Gebackenes Hühnerfleisch",
+                "description": "smitüß-sauer mit Ananas",
+                "category": "61b20edf07daa5dc7eb2b652",
+                "price": 1000
+            },
+            {
+                "labels": [],
+                "allergens": [
+                    "sojabeans",
+                    "egg"
+                ],
+                "_id": "61b2441707daa5dc7eb2b7b3",
+                "name": "Gebratene Nudeln",
+                "description": "mit Hühnerfleisch und Ei",
+                "category": "61b20edf07daa5dc7eb2b652",
+                "price": 800
+            },
+            {
+                "labels": [],
+                "allergens": [
+                    "sojabeans"
+                ],
+                "_id": "61b2447007daa5dc7eb2b7b4",
+                "name": "1/2 Hong Kong Ente",
+                "description": "mit gebratenem Gemüse und Sojabohnen",
+                "category": "61b20edf07daa5dc7eb2b652",
+                "price": 1100
+            },
+            {
+                "labels": [],
+                "allergens": [
+                    "sojabeans"
+                ],
+                "_id": "61b2447007daa5dc7eb2b7b4",
+                "name": "1/2 Hong Kong Ente",
+                "description": "mit gebratenem Gemüse und Sojabohnen",
+                "category": "61b20edf07daa5dc7eb2b652",
+                "price": 1100
+            },
+            {
+                "labels": [],
+                "allergens": [
+                    "sojabeans"
+                ],
+                "_id": "61b2450807daa5dc7eb2b7b6",
+                "name": "1/2 Ente mit Gemüse",
+                "description": "in Chop-Suey-Sauce",
+                "category": "61b20edf07daa5dc7eb2b652",
+                "price": 1100
+            },
+            {
+                "labels": [
+                    "vegetarian"
+                ],
+                "allergens": [
+                    "caffeine",
+                    "egg",
+                    "laktose"
+                ],
+                "_id": "61b34d0007daa5dc7eb2b7c9",
+                "name": "Hausgemachtes Tiramisu",
+                "description": "",
+                "category": "61b20f8b07daa5dc7eb2b653",
+                "price": 400
+            },
+            {
+                "labels": [
+                    "vegetarian"
+                ],
+                "allergens": [
+                    "caffeine",
+                    "laktose"
+                ],
+                "_id": "61b34d2807daa5dc7eb2b7ca",
+                "name": "Tiramisu Eis",
+                "description": "",
+                "category": "61b20f8b07daa5dc7eb2b653",
+                "price": 350
+            },
+            {
+                "labels": [
+                    "vegetarian"
+                ],
+                "allergens": [
+                    "laktose"
+                ],
+                "_id": "61b34d9907daa5dc7eb2b7cf",
+                "name": "Weißes Tartufo",
+                "description": "Italienische Eisspezialität",
+                "category": "61b20f8b07daa5dc7eb2b653",
+                "price": 350
+            },
+            {
+                "labels": [
+                    "vegetarian"
+                ],
+                "allergens": [
+                    "laktose"
+                ],
+                "_id": "61b34da807daa5dc7eb2b7d0",
+                "name": "Braunes Tartufo",
+                "description": "Italienische Eisspezialität",
+                "category": "61b20f8b07daa5dc7eb2b653",
+                "price": 350
+            },
+            {
+                "labels": [
+                    "vegetarian"
+                ],
+                "allergens": [
+                    "laktose"
+                ],
+                "_id": "61b34dd607daa5dc7eb2b7d1",
+                "name": "Spaghetti-Eis",
+                "description": "gefrorene Spaghetti",
+                "category": "61b20f8b07daa5dc7eb2b653",
+                "price": 300
+            },
+            {
+                "labels": [
+                    "vegetarian",
+                    "vegan"
+                ],
+                "allergens": [],
+                "_id": "61b34e2807daa5dc7eb2b7d6",
+                "name": "Mineralwasser 0,7l",
+                "description": "",
+                "category": "61b2141807daa5dc7eb2b698",
+                "price": 150
+            },
+            {
+                "labels": [
+                    "vegetarian",
+                    "vegan"
+                ],
+                "allergens": [],
+                "_id": "61b34e4407daa5dc7eb2b7d7",
+                "name": "Sprudel süß 0,7l",
+                "description": "",
+                "category": "61b2141807daa5dc7eb2b698",
+                "price": 200
+            },
+            {
+                "labels": [
+                    "vegetarian",
+                    "vegan"
+                ],
+                "allergens": [],
+                "_id": "61b34e6e07daa5dc7eb2b7d8",
+                "name": "Orangensaft 1,0l",
+                "description": "",
+                "category": "61b2141807daa5dc7eb2b698",
+                "price": 350
+            },
+            {
+                "labels": [
+                    "vegetarian",
+                    "vegan"
+                ],
+                "allergens": [],
+                "_id": "61b34e8c07daa5dc7eb2b7d9",
+                "name": "Apfelsaft 1,0l",
+                "description": "",
+                "category": "61b2141807daa5dc7eb2b698",
+                "price": 350
+            },
+            {
+                "labels": [
+                    "vegetarian",
+                    "vegan"
+                ],
+                "allergens": [
+                    "caffeine"
+                ],
+                "_id": "61b34f8b07daa5dc7eb2b7da",
+                "name": "Coca-Cola 0,33l",
+                "description": "",
+                "category": "61b2141807daa5dc7eb2b698",
+                "price": 300
+            },
+            {
+                "labels": [
+                    "vegetarian",
+                    "vegan"
+                ],
+                "allergens": [
+                    "caffeine"
+                ],
+                "_id": "61b34fad07daa5dc7eb2b7db",
+                "name": "Coca-Cola Zero 0,33l",
+                "description": "",
+                "category": "61b2141807daa5dc7eb2b698",
+                "price": 300
+            },
+            {
+                "labels": [
+                    "vegetarian",
+                    "vegan"
+                ],
+                "allergens": [
+                    "caffeine"
+                ],
+                "_id": "61b3509b07daa5dc7eb2b7dc",
+                "name": "Coca-Cola light 0,33l",
+                "description": "",
+                "category": "61b2141807daa5dc7eb2b698",
+                "price": 300
+            },
+            {
+                "labels": [
+                    "vegetarian",
+                    "vegan"
+                ],
+                "allergens": [],
+                "_id": "61b350f007daa5dc7eb2b7e1",
+                "name": "Fanta 0,33l",
+                "description": "",
+                "category": "61b2141807daa5dc7eb2b698",
+                "price": 300
+            },
+            {
+                "labels": [
+                    "vegetarian",
+                    "vegan"
+                ],
+                "allergens": [],
+                "_id": "61b350f907daa5dc7eb2b7e2",
+                "name": "Sprite 0,33l",
+                "description": "",
+                "category": "61b2141807daa5dc7eb2b698",
+                "price": 300
+            },
+            {
+                "labels": [
+                    "vegetarian",
+                    "vegan"
+                ],
+                "allergens": [],
+                "_id": "61b3517907daa5dc7eb2b7e7",
+                "name": "Lambrusco 0,75l",
+                "description": "",
+                "category": "61b2158f07daa5dc7eb2b69a",
+                "price": 1000
+            },
+            {
+                "labels": [
+                    "vegetarian",
+                    "vegan"
+                ],
+                "allergens": [],
+                "_id": "61b3519807daa5dc7eb2b7e8",
+                "name": "Chianti 0,75l",
+                "description": "",
+                "category": "61b2158f07daa5dc7eb2b69a",
+                "price": 1000
+            },
+            {
+                "labels": [
+                    "vegetarian",
+                    "vegan"
+                ],
+                "allergens": [],
+                "_id": "61b351af07daa5dc7eb2b7e9",
+                "name": "Bardolino 0,75l",
+                "description": "",
+                "category": "61b2158f07daa5dc7eb2b69a",
+                "price": 900
+            },
+            {
+                "labels": [
+                    "vegetarian",
+                    "vegan"
+                ],
+                "allergens": [],
+                "_id": "61b351e207daa5dc7eb2b7ea",
+                "name": "Rose 0,75l",
+                "description": "",
+                "category": "61b2158f07daa5dc7eb2b69a",
+                "price": 800
+            },
+            {
+                "labels": [
+                    "vegetarian",
+                    "vegan"
+                ],
+                "allergens": [],
+                "_id": "61b351f607daa5dc7eb2b7eb",
+                "name": "Prosecco 0,75l",
+                "description": "",
+                "category": "61b2158f07daa5dc7eb2b69a",
+                "price": 1300
+            },
+            {
+                "labels": [
+                    "vegetarian",
+                    "vegan"
+                ],
+                "allergens": [
+                    "gluten"
+                ],
+                "_id": "61b3524d07daa5dc7eb2b7ec",
+                "name": "Warsteiner Pils 0,5l",
+                "description": "",
+                "category": "61b2158f07daa5dc7eb2b69a",
+                "price": 250
+            },
+            {
+                "labels": [
+                    "vegetarian",
+                    "vegan"
+                ],
+                "allergens": [
+                    "gluten"
+                ],
+                "_id": "61b3526207daa5dc7eb2b7ed",
+                "name": "Weizen Kristall 0,5l",
+                "description": "",
+                "category": "61b2158f07daa5dc7eb2b69a",
+                "price": 250
+            },
+            {
+                "labels": [
+                    "vegetarian",
+                    "vegan"
+                ],
+                "allergens": [
+                    "gluten"
+                ],
+                "_id": "61b3528107daa5dc7eb2b7ee",
+                "name": "Hefeweizen Hell 0,5l",
+                "description": "",
+                "category": "61b2158f07daa5dc7eb2b69a",
+                "price": 250
+            },
+            {
+                "labels": [
+                    "vegetarian",
+                    "vegan"
+                ],
+                "allergens": [
+                    "gluten"
+                ],
+                "_id": "61b3533007daa5dc7eb2b7ef",
+                "name": "Beck's Bier 0,5l",
+                "description": "",
+                "category": "61b2158f07daa5dc7eb2b69a",
+                "price": 250
+            },
+            {
+                "labels": [
+                    "vegetarian",
+                    "vegan"
+                ],
+                "allergens": [
+                    "gluten"
+                ],
+                "_id": "61b3537b07daa5dc7eb2b7f0",
+                "name": "Stuttgarter Hofbräu 0,5l",
+                "description": "",
+                "category": "61b2158f07daa5dc7eb2b69a",
+                "price": 250
             }
         ],
         "name": "testMenu"
-    },
-    "dishes": [{
-        "id": 1,
-        "message": "Not implemented yet!"
-    }]
+    }
 }
