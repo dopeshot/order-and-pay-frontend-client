@@ -9,10 +9,19 @@ export const LoadingMenu: React.FunctionComponent = () => {
     const { menu } = useAppState().menu
 
     useEffect(() => {
-        loadMenu()
+        let mounted = true
+        if (mounted) {
+            console.log("Hey")
+            loadMenu()
+
+        }
+        return () => { mounted = false }
     }, [loadMenu])
 
     return (<>{menu.categories.length > 0 ? <Menu menu={menu} /> : <div className="text-center text-red">
         <FontAwesomeIcon size="2x" icon={faSpinner} className="animate-spin" />
     </div>}</>)
+
+
 }
+

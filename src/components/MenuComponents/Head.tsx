@@ -12,21 +12,18 @@ type PropTypes = {
 
 export const Head: React.FunctionComponent<PropTypes> = ({ scrollToRef }: PropTypes) => {
     return (
-        <div className="grid grid-rows-6 pl-2 pb-2 " id="head">
-            <div className="row-span-2 grid grid-cols-2 flex-auto overflow-hidden table-row">
-                <h1 className="font-bold pt-14 text-4xl pl-2 " >Menü</h1>
-                <button className="p-8 pt-0 text-2xl pr-6 text-right">
-                    <FontAwesomeIcon icon="bars" />
-                </button>
-            </div>
+        <div className="pl-2 pb-2 flex flex-col flex-shrink" id="head">
+            <button className="pt-4 text-2xl pr-6 text-right self-end overflow-hidden">
+                <FontAwesomeIcon icon="bars" className="overflow-hidden" />
+            </button>
+            <h1 className="font-bold text-4xl pl-2 overflow-hidden" >Menü</h1>
             <Searchbar />
-            <div className="grid grid-cols-2">
-                <h2 className="font-bold pt-4 text-2xl pl-2 ">Kategorien</h2>
-                <Link id="showAll" to="/categories" className="text-red font-bold pt-7 text-sm text-right pr-5 ">Alle Anzeigen</Link>
+            <h2 className="font-bold pt-4 text-2xl pl-2 ">Kategorien</h2>
+            <Link id="showAll" to="/categories" className="text-red font-bold text-sm text-right self-end pr-5">Alle Anzeigen</Link>
+            <div id="categories" className="overflow-auto pt-4 flex flex-nowrap">
+                <Categories scrollToRef={scrollToRef} />
             </div>
-            <div id="categories" className=" row-span-3 flex-auto overflow-hidden table-row pt-4"> <Categories scrollToRef={scrollToRef} /> </div>
         </div>
-
     )
 }
 
