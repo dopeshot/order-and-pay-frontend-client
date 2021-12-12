@@ -22,7 +22,7 @@ export const loadMenu = async ({ state, effects }: Context) => {
             category.index = index
         });
     } catch (error) {
-        console.log(error)
+
     }
 
     state.menu.isLoadingMenu = false

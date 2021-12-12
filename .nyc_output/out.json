@@ -1,243 +1,4 @@
 {
-  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\example\\state.ts": {
-    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\example\\state.ts",
-    "statementMap": {
-      "0": {
-        "start": {
-          "line": 11,
-          "column": 28
-        },
-        "end": {
-          "line": 14,
-          "column": 1
-        }
-      }
-    },
-    "fnMap": {},
-    "branchMap": {},
-    "s": {
-      "0": 14
-    },
-    "f": {},
-    "b": {},
-    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "010b8b9ef79a767ec983f0d0605c4727e57f0359"
-  },
-  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\example\\actions.ts": {
-    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\example\\actions.ts",
-    "statementMap": {
-      "0": {
-        "start": {
-          "line": 3,
-          "column": 26
-        },
-        "end": {
-          "line": 7,
-          "column": 1
-        }
-      },
-      "1": {
-        "start": {
-          "line": 4,
-          "column": 4
-        },
-        "end": {
-          "line": 4,
-          "column": 39
-        }
-      },
-      "2": {
-        "start": {
-          "line": 5,
-          "column": 4
-        },
-        "end": {
-          "line": 5,
-          "column": 74
-        }
-      },
-      "3": {
-        "start": {
-          "line": 6,
-          "column": 4
-        },
-        "end": {
-          "line": 6,
-          "column": 40
-        }
-      }
-    },
-    "fnMap": {
-      "0": {
-        "name": "(anonymous_0)",
-        "decl": {
-          "start": {
-            "line": 3,
-            "column": 26
-          },
-          "end": {
-            "line": 3,
-            "column": 27
-          }
-        },
-        "loc": {
-          "start": {
-            "line": 3,
-            "column": 65
-          },
-          "end": {
-            "line": 7,
-            "column": 1
-          }
-        },
-        "line": 3
-      }
-    },
-    "branchMap": {},
-    "s": {
-      "0": 14,
-      "1": 0,
-      "2": 0,
-      "3": 0
-    },
-    "f": {
-      "0": 0
-    },
-    "b": {},
-    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "5dab2987afaff21c73729fdbed54b4612b52870d"
-  },
-  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\example\\effects.ts": {
-    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\example\\effects.ts",
-    "statementMap": {
-      "0": {
-        "start": {
-          "line": 3,
-          "column": 31
-        },
-        "end": {
-          "line": 12,
-          "column": 1
-        }
-      },
-      "1": {
-        "start": {
-          "line": 5,
-          "column": 25
-        },
-        "end": {
-          "line": 5,
-          "column": 82
-        }
-      },
-      "2": {
-        "start": {
-          "line": 6,
-          "column": 8
-        },
-        "end": {
-          "line": 6,
-          "column": 36
-        }
-      },
-      "3": {
-        "start": {
-          "line": 9,
-          "column": 25
-        },
-        "end": {
-          "line": 9,
-          "column": 88
-        }
-      },
-      "4": {
-        "start": {
-          "line": 10,
-          "column": 8
-        },
-        "end": {
-          "line": 10,
-          "column": 36
-        }
-      }
-    },
-    "fnMap": {
-      "0": {
-        "name": "(anonymous_0)",
-        "decl": {
-          "start": {
-            "line": 4,
-            "column": 14
-          },
-          "end": {
-            "line": 4,
-            "column": 15
-          }
-        },
-        "loc": {
-          "start": {
-            "line": 4,
-            "column": 43
-          },
-          "end": {
-            "line": 7,
-            "column": 5
-          }
-        },
-        "line": 4
-      },
-      "1": {
-        "name": "(anonymous_1)",
-        "decl": {
-          "start": {
-            "line": 8,
-            "column": 13
-          },
-          "end": {
-            "line": 8,
-            "column": 14
-          }
-        },
-        "loc": {
-          "start": {
-            "line": 8,
-            "column": 50
-          },
-          "end": {
-            "line": 11,
-            "column": 5
-          }
-        },
-        "line": 8
-      }
-    },
-    "branchMap": {},
-    "s": {
-      "0": 14,
-      "1": 0,
-      "2": 0,
-      "3": 0,
-      "4": 0
-    },
-    "f": {
-      "0": 0,
-      "1": 0
-    },
-    "b": {},
-    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "3900f3538af0ab19321674d74bb10b55a0d65465"
-  },
-  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\example\\index.ts": {
-    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\example\\index.ts",
-    "statementMap": {},
-    "fnMap": {},
-    "branchMap": {},
-    "s": {},
-    "f": {},
-    "b": {},
-    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "87bffdf3dd72b4cf9741d15b729850eefbb17e92"
-  },
   "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\menu\\state.ts": {
     "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\menu\\state.ts",
     "statementMap": {
@@ -387,16 +148,6 @@
       },
       "12": {
         "start": {
-          "line": 25,
-          "column": 8
-        },
-        "end": {
-          "line": 25,
-          "column": 26
-        }
-      },
-      "13": {
-        "start": {
           "line": 28,
           "column": 4
         },
@@ -531,8 +282,7 @@
       "9": 1200,
       "10": 180,
       "11": 180,
-      "12": 0,
-      "13": 15
+      "12": 15
     },
     "f": {
       "0": 15,
@@ -546,7 +296,7 @@
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "2305054c02ecbb60eba945c1b6872e33f46ac4f6"
+    "hash": "d5933bcb91d60cef3e03ace127c3b9bde1e5efdd"
   },
   "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\config.global.ts": {
     "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\config.global.ts",
@@ -661,21 +411,21 @@
       },
       "6": {
         "start": {
-          "line": 461,
+          "line": 462,
           "column": 23
         },
         "end": {
-          "line": 461,
+          "line": 462,
           "column": 73
         }
       },
       "7": {
         "start": {
-          "line": 461,
+          "line": 462,
           "column": 39
         },
         "end": {
-          "line": 461,
+          "line": 462,
           "column": 73
         }
       }
@@ -733,25 +483,25 @@
         "name": "(anonymous_2)",
         "decl": {
           "start": {
-            "line": 461,
+            "line": 462,
             "column": 23
           },
           "end": {
-            "line": 461,
+            "line": 462,
             "column": 24
           }
         },
         "loc": {
           "start": {
-            "line": 461,
+            "line": 462,
             "column": 39
           },
           "end": {
-            "line": 461,
+            "line": 462,
             "column": 73
           }
         },
-        "line": 461
+        "line": 462
       }
     },
     "branchMap": {
@@ -814,7 +564,7 @@
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "a383ce74a1927fce0863b851e3fc705c275b844c"
+    "hash": "403fd651788f48458cb5a1edba719a91493009b5"
   },
   "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\menu\\index.ts": {
     "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\overmind\\menu\\index.ts",
@@ -832,31 +582,31 @@
     "statementMap": {
       "0": {
         "start": {
-          "line": 7,
+          "line": 6,
           "column": 22
         },
         "end": {
-          "line": 10,
+          "line": 8,
           "column": 2
         }
       },
       "1": {
         "start": {
-          "line": 18,
+          "line": 16,
           "column": 27
         },
         "end": {
-          "line": 18,
+          "line": 16,
           "column": 53
         }
       },
       "2": {
         "start": {
-          "line": 19,
+          "line": 17,
           "column": 26
         },
         "end": {
-          "line": 19,
+          "line": 17,
           "column": 54
         }
       }
@@ -871,158 +621,7 @@
     "f": {},
     "b": {},
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "9d2a7d067287fa0739b3215d2022752c43458b30"
-  },
-  "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\pages\\Example\\Example.tsx": {
-    "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\pages\\Example\\Example.tsx",
-    "statementMap": {
-      "0": {
-        "start": {
-          "line": 5,
-          "column": 48
-        },
-        "end": {
-          "line": 18,
-          "column": 1
-        }
-      },
-      "1": {
-        "start": {
-          "line": 6,
-          "column": 36
-        },
-        "end": {
-          "line": 6,
-          "column": 57
-        }
-      },
-      "2": {
-        "start": {
-          "line": 8,
-          "column": 2
-        },
-        "end": {
-          "line": 17,
-          "column": 3
-        }
-      },
-      "3": {
-        "start": {
-          "line": 13,
-          "column": 45
-        },
-        "end": {
-          "line": 13,
-          "column": 78
-        }
-      }
-    },
-    "fnMap": {
-      "0": {
-        "name": "(anonymous_0)",
-        "decl": {
-          "start": {
-            "line": 5,
-            "column": 48
-          },
-          "end": {
-            "line": 5,
-            "column": 49
-          }
-        },
-        "loc": {
-          "start": {
-            "line": 5,
-            "column": 54
-          },
-          "end": {
-            "line": 18,
-            "column": 1
-          }
-        },
-        "line": 5
-      },
-      "1": {
-        "name": "(anonymous_1)",
-        "decl": {
-          "start": {
-            "line": 13,
-            "column": 21
-          },
-          "end": {
-            "line": 13,
-            "column": 22
-          }
-        },
-        "loc": {
-          "start": {
-            "line": 13,
-            "column": 45
-          },
-          "end": {
-            "line": 13,
-            "column": 78
-          }
-        },
-        "line": 13
-      }
-    },
-    "branchMap": {
-      "0": {
-        "loc": {
-          "start": {
-            "line": 11,
-            "column": 7
-          },
-          "end": {
-            "line": 15,
-            "column": 7
-          }
-        },
-        "type": "cond-expr",
-        "locations": [
-          {
-            "start": {
-              "line": 11,
-              "column": 24
-            },
-            "end": {
-              "line": 11,
-              "column": 47
-            }
-          },
-          {
-            "start": {
-              "line": 12,
-              "column": 8
-            },
-            "end": {
-              "line": 14,
-              "column": 13
-            }
-          }
-        ],
-        "line": 11
-      }
-    },
-    "s": {
-      "0": 14,
-      "1": 0,
-      "2": 0,
-      "3": 0
-    },
-    "f": {
-      "0": 0,
-      "1": 0
-    },
-    "b": {
-      "0": [
-        0,
-        0
-      ]
-    },
-    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "b1512cb7d90680ce1fc894d931b09538c1897d80"
+    "hash": "60a3f3698083504abf9ed49e29e4daebe8b9de19"
   },
   "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\pages\\Menu\\ShowAll.tsx": {
     "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\pages\\Menu\\ShowAll.tsx",
@@ -1033,7 +632,7 @@
           "column": 48
         },
         "end": {
-          "line": 55,
+          "line": 52,
           "column": 1
         }
       },
@@ -1053,7 +652,7 @@
           "column": 23
         },
         "end": {
-          "line": 29,
+          "line": 30,
           "column": 6
         }
       },
@@ -1063,17 +662,17 @@
           "column": 8
         },
         "end": {
-          "line": 28,
+          "line": 29,
           "column": 19
         }
       },
       "4": {
         "start": {
-          "line": 31,
+          "line": 32,
           "column": 4
         },
         "end": {
-          "line": 54,
+          "line": 51,
           "column": 5
         }
       }
@@ -1097,7 +696,7 @@
             "column": 54
           },
           "end": {
-            "line": 55,
+            "line": 52,
             "column": 1
           }
         },
@@ -1121,7 +720,7 @@
             "column": 8
           },
           "end": {
-            "line": 28,
+            "line": 29,
             "column": 19
           }
         },
@@ -1142,7 +741,7 @@
     },
     "b": {},
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "4c624def8300d43deae8ea651601bbb3b73574b5"
+    "hash": "3f214a32a29d78770ac7f73eecad9ac3fd0ecd2f"
   },
   "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\pages\\Error\\NotFound.tsx": {
     "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\pages\\Error\\NotFound.tsx",
@@ -1691,19 +1290,19 @@
       "1": 6080,
       "2": 14,
       "3": 14,
-      "4": 436,
-      "5": 4185
+      "4": 446,
+      "5": 4225
     },
     "f": {
       "0": 6080,
       "1": 0,
-      "2": 436,
-      "3": 4185
+      "2": 446,
+      "3": 4225
     },
     "b": {
       "0": [
-        436,
-        398
+        446,
+        408
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
@@ -1718,7 +1317,7 @@
           "column": 60
         },
         "end": {
-          "line": 40,
+          "line": 38,
           "column": 1
         }
       },
@@ -1728,7 +1327,7 @@
           "column": 4
         },
         "end": {
-          "line": 38,
+          "line": 37,
           "column": 5
         }
       }
@@ -1752,7 +1351,7 @@
             "column": 74
           },
           "end": {
-            "line": 40,
+            "line": 38,
             "column": 1
           }
         },
@@ -1769,7 +1368,7 @@
     },
     "b": {},
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "db16db46596bf162b18976a10e9d4b195c5e5bad"
+    "hash": "a1a6de8cfc5255a180e29f9fc8d0705aee86e370"
   },
   "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\components\\MenuComponents\\MenuComponent.tsx": {
     "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\components\\MenuComponents\\MenuComponent.tsx",
@@ -2087,16 +1686,6 @@
       },
       "4": {
         "start": {
-          "line": 21,
-          "column": 86
-        },
-        "end": {
-          "line": 21,
-          "column": 119
-        }
-      },
-      "5": {
-        "start": {
           "line": 27,
           "column": 24
         },
@@ -2105,7 +1694,7 @@
           "column": 25
         }
       },
-      "6": {
+      "5": {
         "start": {
           "line": 28,
           "column": 28
@@ -2115,7 +1704,7 @@
           "column": 67
         }
       },
-      "7": {
+      "6": {
         "start": {
           "line": 29,
           "column": 28
@@ -2125,7 +1714,7 @@
           "column": 73
         }
       },
-      "8": {
+      "7": {
         "start": {
           "line": 32,
           "column": 24
@@ -2135,7 +1724,7 @@
           "column": 29
         }
       },
-      "9": {
+      "8": {
         "start": {
           "line": 34,
           "column": 32
@@ -2145,7 +1734,7 @@
           "column": 41
         }
       },
-      "10": {
+      "9": {
         "start": {
           "line": 34,
           "column": 55
@@ -2200,7 +1789,7 @@
           },
           "end": {
             "line": 21,
-            "column": 119
+            "column": 89
           }
         },
         "line": 21
@@ -2283,11 +1872,11 @@
         "loc": {
           "start": {
             "line": 20,
-            "column": 113
+            "column": 101
           },
           "end": {
             "line": 20,
-            "column": 179
+            "column": 167
           }
         },
         "type": "cond-expr",
@@ -2295,21 +1884,21 @@
           {
             "start": {
               "line": 20,
-              "column": 143
+              "column": 131
             },
             "end": {
               "line": 20,
-              "column": 145
+              "column": 133
             }
           },
           {
             "start": {
               "line": 20,
-              "column": 148
+              "column": 136
             },
             "end": {
               "line": 20,
-              "column": 179
+              "column": 167
             }
           }
         ],
@@ -2391,11 +1980,11 @@
         "loc": {
           "start": {
             "line": 34,
-            "column": 295
+            "column": 284
           },
           "end": {
             "line": 34,
-            "column": 389
+            "column": 378
           }
         },
         "type": "cond-expr",
@@ -2403,21 +1992,21 @@
           {
             "start": {
               "line": 34,
-              "column": 337
+              "column": 326
             },
             "end": {
               "line": 34,
-              "column": 376
+              "column": 365
             }
           },
           {
             "start": {
               "line": 34,
-              "column": 379
+              "column": 368
             },
             "end": {
               "line": 34,
-              "column": 389
+              "column": 378
             }
           }
         ],
@@ -2429,19 +2018,18 @@
       "1": 76,
       "2": 76,
       "3": 76,
-      "4": 0,
-      "5": 436,
-      "6": 59,
-      "7": 59,
-      "8": 436,
-      "9": 5232,
-      "10": 5
+      "4": 446,
+      "5": 67,
+      "6": 67,
+      "7": 446,
+      "8": 5352,
+      "9": 5
     },
     "f": {
       "0": 76,
       "1": 0,
-      "2": 436,
-      "3": 5232,
+      "2": 446,
+      "3": 5352,
       "4": 5
     },
     "b": {
@@ -2454,177 +2042,177 @@
         76
       ],
       "2": [
-        59,
-        377
+        67,
+        379
       ],
       "3": [
-        406,
-        4826
+        416,
+        4936
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "37f1e93ebe04b102ddc0b0f774c020092fbbf9a8"
+    "hash": "4a718105835981c182e02bf315d8ce752ae68841"
   },
   "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\hooks\\useScroll.ts": {
     "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\hooks\\useScroll.ts",
     "statementMap": {
       "0": {
         "start": {
-          "line": 4,
+          "line": 3,
           "column": 30
         },
         "end": {
-          "line": 28,
+          "line": 27,
           "column": 1
         }
       },
       "1": {
         "start": {
-          "line": 5,
+          "line": 4,
           "column": 19
         },
         "end": {
-          "line": 5,
+          "line": 4,
           "column": 36
         }
       },
       "2": {
         "start": {
-          "line": 6,
+          "line": 5,
           "column": 35
         },
         "end": {
-          "line": 6,
+          "line": 5,
           "column": 49
         }
       },
       "3": {
         "start": {
-          "line": 8,
+          "line": 7,
           "column": 26
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 2
         }
       },
       "4": {
         "start": {
-          "line": 9,
+          "line": 8,
           "column": 18
         },
         "end": {
-          "line": 9,
+          "line": 8,
           "column": 25
         }
       },
       "5": {
         "start": {
-          "line": 10,
+          "line": 9,
           "column": 2
         },
         "end": {
-          "line": 10,
+          "line": 9,
           "column": 36
         }
       },
       "6": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 1
         },
         "end": {
-          "line": 25,
+          "line": 24,
           "column": 25
         }
       },
       "7": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 50
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 54
         }
       },
       "8": {
         "start": {
-          "line": 15,
+          "line": 14,
           "column": 19
         },
         "end": {
-          "line": 15,
+          "line": 14,
           "column": 70
         }
       },
       "9": {
         "start": {
-          "line": 17,
+          "line": 16,
           "column": 2
         },
         "end": {
-          "line": 20,
+          "line": 19,
           "column": 3
         }
       },
       "10": {
         "start": {
-          "line": 18,
+          "line": 17,
           "column": 3
         },
         "end": {
-          "line": 18,
+          "line": 17,
           "column": 38
         }
       },
       "11": {
         "start": {
-          "line": 19,
+          "line": 18,
           "column": 3
         },
         "end": {
-          "line": 19,
+          "line": 18,
           "column": 39
         }
       },
       "12": {
         "start": {
-          "line": 22,
+          "line": 21,
           "column": 2
         },
         "end": {
-          "line": 24,
+          "line": 23,
           "column": 3
         }
       },
       "13": {
         "start": {
-          "line": 23,
+          "line": 22,
           "column": 3
         },
         "end": {
-          "line": 23,
+          "line": 22,
           "column": 61
         }
       },
       "14": {
         "start": {
-          "line": 23,
+          "line": 22,
           "column": 25
         },
         "end": {
-          "line": 23,
+          "line": 22,
           "column": 61
         }
       },
       "15": {
         "start": {
-          "line": 27,
+          "line": 26,
           "column": 1
         },
         "end": {
-          "line": 27,
+          "line": 26,
           "column": 31
         }
       }
@@ -2634,108 +2222,108 @@
         "name": "(anonymous_0)",
         "decl": {
           "start": {
-            "line": 4,
+            "line": 3,
             "column": 30
           },
           "end": {
-            "line": 4,
+            "line": 3,
             "column": 31
           }
         },
         "loc": {
           "start": {
-            "line": 4,
+            "line": 3,
             "column": 48
           },
           "end": {
-            "line": 28,
+            "line": 27,
             "column": 1
           }
         },
-        "line": 4
+        "line": 3
       },
       "1": {
         "name": "(anonymous_1)",
         "decl": {
           "start": {
-            "line": 8,
+            "line": 7,
             "column": 26
           },
           "end": {
-            "line": 8,
+            "line": 7,
             "column": 27
           }
         },
         "loc": {
           "start": {
-            "line": 8,
+            "line": 7,
             "column": 44
           },
           "end": {
-            "line": 11,
+            "line": 10,
             "column": 2
           }
         },
-        "line": 8
+        "line": 7
       },
       "2": {
         "name": "(anonymous_2)",
         "decl": {
           "start": {
-            "line": 13,
+            "line": 12,
             "column": 11
           },
           "end": {
-            "line": 13,
+            "line": 12,
             "column": 12
           }
         },
         "loc": {
           "start": {
-            "line": 13,
+            "line": 12,
             "column": 17
           },
           "end": {
-            "line": 25,
+            "line": 24,
             "column": 2
           }
         },
-        "line": 13
+        "line": 12
       },
       "3": {
         "name": "(anonymous_3)",
         "decl": {
           "start": {
-            "line": 22,
+            "line": 21,
             "column": 9
           },
           "end": {
-            "line": 22,
+            "line": 21,
             "column": 10
           }
         },
         "loc": {
           "start": {
-            "line": 22,
+            "line": 21,
             "column": 15
           },
           "end": {
-            "line": 24,
+            "line": 23,
             "column": 3
           }
         },
-        "line": 22
+        "line": 21
       }
     },
     "branchMap": {
       "0": {
         "loc": {
           "start": {
-            "line": 17,
+            "line": 16,
             "column": 2
           },
           "end": {
-            "line": 20,
+            "line": 19,
             "column": 3
           }
         },
@@ -2743,35 +2331,35 @@
         "locations": [
           {
             "start": {
-              "line": 17,
+              "line": 16,
               "column": 2
             },
             "end": {
-              "line": 20,
+              "line": 19,
               "column": 3
             }
           },
           {
             "start": {
-              "line": 17,
+              "line": 16,
               "column": 2
             },
             "end": {
-              "line": 20,
+              "line": 19,
               "column": 3
             }
           }
         ],
-        "line": 17
+        "line": 16
       },
       "1": {
         "loc": {
           "start": {
-            "line": 23,
+            "line": 22,
             "column": 3
           },
           "end": {
-            "line": 23,
+            "line": 22,
             "column": 61
           }
         },
@@ -2779,26 +2367,26 @@
         "locations": [
           {
             "start": {
-              "line": 23,
+              "line": 22,
               "column": 3
             },
             "end": {
-              "line": 23,
+              "line": 22,
               "column": 61
             }
           },
           {
             "start": {
-              "line": 23,
+              "line": 22,
               "column": 3
             },
             "end": {
-              "line": 23,
+              "line": 22,
               "column": 61
             }
           }
         ],
-        "line": 23
+        "line": 22
       }
     },
     "s": {
@@ -2836,7 +2424,7 @@
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "284b7f2490ca14fa62821b2f8503bc02a9550b6a"
+    "hash": "3f2efed8d3b24865a6c3aa443afee08e94aa1847"
   },
   "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\pages\\Menu\\Menu.tsx": {
     "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\pages\\Menu\\Menu.tsx",
@@ -3190,11 +2778,11 @@
       "2": 108,
       "3": 1296,
       "4": 108,
-      "5": 59,
-      "6": 59,
-      "7": 59,
-      "8": 59,
-      "9": 59,
+      "5": 67,
+      "6": 67,
+      "7": 67,
+      "8": 67,
+      "9": 67,
       "10": 108,
       "11": 27,
       "12": 27,
@@ -3205,18 +2793,18 @@
     "f": {
       "0": 108,
       "1": 1296,
-      "2": 59,
+      "2": 67,
       "3": 27
     },
     "b": {
       "0": [
-        59,
+        67,
         0
       ],
       "1": [
-        59,
-        59,
-        59
+        67,
+        67,
+        67
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
@@ -3231,7 +2819,7 @@
           "column": 52
         },
         "end": {
-          "line": 26,
+          "line": 24,
           "column": 1
         }
       },
@@ -3355,7 +2943,7 @@
             "column": 58
           },
           "end": {
-            "line": 26,
+            "line": 24,
             "column": 1
           }
         },
@@ -3486,7 +3074,7 @@
     },
     "s": {
       "0": 14,
-      "1": 61,
+      "1": 60,
       "2": 60,
       "3": 60,
       "4": 15,
@@ -3498,7 +3086,7 @@
       "10": 60
     },
     "f": {
-      "0": 61,
+      "0": 60,
       "1": 15,
       "2": 4
     },
@@ -3513,38 +3101,38 @@
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "7a0623715e3ae3ea355da5cc49b34c3471fb8c30"
+    "hash": "4b455bc282e44be2c19856fed6d07237e089504d"
   },
   "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\components\\App\\App.tsx": {
     "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\components\\App\\App.tsx",
     "statementMap": {
       "0": {
         "start": {
-          "line": 10,
+          "line": 9,
           "column": 0
         },
         "end": {
-          "line": 10,
+          "line": 9,
           "column": 16
         }
       },
       "1": {
         "start": {
-          "line": 13,
+          "line": 11,
           "column": 44
         },
         "end": {
-          "line": 28,
+          "line": 25,
           "column": 1
         }
       },
       "2": {
         "start": {
-          "line": 15,
+          "line": 13,
           "column": 2
         },
         "end": {
-          "line": 27,
+          "line": 24,
           "column": 3
         }
       }
@@ -3554,25 +3142,25 @@
         "name": "(anonymous_0)",
         "decl": {
           "start": {
-            "line": 13,
+            "line": 11,
             "column": 44
           },
           "end": {
-            "line": 13,
+            "line": 11,
             "column": 45
           }
         },
         "loc": {
           "start": {
-            "line": 13,
+            "line": 11,
             "column": 50
           },
           "end": {
-            "line": 28,
+            "line": 25,
             "column": 1
           }
         },
-        "line": 13
+        "line": 11
       }
     },
     "branchMap": {},
@@ -3586,7 +3174,7 @@
     },
     "b": {},
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "913ca8861a8bb9b74c09d6b5a4f17e509cebddb5"
+    "hash": "c6eea439ca477f1c99580a4c9f1244da19eb67ce"
   },
   "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\reportWebVitals.ts": {
     "path": "D:\\SoftwareProjekt\\order-and-pay-frontend-client\\src\\reportWebVitals.ts",
