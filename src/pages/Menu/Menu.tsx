@@ -52,14 +52,13 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
         <>
             <ScrollCats sectionRefs={sectionRefs} scrollToButton={scrollToButton} shouldDisplayCategoryNavbar={shouldDisplayCategoryNavbar} scrollToRef={scrollToRef} />
             <div id="page" className="container w-full border-solid h-screen">
-
+                <MenuItem dishIndex={currentItem} />
                 <div className="w-full">
                     {/*@ts-ignore*/}
                     <div ref={containerRef} ><Head scrollToRef={scrollToRef} /> </div>
                     <div id="menuComponent" className="pb-96" >
                         <MenuComponent sectionRefs={sectionRefs} />
                     </div>
-                    <MenuItem dishIndex={currentItem} />
                 </div>
             </div>
             <OrderButton />
