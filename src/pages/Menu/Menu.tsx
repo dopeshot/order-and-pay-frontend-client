@@ -16,9 +16,6 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
         rootMargin: "-50px"
     })
 
-
-    // let currentItem: Dish = menu.dishes[0]
-
     const [currentItem, setCurrentItem] = useState(menu.dishes[0])
     const [menuItemOpen, setMenuItemOpen] = useState(false)
     const sectionRefs = useRef<React.RefObject<HTMLDivElement>[]>(menu.categories.map(() => createRef()))
@@ -64,12 +61,12 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
 
                     <div id="menuComponent" className="pb-96" >
 
-                        <MenuComponent sectionRefs={sectionRefs} openMenuItem={openMenuItem} />
+                        <MenuComponent sectionRefs={sectionRefs} openMenuItem={openMenuItem} menuItemOpen={menuItemOpen} />
                     </div>
 
 
                 </div>
-                <div id="menuItem" className=" w-full h-1/2 bottom-0" >
+                <div id="menuItem" className=" overflow-y-auto w-full h-1/2 " >
                     <MenuItem dish={currentItem} menuItemOpen={menuItemOpen} />
                 </div>
             </div>

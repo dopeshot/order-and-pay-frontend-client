@@ -21,7 +21,7 @@ export const ScrollCats: React.FunctionComponent<PropTypes> = ({ sectionRefs, sh
             <button className="text-xl text-grey font-light pl-4 pr-4" onClick={() => console.log("Searchicon clicked")} >
                 <FontAwesomeIcon icon="search" />
             </button>
-            <div id="scrollCats" className='flex gap-0 scrollbar-hide overflow-x-auto'>
+            <div id="scrollCats" className='flex gap-0 scrollbar-hide $ overflow-x-auto'>
                 {sectionRefs.current.length > 0 && <Scrollspy offset={-60} sectionRefs={sectionRefs.current}>
                     {({ currentElementIndexInViewport, elementsStatusInViewport }) => {
                         if (!equalArray(elementsStatusInViewport, prevStatuses)) {

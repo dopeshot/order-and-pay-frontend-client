@@ -19,6 +19,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ dish, menuItemOpe
                 </button>
             ))}</div>
         </div>
+
     ))
 
     return (
@@ -28,7 +29,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ dish, menuItemOpe
                     <div className="float-left font-bold">{dish.name}</div>
                     <div className="float-right text-red font-bold">{priceToLocal(dish.price)}</div>
                 </div>
-                <div className="self-start text-gray-400">{dish.description}</div>
+                <div className="self-start text-gray-400">{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}</div>
             </div>
             {choices}
         </div>
