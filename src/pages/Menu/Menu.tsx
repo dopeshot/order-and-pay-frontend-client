@@ -5,16 +5,17 @@ import { MenuItem } from '../../components/MenuComponents/MenuItem';
 import { OrderButton } from '../../components/MenuComponents/OrderButton';
 import { ScrollCats } from '../../components/MenuComponents/ScrollCats';
 import { useScrollToNav } from '../../hooks/useScroll';
-import { MenuType } from '../../overmind/menu/state';
+import { useAppState } from '../../overmind';
+import { Dish, MenuType } from '../../overmind/menu/state';
 
 export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
+
 
     const [containerRef, shouldDisplayCategoryNavbar] = useScrollToNav({
         root: null,
         rootMargin: "-50px"
     })
-    let currentItem: number
-    currentItem = 0
+    let currentItem: Dish = menu.dishes[0]
     let menuItemOpen: boolean
     const sectionRefs = useRef<React.RefObject<HTMLDivElement>[]>(menu.categories.map(() => createRef()))
 
@@ -32,8 +33,8 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
 
     }
 
-    const openMenuItem = (index: number) => {
-        currentItem = index
+    const openMenuItem = (dish: Dish) => {
+        currentItem = dish
         menuItemOpen = true
     }
 
@@ -59,7 +60,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
                     <div id="menuComponent" className="pb-96" >
                         <MenuComponent sectionRefs={sectionRefs} />
                     </div>
-                    <MenuItem dishIndex={currentItem} />
+                    <MenuItem dish={currentItem} />
                 </div>
             </div>
             <OrderButton />
