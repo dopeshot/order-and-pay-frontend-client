@@ -1,0 +1,25 @@
+name: Test (Docker)
+
+on:
+  push:
+  pull_request:
+    branches: [main]
+
+jobs:      
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        
+      - name: create env
+        run: 'echo "$ENV_VALUES" > .env'
+        shell: bash
+        env:
+          ENV_VALUES: ${{secrets.PIPELINE_DOCKER_ENV}}
+      
+      # run unit tests with docker container 
+      #- name: docker-e2e
+      #  run: docker-compose -f docker-compose.test.yaml up --exit-code-from oap-frontend-client-test
+    
