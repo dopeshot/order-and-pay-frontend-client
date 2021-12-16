@@ -1,7 +1,9 @@
 import React from "react"
 
-
-export const MenuItem: React.FunctionComponent = () => {
+type PropTypes = {
+    dishIndex: number
+}
+export const MenuItem: React.FunctionComponent<PropTypes> = ({ dishIndex }: PropTypes) => {
 
 
     return (
