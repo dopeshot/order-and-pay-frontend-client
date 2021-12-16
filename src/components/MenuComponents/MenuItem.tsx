@@ -1,9 +1,10 @@
 import React from "react"
+import { Dish } from "../../overmind/menu/state"
 
 type PropTypes = {
-    dishIndex: number
+    dish: Dish
 }
-export const MenuItem: React.FunctionComponent<PropTypes> = ({ dishIndex }: PropTypes) => {
+export const MenuItem: React.FunctionComponent<PropTypes> = ({ dish }: PropTypes) => {
 
 
     return (
