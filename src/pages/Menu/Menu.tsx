@@ -1,4 +1,4 @@
-import React, { createRef, useRef } from 'react';
+import React, { createRef, useRef, useState } from 'react';
 import { Head } from '../../components/MenuComponents/Head';
 import { MenuComponent } from '../../components/MenuComponents/MenuComponent';
 import { MenuItem } from '../../components/MenuComponents/MenuItem';
@@ -15,8 +15,10 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
         root: null,
         rootMargin: "-50px"
     })
+
+
     let currentItem: Dish = menu.dishes[0]
-    let menuItemOpen: boolean
+    const [menuItemOpen, setMenuItemOpen] = useState(false)
     const sectionRefs = useRef<React.RefObject<HTMLDivElement>[]>(menu.categories.map(() => createRef()))
 
     const scrollToButton = async (index: number) => {
@@ -35,7 +37,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
 
     const openMenuItem = (dish: Dish) => {
         currentItem = dish
-        menuItemOpen = true
+        setMenuItemOpen(true)
     }
 
     const scrollToRef = (index: number) => {
@@ -57,10 +59,12 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
                 <div className="w-full">
                     {/*@ts-ignore*/}
                     <div ref={containerRef} ><Head scrollToRef={scrollToRef} /> </div>
+                    <MenuItem dish={currentItem} menuItemOpen={menuItemOpen} />
                     <div id="menuComponent" className="pb-96" >
-                        <MenuComponent sectionRefs={sectionRefs} />
+
+                        <MenuComponent sectionRefs={sectionRefs} openMenuItem={openMenuItem} />
                     </div>
-                    <MenuItem dish={currentItem} />
+
                 </div>
             </div>
             <OrderButton />
