@@ -1,7 +1,7 @@
 import { Context } from ".."
 
 export const loadMenu = async ({ state, effects }: Context) => {
-    state.menu.isLoadingMenu = true
+    state.menu.isLoadingMenu = false
 
     try {
         const response = await effects.menu.getMenu()

@@ -17,7 +17,9 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
     })
 
 
-    let currentItem: Dish = menu.dishes[0]
+    // let currentItem: Dish = menu.dishes[0]
+
+    const [currentItem, setCurrentItem] = useState(menu.dishes[0])
     const [menuItemOpen, setMenuItemOpen] = useState(false)
     const sectionRefs = useRef<React.RefObject<HTMLDivElement>[]>(menu.categories.map(() => createRef()))
 
@@ -36,7 +38,8 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
     }
 
     const openMenuItem = (dish: Dish) => {
-        currentItem = dish
+        setCurrentItem(dish)
+        console.log(dish)
         setMenuItemOpen(true)
     }
 
@@ -58,12 +61,16 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
                 <div className="w-full">
                     {/*@ts-ignore*/}
                     <div ref={containerRef} ><Head scrollToRef={scrollToRef} /> </div>
-                    <MenuItem dish={currentItem} menuItemOpen={menuItemOpen} />
+
                     <div id="menuComponent" className="pb-96" >
 
                         <MenuComponent sectionRefs={sectionRefs} openMenuItem={openMenuItem} />
                     </div>
 
+
+                </div>
+                <div id="menuItem" className=" w-full h-1/2 bottom-0" >
+                    <MenuItem dish={currentItem} menuItemOpen={menuItemOpen} />
                 </div>
             </div>
             <OrderButton />
