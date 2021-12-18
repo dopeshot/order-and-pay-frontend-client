@@ -25,7 +25,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ dish, menuItemOpe
 
     return (
         <div id="menuItem" className=" overflow-y-auto w-full h-full left-0 fixed bottom-0" onClick={() => setMenuItemOpen(false)} >
-            <div className={`container mt-64 flex flex-col shadow-md rounded-md bg-red transition-opacity duration-500 content-center w-full ${menuItemOpen ? `` : `opacity-0 pointer-events-none`} `} >
+            <div className={`container mt-64 flex flex-col shadow-md rounded-md bg-red `} >
                 <div className="self-start flex flex-col w-full justify-between">
                     <div className="self-start justify-between w-full">
                         <div className="float-left font-bold">{dish.name}</div>
@@ -36,5 +36,6 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ dish, menuItemOpe
                 {choices}
             </div>
         </div>
+
     )
 }

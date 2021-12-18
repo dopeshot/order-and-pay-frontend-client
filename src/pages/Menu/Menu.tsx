@@ -3,6 +3,7 @@ import { Head } from '../../components/MenuComponents/Head';
 import { MenuComponent } from '../../components/MenuComponents/MenuComponent';
 import { MenuItem } from '../../components/MenuComponents/MenuItem';
 import { OrderButton } from '../../components/MenuComponents/OrderButton';
+import { DishButton } from '../../components/MenuComponents/DishButton';
 import { ScrollCats } from '../../components/MenuComponents/ScrollCats';
 import { useScrollToNav } from '../../hooks/useScroll';
 import { useAppState } from '../../overmind';
@@ -58,18 +59,20 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
                 <div className="w-full">
                     {/*@ts-ignore*/}
                     <div ref={containerRef} ><Head scrollToRef={scrollToRef} /> </div>
-
                     <div id="menuComponent" className="pb-96" >
-
                         <MenuComponent sectionRefs={sectionRefs} openMenuItem={openMenuItem} menuItemOpen={menuItemOpen} />
                     </div>
+                </div>
 
+
+
+                <div id="menuItem" className="flex flex-col overflow-y-auto sticky bottom-0" >
+                    {menuItemOpen && <MenuItem dish={currentItem} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} />}
 
                 </div>
-                {menuItemOpen && <MenuItem dish={currentItem} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} />}
 
             </div>
-            <OrderButton />
+            {menuItemOpen ? <DishButton /> : <OrderButton />}
         </>
     )
 }
