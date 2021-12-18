@@ -23,7 +23,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ dish, menuItemOpe
     ))
 
     return (
-        <div className={`flex flex-col shadow-md rounded-md bg-red transition-opacity duration-500 content-center w-full ${menuItemOpen ? `` : `opacity-0 pointer-events-none`} `} >
+        <div className={`flex flex-col shadow-md rounded-md bg-red transition-opacity duration-500 content-center w-full overflow-y-auto ${menuItemOpen ? `` : `opacity-0 pointer-events-none`} `} >
             <div className="self-start flex flex-col w-full justify-between">
                 <div className="self-start justify-between w-full">
                     <div className="float-left font-bold">{dish.name}</div>
