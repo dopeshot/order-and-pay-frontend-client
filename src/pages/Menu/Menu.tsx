@@ -1,4 +1,5 @@
 import React, { createRef, useRef, useState } from 'react';
+import disablescroll from 'disable-scroll'
 import { Head } from '../../components/MenuComponents/Head';
 import { MenuComponent } from '../../components/MenuComponents/MenuComponent';
 import { MenuItem } from '../../components/MenuComponents/MenuItem';
@@ -37,10 +38,14 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
 
     }
 
+
+
     const openMenuItem = (dish: Dish) => {
         setCurrentItem(dish)
         console.log(dish)
         setMenuItemOpen(true)
+        //@ts-ignore
+        //disablescroll.on(document.querySelector("#menuComponent"))
     }
 
     const scrollToRef = (index: number) => {
@@ -55,25 +60,28 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
     }
 
     return (
-        <>
+        <div>
             <ScrollCats sectionRefs={sectionRefs} scrollToButton={scrollToButton} shouldDisplayCategoryNavbar={shouldDisplayCategoryNavbar} scrollToRef={scrollToRef} />
-            <div id="page" className="container w-full border-solid h-screen">
+            <div id="page" className={`container w-full border-solid h-screen  ${menuItemOpen ? `pointer-events-none overflow-hidden` : `overflow-scroll `} `}>
                 <div className="w-full">
                     {/*@ts-ignore*/}
                     <div ref={containerRef} ><Head scrollToRef={scrollToRef} /> </div>
-
                     <div id="menuComponent" className="pb-96" >
 
                         <MenuComponent sectionRefs={sectionRefs} openMenuItem={openMenuItem} />
                     </div>
-
-
                 </div>
-                <div id="menuItem" className=" w-full h-1/2 bottom-0" >
-                    <MenuItem dish={currentItem} menuItemOpen={menuItemOpen} />
-                </div>
+
             </div>
+
+            <div id="menuItem" className="fixed bottom-0 w-full " >
+                <MenuItem dish={currentItem} menuItemOpen={menuItemOpen} />
+            </div>
+
+
+
+
             <OrderButton />
-        </>
+        </div>
     )
 }

@@ -20,7 +20,7 @@ export const Head: React.FunctionComponent<PropTypes> = ({ scrollToRef }: PropTy
             <Searchbar />
             <h2 className="font-bold pt-4 text-2xl">Kategorien</h2>
             <Link id="showAll" to="/categories" className="text-red font-bold text-sm text-right self-end pr-5">Alle Anzeigen</Link>
-            <div id="categories" className="overflow-auto pt-4 flex">
+            <div id="categories" className="overflow-auto pt-4 flex scrollbar-hide">
                 <Categories scrollToRef={scrollToRef} />
             </div>
         </div>
