@@ -6,9 +6,10 @@ import { Dish } from '../../overmind/menu/state';
 type PropTypes = {
     sectionRefs: React.MutableRefObject<React.RefObject<HTMLDivElement>[]>,
     openMenuItem: (dish: Dish) => void,
+    menuItemOpen: boolean
 }
 
-export const MenuComponent: React.FunctionComponent<PropTypes> = ({ sectionRefs, openMenuItem }: PropTypes) => {
+export const MenuComponent: React.FunctionComponent<PropTypes> = ({ sectionRefs, openMenuItem, menuItemOpen }: PropTypes) => {
     const { menu } = useAppState().menu
 
     return (<>

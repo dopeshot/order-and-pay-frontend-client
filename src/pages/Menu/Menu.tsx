@@ -4,6 +4,7 @@ import { Head } from '../../components/MenuComponents/Head';
 import { MenuComponent } from '../../components/MenuComponents/MenuComponent';
 import { MenuItem } from '../../components/MenuComponents/MenuItem';
 import { OrderButton } from '../../components/MenuComponents/OrderButton';
+import { DishButton } from '../../components/MenuComponents/DishButton';
 import { ScrollCats } from '../../components/MenuComponents/ScrollCats';
 import { useScrollToNav } from '../../hooks/useScroll';
 import { useAppState } from '../../overmind';
@@ -16,9 +17,6 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
         root: null,
         rootMargin: "-50px"
     })
-
-
-    // let currentItem: Dish = menu.dishes[0]
 
     const [currentItem, setCurrentItem] = useState(menu.dishes[0])
     const [menuItemOpen, setMenuItemOpen] = useState(false)
@@ -60,28 +58,26 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
     }
 
     return (
-        <div>
+        <>
             <ScrollCats sectionRefs={sectionRefs} scrollToButton={scrollToButton} shouldDisplayCategoryNavbar={shouldDisplayCategoryNavbar} scrollToRef={scrollToRef} />
             <div id="page" className={`container w-full border-solid h-screen  ${menuItemOpen ? `pointer-events-none overflow-hidden` : `overflow-scroll `} `}>
                 <div className="w-full">
                     {/*@ts-ignore*/}
                     <div ref={containerRef} ><Head scrollToRef={scrollToRef} /> </div>
                     <div id="menuComponent" className="pb-96" >
-
-                        <MenuComponent sectionRefs={sectionRefs} openMenuItem={openMenuItem} />
+                        <MenuComponent sectionRefs={sectionRefs} openMenuItem={openMenuItem} menuItemOpen={menuItemOpen} />
                     </div>
                 </div>
 
+
+
+                <div id="menuItem" className="flex flex-col overflow-y-auto sticky bottom-0" >
+                    {menuItemOpen && <MenuItem dish={currentItem} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} />}
+
+                </div>
+
             </div>
-
-            <div id="menuItem" className="fixed bottom-0 w-full " >
-                <MenuItem dish={currentItem} menuItemOpen={menuItemOpen} />
-            </div>
-
-
-
-
-            <OrderButton />
-        </div>
+            {menuItemOpen ? <DishButton /> : <OrderButton />}
+        </>
     )
 }
