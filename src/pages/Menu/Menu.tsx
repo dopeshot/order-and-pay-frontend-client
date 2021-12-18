@@ -69,12 +69,9 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
                     </div>
                 </div>
 
-
-
-                <div id="menuItem" className="flex flex-col overflow-y-auto sticky bottom-0" >
-                    {menuItemOpen && <MenuItem dish={currentItem} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} />}
-
-                </div>
+            </div>
+            <div id="menuItem" className="conatiner flex flex-col overflow-y-auto sticky bottom-0" >
+                {menuItemOpen && <MenuItem dish={currentItem} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} />}
 
             </div>
             {menuItemOpen ? <DishButton /> : <OrderButton />}
