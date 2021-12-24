@@ -51,6 +51,14 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ dish, menuItemOpe
                     <div className="pt-2">
                         {choices}
                     </div>
+                    <p className="pt-2 font-bold pb-2">Notiz an die Küche</p>
+                    <div className="border rounded shadow h-24 flex justify-between items-stretch">
+                        <p className="pt-2 pl-2 text-gray-400">Platz für Wünsche...</p>
+                        <div className="h-full pt-2 pr-2 flex flex-col justify-between">
+                            <FontAwesomeIcon icon="hamburger" className="text-red self-end" />
+                            <p className="text-xs">edited: 69:69</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
