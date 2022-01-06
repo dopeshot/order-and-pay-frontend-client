@@ -42,6 +42,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
         setCurrentItem(dish)
         console.log(dish)
         setMenuItemOpen(true)
+        console.log(menuItemOpen)
         //@ts-ignore
         //disablescroll.on(document.querySelector("#menuComponent"))
     }
@@ -70,7 +71,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
                 </div>
 
             </div>
-            <div id="menuItem" className="conatiner flex flex-col overflow-y-auto sticky bottom-0" >
+            <div id="menuItem" className="container flex flex-col overflow-y-auto sticky bottom-0" >
                 {menuItemOpen && <MenuItem dish={currentItem} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} />}
 
             </div>

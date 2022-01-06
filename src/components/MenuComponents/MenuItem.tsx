@@ -32,11 +32,11 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ dish, menuItemOpe
 
     return (
         <div id="menuItem" className=" overflow-y-auto w-full h-full left-0 fixed bottom-0" onClick={() => setMenuItemOpen(false)} >
-            <div className={`container mt-96 flex flex-col shadow-md rounded-md bg-red `} >
-                <div className="self-start flex flex-col w-full justify-between">
+            <div className="container mt-96 flex flex-col shadow-md rounded-md bg-red" onClick={() => setMenuItemOpen(true)} >
+                <div className="self-start flex flex-col w-full justify-between" onClick={() => setMenuItemOpen(true)}>
                     <div className="self-start justify-between w-full">
                         <div className="float-left font-bold">{dish.name}</div>
-                        <div className="float-right text-red font-bold">{priceToLocal(dish.price)}</div>
+                        <div className="float-right text-white font-bold">{priceToLocal(dish.price)}</div>
                     </div>
                     <div className="self-start text-gray-400">{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}{dish.description}</div>
                 </div>
