@@ -42,8 +42,6 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
         setCurrentItem(dish)
         console.log(dish)
         setMenuItemOpen(true)
-        //@ts-ignore
-        //disablescroll.on(document.querySelector("#menuComponent"))
     }
 
     const scrollToRef = (index: number) => {
@@ -51,7 +49,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
         const menuComponentTop = document.querySelector("#menuComponent")!.getBoundingClientRect().top // MC: use reference here? 
         const offset = 250
 
-        window.scrollTo({
+        document.querySelector("#page")!.scrollTo({
             top: categoryTop - menuComponentTop + offset,
             behavior: 'smooth',
         })
@@ -60,7 +58,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
     return (
         <>
             <ScrollCats sectionRefs={sectionRefs} scrollToButton={scrollToButton} shouldDisplayCategoryNavbar={shouldDisplayCategoryNavbar} scrollToRef={scrollToRef} />
-            <div id="page" className={`container w-full border-solid h-screen  ${menuItemOpen ? `pointer-events-none overflow-hidden` : `overflow-scroll `} `}>
+            <div id="page" data-spy="scroll" data-target="#myScrollspy" className={`container w-full border-solid h-screen   ${menuItemOpen ? `pointer-events-none overflow-hidden` : `scrollbar-hide overflow-scroll `} `}>
                 <div className="w-full">
                     {/*@ts-ignore*/}
                     <div ref={containerRef} ><Head scrollToRef={scrollToRef} /> </div>
@@ -70,7 +68,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
                 </div>
 
             </div>
-            <div id="menuItem" className="conatiner flex flex-col overflow-y-auto sticky bottom-0" >
+            <div id="menuItem" className="w-full flex flex-col sticky bottom-0" >
                 {menuItemOpen && <MenuItem dish={currentItem} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} />}
 
             </div>

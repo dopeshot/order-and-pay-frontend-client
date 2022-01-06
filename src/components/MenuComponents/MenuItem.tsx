@@ -31,7 +31,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ dish, menuItemOpe
     ))
 
     return (
-        <div id="menuItem" className=" overflow-y-auto w-full h-full left-0 fixed bottom-0" onClick={() => setMenuItemOpen(false)} >
+        <div id="menuItem" className="overflow-y-auto scrollbar-hide h-full fixed w-full bottom-0" onClick={() => setMenuItemOpen(false)} >
             <div className={`container mt-96 flex flex-col shadow-md rounded-md bg-red `} >
                 <div className="self-start flex flex-col w-full justify-between">
                     <div className="self-start justify-between w-full">
