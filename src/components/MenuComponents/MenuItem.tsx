@@ -34,34 +34,33 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ dish, menuItemOpe
     ))
 
     return (
-        <div className="overflow-y-auto w-full left-0 fixed bottom-0 flex flex-col h-full justify-end" onClick={() => setMenuItemOpen(false)} >
-            <div className={`bg-white flex flex-col shadow-md rounded-md h-1/2 w-full overflow-y-auto justify-end pb-16`} >
-                <div className="px-4 pt-3 overflow-y-auto">
-                    <div className="self-start flex flex-col w-full pt-2">
-                        <div className="self-start justify-between w-full">
-                            <div className="float-left font-bold text-xl">{dish.name}</div>
-                            <div className="float-right text-red font-bold text-xl">{priceToLocal(dish.price)}</div>
-                        </div>
-                        <div className="self-start text-gray-400">{dish.description}</div>
+        <div id="menuItem" className=" overflow-y-auto w-full h-full left-0 fixed bottom-0" onClick={() => setMenuItemOpen(false)} >
+            <div className={`container mt-96 flex flex-col shadow-md rounded-md bg-white`} >
+                <div className="self-start flex flex-col w-full justify-between">
+                    <div className="self-start justify-between w-full">
+                        <div className="float-left font-bold">{dish.name}</div>
+                        <div className="float-right text-red font-bold">{priceToLocal(dish.price)}</div>
                     </div>
-                    <p className="pt-2 font-bold">Allergien</p>
-                    <div className="flex overflow-x-auto">
-                        {allergens}
-                    </div>
-                    <div className="pt-2">
-                        {choices}
-                    </div>
-                    <p className="pt-2 font-bold pb-2">Notiz an die Küche</p>
-                    <div className="border rounded shadow h-24 flex justify-between items-stretch">
-                        <p className="pt-2 pl-2 text-gray-400">Platz für Wünsche...</p>
-                        <div className="h-full pt-2 pr-2 flex flex-col justify-between">
-                            <FontAwesomeIcon icon="hamburger" className="text-red self-end" />
-                            <p className="text-xs">edited: 69:69</p>
-                        </div>
+                    <div className="self-start text-gray-400">{dish.description}</div>
+                </div>
+                <p className="pt-2 font-bold">Allergien</p>
+                <div className="flex overflow-x-auto">
+                    {allergens}
+                </div>
+                <div className="pt-2">
+                    {choices}
+                </div>
+                <p className="pt-2 font-bold pb-2">Notiz an die Küche</p>
+                <div className="border rounded shadow h-24 flex justify-between items-stretch">
+                    <p className="pt-2 pl-2 text-gray-400">Platz für Wünsche...</p>
+                    <div className="h-full pt-2 pr-2 flex flex-col justify-between">
+                        <FontAwesomeIcon icon="hamburger" className="text-red self-end" />
+                        <p className="text-xs">edited: 69:69</p>
                     </div>
                 </div>
             </div>
         </div>
+
 
     )
 }
