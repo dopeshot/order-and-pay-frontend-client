@@ -78,6 +78,13 @@ export const getMenu = (): Promise<any> => {
                         ],
                         "allergens": [
                             "gluten",
+                            "laktose",
+                            "laktose",
+                            "laktose",
+                            "laktose",
+                            "laktose",
+                            "laktose",
+                            "laktose",
                             "laktose"
                         ],
                         "_id": "617e6ccfb5661a79fd0d1a3d",
