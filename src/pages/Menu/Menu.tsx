@@ -42,6 +42,9 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
         setCurrentItem(dish)
         console.log(dish)
         setMenuItemOpen(true)
+        console.log(menuItemOpen)
+        //@ts-ignore
+        //disablescroll.on(document.querySelector("#menuComponent"))
     }
 
     const scrollToRef = (index: number) => {
