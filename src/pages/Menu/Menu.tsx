@@ -71,10 +71,10 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
                 </div>
 
             </div>
-            <div id="menuItem" className="container flex flex-col overflow-y-auto sticky bottom-0" >
-                {menuItemOpen && <MenuItem dish={currentItem} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} />}
 
-            </div>
+            {menuItemOpen && <MenuItem dish={currentItem} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} />}
+
+
             {menuItemOpen ? <DishButton /> : <OrderButton />}
         </>
     )
