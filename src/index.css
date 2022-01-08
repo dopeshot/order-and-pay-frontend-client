@@ -17,11 +17,17 @@ body{
     box-shadow: 0px 1px 8px 0.1px rgba(255, 112, 112, 1);
 }
 
-
+.bgtrans{
+    background: rgba(0, 0, 0, 0.609)
+}
 .pseudoActiveElement{
     color: white;
     background-color: #F64040;
     box-shadow: 0px 1px 8px 0.1px rgba(255, 112, 112, 1);
+}
+
+.margin75P{
+    margin-top: 40rem ;
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
