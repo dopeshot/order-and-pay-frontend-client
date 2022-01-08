@@ -38,13 +38,29 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
 
 
 
+
+    async function asyncCall() {
+        const result = await resolveAfter2Seconds();
+        //@ts-ignore
+        result.scrollTo({
+            top: 2000,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    function resolveAfter2Seconds() {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                resolve(document.querySelector("#menuItem"));
+            }, 10);
+        });
+    }
     const openMenuItem = (dish: Dish) => {
         setCurrentItem(dish)
-        console.log(dish)
         setMenuItemOpen(true)
-        console.log(menuItemOpen)
-        //@ts-ignore
-        //disablescroll.on(document.querySelector("#menuComponent"))
+        asyncCall();
+
     }
 
     const scrollToRef = (index: number) => {
@@ -71,10 +87,10 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
                 </div>
 
             </div>
-            <div id="menuItem" className="conatiner flex flex-col overflow-y-auto sticky bottom-0" >
-                {menuItemOpen && <MenuItem dish={currentItem} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} />}
 
-            </div>
+            {menuItemOpen && <MenuItem dish={currentItem} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} />}
+
+
             {menuItemOpen ? <DishButton /> : <OrderButton />}
         </>
     )
