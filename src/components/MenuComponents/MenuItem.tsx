@@ -3,6 +3,8 @@ import { useAppState } from '../../overmind';
 import { priceToLocal } from '../../services/utilities'
 import { Dish } from "../../overmind/menu/state"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Dropdown } from "../../components/MenuComponents/Dropdown";
+
 
 type PropTypes = {
     dish: Dish

@@ -23,7 +23,8 @@ module.exports = {
         'grey': '#9E9E9E',
         'light-grey': '#F6F6F6',
         'description-grey': '#EBEBEB',
-        'dividergrey': !'#DCDCDC'
+        'dividergrey': '#DCDCDC',
+        'chevron': '#9AA5B1'
       },
       boxShadow: {
         'focus': '0px 1px 8px 0.1px rgba(255, 112, 112, 1)',
