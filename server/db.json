@@ -155,19 +155,19 @@
                 "price": 900,
                 "choices": [
                     {
-                        "name": "Größe",
+                        "name": "Stückzahl",
                         "type": "single",
                         "options": [
                             {
-                                "name": "Small",
+                                "name": "3 Stück",
                                 "price": -200
                             },
                             {
-                                "name": "Small",
+                                "name": "6 Stück",
                                 "price": 0
                             },
                             {
-                                "name": "Small",
+                                "name": "9 Stück",
                                 "price": 200
                             }
                         ]

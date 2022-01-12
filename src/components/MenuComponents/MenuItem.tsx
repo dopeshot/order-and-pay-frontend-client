@@ -13,7 +13,7 @@ type PropTypes = {
 }
 export const MenuItem: React.FunctionComponent<PropTypes> = ({ dish, menuItemOpen, setMenuItemOpen }: PropTypes) => {
 
-    const choices = dish.choices.map((choice, index) => (
+    const choices = dish.choices.filter(choice => choice.type == 'multi').map((choice, index) => (
         <div className="flex flex-col pt-2">
             <div className="self-start font-bold">{choice.name}</div>
             <div className="flex justify-between">{choice.options.map((option) => (
@@ -36,9 +36,11 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ dish, menuItemOpe
     ))
 
     return (
-        <div id="menuItem" className=" overflow-y-auto  h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar " onClick={() => setMenuItemOpen(false)} >
-            <div className={`container flex flex-col margin75P`} >
-                <div className={`margin75P bg-white shadow-md rounded-md  `}>
+        <div id="menuItem" className="overflow-y-auto h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar" >
+            <div className="bg-red opacity-50 inset-0 w-full h-full fixed" style={{ zIndex: -1 }} onClick={() => setMenuItemOpen(false)} />
+            <div className="container flex flex-col margin75P">
+                <div className="w-full" style={{ height: "40rem" }} onClick={() => setMenuItemOpen(false)} />
+                <div className="bg-white shadow-md rounded-md pb-64 ">
                     <div className="self-start flex flex-col w-full justify-between">
                         <div className="self-start justify-between w-full">
                             <div className="float-left font-bold">{dish.name}</div>
@@ -50,6 +52,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ dish, menuItemOpe
                     <div className="flex overflow-x-auto">
                         {allergens}
                     </div>
+                    <Dropdown dish={dish} />
                     <div className="pt-2">
                         {choices}
                     </div>
