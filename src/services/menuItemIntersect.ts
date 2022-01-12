@@ -12,33 +12,22 @@ export let useCheckMenuItem = (options: any, menuItemOpen: boolean) => {
 
     useEffect(() => {
         if (scrollRef.current) {
-            console.log("Weird" + scrollRef.current)
+            setTimeout(() => {
 
-            let observerRerValue: HTMLInputElement | null = null
-            const observer = new IntersectionObserver(callBackFunction, options)
-            console.log(menuItemOpen)
-            if (menuItemOpen) {
-                console.log(menuItemOpen)
-                console.log("1" + scrollRef.current)
+                let observerRerValue: HTMLInputElement | null = null
+                const observer = new IntersectionObserver(callBackFunction, options)
+
                 observer.observe(scrollRef.current)
                 observerRerValue = scrollRef.current
-            }
-            else {
-                setTimeout(() => {
-                    console.log("2" + scrollRef.current)
-                    observer.observe(scrollRef.current)
-                    observerRerValue = scrollRef.current
-                }, 1000)
-            }
 
-            console.log("bottom" + scrollRef)
-
-            return () => {
-                if (observerRerValue) {
+                console.log("isVisble: " + isVisible)
+                if (observerRerValue && !isVisible) {
                     observer.unobserve(observerRerValue)
                 }
-            }
+
+            }, 300)
         }
+
     }, [scrollRef, options])
 
     return [scrollRef, isVisible]
