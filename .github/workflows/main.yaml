@@ -22,7 +22,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          start: npm run start:cc
+          start: npm run start
           wait-on: 'http://localhost:3000'  
         
       - name: Archive report
