@@ -29,7 +29,6 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
         rootMargin: "-200px"
     }, isOffen)
 
-
     const scrollToButton = async (index: number) => {
         // MC: Maybe use refs here? instead of selection via dom
         const activeElements = document.getElementById(`categoryScroll_${index}`)

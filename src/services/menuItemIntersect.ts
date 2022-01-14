@@ -5,30 +5,32 @@ export let useCheckMenuItem = (options: any, menuItemOpen: boolean) => {
     const scrollRef = useRef<any>(null)
     const [isVisible, setIsVisible] = useState(true)
 
-    const callBackFunction = (entries: any) => {
-        const [entry] = entries
-        setIsVisible(entry.isIntersecting)
-    }
-
     useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                console.log(entry);
+                let observerRerValue: HTMLInputElement | null = null
+
+                if (entry.isIntersecting) {
+                    setIsVisible(entry.isIntersecting)
+                    console.log(entry)
+                    if (entry.intersectionRatio) { }
+                    console.log('It works!')
+                }
+                else {
+                    observer.unobserve(entry.target)
+                }
+            },
+            options
+        );
         if (scrollRef.current) {
             setTimeout(() => {
-
-                let observerRerValue: HTMLInputElement | null = null
-                const observer = new IntersectionObserver(callBackFunction, options)
-
                 observer.observe(scrollRef.current)
-                observerRerValue = scrollRef.current
-
-                console.log("isVisble: " + isVisible)
-                if (observerRerValue && !isVisible) {
-                    observer.unobserve(observerRerValue)
-                }
 
             }, 300)
         }
 
-    }, [scrollRef, options])
+    }, [scrollRef, options]);
 
     return [scrollRef, isVisible]
 }
