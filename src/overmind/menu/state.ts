@@ -1,5 +1,3 @@
-import { type } from "os"
-
 export type Menu = {
     name: string,
     dishes: Dish[],
@@ -13,18 +11,6 @@ export type Dish = {
     labels: string[],
     allergens: string[],
     category: string,
-    price: number,
-    choices: Choice[]
-}
-
-export type Choice = {
-    name: string,
-    type: string,
-    options: Option[]
-}
-
-export type Option = {
-    name: string,
     price: number
 }
 

@@ -21,7 +21,6 @@
         "@types/react-dom": "^17.0.10",
         "@types/react-router-hash-link": "^2.4.4",
         "axios": "^0.24.0",
-        "disable-scroll": "^0.6.0",
         "overmind": "^28.0.1",
         "overmind-react": "^29.0.1",
         "react": "^17.0.2",
@@ -34,7 +33,7 @@
         "web-vitals": "^1.1.2"
     },
     "scripts": {
-        "start": "craco -r @cypress/instrument-cra --openssl-legacy-provider start",
+        "start": "craco -r @cypress/instrument-cra start",
         "mockserver": "json-server ./server/db.json --routes ./server/routes.json --port 3004",
         "mockserver:watch": "json-server --watch ./server/db.json --routes ./server/routes.json --port 3004",
         "build": "craco build",

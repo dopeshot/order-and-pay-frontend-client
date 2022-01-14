@@ -1,15 +1,12 @@
 import React from 'react';
 import { DishCard } from '../../components/MenuComponents/DishCard';
 import { useAppState } from '../../overmind';
-import { Dish } from '../../overmind/menu/state';
 
 type PropTypes = {
     sectionRefs: React.MutableRefObject<React.RefObject<HTMLDivElement>[]>,
-    openMenuItem: (dish: Dish) => void,
-    menuItemOpen: boolean
 }
 
-export const MenuComponent: React.FunctionComponent<PropTypes> = ({ sectionRefs, openMenuItem, menuItemOpen }: PropTypes) => {
+export const MenuComponent: React.FunctionComponent<PropTypes> = ({ sectionRefs }: PropTypes) => {
     const { menu } = useAppState().menu
 
     return (<>
@@ -28,8 +25,8 @@ export const MenuComponent: React.FunctionComponent<PropTypes> = ({ sectionRefs,
                 {/* Dishes of current category */}
                 <div className="px-5 divide-y divide-dividergrey ">
                     {category.dishesIndex.map((index: number) => (
-                        //key will get changed to ID once backend has dish ids// openmenu(menu.dishes[index])
-                        <div key={index + "_dishcard"} id={index + "_dishCard_Id"} className="block pb-2 pt-2 dish" onClick={() => openMenuItem(menu.dishes[index])} >
+                        //key will get changed to ID once backend has dish ids
+                        <div key={index + "_dishcard"} id={index + "_dishCard_Id"} className="block pb-2 pt-2 dish">
                             <DishCard dish={menu.dishes[index]} />
                         </div>))}
                 </div>

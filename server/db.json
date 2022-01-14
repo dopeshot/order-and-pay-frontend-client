@@ -75,45 +75,7 @@
                 "name": "Gebackener Mozzarella",
                 "description": "Mozzarella Käse im Teigmantel",
                 "category": "61aa702b02fc57c3ee72ff99",
-                "price": 650,
-                "choices": [
-                    {
-                        "name": "Größe",
-                        "type": "single",
-                        "options": [
-                            {
-                                "name": "Small",
-                                "price": -200
-                            },
-                            {
-                                "name": "Small",
-                                "price": 0
-                            },
-                            {
-                                "name": "Small",
-                                "price": 200
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Extra Beläge wählen",
-                        "type": "multi",
-                        "options": [
-                            {
-                                "name": "Salami",
-                                "price": 100
-                            },
-                            {
-                                "name": "Schinken",
-                                "price": 100
-                            },
-                            {
-                                "name": "Lea",
-                                "price": 90
-                            }
-                        ]
-                    }
-                ]
+                "price": 650
             },
             {
                 "labels": [
@@ -152,45 +114,7 @@
                 "name": "Krabbencocktail",
                 "description": "Cocktailsauce mit frischen Krabben",
                 "category": "61aa702b02fc57c3ee72ff99",
-                "price": 900,
-                "choices": [
-                    {
-                        "name": "Größe",
-                        "type": "single",
-                        "options": [
-                            {
-                                "name": "Small",
-                                "price": -200
-                            },
-                            {
-                                "name": "Small",
-                                "price": 0
-                            },
-                            {
-                                "name": "Small",
-                                "price": 200
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Extra Beläge wählen",
-                        "type": "multi",
-                        "options": [
-                            {
-                                "name": "Salami",
-                                "price": 100
-                            },
-                            {
-                                "name": "Schinken",
-                                "price": 100
-                            },
-                            {
-                                "name": "Lea",
-                                "price": 90
-                            }
-                        ]
-                    }
-                ]
+                "price": 900
             },
             {
                 "labels": [
