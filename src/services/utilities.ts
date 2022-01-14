@@ -1,3 +1,5 @@
+import { useEffect } from "react"
+
 export const priceToLocal = (price: number) => {
     return new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(price / 100)
 }
@@ -20,3 +22,6 @@ export const equalArray = <T>(array1: Array<T>, array2: Array<T>) => {
 export const getCurrentPrice = (price: number, current: number) => {
     return current = current + price
 }
+
+
+

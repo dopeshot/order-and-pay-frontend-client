@@ -86,11 +86,11 @@
                                 "price": -200
                             },
                             {
-                                "name": "Small",
+                                "name": "Big",
                                 "price": 0
                             },
                             {
-                                "name": "Small",
+                                "name": "Huge",
                                 "price": 200
                             }
                         ]

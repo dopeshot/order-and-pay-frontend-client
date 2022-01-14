@@ -24,7 +24,8 @@ module.exports = {
         'light-grey': '#F6F6F6',
         'description-grey': '#EBEBEB',
         'dividergrey': '#DCDCDC',
-        'chevron': '#9AA5B1'
+        'chevron': '#9AA5B1',
+        'menu-bg': '#1F1F23'
       },
       boxShadow: {
         'focus': '0px 1px 8px 0.1px rgba(255, 112, 112, 1)',
@@ -33,6 +34,9 @@ module.exports = {
       },
       flex: {
         '2/4': '1 1 50%'
+      },
+      backgroundOpacity: {
+        '62': '0.62'
       }
     },
   },

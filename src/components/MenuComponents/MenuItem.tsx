@@ -1,5 +1,4 @@
-import React from "react"
-import { useAppState } from '../../overmind';
+import React, { useState } from "react"
 import { priceToLocal } from '../../services/utilities'
 import { Dish } from "../../overmind/menu/state"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,21 +9,33 @@ type PropTypes = {
     dish: Dish
     menuItemOpen: boolean
     setMenuItemOpen: (bool: boolean) => void
+
+
 }
 export const MenuItem: React.FunctionComponent<PropTypes> = ({ dish, menuItemOpen, setMenuItemOpen }: PropTypes) => {
 
-    const choices = dish.choices.filter(choice => choice.type == 'multi').map((choice, index) => (
-        <div className="flex flex-col pt-2">
-            <div className="self-start font-bold">{choice.name}</div>
-            <div className="flex justify-between">{choice.options.map((option) => (
-                <button>
-                    <div>{option.name}</div>
-                    <div>{priceToLocal(option.price)}</div>
-                </button>
-            ))}</div>
+
+    const [dropDownOpen, setdropDownOpen] = useState(false)
+
+    const choices = dish.choices.map((choice, index) => (
+        <div className="pt-2">
+            {/* Backend einen extra Text? */}
+            <p> Wähle die {choice.name}</p>
+            {choice.type === "multi" && <div className="flex flex-col pt-2">
+                <p className="self-start font-bold"> {choice.name}</p>
+                <div className="flex justify-between">{choice.options.map((option) => (
+                    <button>
+                        <p> {option.name}</p>
+                        <p> {priceToLocal(option.price)}</p>
+                    </button>
+                ))}</div>
+            </div>}
+            {choice.type === "single" && <Dropdown choice={choice} dropDownOpen={dropDownOpen} setdropDownOpen={setdropDownOpen}></Dropdown>}
+
         </div>
 
     ))
+
     const allergens = dish.allergens.map(allergen => (
 
         <div className="m-3 flex flex-col items-center">
@@ -37,10 +48,10 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ dish, menuItemOpe
 
     return (
         <div id="menuItem" className="overflow-y-auto h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar" >
-            <div className="bg-red opacity-50 inset-0 w-full h-full fixed" style={{ zIndex: -1 }} onClick={() => setMenuItemOpen(false)} />
+            <div className="bg-menu-bg bg-opacity-50 inset-0 w-full h-full fixed" style={{ zIndex: -1 }} onClick={() => setMenuItemOpen(false)} />
             <div className="container flex flex-col margin75P">
                 <div className="w-full" style={{ height: "40rem" }} onClick={() => setMenuItemOpen(false)} />
-                <div className="bg-white shadow-md rounded-md pb-64 ">
+                <div className="bg-white shadow-md rounded-md ">
                     <div className="self-start flex flex-col w-full justify-between">
                         <div className="self-start justify-between w-full">
                             <div className="float-left font-bold">{dish.name}</div>
@@ -52,10 +63,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ dish, menuItemOpe
                     <div className="flex overflow-x-auto">
                         {allergens}
                     </div>
-                    <Dropdown dish={dish} />
-                    <div className="pt-2">
-                        {choices}
-                    </div>
+                    {choices}
                     <p className="pt-2 font-bold pb-2">Notiz an die Küche</p>
                     <div id="notes" className="border rounded shadow mb-16 h-24 flex justify-between items-stretch">
                         <p className="pt-2 pl-2 text-gray-400">Platz für Wünsche...</p>
