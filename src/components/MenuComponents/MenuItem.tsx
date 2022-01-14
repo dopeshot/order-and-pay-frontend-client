@@ -52,8 +52,9 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ dish, menuItemOpe
                 <div className="w-full" style={{ height: "40rem" }} onClick={() => setMenuItemOpen(false)} />
                 <div className="bg-white shadow-md rounded-md pb-64 pl-3 pr-3 pt-3">
                     {dish.img !== "" && dish.img ?
-                        <div className=" w-full">
-                            <img src={dish.img}></img>
+                        <div className="flex flex-col h-full w-full justify-items-center relative">
+                            <div className="flex flex-col absolute self-center"><FontAwesomeIcon icon="minus" className="text-white fa-2x self-center" /></div>
+                            <img className="w-full h-full" src={dish.img}></img>
                         </div> : <div className="flex flex-col"><FontAwesomeIcon icon="minus" className="text-gray-600 fa-2x self-center" /></div>}
                     <div className="self-start flex flex-col w-full justify-between">
                         <div className="self-start justify-between w-full">
