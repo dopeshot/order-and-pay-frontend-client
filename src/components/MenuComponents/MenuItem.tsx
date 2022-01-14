@@ -44,6 +44,9 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ dish, menuItemOpe
         </div>
     ))
 
+    const handler = () => {
+        console.log("add handler here")
+    }
 
     return (
         <div id="menuItem" className="overflow-y-auto h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar" >
@@ -72,7 +75,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ dish, menuItemOpe
                     <div id="notes" className="border rounded shadow mb-16 h-24 flex justify-between items-stretch">
                         <p className="pt-2 pl-2 text-gray-400">Platz für Wünsche...</p>
                         <div className="h-full pt-2 pr-2 flex flex-col justify-between">
-                            <button><FontAwesomeIcon icon="edit" className="text-red self-end" /></button>
+                            <button onClick={() => handler()}><FontAwesomeIcon icon="edit" className="text-red self-end" /></button>
                         </div>
                     </div>
                 </div>
