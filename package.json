@@ -34,7 +34,7 @@
         "web-vitals": "^1.1.2"
     },
     "scripts": {
-        "start": "craco -r @cypress/instrument-cra start",
+        "start": "craco -r @cypress/instrument-cra --openssl-legacy-provider start",
         "mockserver": "json-server ./server/db.json --routes ./server/routes.json --port 3004",
         "mockserver:watch": "json-server --watch ./server/db.json --routes ./server/routes.json --port 3004",
         "build": "craco build",

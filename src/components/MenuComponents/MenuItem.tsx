@@ -1,4 +1,5 @@
-import React, { useState } from "react"
+import React, { MutableRefObject, useEffect, useState } from "react"
+import { useAppState } from '../../overmind';
 import { priceToLocal } from '../../services/utilities'
 import { Dish } from "../../overmind/menu/state"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,12 +7,23 @@ import { Dropdown } from "../../components/MenuComponents/Dropdown";
 
 
 type PropTypes = {
-    dish: Dish
-    menuItemOpen: boolean
-    setMenuItemOpen: (bool: boolean) => void
+    dish: Dish,
+    menuItemOpen: boolean,
+    setMenuItemOpen: (bool: boolean) => void,
+    menuRef: boolean | MutableRefObject<any>,
+    menuInViewport: boolean | MutableRefObject<any>,
+    setIsOffen: (bool: boolean) => void
 }
 
-export const MenuItem: React.FunctionComponent<PropTypes> = ({ dish, menuItemOpen, setMenuItemOpen }: PropTypes) => {
+export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInViewport, dish, menuItemOpen, setMenuItemOpen, setIsOffen }: PropTypes) => {
+
+    useEffect(() => {
+        if (!menuInViewport) {
+            setMenuItemOpen(false)
+            setIsOffen(false)
+            console.log(menuItemOpen)
+        }
+    }, [menuInViewport])
 
     const [dropDownOpen, setdropDownOpen] = useState(false)
 
@@ -53,7 +65,8 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ dish, menuItemOpe
             <div className="bg-menu-bg bg-opacity-50 inset-0 w-full h-full fixed" style={{ zIndex: -1 }} onClick={() => setMenuItemOpen(false)} />
             <div className="container flex flex-col margin75P">
                 <div className="w-full" style={{ height: "40rem" }} onClick={() => setMenuItemOpen(false)} />
-                <div className="bg-white shadow-md rounded-md pb-64 pl-3 pr-3 pt-3">
+                {/*@ts-ignore*/}
+                <div ref={menuRef} className="bg-white shadow-md rounded-md pb-64 pl-3 pr-3 pt-3">
                     {dish.img !== "" && dish.img ?
                         <div className="flex flex-col h-full w-full justify-items-center relative">
                             <div className="flex flex-col absolute self-center"><FontAwesomeIcon icon="minus" className="text-white fa-2x self-center" /></div>

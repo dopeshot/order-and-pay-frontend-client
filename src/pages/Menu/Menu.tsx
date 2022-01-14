@@ -9,18 +9,25 @@ import { ScrollCats } from '../../components/MenuComponents/ScrollCats';
 import { useScrollToNav } from '../../hooks/useScroll';
 import { useAppState } from '../../overmind';
 import { Dish, MenuType } from '../../overmind/menu/state';
+import { useCheckMenuItem } from '../../services/menuItemIntersect';
+import { TIMEOUT } from 'dns';
 
 export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
 
+    const [currentItem, setCurrentItem] = useState(menu.dishes[0])
+    const [menuItemOpen, setMenuItemOpen] = useState(false)
+    const [isOffen, setIsOffen] = useState(false)
+    const sectionRefs = useRef<React.RefObject<HTMLDivElement>[]>(menu.categories.map(() => createRef()))
 
     const [containerRef, shouldDisplayCategoryNavbar] = useScrollToNav({
         root: null,
         rootMargin: "-50px"
     })
 
-    const [currentItem, setCurrentItem] = useState(menu.dishes[0])
-    const [menuItemOpen, setMenuItemOpen] = useState(false)
-    const sectionRefs = useRef<React.RefObject<HTMLDivElement>[]>(menu.categories.map(() => createRef()))
+    let [menuRef, menuInViewport] = useCheckMenuItem({
+        root: null,
+        rootMargin: "-200px"
+    }, isOffen)
 
     const scrollToButton = async (index: number) => {
         // MC: Maybe use refs here? instead of selection via dom
@@ -33,11 +40,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
                 left: activeElements.getBoundingClientRect().left - scrollSpy.getBoundingClientRect().left - 4,
                 behavior: 'smooth',
             })
-
     }
-
-
-
 
     async function asyncCall() {
         const result = await resolveAfter2Seconds();
@@ -47,20 +50,24 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
             left: 0,
             behavior: 'smooth'
         });
+
     }
 
     function resolveAfter2Seconds() {
         return new Promise(resolve => {
             setTimeout(() => {
                 resolve(document.querySelector("#menuItem"));
-            }, 10);
+            }, 20);
         });
     }
     const openMenuItem = (dish: Dish) => {
+        console.log("openMenuItem")
         setCurrentItem(dish)
         setMenuItemOpen(true)
         asyncCall();
-
+        setTimeout(() => {
+            setIsOffen(true)
+        }, 10)
     }
 
     const scrollToRef = (index: number) => {
@@ -87,9 +94,8 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
                 </div>
 
             </div>
-
-            {menuItemOpen && <MenuItem dish={currentItem} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} />}
-
+            {console.log("menuInviewport: " + menuInViewport)}
+            {menuItemOpen && <MenuItem menuRef={menuRef} menuInViewport={menuInViewport} dish={currentItem} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} setIsOffen={setIsOffen} />}
 
             {menuItemOpen ? <DishButton /> : <OrderButton />}
         </>
