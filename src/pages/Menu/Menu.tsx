@@ -50,22 +50,24 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
             left: 0,
             behavior: 'smooth'
         });
+
     }
 
     function resolveAfter2Seconds() {
         return new Promise(resolve => {
             setTimeout(() => {
                 resolve(document.querySelector("#menuItem"));
-            }, 10);
+            }, 20);
         });
     }
     const openMenuItem = (dish: Dish) => {
+        console.log("openMenuItem")
         setCurrentItem(dish)
         setMenuItemOpen(true)
         asyncCall();
         setTimeout(() => {
             setIsOffen(true)
-        }, 400)
+        }, 10)
     }
 
     const scrollToRef = (index: number) => {
@@ -92,6 +94,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
                 </div>
 
             </div>
+            {console.log("menuInviewport: " + menuInViewport)}
             {menuItemOpen && <MenuItem menuRef={menuRef} menuInViewport={menuInViewport} dish={currentItem} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} setIsOffen={setIsOffen} />}
 
             {menuItemOpen ? <DishButton /> : <OrderButton />}
