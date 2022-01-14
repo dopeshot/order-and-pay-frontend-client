@@ -4,8 +4,10 @@ import { Dish, MenuType } from "./state";
 export const getMenu = (): Promise<any> => {
     const dontUseHost = false
 
-    if (!dontUseHost)
+    if (!dontUseHost) {
+        console.log(request.get<MenuType>('/menu/current'))
         return request.get<MenuType>('/menu/current') // MenuType is not correct! Here there is no index stuff???
+    }
     else
         return new Promise((resolve) => resolve({
             data: {

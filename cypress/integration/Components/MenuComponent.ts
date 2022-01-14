@@ -1,9 +1,14 @@
 /// <reference types="Cypress" />
 
+import { getMenu } from "../../../src/overmind/menu/effects"
+
 before(() => {
+    cy.intercept('GET', '**/menu/current', { fixture: 'data.json' }).as('getMenu')
     cy.visit("/menu")
+    cy.wait('@getMenu')
 })
 describe("MenuComponent", () => {
+
     it('Exists', () => {
         cy.get('#menuComponent').should("be.visible")
     })

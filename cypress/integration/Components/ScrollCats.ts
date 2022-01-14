@@ -1,6 +1,7 @@
 /// <reference types="Cypress" />
 
 before(() => {
+    cy.intercept('GET', '**/menu/current', { fixture: 'data.json' }).as('getMenu')
     cy.visit("/menu")
 })
 describe("MenuComponent", () => {

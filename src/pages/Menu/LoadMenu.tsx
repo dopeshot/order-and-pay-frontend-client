@@ -17,7 +17,7 @@ export const LoadingMenu: React.FunctionComponent = () => {
         }
         return () => { mounted = false }
     }, [loadMenu])
-
+    console.log(menu)
     return (<>{menu.categories.length > 0 ? <Menu menu={menu} /> : <div className="text-center text-red">
         <FontAwesomeIcon size="2x" icon={faSpinner} className="animate-spin" />
     </div>}</>)

@@ -4,6 +4,7 @@ import cypress from "cypress"
 
 const baseUrl = Cypress.config().baseUrl
 before(() => {
+    cy.intercept('GET', '**/menu/current', { fixture: 'data.json' }).as('getMenu')
     cy.visit("/menu")
 })
 
@@ -20,9 +21,8 @@ describe("Renders homepage", () => {
     })
     it("Opens the 'Alles Anzeigen' page ", () => {
         cy.get('#showAll').click();
-        cy.url().should('eq',baseUrl+ '/categories')
+        cy.url().should('eq', baseUrl + '/categories')
     })
 
-   
+
 })
-  
