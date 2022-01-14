@@ -9,9 +9,11 @@ before(() => {
     cy.visit("/menu");
 })
 
-describe("Renders ShowAll Page", () => {
+describe("Renders Categories Page", () => {
     it("Renders correctly", () => {
 
+        cy.get('#showAll').click();
+        cy.url().should('eq', baseUrl + '/categories')
 
         cy.get("#page").should("be.visible")
         cy.get("#categoryHashlinks").should("be.visible")
