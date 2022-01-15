@@ -14,6 +14,7 @@ export type Dish = {
     allergens: string[],
     category: string,
     price: number,
+    img: string,
     choices: Choice[]
 }
 

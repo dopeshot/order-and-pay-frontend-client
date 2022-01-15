@@ -22,6 +22,3 @@ export const equalArray = <T>(array1: Array<T>, array2: Array<T>) => {
 export const getCurrentPrice = (price: number, current: number) => {
     return current = current + price
 }
-
-
-
