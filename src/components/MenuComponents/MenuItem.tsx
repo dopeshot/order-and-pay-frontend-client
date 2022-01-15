@@ -48,12 +48,19 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ dish, menuItemOpe
         </div>
     ))
 
+    //  {dropDownOpen && <div data-cy="table-bulk-dropdown-background" className="fixed inset-0 h-full w-full z-10" aria-hidden="true" onClick={() => setdropDownOpen(!dropDownOpen)}></div>}
+
     return (
         <div id="menuItem" className="overflow-y-auto h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar" >
             <div className="bg-menu-bg bg-opacity-50 inset-0 w-full h-full fixed" style={{ zIndex: -1 }} onClick={() => setMenuItemOpen(false)} />
             <div className="container flex flex-col margin75P">
                 <div className="w-full" style={{ height: "40rem" }} onClick={() => setMenuItemOpen(false)} />
-                <div className="bg-white shadow-md rounded-md pb-64 pl-3 pr-3 pt-3">
+
+                <div className="bg-white shadow-md rounded-md pb-64 pl-3 pr-3 pt-3" style={{ zIndex: -0 }} onClick={() => setdropDownOpen(false)} >
+
+
+
+
                     <div className="flex flex-col"><FontAwesomeIcon icon="minus" className="text-gray-600 fa-2x self-center" /></div>
                     <div className="self-start flex flex-col w-full justify-between">
                         <div className="self-start justify-between w-full">
