@@ -26,6 +26,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
     }, [menuInViewport])
 
     const [dropDownOpen, setdropDownOpen] = useState(false)
+    const [isTextArea, setisTextArea] = useState(false)
 
     const choices = dish.choices.map((choice, index) => (
         <div className="">
@@ -56,8 +57,10 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
     ))
 
     const handler = () => {
-        console.log("add handler here")
+        setisTextArea(!isTextArea)
     }
+
+
 
     return (
         <div id="menuItem" className="overflow-y-auto h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar" >
@@ -90,12 +93,15 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                         </div>
                         {choices}
                         <p className="font-bold pb-4 pt-3">Notiz an die Küche</p>
-                        <div id="notes" className="border rounded shadow mb-16 h-24 flex justify-between items-stretch">
-                            <p className="pt-2 pl-2 text-gray-400">Platz für Wünsche...</p>
-                            <div className="h-full pt-2 pr-2 flex flex-col justify-between">
-                                <button onClick={() => handler()}><FontAwesomeIcon icon="edit" className="text-red self-end" /></button>
-                            </div>
-                        </div>
+
+                        {isTextArea ?
+                            <textarea
+                                className="h-24 mb-16 form-control w-full px-3 py-1.5 text-gray-700 bg-clip-padding border border-solid border-gray-300 rounded focus:text-gray-700 focus:border-blue-600 focus:outline-none" id="exampleFormControlTextarea1" rows={3} placeholder="Hier werden Wünsche wahr..."></textarea> : <div id="notes" className="border rounded shadow mb-16 h-24 flex justify-between items-stretch">
+                                <p className="pt-2 pl-2 text-gray-400">Platz für Wünsche...</p>
+                                <div className="h-full pt-2 pr-2 flex flex-col justify-between">
+                                    <button onClick={() => handler()}><FontAwesomeIcon icon="edit" className="text-red self-end" /></button>
+                                </div>
+                            </div>}
                     </div>
                 </div>
             </div>

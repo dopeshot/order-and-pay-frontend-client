@@ -60,6 +60,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
             }, 20);
         });
     }
+
     const openMenuItem = (dish: Dish) => {
         console.log("openMenuItem")
         setCurrentItem(dish)
@@ -92,11 +93,9 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
                         <MenuComponent sectionRefs={sectionRefs} openMenuItem={openMenuItem} menuItemOpen={menuItemOpen} />
                     </div>
                 </div>
-
             </div>
             {console.log("menuInviewport: " + menuInViewport)}
             {menuItemOpen && <MenuItem menuRef={menuRef} menuInViewport={menuInViewport} dish={currentItem} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} setIsOffen={setIsOffen} />}
-
             {menuItemOpen ? <DishButton /> : <OrderButton />}
         </>
     )
