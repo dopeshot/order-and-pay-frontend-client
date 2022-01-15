@@ -6,17 +6,23 @@ import { drop } from 'cypress/types/lodash';
 import { Event, event } from 'cypress/types/jquery';
 
 
+
+
 type PropTypes = {
     choice: Choice
     dropDownOpen: boolean
     setdropDownOpen: (bool: boolean) => void
+    // singleChoice: Option
+    // setSingleChoice: (option: Option) => void , singleChoice, setSingleChoice
 
 
 }
 export const Dropdown: React.FunctionComponent<PropTypes> = ({ choice, dropDownOpen, setdropDownOpen }: PropTypes) => {
 
 
+
     const [singleChoice, setSingleChoice] = useState(choice.options[0])
+
 
 
     const handleClick = (option: Option, e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -31,7 +37,7 @@ export const Dropdown: React.FunctionComponent<PropTypes> = ({ choice, dropDownO
         e.stopPropagation()
     }
 
-    //  {dropDownOpen && <div data-cy="table-bulk-dropdown-background" className=" bg-red fixed inset-0 h-full w-full " style={{ zIndex: -1 }} aria-hidden="true" onClick={() => setdropDownOpen(!dropDownOpen)}></div>}
+
     return (
 
         <div className="text-left pr-4 pl-4" style={{ zIndex: 5 }} >
@@ -50,7 +56,8 @@ export const Dropdown: React.FunctionComponent<PropTypes> = ({ choice, dropDownO
             {dropDownOpen && <div className=" origin-top-right mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-y-auto h-32 scrollbar-hide focus:outline-none"                                                      >
                 <div className="py-1 " >
                     {choice.options.map(option => (
-                        <div className=' flex justify-between text-gray-700  px-4 py-2 text-sm  hover:bg-gray-100' onClick={(e) => handleClick(option, e)}>
+                        // Eine richtige ID?
+                        <div key={option.name} className=' flex justify-between text-gray-700  px-4 py-2 text-sm  hover:bg-gray-100' onClick={(e) => handleClick(option, e)}>
                             <p role="menuitem" id={option.name}>{option.name} </p>
                             <p role="menuitem" id={option.name}> {priceToLocal(option.price)}</p>
                         </div>
