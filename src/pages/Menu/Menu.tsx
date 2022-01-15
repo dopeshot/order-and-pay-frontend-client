@@ -97,7 +97,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
             {console.log("menuInviewport: " + menuInViewport)}
             {menuItemOpen && <MenuItem menuRef={menuRef} menuInViewport={menuInViewport} dish={currentItem} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} setIsOffen={setIsOffen} />}
 
-            {menuItemOpen ? <DishButton /> : <OrderButton />}
+            {!menuItemOpen && <OrderButton />}
         </>
     )
 }
