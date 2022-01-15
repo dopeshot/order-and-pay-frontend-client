@@ -28,14 +28,13 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
     const [dropDownOpen, setdropDownOpen] = useState(false)
 
     const choices = dish.choices.map((choice, index) => (
-        <div className="pt-2">
+        <div className="">
             {/* Backend einen extra Text? */}
-            <p> Wähle die {choice.name}</p>
-            {choice.type === "multi" && <div className="flex flex-col pt-2">
-                <p className="self-start font-bold"> {choice.name}</p>
+            <p className="self-start font-bold pb-3 pt-2">{choice.name}</p>
+            {choice.type === "multi" && <div className="flex flex-col">
                 <div className="flex flex-col justify-between">{choice.options.map((option) => (
-                    <div className="flex  items-center pl-3 pr-3">
-                        <input type="checkbox" className="form-checkbox text-red"></input>
+                    <div className="flex items-center pl-3 pr-3">
+                        <input type="checkbox" className="form-checkbox"></input>
                         <div className="flex justify-between w-full pl-3">
                             <div>{option.name}</div>
                             <div>{priceToLocal(option.price)}</div>
@@ -68,35 +67,34 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
 
                 {/* <div className="bg-white shadow-md rounded-md pb-64 pl-3 pr-3 pt-3" style={{ zIndex: -0 }} onClick={() => setdropDownOpen(false)} >
 
-
-
-
                     <div className="flex flex-col"><FontAwesomeIcon icon="minus" className="text-gray-600 fa-2x self-center" /></div> */}
 
                 {/*@ts-ignore*/}
-                <div ref={menuRef} className="bg-white shadow-md rounded-md pb-64 pl-3 pr-3 pt-3" style={{ zIndex: -0 }} onClick={() => setdropDownOpen(false)}>
+                <div ref={menuRef} className="bg-white shadow-md rounded-3xl" style={{ zIndex: -0 }} onClick={() => setdropDownOpen(false)}>
                     {dish.img !== "" && dish.img ?
-                        <div className="flex flex-col h-full w-full justify-items-center relative">
+                        <div className="flex flex-col h-full w-full justify-items-center relative rounded-3xl pb-7">
                             <div className="flex flex-col absolute self-center"><FontAwesomeIcon icon="minus" className="text-white fa-2x self-center" /></div>
-                            <img className="w-full h-full" src={dish.img}></img>
+                            <img className="w-full h-full rounded-t-3xl object-fill" src={dish.img}></img>
                         </div> : <div className="flex flex-col"><FontAwesomeIcon icon="minus" className="text-gray-600 fa-2x self-center" /></div>}
-                    <div className="self-start flex flex-col w-full justify-between">
-                        <div className="self-start justify-between w-full">
-                            <div className="float-left font-bold">{dish.name}</div>
-                            <div className="float-right text-red font-bold">{priceToLocal(dish.price)}</div>
+                    <div className="pl-3 pr-3 pt-3">
+                        <div className="self-start flex flex-col w-full justify-between pb-3">
+                            <div className="self-start justify-between w-full">
+                                <div className="float-left font-bold text-xl">{dish.name}</div>
+                                <div className="float-right text-red font-bold text-xl">{priceToLocal(dish.price)}</div>
+                            </div>
+                            <div className="self-start text-gray-400">{dish.description}</div>
                         </div>
-                        <div className="self-start text-gray-400">{dish.description}</div>
-                    </div>
-                    <p className="pt-2 font-bold">Allergien</p>
-                    <div className="flex overflow-x-auto">
-                        {allergens}
-                    </div>
-                    {choices}
-                    <p className="pt-2 font-bold pb-2">Notiz an die Küche</p>
-                    <div id="notes" className="border rounded shadow mb-16 h-24 flex justify-between items-stretch">
-                        <p className="pt-2 pl-2 text-gray-400">Platz für Wünsche...</p>
-                        <div className="h-full pt-2 pr-2 flex flex-col justify-between">
-                            <button onClick={() => handler()}><FontAwesomeIcon icon="edit" className="text-red self-end" /></button>
+                        <p className="pt-2 font-bold">Allergien</p>
+                        <div className="flex overflow-x-auto pb-2">
+                            {allergens}
+                        </div>
+                        {choices}
+                        <p className="font-bold pb-4 pt-3">Notiz an die Küche</p>
+                        <div id="notes" className="border rounded shadow mb-16 h-24 flex justify-between items-stretch">
+                            <p className="pt-2 pl-2 text-gray-400">Platz für Wünsche...</p>
+                            <div className="h-full pt-2 pr-2 flex flex-col justify-between">
+                                <button onClick={() => handler()}><FontAwesomeIcon icon="edit" className="text-red self-end" /></button>
+                            </div>
                         </div>
                     </div>
                 </div>
