@@ -49,6 +49,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
 
 
     const [dropDownOpen, setdropDownOpen] = useState(false)
+    const [isTextArea, setisTextArea] = useState(false)
 
 
     const choices = dish.choices.map((choice, index) => (
@@ -80,8 +81,10 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
     ))
 
     const handler = () => {
-        console.log("add handler here")
+        setisTextArea(!isTextArea)
     }
+
+
 
     return (
         <div id="menuItem" className="overflow-y-auto h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar" >
@@ -94,6 +97,42 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                             <div className="w-full" style={{ height: "40rem" }} onClick={() => setMenuItemOpen(false)} />
                             {/*@ts-ignore*/}
 
+                            {/*     <div className="flex flex-col"><FontAwesomeIcon icon="minus" className="text-gray-600 fa-2x self-center" /></div>
+
+    
+    <div ref={menuRef} className="bg-white shadow-md rounded-3xl" style={{ zIndex: -0 }} onClick={() => setdropDownOpen(false)}>
+        {dish.img !== "" && dish.img ?
+            <div className="flex flex-col h-full w-full justify-items-center relative rounded-3xl pb-7">
+                <div className="flex flex-col absolute self-center"><FontAwesomeIcon icon="minus" className="text-white fa-2x self-center" /></div>
+                <img className="w-full h-full rounded-t-3xl object-fill" src={dish.img}></img>
+            </div> : <div className="flex flex-col"><FontAwesomeIcon icon="minus" className="text-gray-600 fa-2x self-center" /></div>}
+        <div className="pl-3 pr-3 pt-3">
+            <div className="self-start flex flex-col w-full justify-between pb-3">
+                <div className="self-start justify-between w-full">
+                    <div className="float-left font-bold text-xl">{dish.name}</div>
+                    <div className="float-right text-red font-bold text-xl">{priceToLocal(dish.price)}</div>
+                </div>
+                <div className="self-start text-gray-400">{dish.description}</div>
+            </div>
+            <p className="pt-2 font-bold">Allergien</p>
+            <div className="flex overflow-x-auto pb-2">
+                {allergens}
+            </div>
+            {choices}
+            <p className="font-bold pb-4 pt-3">Notiz an die Küche</p>
+
+            {isTextArea ?
+                <textarea
+                    className="h-24 mb-16 form-control w-full px-3 py-1.5 text-gray-700 bg-clip-padding border border-solid border-gray-300 rounded focus:text-gray-700 focus:border-blue-600 focus:outline-none" id="exampleFormControlTextarea1" rows={3} placeholder="Hier werden Wünsche wahr..."></textarea> : <div id="notes" className="border rounded shadow mb-16 h-24 flex justify-between items-stretch">
+                    <p className="pt-2 pl-2 text-gray-400">Platz für Wünsche...</p>
+                    <div className="h-full pt-2 pr-2 flex flex-col justify-between">
+                        <button onClick={() => handler()}><FontAwesomeIcon icon="edit" className="text-red self-end" /></button>
+                    </div>
+                </div>}
+        </div>
+    </div>
+            </div > */}
+                            {/*@ts-ignore*/}
                             <div ref={menuRef} className="bg-white shadow-md rounded-3xl" style={{ zIndex: -0 }} onClick={() => setdropDownOpen(false)}>
                                 {dish.img !== "" && dish.img ?
                                     <div className="flex flex-col h-full w-full justify-items-center relative rounded-3xl pb-7">
@@ -114,12 +153,14 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                                     </div>
                                     {choices}
                                     <p className="font-bold pb-4 pt-3">Notiz an die Küche</p>
-                                    <div id="notes" className="border rounded shadow mb-16 h-24 flex justify-between items-stretch">
-                                        <p className="pt-2 pl-2 text-gray-400">Platz für Wünsche...</p>
-                                        <div className="h-full pt-2 pr-2 flex flex-col justify-between">
-                                            <button onClick={() => handler()}><FontAwesomeIcon icon="edit" className="text-red self-end" /></button>
-                                        </div>
-                                    </div>
+                                    {isTextArea ?
+                                        <textarea
+                                            className="h-24 mb-16 form-control w-full px-3 py-1.5 text-gray-700 bg-clip-padding border border-solid border-gray-300 rounded focus:text-gray-700 focus:border-blue-600 focus:outline-none" id="exampleFormControlTextarea1" rows={3} placeholder="Hier werden Wünsche wahr..."></textarea> : <div id="notes" className="border rounded shadow mb-16 h-24 flex justify-between items-stretch">
+                                            <p className="pt-2 pl-2 text-gray-400">Platz für Wünsche...</p>
+                                            <div className="h-full pt-2 pr-2 flex flex-col justify-between">
+                                                <button onClick={() => handler()}><FontAwesomeIcon icon="edit" className="text-red self-end" /></button>
+                                            </div>
+                                        </div>}
                                 </div>
                             </div>
                         </div>
@@ -129,6 +170,6 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                 )}
 
             </Formik>
-        </div>
+        </div >
     )
 }
