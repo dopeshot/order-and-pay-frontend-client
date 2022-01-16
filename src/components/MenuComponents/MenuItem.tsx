@@ -34,12 +34,13 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
         dishid: '',
         singleChoices: '',
         multiChoices: '',
-        extras: '',
+        note: '',
         count: 1
     }
 
     const countSchema = yup.object().shape({
-        count: yup.number().min(1, "Dish count must be greater than 1")
+        count: yup.number().min(1, "Dish count must be greater than 1"),
+        note: yup.string().min(1, "Note must be greater than 1 letter").max(240, "Note cannot be greater than 240")
     })
 
     const submitForm = (values: any) => {
