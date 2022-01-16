@@ -19,9 +19,9 @@ jobs:
       - name: instrument
         run: npm run cc:instrument
         
-      - name: Cypress run
+          - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          start: npm run start & npm run mockserver
+          start: npm run start
           wait-on: 'http://localhost:3000'  
         
