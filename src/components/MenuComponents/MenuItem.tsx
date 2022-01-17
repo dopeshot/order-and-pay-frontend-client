@@ -96,6 +96,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                     <Form>
 
                         <div className="bg-menu-bg bg-opacity-50 inset-0 w-full h-full fixed" style={{ zIndex: -1 }} onClick={() => setMenuItemOpen(false)} />
+
                         <div className="container flex flex-col margin75P">
                             <div className="w-full" style={{ height: "40rem" }} onClick={() => setMenuItemOpen(false)} />
 

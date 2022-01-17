@@ -26,7 +26,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
 
     let [menuRef, menuInViewport] = useCheckMenuItem({
         root: null,
-        rootMargin: "-200px"
+        rootMargin: "-100px"
     }, isOffen)
 
     const scrollToButton = async (index: number) => {
@@ -46,7 +46,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
         const result = await resolveAfter2Seconds();
         //@ts-ignore
         result.scrollTo({
-            top: 2000,
+            top: 1000,
             left: 0,
             behavior: 'smooth'
         });
