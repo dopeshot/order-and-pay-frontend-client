@@ -1,4 +1,27 @@
 import { type } from "os"
+enum Status {
+    ACTIVE = "active",
+    DELETED = "deleted"
+}
+
+export type Allergy = {
+    _id: string
+    title: string
+    icon: string
+}
+
+export type Label = {
+    _id: string
+    title: string
+    icon: string
+}
+
+enum ChoiceType {
+    RADIO = "radio",
+    CHECKBOX = "checkbox"
+}
+
+
 
 export type Menu = {
     name: string,
@@ -17,6 +40,7 @@ export type Dish = {
     img: string,
     choices: Choice[]
 }
+
 
 export type Choice = {
     name: string,

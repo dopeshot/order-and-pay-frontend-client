@@ -25,7 +25,9 @@ module.exports = {
         'description-grey': '#EBEBEB',
         'dividergrey': '#DCDCDC',
         'chevron': '#9AA5B1',
-        'menu-bg': '#1F1F23'
+        'menu-bg': '#1F1F23',
+        'error-bg': '#FFEDED',
+        'error-text': '#EF4E4E'
       },
       boxShadow: {
         'focus': '0px 1px 8px 0.1px rgba(255, 112, 112, 1)',
