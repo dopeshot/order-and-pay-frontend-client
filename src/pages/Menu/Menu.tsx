@@ -8,13 +8,15 @@ import { DishButton } from '../../components/MenuComponents/DishButton';
 import { ScrollCats } from '../../components/MenuComponents/ScrollCats';
 import { useScrollToNav } from '../../hooks/useScroll';
 import { useAppState } from '../../overmind';
-import { Dish, MenuType } from '../../overmind/menu/state';
+import { Category, Dish, MenuEditorResponse } from '../../overmind/menu/state';
 import { useCheckMenuItem } from '../../services/menuItemIntersect';
 import { TIMEOUT } from 'dns';
+import { Categories } from '../../components/MenuComponents/Categories';
 
-export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
+export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ menu }) => {
 
-    const [currentItem, setCurrentItem] = useState(menu.dishes[0])
+    const [currentItem, setCurrentItem] = useState(menu.categories[0].dishes[0])
+    const [currentCategory, setCurrentCategory] = useState(menu.categories[0])
     const [menuItemOpen, setMenuItemOpen] = useState(false)
     const [isOffen, setIsOffen] = useState(false)
     const sectionRefs = useRef<React.RefObject<HTMLDivElement>[]>(menu.categories.map(() => createRef()))
@@ -61,9 +63,10 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
         });
     }
 
-    const openMenuItem = (dish: Dish) => {
+    const openMenuItem = (dish: Dish, category: Category & { dishes: Dish[]; }) => {
         console.log("openMenuItem")
         setCurrentItem(dish)
+        setCurrentCategory(category)
         setMenuItemOpen(true)
         asyncCall();
         setTimeout(() => {
@@ -95,7 +98,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
                 </div>
             </div>
             {console.log("menuInviewport: " + menuInViewport)}
-            {menuItemOpen && <MenuItem menuRef={menuRef} menuInViewport={menuInViewport} dish={currentItem} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} setIsOffen={setIsOffen} />}
+            {menuItemOpen && <MenuItem menuRef={menuRef} menuInViewport={menuInViewport} dish={currentItem} category={currentCategory} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} setIsOffen={setIsOffen} />}
 
             {!menuItemOpen && <OrderButton />}
         </>

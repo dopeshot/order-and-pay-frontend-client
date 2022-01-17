@@ -16,70 +16,79 @@ export type Label = {
     icon: string
 }
 
-enum ChoiceType {
+export enum ChoiceType {
     RADIO = "radio",
     CHECKBOX = "checkbox"
 }
 
+export type DIshPopulated = Dish & { allergies: Allergy[], labels: Label[] }
 
-
-export type Menu = {
-    name: string,
-    dishes: Dish[],
-    categories: Category[]
-}
 
 export type Dish = {
     _id: string,
-    name: string,
+    title: string,
     description: string,
     labels: string[],
-    allergens: string[],
+    allergies: string[],
     category: string,
     price: number,
-    img: string,
-    choices: Choice[]
+    image: string,
+    isAvailable: boolean
 }
 
 
 export type Choice = {
-    name: string,
-    type: string,
+    id: number,
+    title: string,
+    type: ChoiceType,
+    default?: number,
     options: Option[]
 }
 
 export type Option = {
+    id: number,
     name: string,
     price: number
 }
 
 export type Category = {
     _id: string,
-    name: string,
+    title: string,
     index: number,
     description: string,
     dishesIndex: number[],
-}
-//Full menu
-//TODO: Complete Menu Object
-export type MenuType = {
-    name: string,
-    dishes: Dish[],
-    categories: Category[]
+    icon: string,
+    image: string,
+    choices: Choice[],
+    menu: string
 }
 
 export type State = {
     isLoadingDishes: boolean,
     isLoadingMenu: boolean,
-    menu: MenuType
+    MenuResponseObj: MenuEditorResponse
 }
+export type CategoryAndDishRefs = { categories: (Category & { dishes: Dish[] })[] }
+
+export type Menu = {
+    title: string
+    description: string
+    status: Status
+    isActive: boolean
+}
+
+export type MenuResponse = Menu
+export type MenuEditorResponse = MenuResponse & CategoryAndDishRefs
 
 export const state: State = {
     isLoadingDishes: false,
     isLoadingMenu: false,
-    menu: {
-        name: "",
-        dishes: [],
-        categories: []
+    MenuResponseObj: {
+        title: "",
+        description: "",
+        status: Status.ACTIVE,
+        isActive: true,
+        categories: [],
+
     }
 }

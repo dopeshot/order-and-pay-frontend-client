@@ -1,19 +1,20 @@
 import React, { MutableRefObject, useEffect, useState } from "react"
 import { useAppState } from '../../overmind';
 import { priceToLocal } from '../../services/utilities'
-import { Dish } from "../../overmind/menu/state"
+import { Dish, ChoiceType, Category } from "../../overmind/menu/state"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Dropdown } from "../../components/MenuComponents/Dropdown";
 import { DishButton } from '../../components/MenuComponents/DishButton';
 import { FormError } from "../../components/MenuComponents/FormError";
 import { Field, Form, Formik, ErrorMessage } from "formik"
 import * as yup from 'yup'
-import { values } from "cypress/types/lodash";
+
 
 
 
 type PropTypes = {
     dish: Dish,
+    category: Category,
     menuItemOpen: boolean,
     setMenuItemOpen: (bool: boolean) => void,
     menuRef: boolean | MutableRefObject<any>,
@@ -21,7 +22,7 @@ type PropTypes = {
     setIsOffen: (bool: boolean) => void
 }
 
-export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInViewport, dish, menuItemOpen, setMenuItemOpen, setIsOffen }: PropTypes) => {
+export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInViewport, dish, category, menuItemOpen, setMenuItemOpen, setIsOffen }: PropTypes) => {
 
 
     useEffect(() => {
@@ -35,7 +36,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
 
     const initialValues = {
         dishid: dish._id,
-        singleChoices: dish.choices.find(choice => choice.type === "single")!.options[0],  // Änderung mit .find(id===xxx)
+        singleChoices: category.choices.find(choice => choice.type === ChoiceType.RADIO)!.options[0],  // Änderung mit .find(id===xxx)
         multiChoices: '',
         note: '',
         count: 1
@@ -74,7 +75,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
     //     </div>)
     //)
 
-    const allergens = dish.allergens.map((allergen) => (
+    const allergens = dish.allergies.map((allergen) => (
         <div className="m-3 flex flex-col items-center">
             <div className="h-7 w-7 bg-red text-center rounded-md">
                 <FontAwesomeIcon icon="hamburger" className="text-white h-full w-full" />
@@ -102,15 +103,15 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
 
                             {/*@ts-ignore*/}
                             <div ref={menuRef} className="bg-white shadow-md rounded-3xl" style={{ zIndex: -0 }} onClick={() => setdropDownOpen(false)}>
-                                {dish.img !== "" && dish.img ?
+                                {dish.image !== "" && dish.image ?
                                     <div className="flex flex-col h-full w-full justify-items-center relative rounded-3xl pb-7">
                                         <div className="flex flex-col absolute self-center"><FontAwesomeIcon icon="minus" className="text-white fa-2x self-center" /></div>
-                                        <img className="w-full h-full rounded-t-3xl object-fill" src={dish.img}></img>
+                                        <img className="w-full h-full rounded-t-3xl object-fill" src={dish.image}></img>
                                     </div> : <div className="flex flex-col"><FontAwesomeIcon icon="minus" className="text-gray-600 fa-2x self-center" /></div>}
                                 <div className="pl-3 pr-3 pt-3">
                                     <div className="self-start flex flex-col w-full justify-between pb-3">
                                         <div className="self-start justify-between w-full">
-                                            <div className="float-left font-bold text-xl">{dish.name}</div>
+                                            <div className="float-left font-bold text-xl">{dish.title}</div>
                                             <div className="float-right text-red font-bold text-xl">{priceToLocal(dish.price)}</div>
                                         </div>
                                         <div className="self-start text-gray-400">{dish.description}</div>
@@ -122,11 +123,11 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
 
 
 
-                                    {dish.choices.map((choice) => (
+                                    {category.choices.map((choice) => (
                                         <div className="">
                                             {/* Backend einen extra Text? */}
-                                            <p className="self-start font-bold pb-3 pt-2">{choice.name}</p>
-                                            {choice.type === "multi" && <div className="flex flex-col">
+                                            <p className="self-start font-bold pb-3 pt-2">{choice.title}</p>
+                                            {choice.type === ChoiceType.CHECKBOX && <div className="flex flex-col">
                                                 <div className="flex flex-col justify-between">{choice.options.map((option) => (
                                                     <div className="flex items-center pl-3 pr-3">
                                                         <input type="checkbox" className="form-checkbox"></input>
@@ -137,7 +138,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                                                     </div>
                                                 ))}</div>
                                             </div>}
-                                            {choice.type === "single" && <Dropdown choice={choice} dropDownOpen={dropDownOpen} setdropDownOpen={setdropDownOpen} formik={formik}></Dropdown>}
+                                            {choice.type === ChoiceType.RADIO && <Dropdown choice={choice} dropDownOpen={dropDownOpen} setdropDownOpen={setdropDownOpen} formik={formik}></Dropdown>}
                                         </div>)
                                     )}
                                     <p className="font-bold pb-4 pt-3">Notiz an die Küche</p>
