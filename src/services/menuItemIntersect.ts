@@ -11,12 +11,10 @@ export let useCheckMenuItem = (options: any, menuItemOpen: boolean) => {
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                console.log("Hey")
 
                 let observerRerValue: HTMLInputElement | null = null
 
                 if (entry.isIntersecting) {
-
                     console.log(entry)
                     if (entry.intersectionRatio) { }
                     console.log('It works!')

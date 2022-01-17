@@ -1,4 +1,3 @@
-import { type } from "os"
 
 export type Menu = {
     name: string,
@@ -26,7 +25,9 @@ export type Choice = {
 
 export type Option = {
     name: string,
-    price: number
+    price: number,
+    isChecked: boolean,
+    priceDish: number
 }
 
 export type Category = {
