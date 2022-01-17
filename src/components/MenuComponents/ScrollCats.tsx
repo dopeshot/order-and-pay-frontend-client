@@ -23,12 +23,12 @@ export const ScrollCats: React.FunctionComponent<PropTypes> = ({ sectionRefs, sh
                 <FontAwesomeIcon icon="search" />
             </button>
             <div id="scrollCats" className='flex gap-0 scrollbar-hide $ overflow-x-auto'>
-                {sectionRefs.current.length > 0 && <Scrollspy offset={-60} sectionRefs={sectionRefs.current}>
+                {sectionRefs.current.length > 0 && <Scrollspy offset={-60} sectionRefs={sectionRefs.current} rootSelector='#page'>
                     {({ currentElementIndexInViewport, elementsStatusInViewport }) => {
-                        console.log(sectionRefs)
+
                         if (!equalArray(elementsStatusInViewport, prevStatuses)) {
                             prevStatuses = elementsStatusInViewport
-
+                            console.log(sectionRefs)
                             scrollToButton(currentElementIndexInViewport)
                         }
                         return <ul className="scrollspy flex gap-1 pl-2 pt-2 pb-1">{
