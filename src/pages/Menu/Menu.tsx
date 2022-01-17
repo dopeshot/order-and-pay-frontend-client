@@ -68,7 +68,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
         asyncCall();
         setTimeout(() => {
             setIsOffen(true)
-        }, 10)
+        }, 100)
     }
 
     const scrollToRef = (index: number) => {
