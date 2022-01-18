@@ -7,6 +7,8 @@ import { TIMEOUT } from "dns";
 import { DishButton } from '../../components/MenuComponents/DishButton';
 import { Dropdown } from "../../components/MenuComponents/Dropdown";
 import { useActions } from '../../overmind';
+//import { Dish } from "../../overmind/menu/state";
+//import { priceToLocal } from '../../services/utilities';
 import { FormError } from "../../components/MenuComponents/FormError";
 import { Field, Form, Formik, ErrorMessage } from "formik"
 import * as yup from 'yup'
