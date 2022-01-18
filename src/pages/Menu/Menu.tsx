@@ -5,12 +5,17 @@ import { MenuItem } from '../../components/MenuComponents/MenuItem';
 import { OrderButton } from '../../components/MenuComponents/OrderButton';
 import { ScrollCats } from '../../components/MenuComponents/ScrollCats';
 import { useScrollToNav } from '../../hooks/useScroll';
-import { Dish, MenuType } from '../../overmind/menu/state';
+import { useAppState } from '../../overmind';
+//import { Dish, MenuType } from '../../overmind/menu/state';
+import { Category, Dish, MenuEditorResponse } from '../../overmind/menu/state';
 import { useCheckMenuItem } from '../../services/menuItemIntersect';
+import { TIMEOUT } from 'dns';
+import { Categories } from '../../components/MenuComponents/Categories';
 
-export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
+export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ menu }) => {
 
-    const [currentItem, setCurrentItem] = useState(menu.dishes[0])
+    const [currentItem, setCurrentItem] = useState(menu.categories[0].dishes[0])
+    const [currentCategory, setCurrentCategory] = useState(menu.categories[0])
     const [menuItemOpen, setMenuItemOpen] = useState(false)
     const [isOffen, setIsOffen] = useState(false)
     const sectionRefs = useRef<React.RefObject<HTMLDivElement>[]>(menu.categories.map(() => createRef()))
@@ -22,7 +27,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
 
     let [menuRef, menuInViewport] = useCheckMenuItem({
         root: null,
-        rootMargin: "-200px"
+        rootMargin: "-100px"
     }, isOffen)
 
     const scrollToButton = async (index: number) => {
@@ -42,7 +47,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
         const result = await resolveAfter2Seconds();
         //@ts-ignore
         result.scrollTo({
-            top: 2000,
+            top: 1000,
             left: 0,
             behavior: 'smooth'
         });
@@ -57,14 +62,15 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
         });
     }
 
-    const openMenuItem = (dish: Dish) => {
+    const openMenuItem = (dish: Dish, category: Category & { dishes: Dish[]; }) => {
         console.log("openMenuItem")
         setCurrentItem(dish)
+        setCurrentCategory(category)
         setMenuItemOpen(true)
         asyncCall();
         setTimeout(() => {
             setIsOffen(true)
-        }, 10)
+        }, 100)
     }
 
     const scrollToRef = (index: number) => {
@@ -81,7 +87,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
     return (
         <>
             <ScrollCats sectionRefs={sectionRefs} scrollToButton={scrollToButton} shouldDisplayCategoryNavbar={shouldDisplayCategoryNavbar} scrollToRef={scrollToRef} />
-            <div id="page" data-spy="scroll" data-target="#myScrollspy" className={`container w-full border-solid h-screen   ${menuItemOpen ? `pointer-events-none overflow-hidden` : `scrollbar-hide overflow-scroll `} `}>
+            <div id="page" className={`container w-full border-solid h-screen   ${menuItemOpen ? `pointer-events-none overflow-hidden` : `scrollbar-hide overflow-scroll `} `}>
                 <div className="w-full">
                     {/*@ts-ignore*/}
                     <div ref={containerRef} ><Head scrollToRef={scrollToRef} /> </div>
@@ -91,7 +97,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuType }> = ({ menu }) => {
                 </div>
             </div>
             {console.log("menuInviewport: " + menuInViewport)}
-            {menuItemOpen && <MenuItem menuRef={menuRef} menuInViewport={menuInViewport} dish={currentItem} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} setIsOffen={setIsOffen} />}
+            {menuItemOpen && <MenuItem menuRef={menuRef} menuInViewport={menuInViewport} dish={currentItem} category={currentCategory} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} setIsOffen={setIsOffen} />}
 
             {!menuItemOpen && <OrderButton />}
         </>

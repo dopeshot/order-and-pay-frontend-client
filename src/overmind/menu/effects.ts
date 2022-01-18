@@ -1,11 +1,12 @@
 import { request } from "../../services/axios";
-import { Dish, MenuType } from "./state";
+import { Dish, MenuEditorResponse } from "./state";
 
 export const getMenu = (): Promise<any> => {
     const dontUseHost = false
 
     if (!dontUseHost)
-        return request.get<MenuType>('/menu/current') // MenuType is not correct! Here there is no index stuff???
+        return request.get<MenuEditorResponse>('/menu') // /menus/:id/refs
+    //return request.get<MenuType>('/menu/current') // MenuType is not correct! Here there is no index stuff???
     else
         return new Promise((resolve) => resolve({
             data: {

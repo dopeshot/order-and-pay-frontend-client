@@ -16,7 +16,7 @@ export const DishCard: React.FunctionComponent<DishProps> = ({ dish }) => {
             <div className="self-start flex-2/4">
                 {/* Name of the dish */}
                 <p className="text-lg font-bold">
-                    {dish.name}
+                    {dish.title}
                 </p>
                 {/* Dishcription TODO: Platzhalter austauschen */}
                 <p className="self-start text-xs text-grey">
@@ -28,7 +28,7 @@ export const DishCard: React.FunctionComponent<DishProps> = ({ dish }) => {
                 </p>
             </div>
             {/* Image of the dish */}
-            <img alt={dish.name} className="self-center h-16 object-cover rounded-lg" src="https://www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg"></img>
+            <img alt={dish.title} className="self-center h-16 object-cover rounded-lg" src="https://www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg"></img>
             {/* More info button */}
             <button className="rounded-lg h-7 w-7 bg-red text-white font-bold text-xs">
                 <FontAwesomeIcon icon="plus" />

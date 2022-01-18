@@ -35,7 +35,7 @@ export let useCheckMenuItem = (options: any, menuItemOpen: boolean) => {
                 console.log("start observing")
                 observer.observe(scrollRef.current)
 
-            }, 300)
+            }, 400)
         }
 
     }, [scrollRef, options]);

@@ -7,7 +7,7 @@ export const ShowAll: React.FunctionComponent = () => {
 
     const state = useAppState().menu
 
-    const categories = state.menu.categories.map((category, index) => (
+    const categories = state.MenuResponseObj.categories.map((category, index) => (
 
         <HashLink key={category._id + "_showAll"} id={"hashLink_" + index} to={`/menu#${'section-' + (index)}`} className="flex items-center block justify-between p-3 rounded-lg text-white bg-cover bg-gray-400 bg-blend-multiply bg-left shadow-whiteBox" style={{ backgroundImage: "url(https://www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg)" }}>
             <div className="flex items-center min-w-0">
@@ -16,7 +16,7 @@ export const ShowAll: React.FunctionComponent = () => {
                 </div>
                 <div className="min-w-0">
                     <p className="text-lg font-semibold">
-                        {category.name}
+                        {category.title}
                     </p>
                     <p className="text-sm font-thin whitespace-nowrap overflow-hidden overflow-ellipsis">
                         {category.description}
