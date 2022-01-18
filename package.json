@@ -37,7 +37,7 @@
     },
     "scripts": {
         "start": "craco -r @cypress/instrument-cra start",
-        "mockserver": "json-server ./server/db.json --routes ./server/routes.json --port 3004",
+        "mockserver": "json-server ./server/db.json --port 3004",
         "mockserver:watch": "json-server --watch ./server/db.json --routes ./server/routes.json --port 3004",
         "build": "craco build",
         "test": "cypress open",
