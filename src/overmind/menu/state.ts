@@ -1,3 +1,8 @@
+
+// export type Menu = {
+//     name: string,
+//     dishes: Dish[],
+//     categories: Category[]
 import { type } from "os"
 enum Status {
     ACTIVE = "active",
@@ -48,7 +53,9 @@ export type Choice = {
 export type Option = {
     id: number,
     name: string,
-    price: number
+    price: number,
+    isChecked: boolean,
+    priceDish: number
 }
 
 export type Category = {

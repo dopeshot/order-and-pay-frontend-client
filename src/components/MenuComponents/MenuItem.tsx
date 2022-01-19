@@ -3,13 +3,15 @@ import { useAppState } from '../../overmind';
 import { priceToLocal } from '../../services/utilities'
 import { Dish, ChoiceType, Category } from "../../overmind/menu/state"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Dropdown } from "../../components/MenuComponents/Dropdown";
+import { TIMEOUT } from "dns";
 import { DishButton } from '../../components/MenuComponents/DishButton';
+import { Dropdown } from "../../components/MenuComponents/Dropdown";
+import { useActions } from '../../overmind';
+//import { Dish } from "../../overmind/menu/state";
+//import { priceToLocal } from '../../services/utilities';
 import { FormError } from "../../components/MenuComponents/FormError";
 import { Field, Form, Formik, ErrorMessage } from "formik"
 import * as yup from 'yup'
-
-
 
 
 type PropTypes = {
@@ -23,26 +25,31 @@ type PropTypes = {
 }
 
 export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInViewport, dish, category, menuItemOpen, setMenuItemOpen, setIsOffen }: PropTypes) => {
-
+    // const { checkboxHandler } = useActions().menu
 
     useEffect(() => {
         if (!menuInViewport) {
             setMenuItemOpen(false)
             setIsOffen(false)
-            console.log(menuItemOpen)
         }
     }, [menuInViewport])
 
+    const defaultNumber = category.choices.find(choice => choice.type === ChoiceType.RADIO) ? category.choices.find(choice => choice.type === ChoiceType.RADIO)!.default : 0
 
     const initialValues = {
         dishid: dish._id,
-        singleChoices: category.choices.find(choice => choice.type === ChoiceType.RADIO) ? category.choices.find(choice => choice.type === ChoiceType.RADIO)!.options[0] : "",  // Änderung mit .find(id===xxx)
-        multiChoices: '',
+        choices: {
+            id: category.choices.find(choice => choice.type === ChoiceType.RADIO)?.id,
+            type: category.choices.find(choice => choice.type === ChoiceType.RADIO)?.type,
+            valueId: category.choices.find(choice => choice.type === ChoiceType.RADIO) ? category.choices.find(choice => choice.type === ChoiceType.RADIO)!.options[defaultNumber!].id : "",
+            singleChoices: category.choices.find(choice => choice.type === ChoiceType.RADIO) ? category.choices.find(choice => choice.type === ChoiceType.RADIO)!.options[defaultNumber!] : "",// Änderung mit .find(id===xxx)
+        },
         note: '',
-        count: 1
+        count: 1,
+        tableid: 0
     }
 
-    const countSchema = yup.object().shape({
+    const orderSchema = yup.object().shape({
         count: yup.number().min(1, "Dish count must be greater than 1"),
         note: yup.string().max(240, "Note cannot be greater than 240")
     })
@@ -51,29 +58,9 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
         console.log(values)
     }
 
-
     const [dropDownOpen, setdropDownOpen] = useState(false)
     const [isTextArea, setisTextArea] = useState(false)
-
-
-    // const choices = dish.choices.map((choice, index) => (
-    //     <div className="">
-    //         {/* Backend einen extra Text? */}
-    //         <p className="self-start font-bold pb-3 pt-2">{choice.name}</p>
-    //         {choice.type === "multi" && <div className="flex flex-col">
-    //             <div className="flex flex-col justify-between">{choice.options.map((option) => (
-    //                 <div className="flex items-center pl-3 pr-3">
-    //                     <input type="checkbox" className="form-checkbox"></input>
-    //                     <div className="flex justify-between w-full pl-3">
-    //                         <div>{option.name}</div>
-    //                         <div>{priceToLocal(option.price)}</div>
-    //                     </div>
-    //                 </div>
-    //             ))}</div>
-    //         </div>}
-    //         {choice.type === "single" && <Dropdown choice={choice} dropDownOpen={dropDownOpen} setdropDownOpen={setdropDownOpen} formik={formik}></Dropdown>}
-    //     </div>)
-    //)
+    const [currentPrice, setCurrentPrice] = useState<number>(0)
 
     const allergens = dish.allergies.map((allergen) => (
         <div className="m-3 flex flex-col items-center">
@@ -88,19 +75,14 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
         setisTextArea(!isTextArea)
     }
 
-
-
     return (
         <div id="menuItem" className="overflow-y-auto h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar" >
-            <Formik initialValues={initialValues} validationSchema={countSchema} onSubmit={submitForm}>
+            <Formik initialValues={initialValues} validationSchema={orderSchema} onSubmit={submitForm}>
                 {(formik) => (
                     <Form>
-
                         <div className="bg-menu-bg bg-opacity-50 inset-0 w-full h-full fixed" style={{ zIndex: -1 }} onClick={() => setMenuItemOpen(false)} />
-
                         <div className="container flex flex-col margin75P">
                             <div className="w-full" style={{ height: "40rem" }} onClick={() => setMenuItemOpen(false)} />
-
                             {/*@ts-ignore*/}
                             <div ref={menuRef} className="bg-white shadow-md rounded-3xl" style={{ zIndex: -0 }} onClick={() => setdropDownOpen(false)}>
                                 {dish.image !== "" && dish.image ?
@@ -120,9 +102,6 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                                     <div className="flex overflow-x-auto pb-2">
                                         {allergens}
                                     </div>
-
-
-
                                     {category.choices.map((choice) => (
                                         <div className="">
                                             {/* Backend einen extra Text? */}
@@ -138,21 +117,15 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                                                     </div>
                                                 ))}</div>
                                             </div>}
-                                            {choice.type === ChoiceType.RADIO && <Dropdown choice={choice} dropDownOpen={dropDownOpen} setdropDownOpen={setdropDownOpen} formik={formik}></Dropdown>}
+                                            {choice.type === ChoiceType.RADIO && <Dropdown choice={choice} dropDownOpen={dropDownOpen} setdropDownOpen={setdropDownOpen} currentPrice={currentPrice} formik={formik}></Dropdown>}
                                         </div>)
                                     )}
                                     <p className="font-bold pb-4 pt-3">Notiz an die Küche</p>
 
-
-                                    {isTextArea ?
-                                        <Field component='textarea' name='note' type='text' className={`h-24  form-control w-full px-3 py-1.5 text-gray-700 bg-clip-padding border border-solid border-gray-300 rounded focus:text-gray-700 focus:border-blue-600 focus:outline-none ${formik.errors.note && formik.touched.note ? 'bg-error-bg border border-error-text focus:border-error-text' : ''}`} id="exampleFormControlTextarea1" rows={3} placeholder="Hier werden Wünsche wahr..." />
-                                        :
-                                        <div id="notes" className="border rounded shadow mb-16 h-24 flex justify-between items-stretch">
-                                            <p className="pt-2 pl-2 text-gray-400">Platz für Wünsche...</p>
-                                            <div className="h-full pt-2 pr-2 flex flex-col justify-between">
-                                                <button onClick={() => handler()}><FontAwesomeIcon icon="edit" className="text-red self-end" /></button>
-                                            </div>
-                                        </div>}
+                                    <div className="h-full w-full pt-2 pr-2 flex flex-col">
+                                        <button onClick={() => handler()} className="text-red self-end absolute pr-2 pt-1"><FontAwesomeIcon icon="edit" className="text-red" /></button>
+                                        <Field component='textarea' name='note' type='text' className={`h-24 form-control w-full px-3 py-1.5 text-gray-700 bg-clip-padding border border-solid border-gray-300 rounded focus:text-gray-700 focus:border-blue-600 focus:outline-none ${formik.errors.note && formik.touched.note ? 'bg-error-bg border border-error-text focus:border-error-text' : ''}`} id="exampleFormControlTextarea1" rows={3} placeholder="Hier werden Wünsche wahr..." />
+                                    </div>
 
                                     <div className="mb-24">
                                         <FormError dataCy="note-input-error" field='note' />
@@ -160,11 +133,9 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                                 </div>
                             </div>
                         </div>
-                        <DishButton formik={formik} />
+                        <DishButton currentPrice={currentPrice} formik={formik} />
                     </Form>
-
                 )}
-
             </Formik>
         </div >
     )

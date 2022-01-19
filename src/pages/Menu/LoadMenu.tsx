@@ -11,7 +11,6 @@ export const LoadingMenu: React.FunctionComponent = () => {
     useEffect(() => {
         let mounted = true
         if (mounted) {
-            console.log("Hey")
             loadMenu()
 
         }

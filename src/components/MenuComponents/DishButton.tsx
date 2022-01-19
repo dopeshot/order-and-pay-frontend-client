@@ -1,17 +1,14 @@
-import { getCurrentPrice } from '../../services/utilities'
 import { priceToLocal } from '../../services/utilities'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FormikProps } from 'formik';
 
 
 type PropTypes = {
-
-    formik: FormikProps<any>
-
+    formik: FormikProps<any>,
+    currentPrice: number
 }
 
-export const DishButton: React.FunctionComponent<PropTypes> = ({ formik }: PropTypes) => {
-
+export const DishButton: React.FunctionComponent<PropTypes> = ({ formik, currentPrice }: PropTypes) => {
 
     return (
         <footer className="w-full h-14  flex items-center justify-around bg-white flex-grow fixed bottom-0">
@@ -25,7 +22,7 @@ export const DishButton: React.FunctionComponent<PropTypes> = ({ formik }: PropT
                 </button>
             </div>
             <button id="orderButton" className="bg-red flex-grow text-white font-bold rounded-full py-2 px-7" type='submit'>
-                <p>Für {priceToLocal(getCurrentPrice(600, 120))} hinzufügen</p>
+                <p>Für {priceToLocal(currentPrice)} hinzufügen</p>
             </button>
         </footer>
     )

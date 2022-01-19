@@ -14,6 +14,7 @@ describe("MenuComponent", () => {
         cy.get("#page").scrollTo(0, 5000)
         cy.contains("Alkoholfreie Getränke").should("be.visible")
         cy.get("#scrollCats").should("be.visible")
+        cy.get("#page").scrollTo(0, -5000)
     })
 })
 

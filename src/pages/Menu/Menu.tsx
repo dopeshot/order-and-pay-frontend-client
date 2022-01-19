@@ -45,7 +45,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
     }
 
     async function asyncCall() {
-        const result = await resolveAfter2Seconds();
+        const result = await resolveAfter20ms();
         //@ts-ignore
         result.scrollTo({
             top: 1000,
@@ -55,7 +55,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
 
     }
 
-    function resolveAfter2Seconds() {
+    function resolveAfter20ms() {
         return new Promise(resolve => {
             setTimeout(() => {
                 resolve(document.querySelector("#menuItem"));
