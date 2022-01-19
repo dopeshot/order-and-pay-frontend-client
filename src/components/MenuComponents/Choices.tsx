@@ -13,17 +13,7 @@ type PropTypes = {
     setdropDownOpen: React.Dispatch<React.SetStateAction<boolean>>,
     currentPrice: number,
     dish: Dish,
-    formik: FormikProps<{
-        dishid: string;
-        choices: {
-            id: number;
-            type: ChoiceType | undefined;
-            singleChoices: Option;
-        };
-        note: string;
-        count: number;
-        tableid: number;
-    }>
+    formik: any
 }
 
 export const Choices: React.FunctionComponent<PropTypes> = ({ dish, category, dropDownOpen, setdropDownOpen, currentPrice, formik }: PropTypes) => {
