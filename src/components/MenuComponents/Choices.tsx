@@ -3,12 +3,14 @@ import { FormikProps } from 'formik';
 import { Category, ChoiceType, Dish, Option } from '../../overmind/menu/state';
 import { Dropdown } from './Dropdown';
 import { useActions, useAppState } from '../../overmind';
+import { Formik } from "formik"
+import { SetStateAction } from 'react';
 
 
 type PropTypes = {
     category: Category,
-    dropDownOpen: boolean,
-    setdropDownOpen: React.Dispatch<React.SetStateAction<boolean>>,
+    dropDownOpen: Map<any, any>,
+    setdropDownOpen: React.Dispatch<SetStateAction<Map<any, any>>>,
     currentPrice: number,
     setCurrentPrice: React.Dispatch<React.SetStateAction<number>>
     dish: Dish,
@@ -22,13 +24,10 @@ export const Choices: React.FunctionComponent<PropTypes> = ({ dish, category, dr
     const test = (e: any, price: number) => {
         formik.setFieldValue(e.target.name, !e.target.checked)
         if (e.target.checked) {
-            console.log("fuck")
-            sum = priceHandler(price)
-            console.log("sum: " + sum)
+            priceHandler(price)
         }
         else {
-            sum = priceHandler(-price)
-            console.log(sum)
+            priceHandler(-price)
         }
     }
 

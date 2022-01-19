@@ -97,7 +97,6 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
                     </div>
                 </div>
             </div>
-            {console.log("menuInviewport: " + menuInViewport)}
             {menuItemOpen && <MenuItem menuRef={menuRef} menuInViewport={menuInViewport} dish={currentItem} category={currentCategory} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} setIsOffen={setIsOffen} />}
 
             {!menuItemOpen && <OrderButton />}

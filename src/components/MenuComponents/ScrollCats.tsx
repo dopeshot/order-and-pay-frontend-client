@@ -28,7 +28,7 @@ export const ScrollCats: React.FunctionComponent<PropTypes> = ({ sectionRefs, sh
 
                         if (!equalArray(elementsStatusInViewport, prevStatuses)) {
                             prevStatuses = elementsStatusInViewport
-                            console.log(sectionRefs)
+                            //console.log(sectionRefs)
                             scrollToButton(currentElementIndexInViewport)
                         }
                         return <ul className="scrollspy flex gap-1 pl-2 pt-2 pb-1">{

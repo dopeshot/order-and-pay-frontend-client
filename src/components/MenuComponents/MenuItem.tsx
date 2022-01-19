@@ -13,6 +13,7 @@ import { useActions } from '../../overmind';
 import { FormError } from "../../components/MenuComponents/FormError";
 import { Field, Form, Formik, ErrorMessage } from "formik"
 import * as yup from 'yup'
+import { type } from "os";
 
 
 type PropTypes = {
@@ -58,8 +59,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
     const submitForm = (values: any) => {
         console.log(values)
     }
-
-    const [dropDownOpen, setdropDownOpen] = useState(false)
+    const [dropDown, setDropDown] = useState(new Map());
     const [isTextArea, setisTextArea] = useState(false)
     const [currentPrice, setCurrentPrice] = useState<number>(0)
 
@@ -75,6 +75,13 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
     const handler = () => {
         setisTextArea(!isTextArea)
     }
+    const closAllDropDown = () => {
+        category.choices.forEach(choice => {
+            if (choice.type === ChoiceType.RADIO)
+                setDropDown(new Map(dropDown.set(choice.id, false)))
+
+        });
+    }
 
     return (
         <div id="menuItem" className="overflow-y-auto h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar" >
@@ -85,7 +92,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                         <div className="container flex flex-col margin75P">
                             <div className="w-full" style={{ height: "40rem" }} onClick={() => setMenuItemOpen(false)} />
                             {/*@ts-ignore*/}
-                            <div ref={menuRef} className="bg-white shadow-md rounded-3xl" style={{ zIndex: -0 }} onClick={() => setdropDownOpen(false)}>
+                            <div ref={menuRef} className="bg-white shadow-md rounded-3xl" style={{ zIndex: -0 }} onClick={() => closAllDropDown()}>
                                 {dish.image !== "" && dish.image ?
                                     <div className="flex flex-col h-full w-full justify-items-center relative rounded-3xl pb-7">
                                         <div className="flex flex-col absolute self-center"><FontAwesomeIcon icon="minus" className="text-white fa-2x self-center" /></div>
@@ -104,7 +111,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                                         {allergens}
                                     </div>
 
-                                    <Choices dish={dish} category={category} dropDownOpen={dropDownOpen} setdropDownOpen={setdropDownOpen} currentPrice={currentPrice} setCurrentPrice={setCurrentPrice} formik={formik}></Choices>
+                                    <Choices dish={dish} category={category} dropDownOpen={dropDown} setdropDownOpen={setDropDown} currentPrice={currentPrice} setCurrentPrice={setCurrentPrice} formik={formik}></Choices>
                                     <p className="font-bold pb-4 pt-3">Notiz an die Küche</p>
 
                                     <div className="h-full w-full pt-2 pr-2 flex flex-col">
@@ -115,13 +122,13 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                                     <div className="mb-24">
                                         <FormError dataCy="note-input-error" field='note' />
                                     </div>
-                                </div>
-                            </div>
-                        </div>
+                                </div >
+                            </div >
+                        </div >
                         <DishButton currentPrice={currentPrice} formik={formik} />
-                    </Form>
+                    </Form >
                 )}
-            </Formik>
+            </Formik >
         </div >
     )
 }
