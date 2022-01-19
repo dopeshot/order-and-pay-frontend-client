@@ -1,13 +1,9 @@
 import React, { useState, useEffect, Dispatch, SetStateAction } from 'react';
-import { priceHandler } from '../../overmind/menu/actions'
 import { priceToLocal } from '../../services/utilities'
 import { Choice, Option } from "../../overmind/menu/state"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { drop } from 'cypress/types/lodash';
-import { Event, event } from 'cypress/types/jquery';
 import { FormikProps } from 'formik';
-
-
+import { useActions } from '../../overmind';
 
 
 type PropTypes = {
@@ -19,15 +15,17 @@ type PropTypes = {
     // singleChoice: Option
     // setSingleChoice: (option: Option) => void , singleChoice, setSingleChoice
     formik: FormikProps<any>
-
-
 }
+
 export const Dropdown: React.FunctionComponent<PropTypes> = ({ choice, dropDownOpen, setdropDownOpen, currentPrice, formik }: PropTypes) => {
+
+    const { priceHandler } = useActions().menu
 
     const handleClick = (option: Option, e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         setdropDownOpen(new Map(dropDownOpen.set(choice.id, !dropDownOpen.get(choice.id))))
         e.stopPropagation()
         formik.setFieldValue('choices.singleChoices', option)
+        priceHandler(option.price)
     }
 
     const handleClick2 = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
@@ -50,16 +48,13 @@ export const Dropdown: React.FunctionComponent<PropTypes> = ({ choice, dropDownO
                 </button>
             </div>
 
-            {dropDownOpen.get(choice.id) && <div className=" origin-top-right mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-y-auto h-32 scrollbar-hide focus:outline-none"                                                      >
-                <div className="py-1 " >
+            {dropDownOpen.get(choice.id) && <div className="origin-top-right mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-y-auto h-32 scrollbar-hide focus:outline-none"                                                      >
+                <div className="py-1">
                     {choice.options.map(option => (
                         // Eine richtige ID?
-                        <div key={option.name} id={`${choice.id}`} className=' flex justify-between text-gray-700  px-4 py-2 text-sm  hover:bg-gray-100' onClick={(e) => {
-                            handleClick(option, e)
-                        }}>
+                        <div key={option.name} id={`${choice.id}`} className="flex justify-between text-gray-700 px-4 py-2 text-sm hover:bg-gray-100" onClick={(e) => { handleClick(option, e) }}>
                             <p role="menuitem" id={option.name}>{option.name} </p>
                             <p role="menuitem" id={option.name}> {priceToLocal(option.price)}</p>
-
                         </div>
                     ))}
                 </div>

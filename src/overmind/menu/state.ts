@@ -3,7 +3,6 @@
 //     name: string,
 //     dishes: Dish[],
 //     categories: Category[]
-import { type } from "os"
 enum Status {
     ACTIVE = "active",
     DELETED = "deleted"
