@@ -36,18 +36,15 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
         }
     }, [menuInViewport])
 
-    const defaultnumber = category.choices.find(choice => choice.type === ChoiceType.RADIO)!.default
+    const defaultNumber = category.choices.find(choice => choice.type === ChoiceType.RADIO)!.default
 
     const initialValues = {
         dishid: dish._id,
         choices: {
-            id: category.choices.find(choice => choice.type === ChoiceType.RADIO)!.options[defaultnumber!].id,
+            id: category.choices.find(choice => choice.type === ChoiceType.RADIO)!.id,
             type: category.choices.find(choice => choice.type === ChoiceType.RADIO)?.type,
-            singleChoices: category.choices.find(choice => choice.type === ChoiceType.RADIO)!.options[defaultnumber!],// Änderung mit .find(id===xxx)
-
-
-
-
+            valueId: category.choices.find(choice => choice.type === ChoiceType.RADIO)!.options[defaultNumber!].id,
+            singleChoices: category.choices.find(choice => choice.type === ChoiceType.RADIO)!.options[defaultNumber!],// Änderung mit .find(id===xxx)
         },
         note: '',
         count: 1,
@@ -66,53 +63,6 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
     const [dropDownOpen, setdropDownOpen] = useState(false)
     const [isTextArea, setisTextArea] = useState(false)
     const [currentPrice, setCurrentPrice] = useState<number>(0)
-
-    // const choices = cat.choices &&
-    //     <>
-    //         {dish.choices.map((choice, index) => (
-    //             <div className="">
-    //                 {/* Backend einen extra Text? */}
-    //                 <p className="self-start font-bold pb-3 pt-2">{choice.name}</p>
-    //                 {choice.type === "multi" && <div className="flex flex-col">
-    //                     <div className="flex flex-col justify-between">{choice.options.map((option) => (
-    //                         <div className="flex items-center pl-3 pr-3">
-    //                             <input type="checkbox" className="form-checkbox" onClick={() => {
-    //                                 setCurrentPrice(option.price,)
-    //                                 console.log("fick die henne ", currentPrice)
-    //                                 checkboxHandler({ id: dish._id, currentPrice })
-    //                             }
-    //                             }></input>
-    //                             <div className="flex justify-between w-full pl-3">
-    //                                 <div>{option.name}</div>
-    //                                 <div>{priceToLocal(option.price)}</div>
-    //                             </div>
-    //                         </div>
-    //                     ))}</div>
-    //                 </div>}
-    //                 {choice.type === "single" && <Dropdown choice={choice} dropDownOpen={dropDownOpen} setdropDownOpen={setdropDownOpen} currentPrice={currentPrice} checkBoxHandler={checkboxHandler}></Dropdown>}
-    //             </div >))
-    //         }
-    //     </>
-
-    //old code?!
-    // const choices = dish.choices.map((choice, index) => (
-    //     <div className="">
-    //         {/* Backend einen extra Text? */}
-    //         <p className="self-start font-bold pb-3 pt-2">{choice.name}</p>
-    //         {choice.type === "multi" && <div className="flex flex-col">
-    //             <div className="flex flex-col justify-between">{choice.options.map((option) => (
-    //                 <div className="flex items-center pl-3 pr-3">
-    //                     <input type="checkbox" className="form-checkbox"></input>
-    //                     <div className="flex justify-between w-full pl-3">
-    //                         <div>{option.name}</div>
-    //                         <div>{priceToLocal(option.price)}</div>
-    //                     </div>
-    //                 </div>
-    //             ))}</div>
-    //         </div>}
-    //         {choice.type === "single" && <Dropdown choice={choice} dropDownOpen={dropDownOpen} setdropDownOpen={setdropDownOpen} formik={formik}></Dropdown>}
-    //     </div>)
-    //)
 
     const allergens = dish.allergies.map((allergen) => (
         <div className="m-3 flex flex-col items-center">
