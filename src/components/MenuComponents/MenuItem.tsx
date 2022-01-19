@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { TIMEOUT } from "dns";
 import { DishButton } from '../../components/MenuComponents/DishButton';
 import { Dropdown } from "../../components/MenuComponents/Dropdown";
+import { Choices } from "../../components/MenuComponents/Choices";
 import { useActions } from '../../overmind';
 //import { Dish } from "../../overmind/menu/state";
 //import { priceToLocal } from '../../services/utilities';
@@ -148,24 +149,8 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                                     <div className="flex overflow-x-auto pb-2">
                                         {allergens}
                                     </div>
-                                    {category.choices.map((choice) => (
-                                        <div className="">
-                                            {/* Backend einen extra Text? */}
-                                            <p className="self-start font-bold pb-3 pt-2">{choice.title}</p>
-                                            {choice.type === ChoiceType.CHECKBOX && <div className="flex flex-col">
-                                                <div className="flex flex-col justify-between">{choice.options.map((option) => (
-                                                    <div className="flex items-center pl-3 pr-3">
-                                                        <input type="checkbox" className="form-checkbox"></input>
-                                                        <div className="flex justify-between w-full pl-3">
-                                                            <div>{option.name}</div>
-                                                            <div>{priceToLocal(option.price)}</div>
-                                                        </div>
-                                                    </div>
-                                                ))}</div>
-                                            </div>}
-                                            {choice.type === ChoiceType.RADIO && <Dropdown choice={choice} dropDownOpen={dropDownOpen} setdropDownOpen={setdropDownOpen} currentPrice={currentPrice} formik={formik}></Dropdown>}
-                                        </div>)
-                                    )}
+
+                                    <Choices dish={dish} category={category} dropDownOpen={dropDownOpen} setdropDownOpen={setdropDownOpen} currentPrice={currentPrice} formik={formik}></Choices>
                                     <p className="font-bold pb-4 pt-3">Notiz an die Küche</p>
 
                                     <div className="h-full w-full pt-2 pr-2 flex flex-col">
