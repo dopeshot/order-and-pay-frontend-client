@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Dispatch, SetStateAction } from 'react';
 import { priceHandler } from '../../overmind/menu/actions'
 import { priceToLocal } from '../../services/utilities'
 import { Choice, Option } from "../../overmind/menu/state"
@@ -12,8 +12,8 @@ import { FormikProps } from 'formik';
 
 type PropTypes = {
     choice: Choice
-    dropDownOpen: boolean
-    setdropDownOpen: (bool: boolean) => void
+    dropDownOpen: Map<any, any>
+    setdropDownOpen: Dispatch<SetStateAction<Map<any, any>>>
     currentPrice: number,
     //checkBoxHandler: (payload: { id: string; currentPrice: number; }) => void
     // singleChoice: Option
@@ -25,13 +25,15 @@ type PropTypes = {
 export const Dropdown: React.FunctionComponent<PropTypes> = ({ choice, dropDownOpen, setdropDownOpen, currentPrice, formik }: PropTypes) => {
 
     const handleClick = (option: Option, e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-        setdropDownOpen(!dropDownOpen)
+        setdropDownOpen(new Map(dropDownOpen.set(choice.id, !dropDownOpen.get(choice.id))))
         e.stopPropagation()
         formik.setFieldValue('choices.singleChoices', option)
     }
 
     const handleClick2 = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        setdropDownOpen(!dropDownOpen)
+        setdropDownOpen(new Map(dropDownOpen.set(choice.id, !dropDownOpen.get(choice.id))))
+        console.log("dropdown open: " + dropDownOpen.get(choice.id))
+        console.log(choice.id)
         e.stopPropagation()
     }
 
@@ -48,7 +50,7 @@ export const Dropdown: React.FunctionComponent<PropTypes> = ({ choice, dropDownO
                 </button>
             </div>
 
-            {dropDownOpen && <div className=" origin-top-right mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-y-auto h-32 scrollbar-hide focus:outline-none"                                                      >
+            {dropDownOpen.get(choice.id) && <div className=" origin-top-right mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-y-auto h-32 scrollbar-hide focus:outline-none"                                                      >
                 <div className="py-1 " >
                     {choice.options.map(option => (
                         // Eine richtige ID?

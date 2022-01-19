@@ -5,15 +5,16 @@ import { useAppState } from '../../overmind';
 import { Category, ChoiceType, Dish, Option } from '../../overmind/menu/state';
 import { Dropdown } from './Dropdown';
 import { Formik } from "formik"
+import { SetStateAction } from 'react';
 
 
 type PropTypes = {
     category: Category,
-    dropDownOpen: boolean,
-    setdropDownOpen: React.Dispatch<React.SetStateAction<boolean>>,
+    dropDownOpen: Map<any, any>,
+    setdropDownOpen: React.Dispatch<SetStateAction<Map<any, any>>>,
     currentPrice: number,
     dish: Dish,
-    formik: any
+    formik: FormikProps<any>
 }
 
 export const Choices: React.FunctionComponent<PropTypes> = ({ dish, category, dropDownOpen, setdropDownOpen, currentPrice, formik }: PropTypes) => {

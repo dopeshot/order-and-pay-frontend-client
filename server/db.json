@@ -545,23 +545,23 @@
                         "id": 0,
                         "title": "size",
                         "type": "radio",
-                        "default": 0,
+                        "default": 1,
                         "options": [
                             {
                                 "id": 0,
-                                "name": "small",
+                                "name": "BIG",
                                 "price": -200
                             },
                             {
                                 "id": 1,
-                                "name": "normal",
+                                "name": "MASSIVE",
                                 "price": 0
                             }
                         ]
                     },
                     {
                         "id": 5,
-                        "title": "size",
+                        "title": "nien",
                         "type": "radio",
                         "default": 0,
                         "options": [
@@ -573,6 +573,11 @@
                             {
                                 "id": 1,
                                 "name": "normal",
+                                "price": 0
+                            },
+                            {
+                                "id": 3,
+                                "name": "unnormal groß",
                                 "price": 0
                             }
                         ]
