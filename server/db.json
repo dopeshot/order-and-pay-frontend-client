@@ -17,7 +17,7 @@
                         "id": 0,
                         "title": "size",
                         "type": "radio",
-                        "default": 1,
+                        "default": 0,
                         "options": [
                             {
                                 "id": 0,

@@ -27,7 +27,7 @@ export const Dropdown: React.FunctionComponent<PropTypes> = ({ choice, dropDownO
     const handleClick = (option: Option, e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         setdropDownOpen(!dropDownOpen)
         e.stopPropagation()
-        formik.setFieldValue('singleChoices', option)
+        formik.setFieldValue('choices.singleChoices', option)
     }
 
     const handleClick2 = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
@@ -40,8 +40,8 @@ export const Dropdown: React.FunctionComponent<PropTypes> = ({ choice, dropDownO
             <div>
                 <button type="button" className="flex w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700  hover:bg-gray-50 focus:outline-none " id="menu-button" onClick={(e) => handleClick2(e)}>
                     <div className="flex justify-between w-full pr-4">
-                        <p> {formik.values.singleChoices.name}</p>
-                        <p > {priceToLocal(formik.values.singleChoices.price)}</p>
+                        <p> {formik.values.choices.singleChoices.name}</p>
+                        <p > {priceToLocal(formik.values.choices.singleChoices.price)}</p>
                     </div>
 
                     <FontAwesomeIcon icon="chevron-down" className="text-chevron mt-1" />
@@ -52,11 +52,12 @@ export const Dropdown: React.FunctionComponent<PropTypes> = ({ choice, dropDownO
                 <div className="py-1 " >
                     {choice.options.map(option => (
                         // Eine richtige ID?
-                        <div key={option.name} className=' flex justify-between text-gray-700  px-4 py-2 text-sm  hover:bg-gray-100' onClick={(e) => {
+                        <div key={option.name} id={`${choice.id}`} className=' flex justify-between text-gray-700  px-4 py-2 text-sm  hover:bg-gray-100' onClick={(e) => {
                             handleClick(option, e)
                         }}>
                             <p role="menuitem" id={option.name}>{option.name} </p>
                             <p role="menuitem" id={option.name}> {priceToLocal(option.price)}</p>
+
                         </div>
                     ))}
                 </div>

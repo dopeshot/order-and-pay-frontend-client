@@ -36,16 +36,25 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
         }
     }, [menuInViewport])
 
+    const defaultnumber = category.choices.find(choice => choice.type === ChoiceType.RADIO)!.default
 
     const initialValues = {
         dishid: dish._id,
-        singleChoices: category.choices.find(choice => choice.type === ChoiceType.RADIO)!.options[0],  // Änderung mit .find(id===xxx)
-        multiChoices: '',
+        choices: {
+            id: category.choices.find(choice => choice.type === ChoiceType.RADIO)!.options[defaultnumber!].id,
+            type: category.choices.find(choice => choice.type === ChoiceType.RADIO)?.type,
+            singleChoices: category.choices.find(choice => choice.type === ChoiceType.RADIO)!.options[defaultnumber!],// Änderung mit .find(id===xxx)
+
+
+
+
+        },
         note: '',
-        count: 1
+        count: 1,
+        tableid: 0
     }
 
-    const countSchema = yup.object().shape({
+    const orderSchema = yup.object().shape({
         count: yup.number().min(1, "Dish count must be greater than 1"),
         note: yup.string().max(240, "Note cannot be greater than 240")
     })
@@ -120,7 +129,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
 
     return (
         <div id="menuItem" className="overflow-y-auto h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar" >
-            <Formik initialValues={initialValues} validationSchema={countSchema} onSubmit={submitForm}>
+            <Formik initialValues={initialValues} validationSchema={orderSchema} onSubmit={submitForm}>
                 {(formik) => (
                     <Form>
 
@@ -147,9 +156,6 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                                     <div className="flex overflow-x-auto pb-2">
                                         {allergens}
                                     </div>
-
-
-
                                     {category.choices.map((choice) => (
                                         <div className="">
                                             {/* Backend einen extra Text? */}
