@@ -104,7 +104,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                                         {allergens}
                                     </div>
 
-                                    <Choices dish={dish} category={category} dropDownOpen={dropDownOpen} setdropDownOpen={setdropDownOpen} currentPrice={currentPrice} formik={formik}></Choices>
+                                    <Choices dish={dish} category={category} dropDownOpen={dropDownOpen} setdropDownOpen={setdropDownOpen} currentPrice={currentPrice} setCurrentPrice={setCurrentPrice} formik={formik}></Choices>
                                     <p className="font-bold pb-4 pt-3">Notiz an die Küche</p>
 
                                     <div className="h-full w-full pt-2 pr-2 flex flex-col">

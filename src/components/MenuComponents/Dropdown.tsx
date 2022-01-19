@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { priceHandler } from '../../overmind/menu/actions'
 import { priceToLocal } from '../../services/utilities'
 import { Choice, Option } from "../../overmind/menu/state"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
