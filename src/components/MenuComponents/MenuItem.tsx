@@ -14,8 +14,6 @@ import { Field, Form, Formik, ErrorMessage } from "formik"
 import * as yup from 'yup'
 
 
-
-
 type PropTypes = {
     dish: Dish,
     category: Category,
@@ -44,10 +42,6 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
             id: category.choices.find(choice => choice.type === ChoiceType.RADIO)!.options[defaultnumber!].id,
             type: category.choices.find(choice => choice.type === ChoiceType.RADIO)?.type,
             singleChoices: category.choices.find(choice => choice.type === ChoiceType.RADIO)!.options[defaultnumber!],// Änderung mit .find(id===xxx)
-
-
-
-
         },
         note: '',
         count: 1,
@@ -132,9 +126,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
             <Formik initialValues={initialValues} validationSchema={orderSchema} onSubmit={submitForm}>
                 {(formik) => (
                     <Form>
-
                         <div className="bg-menu-bg bg-opacity-50 inset-0 w-full h-full fixed" style={{ zIndex: -1 }} onClick={() => setMenuItemOpen(false)} />
-
                         <div className="container flex flex-col margin75P">
                             <div className="w-full" style={{ height: "40rem" }} onClick={() => setMenuItemOpen(false)} />
                             {/*@ts-ignore*/}
@@ -176,16 +168,10 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                                     )}
                                     <p className="font-bold pb-4 pt-3">Notiz an die Küche</p>
 
-
-                                    {isTextArea ?
-                                        <Field component='textarea' name='note' type='text' className={`h-24  form-control w-full px-3 py-1.5 text-gray-700 bg-clip-padding border border-solid border-gray-300 rounded focus:text-gray-700 focus:border-blue-600 focus:outline-none ${formik.errors.note && formik.touched.note ? 'bg-error-bg border border-error-text focus:border-error-text' : ''}`} id="exampleFormControlTextarea1" rows={3} placeholder="Hier werden Wünsche wahr..." />
-                                        :
-                                        <div id="notes" className="border rounded shadow mb-16 h-24 flex justify-between items-stretch">
-                                            <p className="pt-2 pl-2 text-gray-400">Platz für Wünsche...</p>
-                                            <div className="h-full pt-2 pr-2 flex flex-col justify-between">
-                                                <button onClick={() => handler()}><FontAwesomeIcon icon="edit" className="text-red self-end" /></button>
-                                            </div>
-                                        </div>}
+                                    <div className="h-full w-full pt-2 pr-2 flex flex-col">
+                                        <button onClick={() => handler()} className="text-red self-end absolute pr-2 pt-1"><FontAwesomeIcon icon="edit" className="text-red" /></button>
+                                        <Field component='textarea' name='note' type='text' className={`h-24 form-control w-full px-3 py-1.5 text-gray-700 bg-clip-padding border border-solid border-gray-300 rounded focus:text-gray-700 focus:border-blue-600 focus:outline-none ${formik.errors.note && formik.touched.note ? 'bg-error-bg border border-error-text focus:border-error-text' : ''}`} id="exampleFormControlTextarea1" rows={3} placeholder="Hier werden Wünsche wahr..." />
+                                    </div>
 
                                     <div className="mb-24">
                                         <FormError dataCy="note-input-error" field='note' />
@@ -195,9 +181,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                         </div>
                         <DishButton currentPrice={currentPrice} formik={formik} />
                     </Form>
-
                 )}
-
             </Formik>
         </div >
     )
