@@ -20,7 +20,7 @@ describe("Renders ShowAll Page", () => {
     it("Buttons work", () => {
 
         cy.get("#hashLink_1").click()
-        cy.url().should('eq', baseUrl + '/menu#section-2')
+        cy.url().should('eq', baseUrl + '/menu#section-1')
 
     })
 

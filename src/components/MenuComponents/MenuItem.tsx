@@ -36,7 +36,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
 
     const initialValues = {
         dishid: dish._id,
-        singleChoices: category.choices.find(choice => choice.type === ChoiceType.RADIO)!.options[0],  // Änderung mit .find(id===xxx)
+        singleChoices: category.choices.find(choice => choice.type === ChoiceType.RADIO) ? category.choices.find(choice => choice.type === ChoiceType.RADIO)!.options[0] : "",  // Änderung mit .find(id===xxx)
         multiChoices: '',
         note: '',
         count: 1
