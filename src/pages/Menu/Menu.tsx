@@ -5,6 +5,7 @@ import { MenuItem } from '../../components/MenuComponents/MenuItem';
 import { OrderButton } from '../../components/MenuComponents/OrderButton';
 import { ScrollCats } from '../../components/MenuComponents/ScrollCats';
 import { useScrollToNav } from '../../hooks/useScroll';
+import { useActions } from '../../overmind';
 import { Category, Dish, MenuEditorResponse } from '../../overmind/menu/state';
 import { useCheckMenuItem } from '../../services/menuItemIntersect';
 
@@ -47,7 +48,6 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
             left: 0,
             behavior: 'smooth'
         });
-
     }
 
     function resolveAfter20ms() {
@@ -58,6 +58,8 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
         });
     }
 
+    const { priceHandler } = useActions().menu
+
     const openMenuItem = (dish: Dish, category: Category & { dishes: Dish[]; }) => {
         console.log("openMenuItem")
         setCurrentItem(dish)
@@ -67,6 +69,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
         setTimeout(() => {
             setIsOffen(true)
         }, 100)
+        priceHandler(dish.price)
     }
 
     const scrollToRef = (index: number) => {

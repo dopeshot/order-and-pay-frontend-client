@@ -46,3 +46,10 @@ export const priceHandler = ({ state }: Context, priceDish: number) => {
     console.log("end sum: " + state.menu.sum)
     return state.menu.sum
 }
+
+export const priceReset = ({ state }: Context) => {
+    //currentPrice = priceDish + currentPrice
+    state.menu.sum = 0
+    console.log("end sum: " + state.menu.sum)
+    return state.menu.sum
+}
