@@ -29,7 +29,7 @@ export const MenuComponent: React.FunctionComponent<PropTypes> = ({ sectionRefs,
                 <div className="px-5 divide-y divide-dividergrey ">
                     {category.dishes.map((dish) => (
                         //key will get changed to ID once backend has dish ids// openmenu(menu.dishes[index])
-                        <div key={index + "_dishcard"} id={index + "_dishCard_Id"} className="block pb-2 pt-2 dish" onClick={() => openMenuItem(dish, category)} >
+                        <div key={dish._id} id={index + "_dishCard_Id"} className="block pb-2 pt-2 dish" onClick={() => openMenuItem(dish, category)} >
                             <DishCard dish={dish} />
                         </div>))}
                 </div>
