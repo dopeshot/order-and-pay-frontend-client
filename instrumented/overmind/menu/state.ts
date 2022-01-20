@@ -1,46 +1,101 @@
-export type Menu = {
-    name: string,
-    dishes: Dish[],
-    categories: Category[]
+
+// export type Menu = {
+//     name: string,
+//     dishes: Dish[],
+//     categories: Category[]
+enum Status {
+    ACTIVE = "active",
+    DELETED = "deleted"
 }
+
+export type Allergy = {
+    _id: string
+    title: string
+    icon: string
+}
+
+export type Label = {
+    _id: string
+    title: string
+    icon: string
+}
+
+export enum ChoiceType {
+    RADIO = "radio",
+    CHECKBOX = "checkbox"
+}
+
+export type DIshPopulated = Dish & { allergies: Allergy[], labels: Label[] }
+
 
 export type Dish = {
     _id: string,
-    name: string,
+    title: string,
     description: string,
     labels: string[],
-    allergens: string[],
+    allergies: string[],
     category: string,
-    price: number
+    price: number,
+    image: string,
+    isAvailable: boolean
+}
+
+
+export type Choice = {
+    id: number,
+    title: string,
+    type: ChoiceType,
+    default?: number,
+    options: Option[]
+}
+
+export type Option = {
+    id: number,
+    name: string,
+    price: number,
+    isChecked: boolean,
+    priceDish: number
 }
 
 export type Category = {
     _id: string,
-    name: string,
+    title: string,
     index: number,
     description: string,
     dishesIndex: number[],
-}
-//Full menu
-//TODO: Complete Menu Object
-export type MenuType = {
-    name: string,
-    dishes: Dish[],
-    categories: Category[]
+    icon: string,
+    image: string,
+    choices: Choice[],
+    menu: string
 }
 
 export type State = {
     isLoadingDishes: boolean,
     isLoadingMenu: boolean,
-    menu: MenuType
+    MenuResponseObj: MenuEditorResponse,
+    sum: number
 }
+export type CategoryAndDishRefs = { categories: (Category & { dishes: Dish[] })[] }
+
+export type Menu = {
+    title: string
+    description: string
+    status: Status
+    isActive: boolean
+}
+
+export type MenuResponse = Menu
+export type MenuEditorResponse = MenuResponse & CategoryAndDishRefs
 
 export const state: State = {
     isLoadingDishes: false,
     isLoadingMenu: false,
-    menu: {
-        name: "",
-        dishes: [],
+    sum: 0,
+    MenuResponseObj: {
+        title: "",
+        description: "",
+        status: Status.ACTIVE,
+        isActive: true,
         categories: []
     }
 }

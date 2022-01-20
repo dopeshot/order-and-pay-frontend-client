@@ -7,7 +7,6 @@ import { Choices } from "../../components/MenuComponents/Choices";
 import { FormError } from "../../components/MenuComponents/FormError";
 import { Field, Form, Formik, ErrorMessage } from "formik"
 import * as yup from 'yup'
-import { useActions, useAppState } from "../../overmind";
 
 
 type PropTypes = {
@@ -22,8 +21,6 @@ type PropTypes = {
 
 export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInViewport, dish, category, menuItemOpen, setMenuItemOpen, setIsOffen }: PropTypes) => {
     // const { checkboxHandler } = useActions().menu
-
-    const { putInBasket } = useActions().basket
 
     useEffect(() => {
         if (!menuInViewport) {
@@ -55,11 +52,6 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
     const submitForm = (values: any) => {
         console.log(values)
     }
-
-    const submitItem = () => {
-
-    }
-
     const [dropDown, setDropDown] = useState(new Map());
     const [isTextArea, setisTextArea] = useState(false)
     const [currentPrice, setCurrentPrice] = useState<number>(0)
@@ -125,7 +117,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                                 </div >
                             </div >
                         </div >
-                        <DishButton currentPrice={currentPrice} formik={formik} submitItem={submitItem} />
+                        <DishButton currentPrice={currentPrice} formik={formik} />
                     </Form >
                 )}
             </Formik >

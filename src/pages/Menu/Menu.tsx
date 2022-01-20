@@ -1,4 +1,5 @@
 import React, { createRef, useRef, useState } from 'react';
+import { useAppState } from '../../overmind';
 import { Head } from '../../components/MenuComponents/Head';
 import { MenuComponent } from '../../components/MenuComponents/MenuComponent';
 import { MenuItem } from '../../components/MenuComponents/MenuItem';
@@ -9,6 +10,8 @@ import { Category, Dish, MenuEditorResponse } from '../../overmind/menu/state';
 import { useCheckMenuItem } from '../../services/menuItemIntersect';
 
 export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ menu }) => {
+
+    const basket = useAppState().basket.basket
 
     const [currentItem, setCurrentItem] = useState(menu.categories[0].dishes[0])
     const [currentCategory, setCurrentCategory] = useState(menu.categories[0])
@@ -94,7 +97,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
             </div>
             {menuItemOpen && <MenuItem menuRef={menuRef} menuInViewport={menuInViewport} dish={currentItem} category={currentCategory} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} setIsOffen={setIsOffen} />}
 
-            {!menuItemOpen && <OrderButton />}
+            {(!menuItemOpen && basket.items.length > 0) && <OrderButton />}
         </>
     )
 }

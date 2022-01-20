@@ -1,8 +1,4 @@
 
-// export type Menu = {
-//     name: string,
-//     dishes: Dish[],
-//     categories: Category[]
 enum Status {
     ACTIVE = "active",
     DELETED = "deleted"
@@ -68,6 +64,8 @@ export type Category = {
     choices: Choice[],
     menu: string
 }
+
+
 
 export type State = {
     isLoadingDishes: boolean,

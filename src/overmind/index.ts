@@ -1,12 +1,12 @@
 import { IContext } from 'overmind'
 import { createActionsHook, createStateHook } from 'overmind-react'
 import { namespaced } from 'overmind/config'
-import * as example from './example'
+import * as basket from './basket'
 import * as menu from './menu'
 
 export const config = namespaced({
-    example,
-    menu
+    menu,
+    basket
 })
 
 export type Context = IContext<{
