@@ -3,7 +3,6 @@
 //     name: string,
 //     dishes: Dish[],
 //     categories: Category[]
-import { type } from "os"
 enum Status {
     ACTIVE = "active",
     DELETED = "deleted"
@@ -73,7 +72,8 @@ export type Category = {
 export type State = {
     isLoadingDishes: boolean,
     isLoadingMenu: boolean,
-    MenuResponseObj: MenuEditorResponse
+    MenuResponseObj: MenuEditorResponse,
+    sum: number
 }
 export type CategoryAndDishRefs = { categories: (Category & { dishes: Dish[] })[] }
 
@@ -90,12 +90,12 @@ export type MenuEditorResponse = MenuResponse & CategoryAndDishRefs
 export const state: State = {
     isLoadingDishes: false,
     isLoadingMenu: false,
+    sum: 0,
     MenuResponseObj: {
         title: "",
         description: "",
         status: Status.ACTIVE,
         isActive: true,
-        categories: [],
-
+        categories: []
     }
 }

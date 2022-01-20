@@ -1,6 +1,7 @@
 import { priceToLocal } from '../../services/utilities'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FormikProps } from 'formik';
+import { useAppState } from '../../overmind';
 
 
 type PropTypes = {
@@ -9,6 +10,8 @@ type PropTypes = {
 }
 
 export const DishButton: React.FunctionComponent<PropTypes> = ({ formik, currentPrice }: PropTypes) => {
+
+    let sum = useAppState().menu.sum
 
     return (
         <footer className="w-full h-14  flex items-center justify-around bg-white flex-grow fixed bottom-0">
@@ -22,7 +25,7 @@ export const DishButton: React.FunctionComponent<PropTypes> = ({ formik, current
                 </button>
             </div>
             <button id="orderButton" className="bg-red flex-grow text-white font-bold rounded-full py-2 px-7" type='submit'>
-                <p>Für {priceToLocal(currentPrice)} hinzufügen</p>
+                <p>Für {priceToLocal(sum)} hinzufügen</p>
             </button>
         </footer>
     )

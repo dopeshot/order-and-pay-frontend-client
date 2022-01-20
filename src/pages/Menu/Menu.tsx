@@ -1,17 +1,12 @@
 import React, { createRef, useRef, useState } from 'react';
-import disablescroll from 'disable-scroll'
 import { Head } from '../../components/MenuComponents/Head';
 import { MenuComponent } from '../../components/MenuComponents/MenuComponent';
 import { MenuItem } from '../../components/MenuComponents/MenuItem';
 import { OrderButton } from '../../components/MenuComponents/OrderButton';
-import { DishButton } from '../../components/MenuComponents/DishButton';
 import { ScrollCats } from '../../components/MenuComponents/ScrollCats';
 import { useScrollToNav } from '../../hooks/useScroll';
-import { useAppState } from '../../overmind';
 import { Category, Dish, MenuEditorResponse } from '../../overmind/menu/state';
 import { useCheckMenuItem } from '../../services/menuItemIntersect';
-import { TIMEOUT } from 'dns';
-import { Categories } from '../../components/MenuComponents/Categories';
 
 export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ menu }) => {
 
@@ -97,7 +92,6 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
                     </div>
                 </div>
             </div>
-            {console.log("menuInviewport: " + menuInViewport)}
             {menuItemOpen && <MenuItem menuRef={menuRef} menuInViewport={menuInViewport} dish={currentItem} category={currentCategory} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} setIsOffen={setIsOffen} />}
 
             {!menuItemOpen && <OrderButton />}

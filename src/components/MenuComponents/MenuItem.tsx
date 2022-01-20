@@ -1,19 +1,12 @@
 import React, { MutableRefObject, useEffect, useState } from "react"
-import { useAppState } from '../../overmind';
 import { priceToLocal } from '../../services/utilities'
 import { Dish, ChoiceType, Category } from "../../overmind/menu/state"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { TIMEOUT } from "dns";
 import { DishButton } from '../../components/MenuComponents/DishButton';
-import { Dropdown } from "../../components/MenuComponents/Dropdown";
 import { Choices } from "../../components/MenuComponents/Choices";
-import { useActions } from '../../overmind';
-//import { Dish } from "../../overmind/menu/state";
-//import { priceToLocal } from '../../services/utilities';
 import { FormError } from "../../components/MenuComponents/FormError";
 import { Field, Form, Formik, ErrorMessage } from "formik"
 import * as yup from 'yup'
-import { type } from "os";
 
 
 type PropTypes = {
@@ -79,7 +72,6 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
         category.choices.forEach(choice => {
             if (choice.type === ChoiceType.RADIO)
                 setDropDown(new Map(dropDown.set(choice.id, false)))
-
         });
     }
 
@@ -111,7 +103,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                                         {allergens}
                                     </div>
 
-                                    <Choices dish={dish} category={category} dropDownOpen={dropDown} setdropDownOpen={setDropDown} currentPrice={currentPrice} formik={formik}></Choices>
+                                    <Choices dish={dish} category={category} dropDownOpen={dropDown} setdropDownOpen={setDropDown} currentPrice={currentPrice} setCurrentPrice={setCurrentPrice} formik={formik}></Choices>
                                     <p className="font-bold pb-4 pt-3">Notiz an die Küche</p>
 
                                     <div className="h-full w-full pt-2 pr-2 flex flex-col">
@@ -122,13 +114,13 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                                     <div className="mb-24">
                                         <FormError dataCy="note-input-error" field='note' />
                                     </div>
-                                </div>
-                            </div>
-                        </div>
+                                </div >
+                            </div >
+                        </div >
                         <DishButton currentPrice={currentPrice} formik={formik} />
-                    </Form>
+                    </Form >
                 )}
-            </Formik>
+            </Formik >
         </div >
     )
 }
