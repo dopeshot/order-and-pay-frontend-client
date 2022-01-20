@@ -8,6 +8,7 @@ import { FormError } from "../../components/MenuComponents/FormError";
 import { Field, Form, Formik, ErrorMessage } from "formik"
 import * as yup from 'yup'
 import { useActions, useAppState } from "../../overmind";
+import { Item, PickedCheckbox, PickedRadio } from "../../overmind/basket/state";
 
 
 type PropTypes = {
@@ -16,48 +17,81 @@ type PropTypes = {
     menuItemOpen: boolean,
     setMenuItemOpen: (bool: boolean) => void,
     menuRef: boolean | MutableRefObject<any>,
-    menuInViewport: boolean | MutableRefObject<any>,
-    setIsOffen: (bool: boolean) => void
+    menuInViewport: boolean | MutableRefObject<any>
 }
 
-export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInViewport, dish, category, menuItemOpen, setMenuItemOpen, setIsOffen }: PropTypes) => {
+export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInViewport, dish, category, menuItemOpen, setMenuItemOpen }: PropTypes) => {
     // const { checkboxHandler } = useActions().menu
 
     const { putInBasket } = useActions().basket
 
+
+    const close = () => {
+        priceReset()
+        setMenuItemOpen(false)
+    }
     useEffect(() => {
         if (!menuInViewport) {
-            setMenuItemOpen(false)
-            setIsOffen(false)
+            close()
+
         }
     }, [menuInViewport])
 
     const defaultNumber = category.choices.find(choice => choice.type === ChoiceType.RADIO) ? category.choices.find(choice => choice.type === ChoiceType.RADIO)!.default : 0
 
+
+    let initChoices: (PickedRadio | PickedCheckbox)[] = []
+
+    category.choices.forEach((choice) => {
+        if (choice.type === ChoiceType.RADIO)
+            initChoices.push(
+                {
+                    id: choice.id,
+                    type: ChoiceType.RADIO,
+                    valueId: choice.default!
+                }
+            )
+        else {
+            initChoices.push({
+                id: choice.id,
+                type: ChoiceType.CHECKBOX,
+                valueId: []
+            })
+        }
+
+    })
+
+
     const initialValues = {
         dishid: dish._id,
-        choices: {
-            id: category.choices.find(choice => choice.type === ChoiceType.RADIO)?.id,
-            type: category.choices.find(choice => choice.type === ChoiceType.RADIO)?.type,
-            valueId: category.choices.find(choice => choice.type === ChoiceType.RADIO) ? category.choices.find(choice => choice.type === ChoiceType.RADIO)!.options[defaultNumber!].id : "",
-            singleChoices: category.choices.find(choice => choice.type === ChoiceType.RADIO) ? category.choices.find(choice => choice.type === ChoiceType.RADIO)!.options[defaultNumber!] : "",// Änderung mit .find(id===xxx)
-        },
+        choices: initChoices,
         note: '',
         count: 1,
         tableid: 0
     }
+
 
     const orderSchema = yup.object().shape({
         count: yup.number().min(1, "Dish count must be greater than 1"),
         note: yup.string().max(240, "Note cannot be greater than 240")
     })
 
+
     const submitForm = (values: any) => {
         console.log(values)
-    }
+        console.log("submitForm")
+        let pickedChoices: (PickedRadio | PickedCheckbox)[] = []
 
-    const submitItem = () => {
-
+        const item: Item = {
+            dishId: values.dishid,
+            count: values.count,
+            pickedChoices: values.choices,
+            note: values.note,
+            dish: dish
+        }
+        console.log(item)
+        putInBasket(item)
+        close()
     }
 
     const [dropDown, setDropDown] = useState(new Map());
@@ -83,6 +117,8 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
         });
     }
 
+    const { priceReset } = useActions().menu
+
     return (
         <div id="menuItem" className="overflow-y-auto h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar" >
             <Formik initialValues={initialValues} validationSchema={orderSchema} onSubmit={submitForm}>
@@ -90,7 +126,9 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                     <Form>
                         <div className="bg-menu-bg bg-opacity-50 inset-0 w-full h-full fixed" style={{ zIndex: -1 }} onClick={() => setMenuItemOpen(false)} />
                         <div className="container flex flex-col margin75P">
-                            <div className="w-full" style={{ height: "40rem" }} onClick={() => setMenuItemOpen(false)} />
+                            <div className="w-full" style={{ height: "40rem" }} onClick={() => {
+                                close()
+                            }} />
                             {/*@ts-ignore*/}
                             <div ref={menuRef} className="bg-white shadow-md rounded-3xl" style={{ zIndex: -0 }} onClick={() => closAllDropDown()}>
                                 {dish.image !== "" && dish.image ?
@@ -115,7 +153,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                                     <p className="font-bold pb-4 pt-3">Notiz an die Küche</p>
 
                                     <div className="h-full w-full pt-2 pr-2 flex flex-col">
-                                        <button onClick={() => handler()} className="text-red self-end absolute pr-2 pt-1"><FontAwesomeIcon icon="edit" className="text-red" /></button>
+                                        <button type='button' onClick={() => handler()} className="text-red self-end absolute pr-2 pt-1"><FontAwesomeIcon icon="edit" className="text-red" /></button>
                                         <Field component='textarea' name='note' type='text' className={`h-24 form-control w-full px-3 py-1.5 text-gray-700 bg-clip-padding border border-solid border-gray-300 rounded focus:text-gray-700 focus:border-blue-600 focus:outline-none ${formik.errors.note && formik.touched.note ? 'bg-error-bg border border-error-text focus:border-error-text' : ''}`} id="exampleFormControlTextarea1" rows={3} placeholder="Hier werden Wünsche wahr..." />
                                     </div>
 
@@ -125,7 +163,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                                 </div >
                             </div >
                         </div >
-                        <DishButton currentPrice={currentPrice} formik={formik} submitItem={submitItem} />
+                        <DishButton formik={formik} />
                     </Form >
                 )}
             </Formik >

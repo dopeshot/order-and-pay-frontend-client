@@ -9,22 +9,18 @@ import { useActions } from '../../overmind';
 type PropTypes = {
     choice: Choice
     dropDownOpen: Map<any, any>
-    setdropDownOpen: Dispatch<SetStateAction<Map<any, any>>>
-    currentPrice: number,
-    //checkBoxHandler: (payload: { id: string; currentPrice: number; }) => void
-    // singleChoice: Option
-    // setSingleChoice: (option: Option) => void , singleChoice, setSingleChoice
+    setdropDownOpen: Dispatch<SetStateAction<Map<any, any>>>,
     formik: FormikProps<any>
 }
 
-export const Dropdown: React.FunctionComponent<PropTypes> = ({ choice, dropDownOpen, setdropDownOpen, currentPrice, formik }: PropTypes) => {
+export const Dropdown: React.FunctionComponent<PropTypes> = ({ choice, dropDownOpen, setdropDownOpen, formik }: PropTypes) => {
 
     const { priceHandler } = useActions().menu
 
     const handleClick = (option: Option, e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         setdropDownOpen(new Map(dropDownOpen.set(choice.id, !dropDownOpen.get(choice.id))))
         e.stopPropagation()
-        formik.setFieldValue('choices.singleChoices', option)
+        formik.values.choices[currentFormikChoiceIndex].valueId = option.id
         priceHandler(option.price)
     }
 
@@ -35,13 +31,17 @@ export const Dropdown: React.FunctionComponent<PropTypes> = ({ choice, dropDownO
         e.stopPropagation()
     }
 
+    const currentFormikChoice = formik.values.choices.find((current: { id: any; }) => current.id === choice.id)
+    const currentFormikChoiceIndex = formik.values.choices.findIndex((current: { id: any; }) => current.id === choice.id)
+
     return (
         <div className="text-left pr-4 pl-4" style={{ zIndex: 5 }} >
             <div>
                 <button type="button" className="flex w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700  hover:bg-gray-50 focus:outline-none " id="menu-button" onClick={(e) => handleClick2(e)}>
                     <div className="flex justify-between w-full pr-4">
-                        <p> {formik.values.choices.singleChoices.name}</p>
-                        <p > {priceToLocal(formik.values.choices.singleChoices.price)}</p>
+
+                        <p> {choice.options.find(option => option.id === currentFormikChoice.valueId)!.name}</p>
+                        <p > {priceToLocal(choice.options.find(option => option.id === currentFormikChoice.valueId)!.price)}</p>
                     </div>
 
                     <FontAwesomeIcon icon="chevron-down" className="text-chevron mt-1" />

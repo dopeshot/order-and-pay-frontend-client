@@ -1,19 +1,28 @@
+import { ChoiceType, Dish } from "../menu/state"
 
 export type Basket = {
     price: number,
     items: Item[]
-
 }
 
 export type Item = {
     dishId: string,
     count: number,
-    pickedChoices: PickedChoice[],
-    note: string
+    pickedChoices: (PickedRadio | PickedCheckbox)[],
+    note: string,
+    dish: Dish
 }
 
-export type PickedChoice = {
+export type PickedRadio = {
+    id: number,
+    type: ChoiceType,
+    valueId: number
+}
 
+export type PickedCheckbox = {
+    id: number,
+    type: ChoiceType,
+    valueId: number[]
 }
 
 

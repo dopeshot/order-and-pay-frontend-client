@@ -6,11 +6,10 @@ import { useAppState } from '../../overmind';
 
 type PropTypes = {
     formik: FormikProps<any>,
-    currentPrice: number,
-    submitItem: () => void
+
 }
 
-export const DishButton: React.FunctionComponent<PropTypes> = ({ formik, currentPrice, submitItem }: PropTypes) => {
+export const DishButton: React.FunctionComponent<PropTypes> = ({ formik }: PropTypes) => {
 
     let sum = useAppState().menu.sum
 
@@ -26,8 +25,8 @@ export const DishButton: React.FunctionComponent<PropTypes> = ({ formik, current
                     <FontAwesomeIcon icon="plus" />
                 </button>
             </div>
-            <button id="orderButton" className="bg-red flex-grow text-white font-bold rounded-full py-2 px-7" type='submit' onClick={() => submitItem()}>
-                <p>Für {priceToLocal(sum)} hinzufügen</p>
+            <button id="orderButton" className="bg-red flex-grow text-white font-bold rounded-full py-2 px-7" type='submit' >
+                <p>Für {priceToLocal(sum * formik.values.count)} hinzufügen</p>
             </button>
         </footer>
     )

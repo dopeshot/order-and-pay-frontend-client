@@ -6,6 +6,7 @@ import { MenuItem } from '../../components/MenuComponents/MenuItem';
 import { OrderButton } from '../../components/MenuComponents/OrderButton';
 import { ScrollCats } from '../../components/MenuComponents/ScrollCats';
 import { useScrollToNav } from '../../hooks/useScroll';
+import { useActions } from '../../overmind';
 import { Category, Dish, MenuEditorResponse } from '../../overmind/menu/state';
 import { useCheckMenuItem } from '../../services/menuItemIntersect';
 
@@ -16,7 +17,6 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
     const [currentItem, setCurrentItem] = useState(menu.categories[0].dishes[0])
     const [currentCategory, setCurrentCategory] = useState(menu.categories[0])
     const [menuItemOpen, setMenuItemOpen] = useState(false)
-    const [isOffen, setIsOffen] = useState(false)
     const sectionRefs = useRef<React.RefObject<HTMLDivElement>[]>(menu.categories.map(() => createRef()))
 
     const [containerRef, shouldDisplayCategoryNavbar] = useScrollToNav({
@@ -27,7 +27,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
     let [menuRef, menuInViewport] = useCheckMenuItem({
         root: null,
         rootMargin: "-100px"
-    }, isOffen)
+    }, menuItemOpen)
 
     const scrollToButton = async (index: number) => {
         // MC: Maybe use refs here? instead of selection via dom
@@ -50,7 +50,6 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
             left: 0,
             behavior: 'smooth'
         });
-
     }
 
     function resolveAfter20ms() {
@@ -61,15 +60,15 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
         });
     }
 
+    const { priceHandler } = useActions().menu
+
     const openMenuItem = (dish: Dish, category: Category & { dishes: Dish[]; }) => {
         console.log("openMenuItem")
         setCurrentItem(dish)
         setCurrentCategory(category)
         setMenuItemOpen(true)
         asyncCall();
-        setTimeout(() => {
-            setIsOffen(true)
-        }, 100)
+        priceHandler(dish.price)
     }
 
     const scrollToRef = (index: number) => {
@@ -95,7 +94,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
                     </div>
                 </div>
             </div>
-            {menuItemOpen && <MenuItem menuRef={menuRef} menuInViewport={menuInViewport} dish={currentItem} category={currentCategory} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} setIsOffen={setIsOffen} />}
+            {menuItemOpen && <MenuItem menuRef={menuRef} menuInViewport={menuInViewport} dish={currentItem} category={currentCategory} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} />}
 
             {(!menuItemOpen && basket.items.length > 0) && <OrderButton />}
         </>
