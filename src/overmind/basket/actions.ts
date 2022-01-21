@@ -1,5 +1,7 @@
 
 
+import { off } from "process"
+import { actions } from "."
 import { Context } from ".."
 import { Item } from "./state"
 
@@ -19,6 +21,12 @@ export const addCount = ({ state }: Context, index: number) => {
 
 }
 export const subCount = ({ state }: Context, index: number) => {
+
     state.basket.basket.items[index].count += -1
+    if (state.basket.basket.items[index].count == 0) {
+        state.basket.basket.items.splice(index, 1)
+    }
+
+
 
 }

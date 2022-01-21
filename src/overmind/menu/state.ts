@@ -58,7 +58,6 @@ export type Category = {
     title: string,
     index: number,
     description: string,
-    dishesIndex: number[],
     icon: string,
     image: string,
     choices: Choice[],

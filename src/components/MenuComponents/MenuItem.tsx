@@ -86,8 +86,8 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
             dishId: values.dishid,
             count: values.count,
             pickedChoices: values.choices,
-            note: values.note,
-            dish: dish
+            note: values.note
+
         }
         console.log(item)
         putInBasket(item)

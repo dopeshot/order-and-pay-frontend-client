@@ -9,7 +9,7 @@ import { getDish, getPrice, idToName, priceToLocal } from '../services/utilities
 
 export const Basket: React.FunctionComponent = () => {
 
-    const { addCount, subCount } = useActions().basket
+    const { addCount, subCount, removeFromBasket } = useActions().basket
 
     const menu = useAppState().menu.MenuResponseObj
     const basket = useAppState().basket.basket
@@ -17,7 +17,10 @@ export const Basket: React.FunctionComponent = () => {
 
     const itemList = basket.items.map((item, index) => (
         <div>
-            <p className="mb-1">{getDish(item, menu).title}</p>
+            <div className="flex justify-between">
+                <p className="mb-1">{getDish(item, menu).title}</p>
+                <button onClick={() => { removeFromBasket(index) }}><FontAwesomeIcon icon="trash" /></button>
+            </div>
             <p className="text-xs text-grey mb-6">{item.pickedChoices.map((choice, index) => (
                 <>{idToName(getDish(item, menu), choice, menu)}</>
             ))}</p>

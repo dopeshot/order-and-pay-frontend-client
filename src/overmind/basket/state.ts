@@ -10,7 +10,7 @@ export type Item = {
     count: number,
     pickedChoices: (PickedRadio | PickedCheckbox)[],
     note: string,
-    dish: Dish
+
 }
 
 export type PickedRadio = {
