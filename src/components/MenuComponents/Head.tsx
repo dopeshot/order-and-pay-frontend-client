@@ -12,7 +12,7 @@ type PropTypes = {
 
 export const Head: React.FunctionComponent<PropTypes> = ({ scrollToRef }: PropTypes) => {
     return (
-        <div className="pb-2 flex flex-col" id="head">
+        <div className="pb-2 m-3 flex flex-col" id="head">
             <button className="pt-4 text-2xl pr-6 text-right self-end">
                 <FontAwesomeIcon icon="bars" className="overflow-hidden" />
             </button>

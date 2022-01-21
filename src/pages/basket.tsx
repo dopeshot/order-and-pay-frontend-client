@@ -1,31 +1,40 @@
-import { useAppState } from '../overmind';
+import { useActions, useAppState } from '../overmind';
 import { HashLink } from 'react-router-hash-link';
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { DishCard } from '../components/MenuComponents/DishCard';
 import { Dish } from '../overmind/menu/state';
 import { isComputedPropertyName } from 'typescript';
-import { idToName } from '../services/utilities';
+import { getDish, getPrice, idToName, priceToLocal } from '../services/utilities';
 
 export const Basket: React.FunctionComponent = () => {
+
+    const { addCount, subCount } = useActions().basket
 
     const menu = useAppState().menu.MenuResponseObj
     const basket = useAppState().basket.basket
 
 
-
     const itemList = basket.items.map((item, index) => (
         <div>
-            <p className="mb-1">{item.dish.title}</p>
+            <p className="mb-1">{getDish(item, menu).title}</p>
             <p className="text-xs text-grey mb-6">{item.pickedChoices.map((choice, index) => (
-                <>{idToName(item.dish, choice, menu)}</>
+                <>{idToName(getDish(item, menu), choice, menu)}</>
             ))}</p>
             <div className="flex justify-between">
-                <p>5,60</p>
-                <div className="">Buttons</div>
+                <p>{priceToLocal(getPrice(item, menu))}</p>
+                <div className="flex justify-between">
+                    <button type='button' className="rounded h-4 w-4 bg-red text-white font-bold text-xs" onClick={() => { subCount(index) }}>
+                        <FontAwesomeIcon icon="minus" />
+                    </button>
+                    <p>{item.count}</p>
+                    <button type='button' className="rounded h-4 w-4 bg-red text-white font-bold text-xs" onClick={() => { addCount(index) }}>
+                        <FontAwesomeIcon icon="plus" />
+                    </button>
+                </div>
             </div>
 
-        </div>
+        </div >
     ))
 
     return (
