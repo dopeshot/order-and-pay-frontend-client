@@ -107,9 +107,11 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ setValue, value 
     <div className='pt-3 container w-full pr-5'>
       <div className={`container h-3/5 ${searchbarOpen ? `absolute` : ``} rounded-lg z-30 overflow-y-scroll bg-white`}>
         {searchbarOpen ?
-          <div className="mt-4 mx-3 rounded-xl z-20">
-            <div className="flex flex-wrap justify-between content">{allergiesMapped}</div>
-            <div className="flex flex-wrap justify-between content">{labelsMapped}</div>
+          <div className="flex flex-col mt-4 mx-3 rounded-xl z-20">
+            <div className="flex h-11 w-full justify-between overflow-x-scroll content">
+              <div className='flex'>{allergiesMapped}</div></div>
+            <div className="flex h-11 w-full justify-between overflow-x-scroll content">
+              <div className='flex'>{labelsMapped}</div></div>
             <div>{foundDishesMapped}</div>
           </div> : null}
       </div>
