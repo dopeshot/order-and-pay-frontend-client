@@ -3,7 +3,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons"
 import React, { useState } from 'react'
 import { Search } from './Search';
 import { useAppState } from '../../overmind';
-import { Dish } from '../../overmind/menu/state';
+import { Allergy, Dish, Label } from '../../overmind/menu/state';
 import { DishCard } from './DishCard';
 
 export const Searchbar: React.FunctionComponent = () => {
@@ -34,10 +34,59 @@ export const Searchbar: React.FunctionComponent = () => {
   let foundDishes: Dish[] = search(value)
 
 
-  const foundDishesMapped = foundDishes.map(dish => (
 
-    <DishCard dish={dish}></DishCard>
+  const getAllergies = () => {
+    let allergies: string[] = []
+
+    menu.categories.forEach(category => {
+      category.dishes.forEach(dish => {
+        dish.allergies.forEach(allergy => {
+          if (!allergies.includes(allergy)) {
+            allergies.push(allergy)
+          }
+
+        })
+      })
+    })
+    console.log(allergies)
+    return allergies
+  }
+
+  const getLabels = () => {
+    let labels: string[] = []
+    menu.categories.forEach(category => {
+      category.dishes.forEach(dish => {
+        dish.labels.forEach(label => {
+          if (!labels.includes(label)) {
+            labels.push(label)
+          }
+
+        })
+      })
+    })
+    console.log(labels)
+
+    return labels
+  }
+
+  const foundDishesMapped = foundDishes.map(dish => (
+    <div className='p-5'>
+      <DishCard dish={dish}></DishCard>
+    </div>
+
   ))
+
+  const allergiesMapped = getAllergies().map(allergy => (
+
+    <div>{allergy}</div>
+
+  ))
+
+  const labelsMapped = getLabels().map(label => (
+    <div>{label}</div>
+  ))
+
+
 
 
   return (
@@ -52,8 +101,9 @@ export const Searchbar: React.FunctionComponent = () => {
           <div className="container pt-3">
             <div className="mt-24 px-3"><Search setValue={setValue}></Search></div>
             <div className="bg-white mt-4 mx-3 h-3/5 rounded-xl overflow-hidden">
-              {console.log(foundDishesMapped)}
-              {foundDishesMapped}
+              <div className="flex flex-wrap justify-between content">{allergiesMapped}</div>
+              <div className="flex flex-wrap justify-between content">{labelsMapped}</div>
+              <div>{foundDishesMapped}</div>
             </div>
           </div>
         </div>
