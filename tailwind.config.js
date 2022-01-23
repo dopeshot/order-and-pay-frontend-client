@@ -24,10 +24,12 @@ module.exports = {
         'light-grey': '#F6F6F6',
         'description-grey': '#EBEBEB',
         'dividergrey': '#DCDCDC',
+        'button-grey': '#F1F1F1',
         'chevron': '#9AA5B1',
         'menu-bg': '#1F1F23',
         'error-bg': '#FFEDED',
-        'error-text': '#EF4E4E'
+        'error-text': '#EF4E4E',
+        'light-black': '#1F1F23'
       },
       boxShadow: {
         'focus': '0px 1px 8px 0.1px rgba(255, 112, 112, 1)',

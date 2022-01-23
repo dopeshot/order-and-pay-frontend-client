@@ -26,6 +26,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
     const { putInBasket } = useActions().basket
 
 
+
     const close = () => {
         priceReset()
         setMenuItemOpen(false)

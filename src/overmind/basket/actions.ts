@@ -1,15 +1,25 @@
-
-
-import { off } from "process"
-import { actions } from "."
 import { Context } from ".."
+import { sortChoices } from "../../services/utilities"
 import { Item } from "./state"
 
-
 export const putInBasket = ({ state }: Context, item: Item) => {
-    state.basket.basket.items.push(item)
+
+    sortChoices(item)
+    const currentDishes = state.basket.basket.items
+
+    currentDishes.forEach(dish => sortChoices(dish))
+
+    const index = currentDishes.findIndex((o) => JSON.stringify(o) === JSON.stringify(item))
+
+    if (index === -1) {
+        currentDishes.push(item)
+        return
+    }
+
+    currentDishes[index].count++
     return
 }
+
 export const removeFromBasket = ({ state }: Context, index: number) => {
 
     state.basket.basket.items.splice(index, 1)

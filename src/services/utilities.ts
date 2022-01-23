@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import { DishButton } from "../components/MenuComponents/DishButton"
 import { Basket, Item, PickedCheckbox, PickedRadio } from "../overmind/basket/state"
 import { Category, CategoryAndDishRefs, Choice, ChoiceType, Dish, DIshPopulated, Menu, MenuEditorResponse, MenuResponse } from "../overmind/menu/state"
 
@@ -74,7 +75,7 @@ export const getPrice = (item: Item, menu: MenuEditorResponse) => {
     let extra: number = 0
     item.pickedChoices.forEach((pChoice) => {
         console.log(pChoice)
-        if (pChoice.type == ChoiceType.RADIO) {
+        if (pChoice.type === ChoiceType.RADIO) {
             const choice = category?.choices.find(choice => choice.id === pChoice.id)
             const option = choice!.options.find(option => option.id === pChoice.valueId)
             extra += option!.price
@@ -105,6 +106,14 @@ export const getBasketPrice = (basket: Basket, menu: MenuEditorResponse) => {
 
 }
 
-export const checkEqualItems = (item1: Item, item2: Item) => {
+export const sortChoices = (item: Item) => {
+    item.pickedChoices.sort((a, b) => (a.id - b.id))
+    item.pickedChoices.forEach(choice => {
+        if (choice.type === ChoiceType.CHECKBOX) {
+            choice.valueId.sort((a, b) => (a - b))
 
+        } return item
+    })
 }
+
+

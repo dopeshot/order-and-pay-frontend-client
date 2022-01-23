@@ -15,13 +15,13 @@ export type Item = {
 
 export type PickedRadio = {
     id: number,
-    type: ChoiceType,
+    type: ChoiceType.RADIO,
     valueId: number
 }
 
 export type PickedCheckbox = {
     id: number,
-    type: ChoiceType,
+    type: ChoiceType.CHECKBOX,
     valueId: number[]
 }
 

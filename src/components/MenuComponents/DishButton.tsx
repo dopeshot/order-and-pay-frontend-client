@@ -1,7 +1,8 @@
-import { priceToLocal } from '../../services/utilities'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FormikProps } from 'formik';
 import { useAppState } from '../../overmind';
+import { priceToLocal } from '../../services/utilities';
+
 
 
 type PropTypes = {
@@ -12,6 +13,7 @@ type PropTypes = {
 export const DishButton: React.FunctionComponent<PropTypes> = ({ formik }: PropTypes) => {
 
     let sum = useAppState().menu.sum
+    const basket = useAppState().basket.basket
 
 
     return (

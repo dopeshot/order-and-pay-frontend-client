@@ -26,12 +26,12 @@ export const Basket: React.FunctionComponent = () => {
             ))}</p>
             <div className="flex justify-between">
                 <p>{priceToLocal(getPrice(item, menu))}</p>
-                <div className="flex justify-between">
-                    <button type='button' className="rounded h-4 w-4 bg-red text-white font-bold text-xs" onClick={() => { subCount(index) }}>
-                        <FontAwesomeIcon icon="minus" />
+                <div className="flex justify-between items-center">
+                    <button type='button' className="rounded h-4 w-6 bg-button-grey text-light-black  font-bold text-xs text-center" onClick={() => { subCount(index) }}>
+                        <FontAwesomeIcon className="text-center" icon="minus" />
                     </button>
-                    <p>{item.count}</p>
-                    <button type='button' className="rounded h-4 w-4 bg-red text-white font-bold text-xs" onClick={() => { addCount(index) }}>
+                    <p className='p-2'>{item.count}</p>
+                    <button type='button' className=" rounded h-4 w-6 bg-red text-white font-bold text-xs text-center" onClick={() => { addCount(index) }}>
                         <FontAwesomeIcon icon="plus" />
                     </button>
                 </div>
@@ -55,6 +55,12 @@ export const Basket: React.FunctionComponent = () => {
                 <p className="font-thin text-grey mb-8">{basket.items.length} Items</p>
                 <div>{itemList}</div>
             </div>
+            <footer className="w-full h-14 bg-red shadow-category fixed bottom-0 ">
+                <button className="container h-full flex justify-around items-center text-white font-bold">
+                    <Link id="kasse" to="/kasse" >Zu Kasse</Link>
+
+                </button>
+            </footer>
 
         </div>
     )
