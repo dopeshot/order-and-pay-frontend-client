@@ -8,10 +8,11 @@ import { Searchbar } from '../../components/MenuComponents/Searchbar';
 
 type PropTypes = {
     //scrolling Function 
-    scrollToRef: (id: number) => void
+    scrollToRef: (id: number) => void,
+    openMenuItem: () => void
 }
 
-export const Head: React.FunctionComponent<PropTypes> = ({ scrollToRef }: PropTypes) => {
+export const Head: React.FunctionComponent<PropTypes> = ({ scrollToRef, openMenuItem }: PropTypes) => {
 
     const [value, setValue] = useState("")
 
@@ -22,7 +23,7 @@ export const Head: React.FunctionComponent<PropTypes> = ({ scrollToRef }: PropTy
             </button>
             <h1 className="font-bold text-4xl pt-3 pb-2">Menü</h1>
 
-            <Searchbar setValue={setValue} value={value} />
+            <Searchbar setValue={setValue} value={value} openMenuItem={openMenuItem} />
 
             <h2 className="font-bold text-2xl">Kategorien</h2>
             <Link id="showAll" to="/categories" className="text-red font-bold text-sm text-right self-end pr-5">Alle Anzeigen</Link>

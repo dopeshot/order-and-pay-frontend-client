@@ -1,11 +1,12 @@
 import React from 'react'
-import { Dish } from '../../overmind/menu/state'
+import { Category, Dish } from '../../overmind/menu/state'
 import { priceToLocal } from '../../services/utilities'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Defines the properties of the dishcard 
 type DishProps = {
-    dish: Dish
+    dish: Dish,
+    category: Category & { dishes: Dish[]; },
 }
 
 // Dish items with limited information that are shown in the menu view

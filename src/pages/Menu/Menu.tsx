@@ -88,7 +88,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
             <div id="page" className={`container w-full border-solid h-screen  ${menuItemOpen ? `pointer-events-none overflow-hidden` : `scrollbar-hide overflow-scroll`} `}>
                 <div className="w-full">
                     {/*@ts-ignore*/}
-                    <div ref={containerRef} ><Head scrollToRef={scrollToRef} /> </div>
+                    <div ref={containerRef} ><Head scrollToRef={scrollToRef} openMenuItem={openMenuItem} /> </div>
                     <div id="menuComponent" className="pb-96" >
                         <MenuComponent sectionRefs={sectionRefs} openMenuItem={openMenuItem} menuItemOpen={menuItemOpen} />
                     </div>

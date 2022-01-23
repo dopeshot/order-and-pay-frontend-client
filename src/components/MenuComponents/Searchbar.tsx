@@ -2,15 +2,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHamburger, faSearch } from "@fortawesome/free-solid-svg-icons"
 import React, { Dispatch, SetStateAction, useState } from 'react'
 import { useAppState } from '../../overmind';
-import { Allergy, Dish, Label } from '../../overmind/menu/state';
+import { Allergy, Category, Dish, Label } from '../../overmind/menu/state';
 import { DishCard } from './DishCard';
 
 type PropTypes = {
   setValue: Dispatch<SetStateAction<string>>,
-  value: string
+  value: string,
+  openMenuItem: (dish: Dish, category: Category & { dishes: Dish[] }) => void
 }
 
-export const Searchbar: React.FunctionComponent<PropTypes> = ({ setValue, value }: PropTypes) => {
+export const Searchbar: React.FunctionComponent<PropTypes> = ({ setValue, value, openMenuItem }: PropTypes) => {
 
   const [searchbarOpen, setsearchbarOpen] = useState(false);
 
@@ -72,10 +73,12 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ setValue, value 
   }
 
   const foundDishesMapped = foundDishes.map(dish => (
-    <div className='p-5'>
-      <DishCard dish={dish}></DishCard>
+    <div className='p-5' onClick={() => {
+      openMenuItem(dish, menu.categories.find(category => category._id === dish.category)!)
+      setsearchbarOpen(false)
+    }}>
+      <DishCard dish={dish} category={menu.categories.find(category => category._id === dish.category)!}></DishCard>
     </div>
-
   ))
 
   const allergiesMapped = getAllergies().map(allergy => (
@@ -93,10 +96,10 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ setValue, value 
   ))
 
   return (<>
-    <div className={`w-full text-gray-600 self-start rounded-lg  ${searchbarOpen ? `flex justify-center overflow-y-auto h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar` : ``} `}>
+    <div className={`w-full text-gray-600 self-start rounded-lg  ${searchbarOpen ? `flex justify-center overflow-y-auto h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar` : ``} `} onClick={() => setsearchbarOpen(false)}>
     </div >
     <div className='pt-5 container'>
-      <div className="text-gray-600 self-start flex bg-light-grey rounded-lg h-8 pl-3 sticky container z-30">
+      <div className={`text-gray-600 self-start flex bg-light-grey rounded-lg h-8 pl-3 ${searchbarOpen ? `sticky` : ``} container z-30`}>
         <button type="submit" className="left-3 mr-4 text-grey font-light">
           <FontAwesomeIcon icon={faSearch} />
         </button>
