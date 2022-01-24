@@ -1,8 +1,10 @@
+import { derived } from "overmind"
 import { ChoiceType, Dish } from "../menu/state"
 
 export type Basket = {
     price: number,
-    items: Item[]
+    items: Item[],
+    itemsCount: number
 }
 
 export type Item = {
@@ -34,6 +36,7 @@ export type State = {
 export const state: State = {
     basket: {
         price: 0,
-        items: []
+        items: [],
+        itemsCount: derived((state: Basket) => state.items.reduce((sum, dish) => sum + dish.count, 0))
     }
 }

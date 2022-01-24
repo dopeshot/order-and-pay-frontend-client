@@ -13,7 +13,7 @@ type DishProps = {
 export const DishCard: React.FunctionComponent<DishProps> = ({ dish }) => {
 
     return (
-        <div className="flex gap-2 justify-center items-center" id="dishCard">
+        <div className="flex gap-2 justify-center items-center cursor-pointer" id="dishCard">
             <div className="self-start flex-2/4">
                 {/* Name of the dish */}
                 <p className="text-lg font-bold">

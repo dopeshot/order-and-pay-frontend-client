@@ -34,7 +34,8 @@ export const idToName = (dish: Dish, choice: (PickedRadio | PickedCheckbox), men
     console.log(choice)
 
     if (choice.type === ChoiceType.RADIO) {
-        return choiceObj?.options.find(option => option.id === choice.valueId)?.name
+
+        return choiceObj?.options.find(option => option.id === choice.valueId)?.name + ","
     }
     else {
         let optionsPicked: string = ""
@@ -42,16 +43,13 @@ export const idToName = (dish: Dish, choice: (PickedRadio | PickedCheckbox), men
             //@ts-ignore
             choice.valueId.forEach(id => {
                 if (id == option.id) {
-                    optionsPicked += option.name + " "
+                    optionsPicked += (" " + option.name + ", ")
                 }
             });
         })
         console.log(optionsPicked)
         return optionsPicked
     }
-
-
-
 }
 
 export const getDish = (item: Item, menu: MenuEditorResponse) => {

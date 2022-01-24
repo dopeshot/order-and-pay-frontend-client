@@ -10,7 +10,7 @@ import { getDish, getPrice, idToName, priceToLocal } from '../services/utilities
 export const Basket: React.FunctionComponent = () => {
 
     const { addCount, subCount, removeFromBasket } = useActions().basket
-
+    const { itemsCount } = useAppState().basket.basket
     const menu = useAppState().menu.MenuResponseObj
     const basket = useAppState().basket.basket
 
@@ -27,12 +27,12 @@ export const Basket: React.FunctionComponent = () => {
             <div className="flex justify-between">
                 <p>{priceToLocal(getPrice(item, menu))}</p>
                 <div className="flex justify-between items-center">
-                    <button type='button' className="rounded h-4 w-6 bg-button-grey text-light-black  font-bold text-xs text-center" onClick={() => { subCount(index) }}>
+                    <button type='button' className="rounded h-5 w-6 bg-button-grey text-light-black  font-bold text-xs text-center" onClick={() => { subCount(index) }}>
                         <FontAwesomeIcon className="text-center" icon="minus" />
                     </button>
                     <p className='p-2'>{item.count}</p>
-                    <button type='button' className=" rounded h-4 w-6 bg-red text-white font-bold text-xs text-center" onClick={() => { addCount(index) }}>
-                        <FontAwesomeIcon icon="plus" />
+                    <button type='button' className=" rounded h-5 w-6 bg-red text-white font-bold text-xs text-center" onClick={() => { addCount(index) }}>
+                        <FontAwesomeIcon className="text-center" icon="plus" />
                     </button>
                 </div>
             </div>
@@ -52,12 +52,12 @@ export const Basket: React.FunctionComponent = () => {
             </div>
             <div id="container" className="container p-5">
                 <h1 className="font-bold text-4xl pb-2">Warenkorb</h1>
-                <p className="font-thin text-grey mb-8">{basket.items.length} Items</p>
+                <p className="font-thin text-grey mb-8">{itemsCount} Items</p>
                 <div>{itemList}</div>
             </div>
             <footer className="w-full h-14 bg-red shadow-category fixed bottom-0 ">
                 <button className="container h-full flex justify-around items-center text-white font-bold">
-                    <Link id="kasse" to="/kasse" >Zu Kasse</Link>
+                    <Link id="kasse" to="/kasse" >Zur Kasse</Link>
 
                 </button>
             </footer>
