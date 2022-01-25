@@ -1,18 +1,19 @@
 import React from 'react'
-import { Dish } from '../../overmind/menu/state'
+import { Category, Dish } from '../../overmind/menu/state'
 import { priceToLocal } from '../../services/utilities'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Defines the properties of the dishcard 
 type DishProps = {
-    dish: Dish
+    dish: Dish,
+    category: Category & { dishes: Dish[]; },
 }
 
 // Dish items with limited information that are shown in the menu view
 export const DishCard: React.FunctionComponent<DishProps> = ({ dish }) => {
 
     return (
-        <div className="flex gap-2 justify-center items-center" id="dishCard">
+        <div className="flex gap-2 justify-center items-center cursor-pointer" id="dishCard">
             <div className="self-start flex-2/4">
                 {/* Name of the dish */}
                 <p className="text-lg font-bold">
