@@ -19,7 +19,7 @@ export const ScrollCats: React.FunctionComponent<PropTypes> = ({ sectionRefs, sh
 
     return (
         <div className={`flex fixed bg-white transition-opacity duration-200 content-center w-full ${shouldDisplayCategoryNavbar ? `` : `opacity-0 pointer-events-none`} `}>
-            <button className="text-xl text-grey font-light pl-4 pr-4" onClick={() => console.log("Searchicon clicked")} >
+            <button className="text-xl text-grey font-light pl-4 pr-4" onClick={() => { }} >
                 <FontAwesomeIcon icon="search" />
             </button>
             <div id="scrollCats" className='flex gap-0 scrollbar-hide $ overflow-x-auto'>

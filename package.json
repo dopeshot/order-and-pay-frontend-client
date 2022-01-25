@@ -40,7 +40,7 @@
         "mockserver": "json-server ./server/db.json --port 3004",
         "mockserver:watch": "json-server --watch ./server/db.json --routes ./server/routes.json --port 3004",
         "build": "craco build",
-        "test": "cypress open",
+        "test": "cypress run",
         "craco:test": "craco test",
         "eject": "react-scripts eject",
         "cypress:open": "cypress open",
