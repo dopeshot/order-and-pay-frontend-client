@@ -12,7 +12,6 @@ export type Item = {
     count: number,
     pickedChoices: (PickedRadio | PickedCheckbox)[],
     note: string,
-
 }
 
 export type PickedRadio = {
