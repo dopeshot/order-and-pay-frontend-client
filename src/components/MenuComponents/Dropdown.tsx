@@ -17,11 +17,15 @@ export const Dropdown: React.FunctionComponent<PropTypes> = ({ choice, dropDownO
 
     const { priceHandler } = useActions().menu
 
+
     const handleClick = (option: Option, e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         setdropDownOpen(new Map(dropDownOpen.set(choice.id, !dropDownOpen.get(choice.id))))
         e.stopPropagation()
         formik.values.choices[currentFormikChoiceIndex].valueId = option.id
-        priceHandler(option.price)
+        console.log(formik.values.choices[currentFormikChoiceIndex])
+        let priceDiff = option.price - formik.values.choices[currentFormikChoiceIndex].currentPrice
+        formik.values.choices[currentFormikChoiceIndex].currentPrice = option.price
+        priceHandler(priceDiff)
     }
 
     const handleClick2 = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {

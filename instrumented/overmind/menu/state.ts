@@ -8,7 +8,7 @@ enum Status {
     DELETED = "deleted"
 }
 
-export type Allergy = {
+export type Allergen = {
     _id: string
     title: string
     icon: string
@@ -25,7 +25,7 @@ export enum ChoiceType {
     CHECKBOX = "checkbox"
 }
 
-export type DIshPopulated = Dish & { allergies: Allergy[], labels: Label[] }
+export type DishPopulated = Dish & { allergens: Allergen[], labels: Label[] }
 
 
 export type Dish = {
@@ -33,7 +33,7 @@ export type Dish = {
     title: string,
     description: string,
     labels: string[],
-    allergies: string[],
+    allergens: string[],
     category: string,
     price: number,
     image: string,
