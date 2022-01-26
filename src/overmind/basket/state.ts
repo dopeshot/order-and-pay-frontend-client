@@ -11,6 +11,7 @@ export type Item = {
     dishId: string,
     count: number,
     pickedChoices: (PickedRadio | PickedCheckbox)[],
+    tableId: string,
     note: string,
 }
 
