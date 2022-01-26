@@ -38,10 +38,11 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
         }
     }, [menuInViewport])
 
-    const defaultNumber = category.choices.find(choice => choice.type === ChoiceType.RADIO) ? category.choices.find(choice => choice.type === ChoiceType.RADIO)!.default : 0
 
 
-    let initChoices: (PickedRadio | PickedCheckbox)[] = []
+
+
+    let initChoices: (FormikRadio | PickedCheckbox)[] = []
 
     category.choices.forEach((choice) => {
         if (choice.type === ChoiceType.RADIO)
@@ -49,7 +50,8 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                 {
                     id: choice.id,
                     type: ChoiceType.RADIO,
-                    valueId: choice.default!
+                    valueId: choice.default!,
+                    currentPrice: choice.options.find(option => option.id === choice.default!)?.price!
                 }
             )
         else {
@@ -170,4 +172,10 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
             </Formik >
         </div >
     )
+}
+export type FormikRadio = {
+    id: number,
+    type: ChoiceType.RADIO,
+    valueId: number,
+    currentPrice: number
 }

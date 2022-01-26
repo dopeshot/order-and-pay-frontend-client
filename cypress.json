@@ -2,7 +2,7 @@
   "baseUrl": "http://localhost:3000",
   "viewportWidth": 480,
   "viewportHeight": 853,
-  "experimentalStudio": false,
+  "experimentalStudio": true,
   "component": {
     "testFiles": "**/*.test.{js,ts,jsx,tsx}",
     "componentFolder": "src/components"
