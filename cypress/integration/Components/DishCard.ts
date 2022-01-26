@@ -1,11 +1,14 @@
 /// <reference types="Cypress" />
 
 before(() => {
+
     cy.visit("/menu")
 })
 describe("DishCard", () => {
     it('Exists', () => {
-        cy.get('#0_dishCard_Id').should("be.visible")
+
+        cy.get('#section-0 > .px-5 > :nth-child(1) > #dishCard > .flex-2\\/4 > .text-lg').should('have.text', 'Gebackener Mozzarella');
+
     })
 
     it("Renders Correctly", function () {

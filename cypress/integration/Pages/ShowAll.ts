@@ -4,14 +4,16 @@ import { useAppState } from '../../../src/overmind/index'
 
 const baseUrl = Cypress.config().baseUrl
 
+before(() => {
+    //  cy.intercept('GET', '**/menu', { fixture: 'data.json' }).as('getMenu')
+    cy.visit("/menu");
+})
 
-
-describe("Renders ShowAll Page", () => {
+describe("Renders Categories Page", () => {
     it("Renders correctly", () => {
-        cy.visit("/menu");
+
         cy.get('#showAll').click();
         cy.url().should('eq', baseUrl + '/categories')
-
 
         cy.get("#page").should("be.visible")
         cy.get("#categoryHashlinks").should("be.visible")
