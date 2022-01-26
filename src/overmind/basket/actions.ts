@@ -10,7 +10,6 @@ export const putInBasket = ({ state }: Context, item: Item) => {
 
     currentDishes.forEach(dish => sortChoices(dish))
 
-
     const currentDishesWithoutCount = currentDishes.map(dish => {
         const { count, ...rest } = dish
         return rest
