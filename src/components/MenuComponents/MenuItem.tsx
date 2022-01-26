@@ -25,8 +25,6 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
 
     const { putInBasket } = useActions().basket
 
-
-
     const close = () => {
         priceReset()
         setMenuItemOpen(false)
@@ -39,7 +37,6 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
     }, [menuInViewport])
 
     const defaultNumber = category.choices.find(choice => choice.type === ChoiceType.RADIO) ? category.choices.find(choice => choice.type === ChoiceType.RADIO)!.default : 0
-
 
     let initChoices: (PickedRadio | PickedCheckbox)[] = []
 
@@ -62,7 +59,6 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
 
     })
 
-
     const initialValues = {
         dishid: dish._id,
         choices: initChoices,
@@ -71,12 +67,10 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
         tableid: 0
     }
 
-
     const orderSchema = yup.object().shape({
         count: yup.number().min(1, "Dish count must be greater than 1"),
         note: yup.string().max(240, "Note cannot be greater than 240")
     })
-
 
     const submitForm = (values: any) => {
         console.log(values)
@@ -99,7 +93,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
     const [isTextArea, setisTextArea] = useState(false)
     const [currentPrice, setCurrentPrice] = useState<number>(0)
 
-    const allergens = dish.allergies.map((allergen) => (
+    const allergens = dish.allergens.map((allergen) => (
         <div className="m-3 flex flex-col items-center">
             <div className="h-7 w-7 bg-red text-center rounded-md">
                 <FontAwesomeIcon icon="hamburger" className="text-white h-full w-full" />

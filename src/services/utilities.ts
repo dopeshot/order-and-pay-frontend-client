@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { DishButton } from "../components/MenuComponents/DishButton"
 import { Basket, Item, PickedCheckbox, PickedRadio } from "../overmind/basket/state"
-import { Category, CategoryAndDishRefs, Choice, ChoiceType, Dish, DIshPopulated, Menu, MenuEditorResponse, MenuResponse } from "../overmind/menu/state"
+import { Category, CategoryAndDishRefs, Choice, ChoiceType, Dish, DishPopulated, Menu, MenuEditorResponse, MenuResponse } from "../overmind/menu/state"
 
 export const priceToLocal = (price: number) => {
     return new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(price / 100)
@@ -54,7 +54,7 @@ export const idToName = (dish: Dish, choice: (PickedRadio | PickedCheckbox), men
 
 export const getDish = (item: Item, menu: MenuEditorResponse) => {
     let dish: Dish = {
-        _id: "", title: "", description: "", labels: [], allergies: [], category: "", price: 0, image: "", isAvailable: false
+        _id: "", title: "", description: "", labels: [], allergens: [], category: "", price: 0, image: "", isAvailable: false
     }
     menu.categories.forEach(category => {
         const possibleDish = category.dishes.find(dish => dish._id === item.dishId)

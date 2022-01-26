@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHamburger, faSearch } from "@fortawesome/free-solid-svg-icons"
 import React, { Dispatch, SetStateAction, useState } from 'react'
 import { useAppState } from '../../overmind';
-import { Allergy, Category, Dish, Label } from '../../overmind/menu/state';
+import { Allergen, Category, Dish, Label } from '../../overmind/menu/state';
 import { DishCard } from './DishCard';
 
 type PropTypes = {
@@ -38,21 +38,25 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ setValue, value,
     setValue(value)
   }
 
-  const getAllergies = () => {
-    let allergies: string[] = []
+  const getallergens = () => {
+    let allergens: string[] = []
 
     menu.categories.forEach(category => {
       category.dishes.forEach(dish => {
-        dish.allergies.forEach(allergy => {
-          if (!allergies.includes(allergy)) {
-            allergies.push(allergy)
+        console.log("allergens???????????????????????????????????????");
+
+        console.log(dish);
+
+        dish.allergens.forEach(Allergen => {
+          if (!allergens.includes(Allergen.title)) {
+            allergens.push(Allergen.title)
           }
 
         })
       })
     })
-    console.log(allergies)
-    return allergies
+    console.log(allergens)
+    return allergens
   }
 
   const getLabels = () => {
@@ -60,8 +64,8 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ setValue, value,
     menu.categories.forEach(category => {
       category.dishes.forEach(dish => {
         dish.labels.forEach(label => {
-          if (!labels.includes(label)) {
-            labels.push(label)
+          if (!labels.includes(label.title)) {
+            labels.push(label.title)
           }
 
         })
@@ -81,10 +85,10 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ setValue, value,
     </div>
   ))
 
-  const allergiesMapped = getAllergies().map(allergy => (
+  const allergensMapped = getallergens().map(Allergen => (
     <button className="text-red flex flex-col font-bold text-center m-1 h-8 w-20 shadow-md rounded-md overflow-hidden text-xs b-2 justify-items-center" >
       <FontAwesomeIcon icon={faHamburger} className='self-center' />
-      <div className='self-center'>{allergy}</div>
+      <div className='self-center'>{Allergen}</div>
     </button>
   ))
 
@@ -112,7 +116,7 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ setValue, value,
         {searchbarOpen ?
           <div className="flex flex-col mt-4 mx-3 rounded-xl z-20">
             <div className="flex h-11 w-full justify-between overflow-x-scroll content">
-              <div className='flex'>{allergiesMapped}</div></div>
+              <div className='flex'>{allergensMapped}</div></div>
             <div className="flex h-11 w-full justify-between overflow-x-scroll content">
               <div className='flex'>{labelsMapped}</div></div>
             <div>{foundDishesMapped}</div>
