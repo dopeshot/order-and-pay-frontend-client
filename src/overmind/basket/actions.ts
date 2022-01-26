@@ -1,3 +1,4 @@
+import { without } from "cypress/types/lodash"
 import { Context } from ".."
 import { sortChoices } from "../../services/utilities"
 import { Item } from "./state"
@@ -9,14 +10,20 @@ export const putInBasket = ({ state }: Context, item: Item) => {
 
     currentDishes.forEach(dish => sortChoices(dish))
 
-    const index = currentDishes.findIndex((o) => JSON.stringify(o) === JSON.stringify(item))
+    const currentDishesWithoutCount = currentDishes.map(dish => {
+        const { count, ...rest } = dish
+        return rest
+    })
 
+    const { count, ...itemWithoutCount }: any = item
+
+
+    const index = currentDishesWithoutCount.findIndex((o) => JSON.stringify(o) === JSON.stringify(itemWithoutCount))
     if (index === -1) {
         currentDishes.push(item)
         return
     }
-
-    currentDishes[index].count++
+    currentDishes[index].count += item.count;
     return
 }
 
