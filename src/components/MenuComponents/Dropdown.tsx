@@ -39,7 +39,7 @@ export const Dropdown: React.FunctionComponent<PropTypes> = ({ choice, dropDownO
     const checkforLea = (option: Option) => {
 
 
-        if (dish.title === "Lea Dannecker" && option.name === "groß") {
+        if (dish.title === "Lea Dannecker" && (option.name === "groß" || option.name === "Mittel")) {
 
             return (<></>)
         }
