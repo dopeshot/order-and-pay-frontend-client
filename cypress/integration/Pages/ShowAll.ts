@@ -5,8 +5,9 @@ import { useAppState } from '../../../src/overmind/index'
 const baseUrl = Cypress.config().baseUrl
 
 before(() => {
-    //  cy.intercept('GET', '**/menu', { fixture: 'data.json' }).as('getMenu')
-    cy.visit("/menu");
+    cy.intercept('GET', 'http://localhost:3004/menu', { fixture: 'data.json' }).as('getMenu')
+    cy.visit("/menu")
+    cy.wait("@getMenu")
 })
 
 describe("Renders Categories Page", () => {

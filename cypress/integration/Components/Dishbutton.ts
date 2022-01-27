@@ -1,7 +1,9 @@
 /// <reference types="Cypress" />
 
 before(() => {
+    cy.intercept('GET', 'http://localhost:3004/menu', { fixture: 'data.json' }).as('getMenu')
     cy.visit("/menu")
+    cy.wait("@getMenu")
 })
 describe("Dishbutton", () => {
     it('Exists', function () {

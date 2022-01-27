@@ -108,12 +108,12 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ setValue, value,
       </div>
     </div>
     <div className='pt-3 container w-full pr-5'>
-      <div className={`container h-3/5 ${searchbarOpen ? `absolute` : ``} rounded-lg z-30 overflow-y-scroll bg-white`}>
+      <div className={`container h-3/5 ${searchbarOpen ? `absolute` : ``} rounded-lg z-30 overflow-y-scroll bg-white scrollbar-hide`}>
         {searchbarOpen ?
           <div className="flex flex-col mt-4 mx-3 rounded-xl z-20">
-            <div className="flex h-11 w-full justify-between overflow-x-scroll content">
+            <div className="flex h-11 w-full justify-between overflow-x-scroll content scrollbar-hide">
               <div className='flex'>{allergiesMapped}</div></div>
-            <div className="flex h-11 w-full justify-between overflow-x-scroll content">
+            <div className="flex h-11 w-full justify-between overflow-x-scroll content scrollbar-hide">
               <div className='flex'>{labelsMapped}</div></div>
             <div>{foundDishesMapped}</div>
           </div> : null}
@@ -122,23 +122,3 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ setValue, value,
 
   </>)
 }
-
-// <div id="menuItem" className="flex justify-center overflow-y-auto h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar" >
-{/* return (
-    <div className="w-full text-gray-600 self-start flex bg-light-grey rounded-lg h-8 pl-3">
-        <button type="submit" className="left-3 mr-4 text-grey font-light">
-          <FontAwesomeIcon icon={faSearch} />
-        </button>
-
-        <input onFocus={(e) => setsearchbarOpen(true)} id="searchbar" className="w-full bg-transparent text-sm text-grey focus:outline-none " placeholder="Search..."></input>
-        {searchbarOpen &&
-          <div id="menuItem" className="flex justify-center overflow-y-auto  h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar" >
-            <div className="container pt-3">
-              <div className="mt-24 px-3"><Search setValue={setValue}></Search></div>
-              <div className="bg-white mt-4 mx-3 h-3/5 rounded-xl overflow-hidden">
-
-                <div>{foundDishesMapped}</div>
-              </div>
-            </div>
-          </div>
-        } */}

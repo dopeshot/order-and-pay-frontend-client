@@ -1,12 +1,13 @@
 /// <reference types="Cypress" />
 
 before(() => {
+    cy.intercept('GET', 'http://localhost:3004/menu', { fixture: 'data.json' }).as('getMenu')
     cy.visit("/menu")
+    cy.wait("@getMenu")
 })
 describe("MenuItem", () => {
     it('Exists', () => {
-        cy.get('#menuComponent').should("be.visible")
-        cy.contains("Gebackener Mozzarella").should("be.visible")
+
         cy.contains("Gebackener Mozzarella").click()
         cy.get("#menuItem").should("be.visible")
 

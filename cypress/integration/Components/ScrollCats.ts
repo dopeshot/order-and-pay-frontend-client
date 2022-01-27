@@ -1,8 +1,9 @@
 /// <reference types="Cypress" />
 
 before(() => {
-    // cy.intercept('GET', '**/menu', { fixture: 'data.json' }).as('getMenu')
+    cy.intercept('GET', 'http://localhost:3004/menu', { fixture: 'data.json' }).as('getMenu')
     cy.visit("/menu")
+    cy.wait("@getMenu")
 })
 describe("Scrollcats", () => {
     it('Renders when scrolled down', () => {
