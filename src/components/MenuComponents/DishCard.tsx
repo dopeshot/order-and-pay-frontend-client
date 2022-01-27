@@ -29,7 +29,7 @@ export const DishCard: React.FunctionComponent<DishProps> = ({ dish }) => {
                 </p>
             </div>
             {/* Image of the dish */}
-            <img alt={dish.title} className="self-center h-16 object-cover rounded-lg" src={dish.image}></img>
+            <img alt={dish.title} className="self-center w-20 h-16 object-cover rounded-lg" src={dish.image}></img>
             {/* More info button */}
             <button className="rounded-lg h-7 w-7 bg-red text-white font-bold text-xs">
                 <FontAwesomeIcon icon="plus" />

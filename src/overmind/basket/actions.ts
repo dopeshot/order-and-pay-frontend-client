@@ -21,10 +21,14 @@ export const putInBasket = ({ state }: Context, item: Item) => {
     const index = currentDishesWithoutCount.findIndex((o) => JSON.stringify(o) === JSON.stringify(itemWithoutCount))
     if (index === -1) {
         currentDishes.push(item)
+        console.log("item", currentDishes)
         return
     }
     currentDishes[index].count += item.count;
+    console.log("item", currentDishes)
     return
+
+
 }
 
 export const removeFromBasket = ({ state }: Context, index: number) => {

@@ -79,7 +79,8 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
             dishId: values.dishid,
             count: values.count,
             pickedChoices: values.choices,
-            note: values.note
+            note: values.note,
+            tableId: values.tableId
 
         }
 
