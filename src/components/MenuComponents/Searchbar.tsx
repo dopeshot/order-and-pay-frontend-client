@@ -48,8 +48,8 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ setValue, value,
         console.log(dish);
 
         dish.allergens.forEach(Allergen => {
-          if (!allergens.includes(Allergen.title)) {
-            allergens.push(Allergen.title)
+          if (!allergens.includes(Allergen) && Allergen != "") {
+            allergens.push(Allergen)
           }
 
         })
@@ -64,8 +64,8 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ setValue, value,
     menu.categories.forEach(category => {
       category.dishes.forEach(dish => {
         dish.labels.forEach(label => {
-          if (!labels.includes(label.title)) {
-            labels.push(label.title)
+          if (!labels.includes(label) && label != "") {
+            labels.push(label)
           }
 
         })
