@@ -9,7 +9,7 @@
             {
                 "_id": "61aa702b02fc57c3ee72ff99",
                 "title": "Vorspeisen",
-                "description": "Erster Gang.",
+                "description": "Erster Gang",
                 "icon": "pizza-slice",
                 "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
                 "choices": [],
@@ -89,7 +89,7 @@
                         "description": "",
                         "category": "61aa702b02fc57c3ee72ff99",
                         "price": 350,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://static.takeaway.com/images/restaurants/de/QP535P3/products/default_OROPN155P.jpg?timestamp=1643024949",
                         "isAvailable": true
                     },
                     {
@@ -992,10 +992,10 @@
             },
             {
                 "_id": "61b20eaf07daa5dc7eb2b651",
-                "title": "Kartoffelaufläufe",
-                "description": "Alle Kartoffelaufläufe werden mit Käse überbacken.",
-                "icon": "pizza-slice",
-                "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                "title": "Team",
+                "description": "Alle hot und zum anbeißen lecker",
+                "icon": "heart",
+                "image": "https://media.discordapp.net/attachments/895305475791401010/936288855752048660/4f9a7b14-e286-4b06-a4d4-9a6aeae39906.jpg?width=679&height=905",
                 "choices": [
                     {
                         "id": 0,
@@ -1005,13 +1005,18 @@
                         "options": [
                             {
                                 "id": 0,
-                                "name": "small",
-                                "price": -200
+                                "name": "klein",
+                                "price": -100
                             },
                             {
                                 "id": 1,
-                                "name": "normal",
+                                "name": "mitel",
                                 "price": 0
+                            },
+                            {
+                                "id": 2,
+                                "name": "groß",
+                                "price": 400
                             }
                         ]
                     },
@@ -1022,13 +1027,18 @@
                         "options": [
                             {
                                 "id": 0,
-                                "name": "salami",
+                                "name": "Backend",
                                 "price": 100
                             },
                             {
                                 "id": 1,
-                                "name": "poop",
-                                "price": 999
+                                "name": "Frontend",
+                                "price": 900
+                            },
+                            {
+                                "id": 1,
+                                "name": "Full-Stack",
+                                "price": 900
                             }
                         ]
                     }
@@ -1043,24 +1053,11 @@
                             "laktose"
                         ],
                         "_id": "61b2423307daa5dc7eb2b7a6",
-                        "title": "Kartoffelauflauf mit Broccoli",
-                        "description": "mit Sahnesauce und Käse überbacken",
+                        "title": "Korbinian Kuhn",
+                        "description": "Betreuer",
                         "category": "61b20eaf07daa5dc7eb2b651",
-                        "price": 750,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-                        "isAvailable": true
-                    },
-                    {
-                        "labels": [],
-                        "allergens": [
-                            "laktose"
-                        ],
-                        "_id": "61b2425b07daa5dc7eb2b7a7",
-                        "title": "Kartoffelauflauf mit Vorderschinken",
-                        "description": "mit Sahnesauce, Pilzen und Käse überbacken",
-                        "category": "61b20eaf07daa5dc7eb2b651",
-                        "price": 750,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "price": 950,
+                        "image": "https://gitlab.mi.hdm-stuttgart.de/uploads/-/system/user/avatar/1790/avatar.png",
                         "isAvailable": true
                     },
                     {
@@ -1070,12 +1067,25 @@
                         "allergens": [
                             "laktose"
                         ],
-                        "_id": "61b242a207daa5dc7eb2b7a8",
-                        "title": "Kartoffelauflauf mit Pilzen",
-                        "description": "mit Sahnesauce, Pilzen, Erbsen, Karotten und Käse überbacken",
+                        "_id": "61b2423307daa5dc7eb2b7a6",
+                        "title": "Michael Cabanis",
+                        "description": "Full-Stack und hot",
                         "category": "61b20eaf07daa5dc7eb2b651",
                         "price": 750,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://www.hdm-stuttgart.de/content/mimmcsm/student/studienanfaenger/fetchPhoto?id=33130",
+                        "isAvailable": true
+                    },
+                    {
+                        "labels": [],
+                        "allergens": [
+                            "laktose"
+                        ],
+                        "_id": "61b2425b07daa5dc7eb2b7a7",
+                        "title": "Max Herkenhoff",
+                        "description": "Vollblut Backendler und hot",
+                        "category": "61b20eaf07daa5dc7eb2b651",
+                        "price": 750,
+                        "image": "https://www.hdm-stuttgart.de/content/mimmcsm/student/studienanfaenger/fetchPhoto?id=33144",
                         "isAvailable": true
                     },
                     {
@@ -1086,11 +1096,71 @@
                             "laktose"
                         ],
                         "_id": "61b242c807daa5dc7eb2b7a9",
-                        "title": "Kartoffelauflauf mit Gorgonzola",
-                        "description": "mit Sahnesauce, Spinat und Käse überbacken",
+                        "title": "Joy-Jasmin Springer (Zoe)",
+                        "description": "Frontend-Girl, Designerin und besitzt einen Septum",
+                        "category": "61b20eaf07daa5dc7eb2b651",
+                        "price": 900,
+                        "image": "https://www.hdm-stuttgart.de/content/mimmcsm/student/studienanfaenger/fetchPhoto?id=33167",
+                        "isAvailable": true
+                    },
+                    {
+                        "labels": [
+                            "vegetarian"
+                        ],
+                        "allergens": [
+                            "laktose"
+                        ],
+                        "_id": "61b242a207daa5dc7eb2b7a8",
+                        "title": "Ben  Häußermann",
+                        "description": "Frontend-Girl und hot",
+                        "category": "61b20eaf07daa5dc7eb2b651",
+                        "price": 750,
+                        "image": "https://media.discordapp.net/attachments/717110491373371422/936290673307553922/46d58dc0-3525-44ef-ac6d-d4c384bd5ea6.jpg",
+                        "isAvailable": true
+                    },
+                    {
+                        "labels": [
+                            "vegetarian"
+                        ],
+                        "allergens": [
+                            "laktose"
+                        ],
+                        "_id": "61b242a207daa5dc7eb2b7a8",
+                        "title": "Maximilian Dolbaum",
+                        "description": "Glücklicher Backendler und Testschreiber zieht den Durchschnitt NICHT runter ",
                         "category": "61b20eaf07daa5dc7eb2b651",
                         "price": 800,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://cdn.discordapp.com/attachments/717110491373371422/936292553467236362/46d58dc0-3525-44ef-ac6d-d4c384bd5ea6.jpg",
+                        "isAvailable": true
+                    },
+                    {
+                        "labels": [
+                            "vegetarian"
+                        ],
+                        "allergens": [
+                            "laktose"
+                        ],
+                        "_id": "61b242a207daa5dc7eb2b7a8",
+                        "title": "Lea Dannecker",
+                        "description": "Frontend-Girl und hot außerdem größer als Man(n) denkt!",
+                        "category": "61b20eaf07daa5dc7eb2b651",
+                        "price": 800,
+                        "image": "https://www.hdm-stuttgart.de/content/mimmcsm/student/studienanfaenger/fetchPhoto?id=33149",
+                        "isAvailable": true
+                    },
+                    {
+                        "labels": [
+                            "vegetarian"
+                        ],
+                        "allergens": [
+                            "laktose"
+                        ],
+                        "_id": "61b242a207daa5dc7eb2b7a8",
+                        "title": "Sarah Mauff",
+                        "description": "Frontend-Girl und hot",
+                        "category": "61b20eaf07daa5dc7eb2b651",
+                        "price": 800,
+                        "image": "https://www.hdm-stuttgart.de/content/mimmcsm/student/studienanfaenger/fetchPhoto?id=33156",
                         "isAvailable": true
                     }
                 ]
@@ -1099,8 +1169,8 @@
                 "_id": "61b20edf07daa5dc7eb2b652",
                 "title": "Chinesische Gerichte",
                 "description": "Alle Gerichte werden mit Reis serviert.",
-                "icon": "pizza-slice",
-                "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                "icon": "drumstick-bite",
+                "image": "https://static.takeaway.com/images/generic/categories/1_asian/asia_gerichte.png?timestamp=1638630215",
                 "choices": [
                     {
                         "id": 0,
@@ -1110,13 +1180,18 @@
                         "options": [
                             {
                                 "id": 0,
-                                "name": "small",
+                                "name": "klein",
                                 "price": -200
                             },
                             {
                                 "id": 1,
                                 "name": "normal",
                                 "price": 0
+                            },
+                            {
+                                "id": 2,
+                                "name": "groß",
+                                "price": 200
                             }
                         ]
                     },
@@ -1127,13 +1202,23 @@
                         "options": [
                             {
                                 "id": 0,
-                                "name": "salami",
+                                "name": "Pilze",
                                 "price": 100
                             },
                             {
                                 "id": 1,
-                                "name": "poop",
-                                "price": 999
+                                "name": "Wasabi",
+                                "price": 100
+                            },
+                            {
+                                "id": 2,
+                                "name": "Süs-Sauer Soße",
+                                "price": 100
+                            },
+                            {
+                                "id": 3,
+                                "name": "Extra Reis",
+                                "price": 100
                             }
                         ]
                     }
@@ -1152,7 +1237,7 @@
                         "description": "mit verschiedenem Gemüse",
                         "category": "61b20edf07daa5dc7eb2b652",
                         "price": 800,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoLDMW3UkQUvlNtdLYvO3I36B2FQx_wznvNA&usqp=CAU",
                         "isAvailable": true
                     },
                     {
@@ -1165,7 +1250,7 @@
                         "description": "mit verschiedenem Gemüsecund Hühnerfleisch",
                         "category": "61b20edf07daa5dc7eb2b652",
                         "price": 850,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://img.chefkoch-cdn.de/rezepte/3716051562425483/bilder/1436708/crop-960x540/gebratener-reis-mit-huehnerbrust-ei-und-gemuese.jpg",
                         "isAvailable": true
                     },
                     {
@@ -1178,7 +1263,7 @@
                         "description": "smitüß-sauer mit Ananas",
                         "category": "61b20edf07daa5dc7eb2b652",
                         "price": 1000,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://media-cdn.tripadvisor.com/media/photo-s/0a/82/83/7c/gebackenes-hahnchen.jpg",
                         "isAvailable": true
                     },
                     {
@@ -1192,7 +1277,7 @@
                         "description": "mit Hühnerfleisch und Ei",
                         "category": "61b20edf07daa5dc7eb2b652",
                         "price": 800,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://www.gutekueche.ch/upload/rezept/292/gebratene-nudeln-mit-schweinefleisch.jpg",
                         "isAvailable": true
                     },
                     {
@@ -1205,7 +1290,7 @@
                         "description": "mit gebratenem Gemüse und Sojabohnen",
                         "category": "61b20edf07daa5dc7eb2b652",
                         "price": 1100,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://i.ytimg.com/vi/vW3CNqzJFUE/hqdefault.jpg",
                         "isAvailable": true
                     },
                     {
@@ -1218,7 +1303,7 @@
                         "description": "in Chop-Suey-Sauce",
                         "category": "61b20edf07daa5dc7eb2b652",
                         "price": 1100,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://i.ytimg.com/vi/vW3CNqzJFUE/hqdefault.jpg",
                         "isAvailable": true
                     }
                 ]
@@ -1227,45 +1312,9 @@
                 "_id": "61b20f8b07daa5dc7eb2b653",
                 "title": "Dessert",
                 "description": "Traditionelle italienische Desserts.",
-                "icon": "pizza-slice",
-                "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-                "choices": [
-                    {
-                        "id": 0,
-                        "title": "size",
-                        "type": "radio",
-                        "default": 1,
-                        "options": [
-                            {
-                                "id": 0,
-                                "name": "small",
-                                "price": -200
-                            },
-                            {
-                                "id": 1,
-                                "name": "normal",
-                                "price": 0
-                            }
-                        ]
-                    },
-                    {
-                        "id": 1,
-                        "title": "toppings",
-                        "type": "checkbox",
-                        "options": [
-                            {
-                                "id": 0,
-                                "name": "salami",
-                                "price": 100
-                            },
-                            {
-                                "id": 1,
-                                "name": "poop",
-                                "price": 999
-                            }
-                        ]
-                    }
-                ],
+                "icon": "cookie",
+                "image": "https://i.ytimg.com/vi/vW3CNqzJFUE/hqdefault.jpg",
+                "choices": [],
                 "menu": "aaaaaaaaaaaaaaaaaaaaaaaa",
                 "dishes": [
                     {
@@ -1282,7 +1331,7 @@
                         "description": "",
                         "category": "61b20f8b07daa5dc7eb2b653",
                         "price": 400,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://pbs.twimg.com/profile_images/709675421126815744/X75RiK8__400x400.jpg",
                         "isAvailable": true
                     },
                     {
@@ -1298,7 +1347,7 @@
                         "description": "",
                         "category": "61b20f8b07daa5dc7eb2b653",
                         "price": 350,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://www.galbani.de/wp-content/uploads/Tiramisu-Eis2.jpg",
                         "isAvailable": true
                     },
                     {
@@ -1313,7 +1362,7 @@
                         "description": "Italienische Eisspezialität",
                         "category": "61b20f8b07daa5dc7eb2b653",
                         "price": 350,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://gelomare.it/218-large_default/tartufo-cuor-di-caffe-carte-d-or.jpg",
                         "isAvailable": true
                     },
                     {
@@ -1328,7 +1377,7 @@
                         "description": "Italienische Eisspezialität",
                         "category": "61b20f8b07daa5dc7eb2b653",
                         "price": 350,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://gelomare.it/217-large_default/tartufo-classico-carte-d-or.jpg",
                         "isAvailable": true
                     },
                     {
@@ -1343,7 +1392,7 @@
                         "description": "gefrorene Spaghetti",
                         "category": "61b20f8b07daa5dc7eb2b653",
                         "price": 300,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://optimise2.assets-servd.host/sordid-swan/production/s/spaghetti-eis-mit-erdbeersosse/featured-image/spaghetti-eis-mit-erdbeersauce.jpg?w=128&h=128&auto=compress%2Cformat&fit=crop&fp-x=0.5&fp-y=0.5&s=7c02651aaff79e5bfad6d4b9c7fe2681",
                         "isAvailable": true
                     }
                 ]
@@ -1353,44 +1402,8 @@
                 "title": "Alkoholfreie Getränke",
                 "description": "Getränke ohne Alkohol",
                 "icon": "pizza-slice",
-                "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-                "choices": [
-                    {
-                        "id": 0,
-                        "title": "size",
-                        "type": "radio",
-                        "default": 1,
-                        "options": [
-                            {
-                                "id": 0,
-                                "name": "small",
-                                "price": -200
-                            },
-                            {
-                                "id": 1,
-                                "name": "normal",
-                                "price": 0
-                            }
-                        ]
-                    },
-                    {
-                        "id": 1,
-                        "title": "toppings",
-                        "type": "checkbox",
-                        "options": [
-                            {
-                                "id": 0,
-                                "name": "salami",
-                                "price": 100
-                            },
-                            {
-                                "id": 1,
-                                "name": "poop",
-                                "price": 999
-                            }
-                        ]
-                    }
-                ],
+                "image": "https://static.takeaway.com/images/generic/categories/drinks/soft_1321028849.png?timestamp=1642953226",
+                "choices": [],
                 "menu": "aaaaaaaaaaaaaaaaaaaaaaaa",
                 "dishes": [
                     {
@@ -1404,7 +1417,7 @@
                         "description": "",
                         "category": "61b2141807daa5dc7eb2b698",
                         "price": 150,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://static.takeaway.com/images/generic/categories/drinks/soft_1321028849.png?timestamp=1642953226",
                         "isAvailable": true
                     },
                     {
@@ -1418,7 +1431,7 @@
                         "description": "",
                         "category": "61b2141807daa5dc7eb2b698",
                         "price": 200,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://static.takeaway.com/images/generic/categories/drinks/soft_1321028849.png?timestamp=1642953226",
                         "isAvailable": true
                     },
                     {
@@ -1432,7 +1445,7 @@
                         "description": "",
                         "category": "61b2141807daa5dc7eb2b698",
                         "price": 350,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://static.takeaway.com/images/generic/categories/drinks/soft_1321028849.png?timestamp=1642953226",
                         "isAvailable": true
                     },
                     {
@@ -1446,7 +1459,7 @@
                         "description": "",
                         "category": "61b2141807daa5dc7eb2b698",
                         "price": 350,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://static.takeaway.com/images/generic/categories/drinks/soft_1321028849.png?timestamp=1642953226",
                         "isAvailable": true
                     },
                     {
@@ -1462,7 +1475,7 @@
                         "description": "",
                         "category": "61b2141807daa5dc7eb2b698",
                         "price": 300,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://static.takeaway.com/images/generic/categories/drinks/soft_1321028849.png?timestamp=1642953226",
                         "isAvailable": true
                     },
                     {
@@ -1478,7 +1491,7 @@
                         "description": "",
                         "category": "61b2141807daa5dc7eb2b698",
                         "price": 300,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://static.takeaway.com/images/generic/categories/drinks/soft_1321028849.png?timestamp=1642953226",
                         "isAvailable": true
                     },
                     {
@@ -1494,7 +1507,7 @@
                         "description": "",
                         "category": "61b2141807daa5dc7eb2b698",
                         "price": 300,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://static.takeaway.com/images/generic/categories/drinks/soft_1321028849.png?timestamp=1642953226",
                         "isAvailable": true
                     },
                     {
@@ -1508,7 +1521,7 @@
                         "description": "",
                         "category": "61b2141807daa5dc7eb2b698",
                         "price": 300,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://static.takeaway.com/images/generic/categories/drinks/soft_1321028849.png?timestamp=1642953226",
                         "isAvailable": true
                     },
                     {
@@ -1522,7 +1535,7 @@
                         "description": "",
                         "category": "61b2141807daa5dc7eb2b698",
                         "price": 300,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://static.takeaway.com/images/generic/categories/drinks/soft_1321028849.png?timestamp=1642953226",
                         "isAvailable": true
                     }
                 ]
@@ -1530,46 +1543,10 @@
             {
                 "_id": "61b2158f07daa5dc7eb2b69a",
                 "title": "Alkoholische Getränke",
-                "description": "Getränke ohne Alkohol",
-                "icon": "pizza-slice",
-                "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-                "choices": [
-                    {
-                        "id": 0,
-                        "title": "size",
-                        "type": "radio",
-                        "default": 1,
-                        "options": [
-                            {
-                                "id": 0,
-                                "name": "small",
-                                "price": -200
-                            },
-                            {
-                                "id": 1,
-                                "name": "normal",
-                                "price": 0
-                            }
-                        ]
-                    },
-                    {
-                        "id": 1,
-                        "title": "toppings",
-                        "type": "checkbox",
-                        "options": [
-                            {
-                                "id": 0,
-                                "name": "salami",
-                                "price": 100
-                            },
-                            {
-                                "id": 1,
-                                "name": "poop",
-                                "price": 999
-                            }
-                        ]
-                    }
-                ],
+                "description": "Getränke mit Alkohol",
+                "icon": "cocktail",
+                "image": "https://static.takeaway.com/images/generic/categories/1_drinks/getraenke_bier3.png?timestamp=1642953226",
+                "choices": [],
                 "menu": "aaaaaaaaaaaaaaaaaaaaaaaa",
                 "dishes": [
                     {
@@ -1583,7 +1560,7 @@
                         "description": "",
                         "category": "61b2158f07daa5dc7eb2b69a",
                         "price": 1000,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://cdn.feinste-weine.de/item/images/1061/middle/40972-234411-1er.jpg",
                         "isAvailable": true
                     },
                     {
@@ -1597,7 +1574,7 @@
                         "description": "",
                         "category": "61b2158f07daa5dc7eb2b69a",
                         "price": 1000,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://www.edeka24.de/out/pictures/generated/product/1/540_540_90/cecchi_chianti_docg_rotwein_2014.jpg",
                         "isAvailable": true
                     },
                     {
@@ -1611,7 +1588,7 @@
                         "description": "",
                         "category": "61b2158f07daa5dc7eb2b69a",
                         "price": 900,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://bonvino.de/wp-content/uploads/2010/10/Zenato-650-Bardolino-www.jpg",
                         "isAvailable": true
                     },
                     {
@@ -1625,7 +1602,7 @@
                         "description": "",
                         "category": "61b2158f07daa5dc7eb2b69a",
                         "price": 800,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://cdn.casamolina.de/media/image/ed/6f/7b/Casal-Mendes-Rose_04PVV001_600x600.png",
                         "isAvailable": true
                     },
                     {
@@ -1639,7 +1616,7 @@
                         "description": "",
                         "category": "61b2158f07daa5dc7eb2b69a",
                         "price": 1300,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://m.media-amazon.com/images/I/71my9L8kWvL._SX425_.jpg",
                         "isAvailable": true
                     },
                     {
@@ -1655,7 +1632,7 @@
                         "description": "",
                         "category": "61b2158f07daa5dc7eb2b69a",
                         "price": 250,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://cdn02.plentymarkets.com/99cbvkn2wswt/item/images/1223/middle/Stoertebeker-Frei-Bier-0-5-l-Bierflasche-kaufen.jpg",
                         "isAvailable": true
                     },
                     {
@@ -1671,7 +1648,7 @@
                         "description": "",
                         "category": "61b2158f07daa5dc7eb2b69a",
                         "price": 250,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://cdn02.plentymarkets.com/99cbvkn2wswt/item/images/1223/middle/Stoertebeker-Frei-Bier-0-5-l-Bierflasche-kaufen.jpg",
                         "isAvailable": true
                     },
                     {
@@ -1687,7 +1664,7 @@
                         "description": "",
                         "category": "61b2158f07daa5dc7eb2b69a",
                         "price": 250,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://cdn02.plentymarkets.com/99cbvkn2wswt/item/images/1223/middle/Stoertebeker-Frei-Bier-0-5-l-Bierflasche-kaufen.jpg",
                         "isAvailable": true
                     },
                     {
@@ -1703,7 +1680,7 @@
                         "description": "",
                         "category": "61b2158f07daa5dc7eb2b69a",
                         "price": 250,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://cdn02.plentymarkets.com/99cbvkn2wswt/item/images/1223/middle/Stoertebeker-Frei-Bier-0-5-l-Bierflasche-kaufen.jpg",
                         "isAvailable": true
                     },
                     {
@@ -1719,7 +1696,7 @@
                         "description": "",
                         "category": "61b2158f07daa5dc7eb2b69a",
                         "price": 250,
-                        "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+                        "image": "https://cdn02.plentymarkets.com/99cbvkn2wswt/item/images/1223/middle/Stoertebeker-Frei-Bier-0-5-l-Bierflasche-kaufen.jpg",
                         "isAvailable": true
                     }
                 ]
