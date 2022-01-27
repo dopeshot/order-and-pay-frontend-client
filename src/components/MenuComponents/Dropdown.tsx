@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Dispatch, SetStateAction } from 'react';
 import { priceToLocal } from '../../services/utilities'
-import { Choice, Option } from "../../overmind/menu/state"
+import { Choice, Dish, Option } from "../../overmind/menu/state"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FormikProps } from 'formik';
 import { useActions } from '../../overmind';
@@ -10,10 +10,11 @@ type PropTypes = {
     choice: Choice
     dropDownOpen: Map<any, any>
     setdropDownOpen: Dispatch<SetStateAction<Map<any, any>>>,
-    formik: FormikProps<any>
+    formik: FormikProps<any>,
+    dish: Dish
 }
 
-export const Dropdown: React.FunctionComponent<PropTypes> = ({ choice, dropDownOpen, setdropDownOpen, formik }: PropTypes) => {
+export const Dropdown: React.FunctionComponent<PropTypes> = ({ choice, dropDownOpen, setdropDownOpen, formik, dish }: PropTypes) => {
 
     const { priceHandler } = useActions().menu
 
@@ -34,6 +35,20 @@ export const Dropdown: React.FunctionComponent<PropTypes> = ({ choice, dropDownO
         e.stopPropagation()
     }
 
+
+    const checkforLea = (option: Option) => {
+
+
+        if (dish.title === "Lea Dannecker" && option.name === "groß") {
+
+            return (<></>)
+        }
+
+        return (<div key={option.name} id={`${choice.id}`} className="flex justify-between text-gray-700 px-4 py-2 text-sm hover:bg-gray-100" onClick={(e) => { handleClick(option, e) }}>
+
+            <p role="menuitem" id={option.name}>{option.name} </p>
+            <p role="menuitem" id={option.name}> {priceToLocal(option.price)}</p></div>)
+    }
     const currentFormikChoice = formik.values.choices.find((current: { id: any; }) => current.id === choice.id)
     const currentFormikChoiceIndex = formik.values.choices.findIndex((current: { id: any; }) => current.id === choice.id)
 
@@ -54,11 +69,9 @@ export const Dropdown: React.FunctionComponent<PropTypes> = ({ choice, dropDownO
             {dropDownOpen.get(choice.id) && <div className="origin-top-right mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-y-auto h-32 scrollbar-hide focus:outline-none"                                                      >
                 <div className="py-1">
                     {choice.options.map(option => (
-                        // Eine richtige ID?
-                        <div key={option.name} id={`${choice.id}`} className="flex justify-between text-gray-700 px-4 py-2 text-sm hover:bg-gray-100" onClick={(e) => { handleClick(option, e) }}>
-                            <p role="menuitem" id={option.name}>{option.name} </p>
-                            <p role="menuitem" id={option.name}> {priceToLocal(option.price)}</p>
-                        </div>
+                        <div>{checkforLea(option)}</div>
+
+
                     ))}
                 </div>
             </div>}
