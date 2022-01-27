@@ -99,32 +99,34 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ setValue, value,
     </button>
   ))
 
-  return (<>
-    <div className={`w-full text-gray-600 self-start rounded-lg  ${searchbarOpen ? `flex justify-center overflow-y-auto h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar` : ``} `} onClick={() => setsearchbarOpen(false)}>
-    </div >
-    <div className='pt-5 container'>
-      <div className={`text-gray-600 self-start flex bg-light-grey rounded-lg h-8 pl-3 ${searchbarOpen ? `sticky` : ``} container z-30`}>
-        <button type="submit" className="left-3 mr-4 text-grey font-light">
-          <FontAwesomeIcon icon={faSearch} />
-        </button>
-        {/* Searchbar object */}
-        <input onFocus={(e) => setsearchbarOpen(true)} id="searchbar" className="rounded-lg w-full self-stretch bg-light-grey text-sm text-grey focus:outline-none" placeholder="Search..." onChange={event => { handleChange(event.target.value) }}></input>
+  return (
+    <>
+      <div className={`w-full text-gray-600 self-start rounded-lg scrollbar-hide  ${searchbarOpen ? `flex justify-center overflow-y-auto h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar` : ``} `} onClick={() => setsearchbarOpen(false)}>
+      </div >
+      <div className='scrollbar-hide'>
+        <div className='pt-5'>
+          <div className={`text-gray-600 self-start flex bg-light-grey rounded-lg h-8 pl-3 ${searchbarOpen ? `sticky` : ``}  z-30`}>
+            <button type="submit" className="left-3 mr-4 text-grey font-light">
+              <FontAwesomeIcon icon={faSearch} />
+            </button>
+            {/* Searchbar object */}
+            <input onFocus={(e) => setsearchbarOpen(true)} id="searchbar" className="rounded-lg w-full self-stretch bg-light-grey text-sm text-grey focus:outline-none" placeholder="Search..." onChange={event => { handleChange(event.target.value) }}></input>
+          </div>
+        </div>
+        <div className='pt-3 scrollbar-hide'>
+          <div className={`h-3/5 container scrollbar-hide ${searchbarOpen ? `absolute` : ``} rounded-lg z-30 overflow-y-scroll bg-white`}>
+            {searchbarOpen ?
+              <div className="flex flex-col mt-4 mx-3 rounded-xl z-20">
+                <div className="flex h-11 scrollbar-hide justify-between overflow-x-scroll content">
+                  <div className='flex'>{allergensMapped}</div></div>
+                <div className="flex h-11 scrollbar-hide container justify-between overflow-x-scroll content">
+                  <div className='flex'>{labelsMapped}</div></div>
+                <div className=''>{foundDishesMapped}</div>
+              </div> : null}
+          </div>
+        </div>
       </div>
-    </div>
-    <div className='pt-3 container w-full pr-5'>
-      <div className={`container h-3/5 ${searchbarOpen ? `absolute` : ``} rounded-lg z-30 overflow-y-scroll bg-white`}>
-        {searchbarOpen ?
-          <div className="flex flex-col mt-4 mx-3 rounded-xl z-20">
-            <div className="flex h-11 w-full justify-between overflow-x-scroll content">
-              <div className='flex'>{allergensMapped}</div></div>
-            <div className="flex h-11 w-full justify-between overflow-x-scroll content">
-              <div className='flex'>{labelsMapped}</div></div>
-            <div>{foundDishesMapped}</div>
-          </div> : null}
-      </div>
-    </div>
-
-  </>)
+    </>)
 }
 
 // <div id="menuItem" className="flex justify-center overflow-y-auto h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar" >
