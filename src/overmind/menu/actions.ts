@@ -10,7 +10,7 @@ export const loadMenu = async ({ state, effects }: Context) => {
 
 
     } catch (error) {
-        console.log("Error at menu load", error)
+
     }
 
     state.menu.isLoadingMenu = false
@@ -19,13 +19,13 @@ export const loadMenu = async ({ state, effects }: Context) => {
 export const priceHandler = ({ state }: Context, priceDish: number) => {
     //currentPrice = priceDish + currentPrice
     state.menu.sum = state.menu.sum + priceDish
-    console.log("end sum: " + state.menu.sum)
+
     return state.menu.sum
 }
 
 export const priceReset = ({ state }: Context) => {
     //currentPrice = priceDish + currentPrice
     state.menu.sum = 0
-    console.log("end sum: " + state.menu.sum)
+
     return state.menu.sum
 }

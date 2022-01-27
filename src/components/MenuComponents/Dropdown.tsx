@@ -22,7 +22,7 @@ export const Dropdown: React.FunctionComponent<PropTypes> = ({ choice, dropDownO
         setdropDownOpen(new Map(dropDownOpen.set(choice.id, !dropDownOpen.get(choice.id))))
         e.stopPropagation()
         formik.values.choices[currentFormikChoiceIndex].valueId = option.id
-        console.log(formik.values.choices[currentFormikChoiceIndex])
+
         let priceDiff = option.price - formik.values.choices[currentFormikChoiceIndex].currentPrice
         formik.values.choices[currentFormikChoiceIndex].currentPrice = option.price
         priceHandler(priceDiff)
@@ -30,8 +30,7 @@ export const Dropdown: React.FunctionComponent<PropTypes> = ({ choice, dropDownO
 
     const handleClick2 = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         setdropDownOpen(new Map(dropDownOpen.set(choice.id, !dropDownOpen.get(choice.id))))
-        console.log("dropdown open: " + dropDownOpen.get(choice.id))
-        console.log(choice.id)
+
         e.stopPropagation()
     }
 

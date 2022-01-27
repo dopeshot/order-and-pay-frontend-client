@@ -15,7 +15,7 @@ export const ScrollCats: React.FunctionComponent<PropTypes> = ({ sectionRefs, sh
     const { MenuResponseObj: categoryAndDishes } = useAppState().menu
 
     let prevStatuses: boolean[] = []
-    console.log(sectionRefs)
+
 
     return (
         <div className={`flex fixed bg-white transition-opacity duration-200 content-center w-full ${shouldDisplayCategoryNavbar ? `` : `opacity-0 pointer-events-none`} `}>

@@ -63,7 +63,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
     const { priceHandler } = useActions().menu
 
     const openMenuItem = (dish: Dish, category: Category & { dishes: Dish[]; }) => {
-        console.log("openMenuItem")
+
         setCurrentItem(dish)
         setCurrentCategory(category)
         setMenuItemOpen(true)

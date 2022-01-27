@@ -72,8 +72,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
     })
 
     const submitForm = (values: any) => {
-        console.log(values)
-        console.log("submitForm")
+
         let pickedChoices: (PickedRadio | PickedCheckbox)[] = []
 
         const item: Item = {
@@ -83,7 +82,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
             note: values.note
 
         }
-        console.log(item)
+
         putInBasket(item)
         close()
     }

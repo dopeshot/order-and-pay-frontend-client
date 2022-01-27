@@ -31,7 +31,7 @@ export const idToName = (dish: Dish, choice: (PickedRadio | PickedCheckbox), men
     const category: Category | undefined = menu.categories.find(category => category._id === dish.category)
     const choiceObj: Choice | undefined = category!.choices.find(choiceObj => choiceObj.id === choice.id)
 
-    console.log(choice)
+
 
     if (choice.type === ChoiceType.RADIO) {
 
@@ -47,7 +47,7 @@ export const idToName = (dish: Dish, choice: (PickedRadio | PickedCheckbox), men
                 }
             });
         })
-        console.log(optionsPicked)
+
         return optionsPicked
     }
 }
@@ -72,7 +72,7 @@ export const getPrice = (item: Item, menu: MenuEditorResponse) => {
     let category = getCategoryFromId(dish.category, menu)
     let extra: number = 0
     item.pickedChoices.forEach((pChoice) => {
-        console.log(pChoice)
+
         if (pChoice.type === ChoiceType.RADIO) {
             const choice = category?.choices.find(choice => choice.id === pChoice.id)
             const option = choice!.options.find(option => option.id === pChoice.valueId)
