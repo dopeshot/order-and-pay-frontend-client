@@ -19,8 +19,6 @@ type PropTypes = {
 
 export const Choices: React.FunctionComponent<PropTypes> = ({ dish, category, dropDownOpen, setdropDownOpen, formik }: PropTypes) => {
 
-
-
     return (
         <>{
             category.choices.map((choice) => (

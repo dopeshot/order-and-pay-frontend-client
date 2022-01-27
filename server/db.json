@@ -19,7 +19,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "gluten",
                             "laktose"
                         ],
@@ -37,7 +37,7 @@
                             "vegan",
                             "glutenfree"
                         ],
-                        "allergies": [],
+                        "allergens": [],
                         "_id": "617e6d1f9a489b7b2d430930",
                         "title": "Gemüseteller",
                         "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
@@ -51,7 +51,7 @@
                             "vegetarian",
                             "vegan"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "gluten",
                             "konservierungsstoffe"
                         ],
@@ -65,7 +65,7 @@
                     },
                     {
                         "labels": [],
-                        "allergies": [
+                        "allergens": [
                             "krebstiere"
                         ],
                         "_id": "617e6e7646dd607f0a87a825",
@@ -80,7 +80,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "gluten",
                             "konservierungsstoffe"
                         ],
@@ -98,7 +98,7 @@
                             "glutenfree",
                             "vegan"
                         ],
-                        "allergies": [],
+                        "allergens": [],
                         "_id": "617e7f7cfb32e4981386e0fc",
                         "title": "Pommes Frites",
                         "description": "",
@@ -122,7 +122,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose"
                         ],
                         "_id": "617e801334566d98bebd7e96",
@@ -137,7 +137,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose"
                         ],
                         "_id": "61b21cac07daa5dc7eb2b6b5",
@@ -152,7 +152,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose"
                         ],
                         "_id": "61b21e4707daa5dc7eb2b6ba",
@@ -167,7 +167,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose"
                         ],
                         "_id": "61b21fbc07daa5dc7eb2b6cb",
@@ -182,7 +182,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose"
                         ],
                         "_id": "61b2288107daa5dc7eb2b6d0",
@@ -197,7 +197,7 @@
                         "labels": [
                             "fisch"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose"
                         ],
                         "_id": "61b2292107daa5dc7eb2b6d5",
@@ -264,7 +264,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -280,7 +280,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -296,7 +296,7 @@
                         "labels": [
                             ""
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -312,7 +312,7 @@
                         "labels": [
                             ""
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -328,7 +328,7 @@
                         "labels": [
                             ""
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -344,7 +344,7 @@
                         "labels": [
                             ""
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -360,7 +360,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -376,7 +376,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -392,7 +392,7 @@
                         "labels": [
                             ""
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -408,7 +408,7 @@
                         "labels": [
                             ""
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten",
                             "krebstiere"
@@ -425,7 +425,7 @@
                         "labels": [
                             ""
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -488,7 +488,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -504,7 +504,7 @@
                         "labels": [
                             ""
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -520,7 +520,7 @@
                         "labels": [
                             ""
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -607,7 +607,7 @@
                             "vegetarian",
                             "vegan"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "gluten"
                         ],
                         "_id": "61b231bd07daa5dc7eb2b762",
@@ -623,7 +623,7 @@
                             "vegetarian",
                             "vegan"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "gluten"
                         ],
                         "_id": "61b231e007daa5dc7eb2b763",
@@ -685,7 +685,7 @@
                         "labels": [
                             ""
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -701,7 +701,7 @@
                         "labels": [
                             "fisch"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -717,7 +717,7 @@
                         "labels": [
                             ""
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten",
                             "krebstiere"
@@ -735,7 +735,7 @@
                             "vegetarian",
                             "vegan"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -749,7 +749,7 @@
                     },
                     {
                         "labels": [],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -763,7 +763,7 @@
                     },
                     {
                         "labels": [],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten",
                             "krebstiere"
@@ -778,7 +778,7 @@
                     },
                     {
                         "labels": [],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten",
                             "krebstiere"
@@ -793,7 +793,7 @@
                     },
                     {
                         "labels": [],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -807,7 +807,7 @@
                     },
                     {
                         "labels": [],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -823,7 +823,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -884,7 +884,7 @@
                 "dishes": [
                     {
                         "labels": [],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -900,7 +900,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -916,7 +916,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -932,7 +932,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -946,7 +946,7 @@
                     },
                     {
                         "labels": [],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -962,7 +962,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -976,7 +976,7 @@
                     },
                     {
                         "labels": [],
-                        "allergies": [
+                        "allergens": [
                             "laktose",
                             "gluten"
                         ],
@@ -1039,7 +1039,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose"
                         ],
                         "_id": "61b2423307daa5dc7eb2b7a6",
@@ -1052,7 +1052,7 @@
                     },
                     {
                         "labels": [],
-                        "allergies": [
+                        "allergens": [
                             "laktose"
                         ],
                         "_id": "61b2425b07daa5dc7eb2b7a7",
@@ -1067,7 +1067,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose"
                         ],
                         "_id": "61b242a207daa5dc7eb2b7a8",
@@ -1082,7 +1082,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose"
                         ],
                         "_id": "61b242c807daa5dc7eb2b7a9",
@@ -1144,7 +1144,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "sojabeans"
                         ],
                         "_id": "61b2438807daa5dc7eb2b7b0",
@@ -1157,7 +1157,7 @@
                     },
                     {
                         "labels": [],
-                        "allergies": [
+                        "allergens": [
                             "sojabeans"
                         ],
                         "_id": "61b243b807daa5dc7eb2b7b1",
@@ -1170,7 +1170,7 @@
                     },
                     {
                         "labels": [],
-                        "allergies": [
+                        "allergens": [
                             "sojabeans"
                         ],
                         "_id": "61b243e907daa5dc7eb2b7b2",
@@ -1183,7 +1183,7 @@
                     },
                     {
                         "labels": [],
-                        "allergies": [
+                        "allergens": [
                             "sojabeans",
                             "egg"
                         ],
@@ -1197,7 +1197,7 @@
                     },
                     {
                         "labels": [],
-                        "allergies": [
+                        "allergens": [
                             "sojabeans"
                         ],
                         "_id": "61b2447007daa5dc7eb2b7b4",
@@ -1210,7 +1210,7 @@
                     },
                     {
                         "labels": [],
-                        "allergies": [
+                        "allergens": [
                             "sojabeans"
                         ],
                         "_id": "61b2450807daa5dc7eb2b7b6",
@@ -1272,7 +1272,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "caffeine",
                             "egg",
                             "laktose"
@@ -1289,7 +1289,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "caffeine",
                             "laktose"
                         ],
@@ -1305,7 +1305,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose"
                         ],
                         "_id": "61b34d9907daa5dc7eb2b7cf",
@@ -1320,7 +1320,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose"
                         ],
                         "_id": "61b34da807daa5dc7eb2b7d0",
@@ -1335,7 +1335,7 @@
                         "labels": [
                             "vegetarian"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "laktose"
                         ],
                         "_id": "61b34dd607daa5dc7eb2b7d1",
@@ -1398,7 +1398,7 @@
                             "vegetarian",
                             "vegan"
                         ],
-                        "allergies": [],
+                        "allergens": [],
                         "_id": "61b34e2807daa5dc7eb2b7d6",
                         "title": "Mineralwasser 0,7l",
                         "description": "",
@@ -1412,7 +1412,7 @@
                             "vegetarian",
                             "vegan"
                         ],
-                        "allergies": [],
+                        "allergens": [],
                         "_id": "61b34e4407daa5dc7eb2b7d7",
                         "title": "Sprudel süß 0,7l",
                         "description": "",
@@ -1426,7 +1426,7 @@
                             "vegetarian",
                             "vegan"
                         ],
-                        "allergies": [],
+                        "allergens": [],
                         "_id": "61b34e6e07daa5dc7eb2b7d8",
                         "title": "Orangensaft 1,0l",
                         "description": "",
@@ -1440,7 +1440,7 @@
                             "vegetarian",
                             "vegan"
                         ],
-                        "allergies": [],
+                        "allergens": [],
                         "_id": "61b34e8c07daa5dc7eb2b7d9",
                         "title": "Apfelsaft 1,0l",
                         "description": "",
@@ -1454,7 +1454,7 @@
                             "vegetarian",
                             "vegan"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "caffeine"
                         ],
                         "_id": "61b34f8b07daa5dc7eb2b7da",
@@ -1470,7 +1470,7 @@
                             "vegetarian",
                             "vegan"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "caffeine"
                         ],
                         "_id": "61b34fad07daa5dc7eb2b7db",
@@ -1486,7 +1486,7 @@
                             "vegetarian",
                             "vegan"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "caffeine"
                         ],
                         "_id": "61b3509b07daa5dc7eb2b7dc",
@@ -1502,7 +1502,7 @@
                             "vegetarian",
                             "vegan"
                         ],
-                        "allergies": [],
+                        "allergens": [],
                         "_id": "61b350f007daa5dc7eb2b7e1",
                         "title": "Fanta 0,33l",
                         "description": "",
@@ -1516,7 +1516,7 @@
                             "vegetarian",
                             "vegan"
                         ],
-                        "allergies": [],
+                        "allergens": [],
                         "_id": "61b350f907daa5dc7eb2b7e2",
                         "title": "Sprite 0,33l",
                         "description": "",
@@ -1577,7 +1577,7 @@
                             "vegetarian",
                             "vegan"
                         ],
-                        "allergies": [],
+                        "allergens": [],
                         "_id": "61b3517907daa5dc7eb2b7e7",
                         "title": "Lambrusco 0,75l",
                         "description": "",
@@ -1591,7 +1591,7 @@
                             "vegetarian",
                             "vegan"
                         ],
-                        "allergies": [],
+                        "allergens": [],
                         "_id": "61b3519807daa5dc7eb2b7e8",
                         "title": "Chianti 0,75l",
                         "description": "",
@@ -1605,7 +1605,7 @@
                             "vegetarian",
                             "vegan"
                         ],
-                        "allergies": [],
+                        "allergens": [],
                         "_id": "61b351af07daa5dc7eb2b7e9",
                         "title": "Bardolino 0,75l",
                         "description": "",
@@ -1619,7 +1619,7 @@
                             "vegetarian",
                             "vegan"
                         ],
-                        "allergies": [],
+                        "allergens": [],
                         "_id": "61b351e207daa5dc7eb2b7ea",
                         "title": "Rose 0,75l",
                         "description": "",
@@ -1633,7 +1633,7 @@
                             "vegetarian",
                             "vegan"
                         ],
-                        "allergies": [],
+                        "allergens": [],
                         "_id": "61b351f607daa5dc7eb2b7eb",
                         "title": "Prosecco 0,75l",
                         "description": "",
@@ -1647,7 +1647,7 @@
                             "vegetarian",
                             "vegan"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "gluten"
                         ],
                         "_id": "61b3524d07daa5dc7eb2b7ec",
@@ -1663,7 +1663,7 @@
                             "vegetarian",
                             "vegan"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "gluten"
                         ],
                         "_id": "61b3526207daa5dc7eb2b7ed",
@@ -1679,7 +1679,7 @@
                             "vegetarian",
                             "vegan"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "gluten"
                         ],
                         "_id": "61b3528107daa5dc7eb2b7ee",
@@ -1695,7 +1695,7 @@
                             "vegetarian",
                             "vegan"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "gluten"
                         ],
                         "_id": "61b3533007daa5dc7eb2b7ef",
@@ -1711,7 +1711,7 @@
                             "vegetarian",
                             "vegan"
                         ],
-                        "allergies": [
+                        "allergens": [
                             "gluten"
                         ],
                         "_id": "61b3537b07daa5dc7eb2b7f0",

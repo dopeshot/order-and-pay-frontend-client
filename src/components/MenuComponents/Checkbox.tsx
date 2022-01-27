@@ -6,11 +6,11 @@ import { Choice, Option } from "../../overmind/menu/state"
 import { priceToLocal } from "../../services/utilities"
 
 
-
 type PropTypes = {
     choice: Choice
     formik: FormikProps<any>
 }
+
 
 export const Checkbox: React.FunctionComponent<PropTypes> = ({ choice, formik }: PropTypes) => {
 
@@ -28,7 +28,6 @@ export const Checkbox: React.FunctionComponent<PropTypes> = ({ choice, formik }:
         }
         { e.target.checked ? priceHandler(option.price) : priceHandler(-option.price) }
     }
-
 
     return <div className="flex flex-col">
         <div className="flex flex-col justify-between">{choice.options.map((option) => (

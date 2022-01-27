@@ -4,7 +4,7 @@ enum Status {
     DELETED = "deleted"
 }
 
-export type Allergy = {
+export type Allergen = {
     _id: string
     title: string
     icon: string
@@ -21,21 +21,19 @@ export enum ChoiceType {
     CHECKBOX = "checkbox"
 }
 
-export type DIshPopulated = Dish & { allergies: Allergy[], labels: Label[] }
-
+export type DishPopulated = Dish & { allergens: Allergen[], labels: Label[] }
 
 export type Dish = {
     _id: string,
     title: string,
     description: string,
-    labels: string[],
-    allergies: string[],
+    labels: Label[],
+    allergens: Allergen[],
     category: string,
     price: number,
     image: string,
     isAvailable: boolean
 }
-
 
 export type Choice = {
     id: number,
@@ -63,8 +61,6 @@ export type Category = {
     choices: Choice[],
     menu: string
 }
-
-
 
 export type State = {
     isLoadingDishes: boolean,
