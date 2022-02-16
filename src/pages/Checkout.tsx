@@ -1,17 +1,11 @@
-import { useActions, useAppState } from '../overmind';
-import { HashLink } from 'react-router-hash-link';
+import { useAppState } from '../overmind';
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { DishCard } from '../components/MenuComponents/DishCard';
-import { Dish } from '../overmind/menu/state';
-import { isComputedPropertyName } from 'typescript';
-import { getBasketPrice, getDish, getPrice, idToName, priceToLocal } from '../services/utilities';
-import { fab, faCcApplePay, faCcPaypal } from '@fortawesome/free-brands-svg-icons';
+import { getBasketPrice, priceToLocal } from '../services/utilities';
+import { faCcApplePay, faCcPaypal } from '@fortawesome/free-brands-svg-icons';
 
 export const Checkout: React.FunctionComponent = () => {
 
-    const { addCount, subCount, removeFromBasket } = useActions().basket
-    const { itemsCount } = useAppState().basket.basket
     const menu = useAppState().menu.MenuResponseObj
     const basket = useAppState().basket.basket
 

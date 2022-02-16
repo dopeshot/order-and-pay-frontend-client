@@ -3,7 +3,7 @@ import { useAppState } from '../../overmind';
 import { Head } from '../../components/MenuComponents/Head';
 import { MenuComponent } from '../../components/MenuComponents/MenuComponent';
 import { MenuItem } from '../../components/MenuComponents/MenuItem';
-import { OrderButton } from '../../components/MenuComponents/OrderButton';
+import { OrderButton } from '../../components/UIComponents/OrderButton';
 import { ScrollCats } from '../../components/MenuComponents/ScrollCats';
 import { useScrollToNav } from '../../hooks/useScroll';
 import { useActions } from '../../overmind';

@@ -5,10 +5,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { DishButton } from '../../components/MenuComponents/DishButton';
 import { Choices } from "../../components/MenuComponents/Choices";
 import { FormError } from "../../components/MenuComponents/FormError";
-import { Field, Form, Formik, ErrorMessage } from "formik"
+import { Field, Form, Formik } from "formik"
 import * as yup from 'yup'
-import { useActions, useAppState } from "../../overmind";
-import { Item, PickedCheckbox, PickedRadio } from "../../overmind/basket/state";
+import { useActions } from "../../overmind";
+import { Item, PickedCheckbox } from "../../overmind/basket/state";
 
 
 type PropTypes = {
@@ -20,7 +20,7 @@ type PropTypes = {
     menuInViewport: boolean | MutableRefObject<any>
 }
 
-export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInViewport, dish, category, menuItemOpen, setMenuItemOpen }: PropTypes) => {
+export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInViewport, dish, category, setMenuItemOpen }: PropTypes) => {
     // const { checkboxHandler } = useActions().menu
 
     const { putInBasket } = useActions().basket
@@ -34,7 +34,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
             close()
 
         }
-    }, [menuInViewport])
+    })
 
     let initChoices: (FormikRadio | PickedCheckbox)[] = []
 
@@ -72,8 +72,6 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
     })
 
     const submitForm = (values: any) => {
-
-        let pickedChoices: (PickedRadio | PickedCheckbox)[] = []
 
         const item: Item = {
             dishId: values.dishid,
@@ -128,7 +126,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                                 {dish.image !== "" && dish.image ?
                                     <div className="flex flex-col h-full w-full justify-items-center relative rounded-3xl pb-7">
                                         <div className="flex flex-col absolute self-center"><FontAwesomeIcon icon="minus" className="text-white fa-2x self-center" /></div>
-                                        <img className="w-full h-full rounded-t-3xl object-fill" src={dish.image}></img>
+                                        <img className="w-full h-full rounded-t-3xl object-fill" src={dish.image} alt="Current Dish"></img>
                                     </div> : <div className="flex flex-col"><FontAwesomeIcon icon="minus" className="text-gray-600 fa-2x self-center" /></div>}
                                 <div className="pl-3 pr-3 pt-3">
                                     <div className="self-start flex flex-col w-full justify-between pb-3">

@@ -1,8 +1,8 @@
-import { priceToLocal } from '../../services/utilities'
+
 import { FormikProps } from 'formik';
-import { Category, ChoiceType, Dish, Option } from '../../overmind/menu/state';
+import { Category, ChoiceType, Dish } from '../../overmind/menu/state';
 import { Dropdown } from './Dropdown';
-import { useActions, useAppState } from '../../overmind';
+
 import { SetStateAction } from 'react';
 import { Checkbox } from './Checkbox';
 

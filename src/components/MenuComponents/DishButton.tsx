@@ -13,7 +13,6 @@ type PropTypes = {
 export const DishButton: React.FunctionComponent<PropTypes> = ({ formik }: PropTypes) => {
 
     let sum = useAppState().menu.sum
-    const basket = useAppState().basket.basket
 
 
     return (

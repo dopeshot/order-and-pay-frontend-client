@@ -1,21 +1,9 @@
-import { useEffect } from "react"
-import { DishButton } from "../components/MenuComponents/DishButton"
+
 import { Basket, Item, PickedCheckbox, PickedRadio } from "../overmind/basket/state"
-import { Category, CategoryAndDishRefs, Choice, ChoiceType, Dish, DishPopulated, Menu, MenuEditorResponse, MenuResponse } from "../overmind/menu/state"
+import { Category, Choice, ChoiceType, Dish, MenuEditorResponse } from "../overmind/menu/state"
 
 export const priceToLocal = (price: number) => {
     return new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(price / 100)
-}
-
-export const scrollTo = (element: HTMLDivElement) => {
-
-    /*
-        element.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-            
-        })
-        */
 }
 
 export const equalArray = <T>(array1: Array<T>, array2: Array<T>) => {
@@ -42,7 +30,7 @@ export const idToName = (dish: Dish, choice: (PickedRadio | PickedCheckbox), men
         choiceObj?.options.forEach((option) => {
             //@ts-ignore
             choice.valueId.forEach(id => {
-                if (id == option.id) {
+                if (id === option.id) {
                     optionsPicked += (" " + option.name + ", ")
                 }
             });

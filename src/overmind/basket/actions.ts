@@ -1,4 +1,4 @@
-import { without } from "cypress/types/lodash"
+
 import { Context } from ".."
 import { sortChoices } from "../../services/utilities"
 import { Item } from "./state"
@@ -44,7 +44,7 @@ export const addCount = ({ state }: Context, index: number) => {
 export const subCount = ({ state }: Context, index: number) => {
 
     state.basket.basket.items[index].count += -1
-    if (state.basket.basket.items[index].count == 0) {
+    if (state.basket.basket.items[index].count === 0) {
         state.basket.basket.items.splice(index, 1)
     }
 

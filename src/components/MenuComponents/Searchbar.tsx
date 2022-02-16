@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHamburger, faSearch } from "@fortawesome/free-solid-svg-icons"
 import React, { Dispatch, SetStateAction, useState } from 'react'
 import { useAppState } from '../../overmind';
-import { Allergen, Category, Dish, Label } from '../../overmind/menu/state';
+import { Category, Dish } from '../../overmind/menu/state';
 import { DishCard } from './DishCard';
 
 type PropTypes = {
@@ -46,7 +46,7 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ setValue, value,
 
 
         dish.allergens.forEach(Allergen => {
-          if (!allergens.includes(Allergen) && Allergen != "") {
+          if (!allergens.includes(Allergen) && Allergen !== "") {
             allergens.push(Allergen)
           }
 
@@ -62,7 +62,7 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ setValue, value,
     menu.categories.forEach(category => {
       category.dishes.forEach(dish => {
         dish.labels.forEach(label => {
-          if (!labels.includes(label) && label != "") {
+          if (!labels.includes(label) && label !== "") {
             labels.push(label)
           }
 

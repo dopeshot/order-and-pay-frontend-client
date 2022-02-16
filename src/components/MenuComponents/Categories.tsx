@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useAppState } from '../../overmind'
-import { faHamburger, faAppleAlt, faBacon, faBreadSlice, faCheese, faFish, faPizzaSlice, faHotdog, faDrumstickBite } from "@fortawesome/free-solid-svg-icons"
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
 
 type PropTypes = {
@@ -12,7 +11,6 @@ type PropTypes = {
 export const Categories: React.FunctionComponent<PropTypes> = ({ scrollToRef }: PropTypes) => {
 
     const { MenuResponseObj } = useAppState().menu
-    const icons = [faHamburger, faAppleAlt, faBacon, faBreadSlice, faCheese, faFish, faPizzaSlice, faHotdog, faDrumstickBite];
 
     return (
         // All Categories

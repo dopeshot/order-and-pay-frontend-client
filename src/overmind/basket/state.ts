@@ -1,5 +1,5 @@
 import { derived } from "overmind"
-import { ChoiceType, Dish } from "../menu/state"
+import { ChoiceType } from "../menu/state"
 
 export type Basket = {
     price: number,

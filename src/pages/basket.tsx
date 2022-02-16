@@ -1,15 +1,11 @@
 import { useActions, useAppState } from '../overmind';
-import { HashLink } from 'react-router-hash-link';
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { DishCard } from '../components/MenuComponents/DishCard';
-import { Dish } from '../overmind/menu/state';
-import { isComputedPropertyName } from 'typescript';
 import { getBasketPrice, getDish, getPrice, idToName, priceToLocal } from '../services/utilities';
 
 export const Basket: React.FunctionComponent = () => {
 
-    const { addCount, subCount, removeFromBasket } = useActions().basket
+    const { addCount, subCount } = useActions().basket
     const { itemsCount } = useAppState().basket.basket
     const menu = useAppState().menu.MenuResponseObj
     const basket = useAppState().basket.basket

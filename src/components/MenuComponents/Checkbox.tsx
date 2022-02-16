@@ -1,7 +1,5 @@
 import { FormikProps } from "formik"
-import { Dispatch, SetStateAction } from "react"
 import { useActions } from "../../overmind"
-import { priceHandler } from "../../overmind/menu/actions"
 import { Choice, Option } from "../../overmind/menu/state"
 import { priceToLocal } from "../../services/utilities"
 
@@ -16,7 +14,6 @@ export const Checkbox: React.FunctionComponent<PropTypes> = ({ choice, formik }:
 
     const { priceHandler } = useActions().menu
 
-    const currentFormikChoice = formik.values.choices.find((current: { id: any; }) => current.id === choice.id)
     const currentFormikChoiceIndex = formik.values.choices.findIndex((current: { id: any; }) => current.id === choice.id)
 
     const test = (e: any, option: Option) => {
