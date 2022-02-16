@@ -1,10 +1,10 @@
 
 import { FormikProps } from 'formik';
 import { Category, ChoiceType, Dish } from '../../overmind/menu/state';
-import { Dropdown } from './Dropdown';
+import { Dropdown } from '../UIComponents/Dropdown';
 
 import { SetStateAction } from 'react';
-import { Checkbox } from './Checkbox';
+import { Checkbox } from '../UIComponents/Checkbox';
 
 
 type PropTypes = {

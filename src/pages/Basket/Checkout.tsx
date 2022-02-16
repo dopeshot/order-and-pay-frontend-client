@@ -1,7 +1,7 @@
-import { useAppState } from '../overmind';
+import { useAppState } from '../../overmind';
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { getBasketPrice, priceToLocal } from '../services/utilities';
+import { getBasketPrice, priceToLocal } from '../../services/utilities';
 import { faCcApplePay, faCcPaypal } from '@fortawesome/free-brands-svg-icons';
 
 export const Checkout: React.FunctionComponent = () => {

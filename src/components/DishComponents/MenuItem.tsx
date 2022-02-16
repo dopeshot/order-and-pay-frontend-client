@@ -2,9 +2,9 @@ import React, { MutableRefObject, useEffect, useState } from "react"
 import { priceToLocal } from '../../services/utilities'
 import { Dish, ChoiceType, Category } from "../../overmind/menu/state"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { DishButton } from '../../components/MenuComponents/DishButton';
-import { Choices } from "../../components/MenuComponents/Choices";
-import { FormError } from "../../components/MenuComponents/FormError";
+import { DishButton } from './DishButton';
+import { Choices } from "./Choices";
+import { FormError } from "../Errorhandling/FormError";
 import { Field, Form, Formik } from "formik"
 import * as yup from 'yup'
 import { useActions } from "../../overmind";

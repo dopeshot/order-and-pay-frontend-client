@@ -2,7 +2,7 @@ import React, { createRef, useRef, useState } from 'react';
 import { useAppState } from '../../overmind';
 import { Head } from '../../components/MenuComponents/Head';
 import { MenuComponent } from '../../components/MenuComponents/MenuComponent';
-import { MenuItem } from '../../components/MenuComponents/MenuItem';
+import { MenuItem } from '../../components/DishComponents/MenuItem';
 import { OrderButton } from '../../components/UIComponents/OrderButton';
 import { ScrollCats } from '../../components/MenuComponents/ScrollCats';
 import { useScrollToNav } from '../../hooks/useScroll';

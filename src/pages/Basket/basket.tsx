@@ -1,7 +1,7 @@
-import { useActions, useAppState } from '../overmind';
+import { useActions, useAppState } from '../../overmind';
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { getBasketPrice, getDish, getPrice, idToName, priceToLocal } from '../services/utilities';
+import { getBasketPrice, getDish, getPrice, idToName, priceToLocal } from '../../services/utilities';
 
 export const Basket: React.FunctionComponent = () => {
 

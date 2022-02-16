@@ -5,9 +5,9 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { NotFound } from '../../pages/Error/NotFound';
 import { LoadingMenu } from '../../pages/Menu/LoadMenu';
-import { Basket } from '../../pages/basket';
-import { Checkout } from '../../pages/Checkout';
-import { Payment } from '../../pages/Payment';
+import { Basket } from '../../pages/Basket/basket';
+import { Checkout } from '../../pages/Basket/Checkout';
+import { Payment } from '../../pages/Basket/Payment';
 
 library.add(fas)
 
