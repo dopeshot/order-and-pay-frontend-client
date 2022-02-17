@@ -126,7 +126,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                                 {dish.image !== "" && dish.image ?
                                     <div className="flex flex-col h-full w-full justify-items-center relative rounded-3xl pb-7">
                                         <div className="flex flex-col absolute self-center"><FontAwesomeIcon icon="minus" className="text-white fa-2x self-center" /></div>
-                                        <img className="w-full h-full rounded-t-3xl object-fill" src={dish.image} alt="Current Dish"></img>
+                                        <img className="w-full h-full rounded-t-3xl object-fill" src={dish.image} alt={dish.title}></img>
                                     </div> : <div className="flex flex-col"><FontAwesomeIcon icon="minus" className="text-gray-600 fa-2x self-center" /></div>}
                                 <div className="pl-3 pr-3 pt-3">
                                     <div className="self-start flex flex-col w-full justify-between pb-3">

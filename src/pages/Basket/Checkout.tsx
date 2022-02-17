@@ -5,6 +5,7 @@ import { getBasketPrice, priceToLocal } from '../../services/utilities';
 import { FooterButton } from '../../components/UIComponents/FooterButton';
 import { faCcApplePay, faCcPaypal } from '@fortawesome/free-brands-svg-icons';
 import { PaymentMethod } from '../../components/UIComponents/PaymentMethod';
+import { Header } from '../../components/UIComponents/Header';
 
 export const Checkout: React.FunctionComponent = () => {
 
@@ -14,14 +15,7 @@ export const Checkout: React.FunctionComponent = () => {
     return (
         <>
             <div id="page" className='container px-5'>
-                <div className="flow-root">
-                    <button className="float-left p-4 pl-4 text-2xl text-left">
-                        <Link id="basket" to="/basket" ><FontAwesomeIcon icon="chevron-left" /></Link>
-                    </button>
-                    <button className="float-right p-4 text-2xl pr-6 text-right">
-                        <FontAwesomeIcon icon="bars" />
-                    </button>
-                </div>
+                <Header parentId="basket" parentLink="/basket" />
                 <div id="container" className="container p-5">
                     <h1 className="font-bold text-4xl pb-2">Zahlmethoden</h1>
                     <div className='pt-9'>

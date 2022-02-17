@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useAppState } from '../../overmind'
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
-import { Category, Dish } from '../../../instrumented/overmind/menu/state'
+
 
 type PropTypes = {
     //scrolling Function gets passed through

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { getBasketPrice, getDish, getPrice, idToName, priceToLocal } from '../../services/utilities';
 import { FooterButton } from '../../components/UIComponents/FooterButton';
+import { Header } from '../../components/UIComponents/Header';
 
 export const Basket: React.FunctionComponent = () => {
 
@@ -46,14 +47,7 @@ export const Basket: React.FunctionComponent = () => {
         <>
             <div id="page" className='container px-5 divide-y divide-dividergrey'>
                 <div>
-                    <div className="flow-root">
-                        <button className="float-left p-4 pl-4 text-2xl text-left">
-                            <Link id="mainMenu" to="/menu" ><FontAwesomeIcon icon="chevron-left" /></Link>
-                        </button>
-                        <button className="float-right p-4 text-2xl pr-6 text-right">
-                            <FontAwesomeIcon icon="bars" />
-                        </button>
-                    </div>
+                    <Header parentId='mainMenu' parentLink="/menu" />
                     <div id="container" className="container p-5">
                         <h1 className="font-bold text-4xl pb-2">Warenkorb</h1>
                         <p className="font-thin text-grey mb-8">{itemsCount} Items</p>
