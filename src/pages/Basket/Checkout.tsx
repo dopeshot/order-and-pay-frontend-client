@@ -2,7 +2,9 @@ import { useAppState } from '../../overmind';
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { getBasketPrice, priceToLocal } from '../../services/utilities';
+import { FooterButton } from '../../components/UIComponents/FooterButton';
 import { faCcApplePay, faCcPaypal } from '@fortawesome/free-brands-svg-icons';
+import { PaymentMethod } from '../../components/UIComponents/PaymentMethod';
 
 export const Checkout: React.FunctionComponent = () => {
 
@@ -26,6 +28,8 @@ export const Checkout: React.FunctionComponent = () => {
                         <div className="flex items-center pl-3 pr-3 pt-3">
                             <div className="flex w-full pl-3 text-xl">
                                 <FontAwesomeIcon icon={faCcPaypal} className='text-red' />
+
+
                                 <p className='pl-3'>Paypal</p>
                             </div>
                             <input type="radio" name="checked" value='Paypal' />
@@ -37,20 +41,8 @@ export const Checkout: React.FunctionComponent = () => {
                             </div>
                             <input type="radio" name="checked" value='ApplePay' />
                         </div>
-                        <div className="flex items-center pl-3 pr-3 pt-3">
-                            <div className="flex w-full pl-3 text-xl">
-                                <FontAwesomeIcon icon="credit-card" className='text-red' />
-                                <p className='pl-3'>Kreditkarte</p>
-                            </div>
-                            <input type="radio" name="checked" value='Kreditkarte' />
-                        </div>
-                        <div className="flex items-center pl-3 pr-3 pt-3">
-                            <div className="flex w-full pl-3 text-xl">
-                                <FontAwesomeIcon icon="money-bill-wave" className='text-red' />
-                                <p className='pl-3'>Barzahlung</p>
-                            </div>
-                            <input type="radio" name="checked" value='Barzahlung' />
-                        </div>
+                        <PaymentMethod icon="credit-card" name="Kreditkarte" id="credit" />
+                        <PaymentMethod icon="money-bill-wave" name="Barzahlung" id="cash" />
                     </div>
                     <p className='pt-16 text-sm'>Per Klick auf 'Jetzt bezahlen!' werden Sie auf die jeweilige Seite des Anbieters weitergeleitet!</p>
                     <p className='text-sm'>Im Falle der Barzahlung kommt in Kürze einer unserer Mitarbeiter zu Ihnen.</p>
@@ -60,11 +52,7 @@ export const Checkout: React.FunctionComponent = () => {
                     </div>
                 </div>
             </div>
-            <footer className="w-full h-14 bg-red shadow-category fixed bottom-0 ">
-                <button className="container h-full flex justify-around items-center text-white font-bold">
-                    <Link id="payment" to="/payment" >Jetzt bezahlen!</Link>
-                </button>
-            </footer>
+            <FooterButton id="payment" link="/payment" text="Jetzt bezahlen!" />
         </>
     )
 }

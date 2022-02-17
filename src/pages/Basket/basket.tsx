@@ -2,6 +2,7 @@ import { useActions, useAppState } from '../../overmind';
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { getBasketPrice, getDish, getPrice, idToName, priceToLocal } from '../../services/utilities';
+import { FooterButton } from '../../components/UIComponents/FooterButton';
 
 export const Basket: React.FunctionComponent = () => {
 
@@ -76,12 +77,7 @@ export const Basket: React.FunctionComponent = () => {
 
 
             </div>
-            <footer className="w-full h-14 bg-red shadow-category fixed bottom-0 ">
-                <button className="container h-full flex justify-around items-center text-white font-bold">
-                    <Link id="payscreen" to="/payscreen" >Zur Kasse</Link>
-
-                </button>
-            </footer>
+            <FooterButton text='Zur Kasse' id="payscreen" link="/payscreen" />
         </>
     )
 }
