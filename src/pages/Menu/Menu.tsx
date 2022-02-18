@@ -34,10 +34,11 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
     const pageRef = useRef(null)
     const scrollCatRef = useRef(null)
     const scrollSpyRef = useRef(null)
+    const catButtonRefs = useRef<Array<HTMLButtonElement | null>>([])
 
     const scrollToButton = async (index: number) => {
         // MC: Maybe use refs here? instead of selection via dom
-        const activeElements = document.getElementById(`categoryScroll_${index}`)
+        const activeElements = catButtonRefs.current[index]
         const header = scrollCatRef.current
         const scrollSpy = scrollSpyRef.current
 
@@ -92,7 +93,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
 
     return (
         <>
-            <ScrollCats scrollSpyRef={scrollSpyRef} scrollCatRef={scrollCatRef} sectionRefs={sectionRefs} scrollToButton={scrollToButton} shouldDisplayCategoryNavbar={shouldDisplayCategoryNavbar} scrollToRef={scrollToRef} />
+            <ScrollCats catButtonRefs={catButtonRefs} scrollSpyRef={scrollSpyRef} scrollCatRef={scrollCatRef} sectionRefs={sectionRefs} scrollToButton={scrollToButton} shouldDisplayCategoryNavbar={shouldDisplayCategoryNavbar} scrollToRef={scrollToRef} />
             <div id="page" ref={pageRef} className={`container w-full border-solid h-screen  ${menuItemOpen ? `pointer-events-none overflow-hidden` : `scrollbar-hide overflow-scroll`} `}>
                 <div className="w-full">
                     {/*@ts-ignore*/}
