@@ -8,6 +8,8 @@ type PropTypes = {
     icon: string
 }
 
+
+
 export const PaymentMethod: React.FunctionComponent<PropTypes> = ({ name, icon, id }: PropTypes) => {
 
 

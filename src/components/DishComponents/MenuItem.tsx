@@ -16,29 +16,24 @@ type PropTypes = {
     category: Category,
     menuItemOpen: boolean,
     setMenuItemOpen: (bool: boolean) => void,
-    menuRef: boolean | MutableRefObject<any>,
-    menuInViewport: boolean | MutableRefObject<any>
+    menuRef: MutableRefObject<any>,
+    menuInViewport: boolean | MutableRefObject<any>,
+    scrollRef: MutableRefObject<any>
 }
 
-export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInViewport, dish, category, setMenuItemOpen }: PropTypes) => {
+export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInViewport, dish, category, setMenuItemOpen, scrollRef }: PropTypes) => {
     // const { checkboxHandler } = useActions().menu
 
     const { putInBasket } = useActions().basket
     const [isClosing, setIsClosing] = useState(false)
 
     const close = () => {
-        if (!isClosing) {
-            setIsClosing(true)
 
-            setTimeout(() => {
-                priceReset()
-                setMenuItemOpen(false)
-                setIsClosing(false)
-
-            }, 300);
-        }
-
+        priceReset()
+        setMenuItemOpen(false)
     }
+
+
     useEffect(() => {
         if (!menuInViewport) {
             close()
@@ -122,7 +117,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
     const { priceReset } = useActions().menu
 
     return (
-        <div id="menuItem" className="overflow-y-auto h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar" >
+        <div id="menuItem" ref={scrollRef} className="overflow-y-auto h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar" >
             <Formik initialValues={initialValues} validationSchema={orderSchema} onSubmit={submitForm}>
                 {(formik) => (
                     <Form>

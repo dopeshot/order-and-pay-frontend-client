@@ -27,9 +27,10 @@ export let useCheckMenuItem = (options: any, menuItemOpen: boolean) => {
         );
         if (scrollRef.current && isVisible) {
             setTimeout(() => {
-                observer.observe(scrollRef.current)
+                if (scrollRef.current)
+                    observer.observe(scrollRef.current)
 
-            }, 1000)
+            }, 200)
         }
 
     }, [scrollRef, options, isVisible]);
