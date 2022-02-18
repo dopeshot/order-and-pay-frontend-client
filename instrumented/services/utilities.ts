@@ -18,7 +18,3 @@ export const scrollTo = (element: HTMLDivElement) => {
 export const equalArray = <T>(array1: Array<T>, array2: Array<T>) => {
     return array1.length === array2.length && array1.every((value, index) => value === array2[index])
 }
-
-export const getCurrentPrice = (price: number, current: number) => {
-    return current = current + price
-}

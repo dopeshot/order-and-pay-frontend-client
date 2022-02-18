@@ -16,7 +16,7 @@ export const Categories: React.FunctionComponent<PropTypes> = ({ scrollToRef }: 
         // All Categories
         <div className='flex gap-1 bg-white top-0'>
             {MenuResponseObj.categories.map((category, index) =>
-                <CategoryButton scrollToRef={scrollToRef} index={index} category={category} />)}
+                <CategoryButton scrollToRef={scrollToRef} key={category._id} index={index} category={category} />)}
         </div>
     )
 }
