@@ -28,7 +28,7 @@ export const Checkbox: React.FunctionComponent<PropTypes> = ({ choice, formik }:
 
     return <div className="flex flex-col">
         <div className="flex flex-col justify-between">{choice.options.map((option) => (
-            <div className="flex items-center pl-3 pr-3">
+            <div className="flex items-center pl-3 pr-3" key={option.id}>
                 <input type="checkbox" name="checked" value={`${option.id}`}
                     onChange={(e) => { test(e, option) }} />
                 <div className="flex justify-between w-full pl-3">

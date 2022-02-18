@@ -1,5 +1,5 @@
 
-import { Basket, Item, PickedCheckbox, PickedRadio } from "../overmind/basket/state"
+import { Basket, Item, PickedCheckbox, PickedRadio, SendBasket } from "../overmind/basket/state"
 import { Category, Choice, ChoiceType, Dish, MenuEditorResponse } from "../overmind/menu/state"
 
 export const priceToLocal = (price: number) => {
@@ -8,10 +8,6 @@ export const priceToLocal = (price: number) => {
 
 export const equalArray = <T>(array1: Array<T>, array2: Array<T>) => {
     return array1.length === array2.length && array1.every((value, index) => value === array2[index])
-}
-
-export const getCurrentPrice = (price: number, current: number) => {
-    return current = current + price
 }
 
 export const idToName = (dish: Dish, choice: (PickedRadio | PickedCheckbox), menu: MenuEditorResponse) => {

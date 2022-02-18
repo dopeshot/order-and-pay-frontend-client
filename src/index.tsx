@@ -8,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 import './index.css';
 
 const overmind = createOvermind(config, {
-  devtools: true
+  devtools: false
 })
 
 ReactDOM.render(

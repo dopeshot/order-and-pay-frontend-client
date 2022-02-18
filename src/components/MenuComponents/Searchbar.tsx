@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHamburger, faSearch } from "@fortawesome/free-solid-svg-icons"
+import { faSearch } from "@fortawesome/free-solid-svg-icons"
 import React, { Dispatch, SetStateAction, useState } from 'react'
 import { useAppState } from '../../overmind';
 import { Category, Dish } from '../../overmind/menu/state';
@@ -38,6 +38,7 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ setValue, value,
     setValue(value)
   }
 
+  //Für die Filter Funktion
   const getallergens = () => {
     let allergens: string[] = []
 
@@ -75,7 +76,7 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ setValue, value,
   }
 
   const foundDishesMapped = foundDishes.map(dish => (
-    <div className='p-5' onClick={() => {
+    <div className='p-5' key={dish._id} onClick={() => {
       openMenuItem(dish, menu.categories.find(category => category._id === dish.category)!)
       setsearchbarOpen(false)
     }}>
@@ -83,16 +84,17 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ setValue, value,
     </div>
   ))
 
+  // Für die Filter Funktion die Buttons 
   const allergensMapped = getallergens().map(Allergen => (
     <button className="text-red flex flex-col font-bold text-center m-1 h-8 w-20 shadow-md rounded-md overflow-hidden text-xs b-2 justify-items-center" >
-      <FontAwesomeIcon icon={faHamburger} className='self-center' />
+      {/* <FontAwesomeIcon icon={faHamburger} className='self-center' /> */}
       <div className='self-center'>{Allergen}</div>
     </button>
   ))
 
   const labelsMapped = getLabels().map(label => (
     <button className="text-green-600 flex flex-col font-bold text-center m-1 h-8 w-20 shadow-md rounded-md overflow-hidden text-xs b-2 justify-items-center" >
-      <FontAwesomeIcon icon={faHamburger} className='self-center' />
+      {/* <FontAwesomeIcon icon={faHamburger} className='self-center' /> */}
       <div className='self-center'>{label}</div>
     </button>
   ))
@@ -115,10 +117,6 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ setValue, value,
           <div className={` h-3/5 container scrollbar-hide ${searchbarOpen ? `fixed` : ``}  rounded-lg z-30 overflow-y-scroll bg-white`}>
             {searchbarOpen ?
               <div className="flex flex-col mt-4 mx-3 rounded-xl z-20">
-                <div className="flex h-11 scrollbar-hide justify-between overflow-x-scroll content">
-                  <div className='flex'>{allergensMapped}</div></div>
-                <div className="flex h-11 scrollbar-hide container justify-between overflow-x-scroll content">
-                  <div className='flex'>{labelsMapped}</div></div>
                 <div className=''>{foundDishesMapped}</div>
               </div> : null}
           </div>

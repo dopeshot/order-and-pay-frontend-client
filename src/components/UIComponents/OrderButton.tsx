@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { priceToLocal } from '../../services/utilities';
 import { useAppState } from '../../overmind';
-import { getBasketPrice } from '../../services/utilities';
 
 export const OrderButton: React.FunctionComponent = () => {
 
@@ -15,7 +14,7 @@ export const OrderButton: React.FunctionComponent = () => {
             <button id="orderButton" className="container h-full flex justify-around items-center text-white font-bold">
                 <p className="rounded-full w-7 h-7 bg-white text-red" style={{ lineHeight: '1.6rem' }}>{itemsCount}</p>
                 <Link id="basket" to="/basket" >Warenkorb anzeigen</Link>
-                <p>{priceToLocal(getBasketPrice(basket, menu))}</p>
+                <p>{priceToLocal(basket.price)}</p>
             </button>
         </footer>
     )

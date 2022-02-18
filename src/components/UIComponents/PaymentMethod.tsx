@@ -18,7 +18,7 @@ export const PaymentMethod: React.FunctionComponent<PropTypes> = ({ name, icon, 
                 <FontAwesomeIcon icon={icon as IconProp} className='text-red' />
                 <p className='pl-3'>{name}</p>
             </div>
-            <input type="radio" name="checked" value={id} />
+            <input type="radio" name="checked" value={id} defaultChecked={true} />
         </div>
 
     )
