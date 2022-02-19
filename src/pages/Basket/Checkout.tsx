@@ -19,7 +19,7 @@ export const Checkout: React.FunctionComponent = () => {
         if (await sendOrder()) {
             // Send order worked!
             setAlert("Order successful!")
-            history.push('/payment')
+            history.push('/orderConformation')
         } else {
             // Send order failed!
             setAlert("Order failed!")

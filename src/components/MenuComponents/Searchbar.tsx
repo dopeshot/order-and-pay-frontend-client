@@ -46,9 +46,9 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ setValue, value,
       category.dishes.forEach(dish => {
 
 
-        dish.allergens.forEach(Allergen => {
-          if (!allergens.includes(Allergen) && Allergen !== "") {
-            allergens.push(Allergen)
+        dish.allergenIds.forEach(allergen => {
+          if (!allergens.includes(allergen.title) && allergen.title !== "") {
+            allergens.push(allergen.title)
           }
 
         })
@@ -62,9 +62,9 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ setValue, value,
     let labels: string[] = []
     menu.categories.forEach(category => {
       category.dishes.forEach(dish => {
-        dish.labels.forEach(label => {
-          if (!labels.includes(label) && label !== "") {
-            labels.push(label)
+        dish.labelIds.forEach(label => {
+          if (!labels.includes(label.title) && label.title !== "") {
+            labels.push(label.title)
           }
 
         })
@@ -77,10 +77,10 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ setValue, value,
 
   const foundDishesMapped = foundDishes.map(dish => (
     <div className='p-5' key={dish._id} onClick={() => {
-      openMenuItem(dish, menu.categories.find(category => category._id === dish.category)!)
+      openMenuItem(dish, menu.categories.find(category => category._id === dish.categoryId)!)
       setsearchbarOpen(false)
     }}>
-      <DishCard dish={dish} category={menu.categories.find(category => category._id === dish.category)!}></DishCard>
+      <DishCard dish={dish} category={menu.categories.find(category => category._id === dish.categoryId)!}></DishCard>
     </div>
   ))
 

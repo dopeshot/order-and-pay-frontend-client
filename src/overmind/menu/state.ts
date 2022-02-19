@@ -5,14 +5,14 @@ enum Status {
 }
 
 export type Allergen = {
-    _id: string
-    title: string
+    _id: string,
+    title: string,
     icon: string
 }
 
 export type Label = {
-    _id: string
-    title: string
+    _id: string,
+    title: string,
     icon: string
 }
 
@@ -27,9 +27,9 @@ export type Dish = {
     _id: string,
     title: string,
     description: string,
-    labels: string[],
-    allergens: string[],
-    category: string,
+    labelIds: Label[],
+    allergenIds: Allergen[],
+    categoryId: string,
     price: number,
     image: string,
     isAvailable: boolean

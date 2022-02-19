@@ -92,12 +92,12 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
     const [isTextArea, setisTextArea] = useState(false)
     const [currentPrice, setCurrentPrice] = useState<number>(0)
 
-    const allergens = dish.allergens.map((allergen, index) => (
-        <div key={index} className="m-3 flex flex-col items-center">
+    const allergens = dish.allergenIds.map((allergen) => (
+        <div key={allergen._id} className="m-3 flex flex-col items-center">
             <div className="h-7 w-7 bg-red text-center rounded-md">
                 <FontAwesomeIcon icon="hamburger" className="text-white h-full w-full" />
             </div>
-            {allergen}
+            {allergen.title}
         </div>
     ))
 
