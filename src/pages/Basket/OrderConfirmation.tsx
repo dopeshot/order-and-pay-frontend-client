@@ -4,7 +4,7 @@ import { priceToLocal } from '../../services/utilities';
 import { useHistory } from "react-router-dom"
 
 
-export const Payment: React.FunctionComponent = () => {
+export const OrderConfirmation: React.FunctionComponent = () => {
     const basket = useAppState().basket.basket
     const { clearBasket } = useActions().basket
     const history = useHistory()
