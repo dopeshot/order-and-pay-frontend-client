@@ -14,10 +14,15 @@ before(() => {
 describe("Adds Simple Items and Renders Basket correctly", () => {
     it("Adds and removes Simple Items", () => {
         cy.get('#section-0 > .px-5 > :nth-child(1) > #dishCard > .flex-2\\/4 > .text-xs').click();
+        cy.wait(200)
         cy.get('#orderButton > p').click();
+        cy.wait(200)
         cy.get('#section-0 > .px-5 > :nth-child(4) > #dishCard > .flex-2\\/4 > .text-xs').click();
+        cy.wait(200)
         cy.get('#orderButton > p').click();
+        cy.wait(200)
         cy.get('#section-0 > .px-5 > :nth-child(3) > #dishCard > .flex-2\\/4 > .text-xs').click();
+        cy.wait(200)
         cy.get('#orderButton > p').click();
         cy.get('.rounded-full').should('have.text', '3');
         cy.get('#basketButton').should('be.visible');
@@ -31,7 +36,7 @@ describe("Adds Simple Items and Renders Basket correctly", () => {
         cy.get(':nth-child(1) > .items-center > .bg-button-grey > .svg-inline--fa > path').click();
         cy.get(':nth-child(1) > .items-center > .bg-button-grey > .svg-inline--fa > path').click();
         cy.get('.bg-button-grey > .svg-inline--fa').click();
-        cy.get('#mainMenu ').click();
+        cy.get('#mainMenu').click();
     })
 
     it("Adds and merges Complex Items ", () => {
@@ -39,16 +44,24 @@ describe("Adds Simple Items and Renders Basket correctly", () => {
         cy.get(':nth-child(1) > input').check();
         cy.get('#menu-button > .flex').click();
         cy.get('.py-1 > :nth-child(3)').click();
+        cy.wait(200)
         cy.get('.h-14 > .flex > :nth-child(3) > .svg-inline--fa').click();
+        cy.wait(200)
         cy.get('#orderButton > p').click();
+        cy.wait(200)
         cy.get('#section-2 > .px-5 > :nth-child(4) > #dishCard > .flex-2\\/4 > .text-lg').click();
+        cy.wait(200)
         cy.get('.h-14 > .flex > :nth-child(3) > .svg-inline--fa').click();
+        cy.wait(200)
         cy.get('#orderButton > p').click();
+        cy.wait(200)
         cy.get('#section-2 > .px-5 > :nth-child(1) > #dishCard > .flex-2\\/4 > .text-xs').click();
+        cy.wait(200)
         cy.get(':nth-child(4) > .self-start').click();
         cy.get('#menu-button > .flex').click();
         cy.get('.py-1 > :nth-child(3)').click();
         cy.get(':nth-child(1) > input').check();
+        cy.wait(200)
         cy.get('#orderButton > p').click();
         cy.get('#basket').click();
         cy.get('.font-thin').should('have.text', '5 Items');

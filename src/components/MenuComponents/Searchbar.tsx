@@ -41,10 +41,10 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ openMenuItem }: 
 
   const foundDishesMapped = foundDishes.map(dish => (
     <div className='p-5' onClick={() => {
-      openMenuItem(dish, getCategoryFromId(dish.category, menu)!)
+      openMenuItem(dish, getCategoryFromId(dish.categoryId, menu)!)
       setsearchbarOpen(false)
     }}>
-      <DishCard dish={dish} category={menu.categories.find(category => category._id === dish.category)!}></DishCard>
+      <DishCard dish={dish} category={menu.categories.find(category => category._id === dish.categoryId)!}></DishCard>
     </div>
   ))
 

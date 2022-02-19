@@ -1,6 +1,10 @@
 
 import { useAppState } from '../../overmind'
+<<<<<<< HEAD
 import { CategoryButton } from '../UIComponents/CategoryButton'
+=======
+import { IconProp } from '@fortawesome/fontawesome-svg-core'
+>>>>>>> 2139049928ba747176fe341b5bd2b56666213380
 
 type PropTypes = {
     //scrolling Function gets passed through
@@ -11,6 +15,10 @@ type PropTypes = {
 export const Categories: React.FunctionComponent<PropTypes> = ({ scrollToRef }: PropTypes) => {
 
     const { MenuResponseObj } = useAppState().menu
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2139049928ba747176fe341b5bd2b56666213380
 
     return (
         // All Categories

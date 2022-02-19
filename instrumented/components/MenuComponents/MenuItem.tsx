@@ -41,7 +41,6 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
         },
         note: '',
         count: 1,
-        tableid: 0
     }
 
     const orderSchema = yup.object().shape({

@@ -1,4 +1,3 @@
-
 import { Basket, Item, PickedCheckbox, PickedRadio } from "../overmind/basket/state"
 import { Category, Choice, ChoiceType, Dish, MenuEditorResponse } from "../overmind/menu/state"
 
@@ -10,10 +9,9 @@ export const equalArray = <T>(array1: Array<T>, array2: Array<T>) => {
     return array1.length === array2.length && array1.every((value, index) => value === array2[index])
 }
 
-
 export const idToName = (dish: Dish, choice: (PickedRadio | PickedCheckbox), menu: MenuEditorResponse) => {
 
-    const category: Category | undefined = menu.categories.find(category => category._id === dish.category)
+    const category: Category | undefined = menu.categories.find(category => category._id === dish.categoryId)
     const choiceObj: Choice | undefined = category!.choices.find(choiceObj => choiceObj.id === choice.id)
 
 
@@ -39,7 +37,7 @@ export const idToName = (dish: Dish, choice: (PickedRadio | PickedCheckbox), men
 
 export const getDish = (item: Item, menu: MenuEditorResponse) => {
     let dish: Dish = {
-        _id: "", title: "", description: "", labels: [], allergens: [], category: "", price: 0, image: "", isAvailable: false
+        _id: "", title: "", description: "", labelIds: [], allergenIds: [], categoryId: "", price: 0, image: "", isAvailable: false
     }
     menu.categories.forEach(category => {
         const possibleDish = category.dishes.find(dish => dish._id === item.dishId)
@@ -54,7 +52,7 @@ export const getCategoryFromId = (categoryId: string, menu: MenuEditorResponse) 
 
 export const getPrice = (item: Item, menu: MenuEditorResponse) => {
     let dish = getDish(item, menu)
-    let category = getCategoryFromId(dish.category, menu)
+    let category = getCategoryFromId(dish.categoryId, menu)
     let extra: number = 0
     item.pickedChoices.forEach((pChoice) => {
 
@@ -75,8 +73,6 @@ export const getPrice = (item: Item, menu: MenuEditorResponse) => {
         }
 
     })
-
-
     return item.count * (dish.price + extra)
 }
 

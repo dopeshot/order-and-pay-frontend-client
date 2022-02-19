@@ -22,7 +22,7 @@ export const Choices: React.FunctionComponent<PropTypes> = ({ dish, category, dr
     return (
         <>{
             category.choices.map((choice) => (
-                <div className="">
+                <div className="" key={choice.id}>
                     <p className="self-start font-bold pb-3 pt-2">{choice.title}</p>
                     {choice.type === ChoiceType.CHECKBOX && <Checkbox choice={choice} formik={formik}></Checkbox>
                     }

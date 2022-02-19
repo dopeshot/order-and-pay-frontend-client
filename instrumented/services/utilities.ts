@@ -8,6 +8,7 @@ export const priceToLocal = (price: number) => {
 
 export const equalArray = <T>(array1: Array<T>, array2: Array<T>) => {
     return array1.length === array2.length && array1.every((value, index) => value === array2[index])
+<<<<<<< HEAD
 }
 
 
@@ -100,3 +101,6 @@ export const sortChoices = (item: Item) => {
 }
 
 
+=======
+}
+>>>>>>> 2139049928ba747176fe341b5bd2b56666213380

@@ -37,7 +37,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
     const catButtonRefs = useRef<Array<HTMLButtonElement | null>>([])
 
     const scrollToButton = async (index: number) => {
-        // MC: Maybe use refs here? instead of selection via dom
+
         const activeElements = catButtonRefs.current[index]
         const header = scrollCatRef.current
         const scrollSpy = scrollSpyRef.current

@@ -19,7 +19,6 @@ describe("Payment Page", () => {
         cy.get('#payscreen').click();
         cy.get('.text-4xl').should('have.text', 'Zahlmethoden');
         cy.get('.pt-16').should('have.text', 'Per Klick auf \'Jetzt bezahlen!\' werden Sie auf die jeweilige Seite des Anbieters weitergeleitet!');
-        cy.get('#container > :nth-child(4)').should('have.text', 'Im Falle der Barzahlung kommt in Kürze einer unserer Mitarbeiter zu Ihnen.');
         cy.get('#basket').click();
         cy.get('.bg-button-grey > .svg-inline--fa > path').click();
         cy.get('#mainMenu').click();
@@ -54,8 +53,7 @@ describe("Payment Page", () => {
         cy.get('#basket').click();
         cy.get('#payscreen').click();
         cy.get(':nth-child(1) > input').check();
-        cy.get('#payment').click();
-        cy.get('.flex > div > :nth-child(1)').should('have.text', 'Vielen Dank für Ihre Bestellung :)');
+
 
     })
 })
