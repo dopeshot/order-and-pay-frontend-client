@@ -71,8 +71,8 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
     }
 
     const orderSchema = yup.object().shape({
-        count: yup.number().min(1, "Dish count must be greater than 1"),
-        note: yup.string().max(240, "Note cannot be greater than 240")
+        count: yup.number().min(1, "Die Gerichteanzahl muss mindestens 1 sein."),
+        note: yup.string().max(240, "Notiz darf nicht merh als 240 Zeichen enthalten.")
     })
 
     const submitForm = (values: any) => {
@@ -150,7 +150,6 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                                         <button type='button' onClick={() => handler()} className="text-red self-end absolute pr-2 pt-1"><FontAwesomeIcon icon="edit" className="text-red" /></button>
                                         <Field component='textarea' name='note' type='text' className={`h-24 form-control w-full px-3 py-1.5 text-gray-700 bg-clip-padding border border-solid border-gray-300 rounded focus:text-gray-700 focus:border-blue-600 focus:outline-none ${formik.errors.note && formik.touched.note ? 'bg-error-bg border border-error-text focus:border-error-text' : ''}`} id="exampleFormControlTextarea1" rows={3} placeholder="Hier werden Wünsche wahr..." />
                                     </div>
-
                                     <div className="mb-24">
                                         <FormError dataCy="note-input-error" field='note' />
                                     </div>
