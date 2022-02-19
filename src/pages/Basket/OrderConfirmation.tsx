@@ -26,7 +26,7 @@ export const OrderConfirmation: React.FunctionComponent = () => {
                     </div>
                 </div>
             </div>
-            <FooterButton text='Mehr bestellen' method={clearOrder} />
+            <FooterButton id="backToMenu" text='Mehr bestellen' method={clearOrder} />
         </>
     )
 }

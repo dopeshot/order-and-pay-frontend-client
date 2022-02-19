@@ -7,214 +7,345 @@
   "categories": [
     {
       "_id": "61aa702b02fc57c3ee72ff99",
+      "status": "active",
       "title": "Vorspeisen",
-      "description": "Erster Gang.",
+      "description": "Erster Gang",
       "icon": "pizza-slice",
-      "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+      "image": "https://www.toastenstein.com/wp-content/uploads/2019/03/brokkoli_k%C3%A4se_suppe-6-scaled.jpg",
       "choices": [],
-      "menu": "aaaaaaaaaaaaaaaaaaaaaaaa",
+      "menuId": "aaaaaaaaaaaaaaaaaaaaaaaa",
       "dishes": [
         {
-          "labels": [
-            "vegetarian"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            }
           ],
-          "allergies": [
-            "gluten",
-            "laktose"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
+              "title": "Gluten",
+              "icon": "wheat"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            }
           ],
           "_id": "617e6ccfb5661a79fd0d1a3d",
+          "status": "active",
           "title": "Gebackener Mozzarella",
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://www.gutekueche.at/storage/media/recipe/15005/conv/mozzarella-gebacken-default.jpg",
           "isAvailable": true,
           "description": "Mozzarella Käse im Teigmantel",
-          "category": "61aa702b02fc57c3ee72ff99",
+          "categoryId": "61aa702b02fc57c3ee72ff99",
           "price": 650
         },
         {
-          "labels": [
-            "vegetarian",
-            "vegan",
-            "glutenfree"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa2",
+              "title": "Vegan",
+              "icon": "apple"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "glutenfree",
+              "icon": "wheat"
+            }
           ],
-          "allergies": [],
+          "allergenIds": [],
           "_id": "617e6d1f9a489b7b2d430930",
+          "status": "active",
           "title": "Gemüseteller",
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://ais.kochbar.de/kbrezept/290606_213885/1200x1200/gemueseteller-rezept.jpbruschetta",
           "isAvailable": true,
           "description": "Auberginen, Tomaten, Zucchini",
-          "category": "61aa702b02fc57c3ee72ff99",
+          "categoryId": "61aa702b02fc57c3ee72ff99",
           "price": 600
         },
         {
-          "labels": [
-            "vegetarian",
-            "vegan"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa2",
+              "title": "Vegan",
+              "icon": "apple"
+            }
           ],
-          "allergies": [
-            "gluten",
-            "konservierungsstoffe"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
+              "title": "Gluten",
+              "icon": "wheat"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "konservierungsstoffe",
+              "icon": "flask"
+            }
           ],
           "_id": "617e6e2f88da5c7e2cd774f2",
+          "status": "active",
           "title": "Bruschetta",
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://www.daskochrezept.de/sites/daskochrezept.de/files/styles/full_width_tablet_4_3/public/2021-07/bruschetta_mit_mozzarella_1.jpg?h=4521fff0&itok=7IjuoV-8",
           "isAvailable": true,
           "description": "Frisches Baguette mit Tomaten Knoblauch und Olivenöl",
-          "category": "61aa702b02fc57c3ee72ff99",
+          "categoryId": "61aa702b02fc57c3ee72ff99",
           "price": 350
         },
         {
-          "labels": [],
-          "allergies": [
-            "krebstiere"
+          "labelIds": [],
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "krebstiere",
+              "icon": "crab"
+            }
           ],
           "_id": "617e6e7646dd607f0a87a825",
+          "status": "active",
           "title": "Krabbencocktail",
           "description": "Cocktailsauce mit frischen Krabben",
-          "category": "61aa702b02fc57c3ee72ff99",
+          "categoryId": "61aa702b02fc57c3ee72ff99",
           "price": 900,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://images.lecker.de/knackiger-krabben-cocktail-F263501,id=59ff0958,b=lecker,w=440,h=440,cg=c.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            }
           ],
-          "allergies": [
-            "gluten",
-            "konservierungsstoffe"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
+              "title": "Gluten",
+              "icon": "wheat"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "konservierungsstoffe",
+              "icon": "flask"
+            }
           ],
           "_id": "617e6f027cba0580dac835c4",
+          "status": "active",
           "title": "Frühlingsrollen (6Stück)",
           "description": "",
-          "category": "61aa702b02fc57c3ee72ff99",
+          "categoryId": "61aa702b02fc57c3ee72ff99",
           "price": 350,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://static.takeaway.com/images/restaurants/de/QP535P3/products/default_OROPN155P.jpg?timestamp=1643024949",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian",
-            "glutenfree",
-            "vegan"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "glutenfree",
+              "icon": "wheat"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa2",
+              "title": "Vegan",
+              "icon": "apple"
+            }
           ],
-          "allergies": [],
+          "allergenIds": [],
           "_id": "617e7f7cfb32e4981386e0fc",
+          "status": "active",
           "title": "Pommes Frites",
           "description": "",
-          "category": "61aa702b02fc57c3ee72ff99",
+          "categoryId": "61aa702b02fc57c3ee72ff99",
           "price": 300,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://www.edeka-wucherpfennig.de/wp-content/uploads/2017/06/selbstgemachte-pommes.jpg",
           "isAvailable": true
         }
       ]
     },
     {
-      "_id": "Erster Gang.",
+      "_id": "Erster Gang",
+      "status": "active",
       "title": "Salate",
       "description": "Alle Salate werden mit einem Dressing Ihrer Wahl zubereitet.",
       "icon": "pizza-slice",
-      "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+      "image": "https://www.fraenkische-rezepte.de/wp-content/uploads/2020/02/Gemischter-Salat.jpeg-700x525.jpg",
       "choices": [],
-      "menu": "aaaaaaaaaaaaaaaaaaaaaaaa",
+      "menuId": "aaaaaaaaaaaaaaaaaaaaaaaa",
       "dishes": [
         {
-          "labels": [
-            "vegetarian"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            }
           ],
-          "allergies": [
-            "laktose"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            }
           ],
           "_id": "617e801334566d98bebd7e96",
+          "status": "active",
           "title": "Kartoffelsalat",
           "description": "Mit Sahne-Dressing",
-          "category": "61aa70f202fc57c3ee72ff9a",
+          "categoryId": "61aa70f202fc57c3ee72ff9a",
           "price": 500,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://images.lecker.de/,id=393b5f0a,b=lecker,w=610,cg=c.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            }
           ],
-          "allergies": [
-            "laktose"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            }
           ],
           "_id": "61b21cac07daa5dc7eb2b6b5",
+          "status": "active",
           "title": "Gurkensalat",
           "description": "Mit Sahne-Dressing",
-          "category": "61aa70f202fc57c3ee72ff9a",
+          "categoryId": "61aa70f202fc57c3ee72ff9a",
           "price": 300,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://images.lecker.de/,id=5bbe0e8f,b=lecker,w=610,cg=c.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            }
           ],
-          "allergies": [
-            "laktose"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            }
           ],
           "_id": "61b21e4707daa5dc7eb2b6ba",
+          "status": "active",
           "title": "Caprese Salat",
           "description": "mit Mozzarella, Tomaten, Basilikum und Olivenöl",
-          "category": "61aa70f202fc57c3ee72ff9a",
+          "categoryId": "61aa70f202fc57c3ee72ff9a",
           "price": 600,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://image.essen-und-trinken.de/11817278/t/TD/v10/w1440/r1.5/-/capresesalat-69efeee5ef2b05d9b23b9a6813f99820-capresesalat-jpg--18213-.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            }
           ],
-          "allergies": [
-            "laktose"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            }
           ],
           "_id": "61b21fbc07daa5dc7eb2b6cb",
+          "status": "active",
           "title": "Tomatensalat",
           "description": "",
-          "category": "61aa70f202fc57c3ee72ff9a",
+          "categoryId": "61aa70f202fc57c3ee72ff9a",
           "price": 400,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://image.essen-und-trinken.de/11916320/t/JE/v8/w960/r1/-/tomatensalat-dc938dce3256946e0fa3a56c1ed3fcd5-fjt2012081161-jpg--5776-.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            }
           ],
-          "allergies": [
-            "laktose"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            }
           ],
           "_id": "61b2288107daa5dc7eb2b6d0",
-          "title": "Grüner Salat",
+          "status": "active",
+          "title": "Cäsar Salat",
           "description": "",
-          "category": "61aa70f202fc57c3ee72ff9a",
+          "categoryId": "61aa70f202fc57c3ee72ff9a",
           "price": 350,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://images.ichkoche.at/data/image/variations/620x434/2/caesar-salad-rezept-img-18397.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            "fisch"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "fisch",
+              "icon": "fisch"
+            }
           ],
-          "allergies": [
-            "laktose"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            }
           ],
           "_id": "61b2292107daa5dc7eb2b6d5",
+          "status": "active",
           "title": "Nizza Salat",
           "description": "grüner Salat, mit Thunfsich, Zwiebeln,Gurken,Tomaten",
-          "category": "61aa70f202fc57c3ee72ff9a",
+          "categoryId": "61aa70f202fc57c3ee72ff9a",
           "price": 500,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://images.eatsmarter.de/sites/default/files/styles/1600x1200/public/nizza-salat-119695.jpg",
           "isAvailable": true
         }
       ]
     },
     {
       "_id": "61aa71f602fc57c3ee72ff9b",
+      "status": "active",
       "title": "Pizza",
       "description": "Alle Pizzen werden mit Tomatensuce und Käse zubereitet.",
       "icon": "pizza-slice",
-      "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+      "image": "https://www.einfachbacken.de/sites/einfachbacken.de/files/styles/full_width_tablet_4_3/public/2019-02/pizza_margherita.jpg?h=a1e1a043&itok=6sdTIy01",
       "choices": [
         {
           "id": 0,
@@ -257,193 +388,341 @@
           ]
         }
       ],
-      "menu": "aaaaaaaaaaaaaaaaaaaaaaaa",
+      "menuId": "aaaaaaaaaaaaaaaaaaaaaaaa",
       "dishes": [
         {
-          "labels": [
-            "vegetarian"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            }
           ],
-          "allergies": [
-            "laktose",
-            "gluten"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
+              "title": "Gluten",
+              "icon": "wheat"
+            }
           ],
           "_id": "61b229d507daa5dc7eb2b6de",
+          "status": "active",
           "title": "Pizza Margherita",
           "description": "Tomatensauce und Mozzarella",
-          "category": "61aa71f602fc57c3ee72ff9b",
+          "categoryId": "61aa71f602fc57c3ee72ff9b",
           "price": 550,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://www.kuechengoetter.de/uploads/media/300x200/02/4282-pizza-margherita.jpg?v=1-0",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            }
           ],
-          "allergies": [
-            "laktose",
-            "gluten"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
+              "title": "Gluten",
+              "icon": "wheat"
+            }
           ],
           "_id": "61b22a1907daa5dc7eb2b6e5",
+          "status": "active",
           "title": "Pizza Gorgonzola",
           "description": "Tomatensauce, Gorgonzola und Mozzarella",
-          "category": "61aa71f602fc57c3ee72ff9b",
+          "categoryId": "61aa71f602fc57c3ee72ff9b",
           "price": 650,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://suedtirolerfrau.it/wp-content/uploads/2021/01/pizza-gorgonzola.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            ""
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "",
+              "icon": ""
+            }
           ],
-          "allergies": [
-            "laktose",
-            "gluten"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
+              "title": "Gluten",
+              "icon": "wheat"
+            }
           ],
           "_id": "61b22a7407daa5dc7eb2b6e6",
+          "status": "active",
           "title": "Pizza Chickenfleisch",
           "description": "Tomatensauce, Pilzen, Zwiebeln und Curry",
-          "category": "61aa71f602fc57c3ee72ff9b",
+          "categoryId": "61aa71f602fc57c3ee72ff9b",
           "price": 750,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://images.ichkoche.at/data/image/variations/620x434/11/chicken-bbq-pizza-img-106064.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            ""
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "",
+              "icon": ""
+            }
           ],
-          "allergies": [
-            "laktose",
-            "gluten"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
+              "title": "Gluten",
+              "icon": "wheat"
+            }
           ],
           "_id": "61b22aaf07daa5dc7eb2b6e7",
+          "status": "active",
           "title": "Pizza Istanbul",
           "description": "Tomatensauce, türkischer Salami, Zwiebeln und Peperoni",
-          "category": "61aa71f602fc57c3ee72ff9b",
+          "categoryId": "61aa71f602fc57c3ee72ff9b",
           "price": 750,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://www.ab-in-den-urlaub.de/magazin/wp-content/uploads/2020/02/1582547228_Istanbul-T%C3%BCrkei.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            ""
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "",
+              "icon": ""
+            }
           ],
-          "allergies": [
-            "laktose",
-            "gluten"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
+              "title": "Gluten",
+              "icon": "wheat"
+            }
           ],
           "_id": "61b22ad007daa5dc7eb2b6e8",
+          "status": "active",
           "title": "Pizza Mafiosi",
           "description": "Tomatensauce, Parmaschinken un Rucola",
-          "category": "61aa71f602fc57c3ee72ff9b",
+          "categoryId": "61aa71f602fc57c3ee72ff9b",
           "price": 750,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://media-cdn.tripadvisor.com/media/photo-s/11/02/5d/c7/photo0jpg.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            ""
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "",
+              "icon": ""
+            }
           ],
-          "allergies": [
-            "laktose",
-            "gluten"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
+              "title": "Gluten",
+              "icon": "wheat"
+            }
           ],
           "_id": "61b22b1007daa5dc7eb2b6e9",
+          "status": "active",
           "title": "Pizza Speziale",
           "description": "Tomatensauce, Vorderschinken, Pilzen und Hackfleischklößen ",
-          "category": "61aa71f602fc57c3ee72ff9b",
+          "categoryId": "61aa71f602fc57c3ee72ff9b",
           "price": 750,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://media.kaufland.com/images/PPIM/AP_Content_1010/std.lang.all/58/71/Asset_1805871.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            }
           ],
-          "allergies": [
-            "laktose",
-            "gluten"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
+              "title": "Gluten",
+              "icon": "wheat"
+            }
           ],
           "_id": "61b22b5d07daa5dc7eb2b6ea",
+          "status": "active",
           "title": "Pizza Inferno",
           "description": "Tomatensauce, Paprika, Kapern, Peperoni und Silberzwiebeln ",
-          "category": "61aa71f602fc57c3ee72ff9b",
+          "categoryId": "61aa71f602fc57c3ee72ff9b",
           "price": 750,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://media-cdn.tripadvisor.com/media/photo-s/13/d9/e5/6b/fresh-good-quality-topping.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            }
           ],
-          "allergies": [
-            "laktose",
-            "gluten"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
+              "title": "Gluten",
+              "icon": "wheat"
+            }
           ],
           "_id": "61b22b8907daa5dc7eb2b6eb",
+          "status": "active",
           "title": "Pizza Vegetaria",
           "description": "Tomatensauce, Artischocken, Pilzen, Broccoli und Zwiebeln ",
-          "category": "61aa71f602fc57c3ee72ff9b",
+          "categoryId": "61aa71f602fc57c3ee72ff9b",
           "price": 750,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://d3a76jc0ho84i8.cloudfront.net/static/desktop/products/pizza-vegetaria.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            ""
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "",
+              "icon": ""
+            }
           ],
-          "allergies": [
-            "laktose",
-            "gluten"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
+              "title": "Gluten",
+              "icon": "wheat"
+            }
           ],
           "_id": "61b22bb307daa5dc7eb2b6ec",
+          "status": "active",
           "title": "Pizza Diavolo",
           "description": "Tomatensauce, Speck, scharfer Peperoni und Oliven",
-          "category": "61aa71f602fc57c3ee72ff9b",
+          "categoryId": "61aa71f602fc57c3ee72ff9b",
           "price": 750,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/36DFE80A-776A-49F7-B4BB-273C0A702BEE/Derivates/b6c3bc06-581e-4da9-a38f-8b6d47d62891.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            ""
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "",
+              "icon": ""
+            }
           ],
-          "allergies": [
-            "laktose",
-            "gluten",
-            "krebstiere"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
+              "title": "Gluten",
+              "icon": "wheat"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "krebstiere",
+              "icon": "crab"
+            }
           ],
           "_id": "61b22bf607daa5dc7eb2b6ed",
+          "status": "active",
           "title": "Pizza Meeresfrüchten",
           "description": "Tomatensauce und Meeresfrüchte ",
-          "category": "61aa71f602fc57c3ee72ff9b",
+          "categoryId": "61aa71f602fc57c3ee72ff9b",
           "price": 750,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://images.eatsmarter.de/sites/default/files/styles/576x432/public/pizza-mit-meeresfruechten-284021.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            ""
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "",
+              "icon": ""
+            }
           ],
-          "allergies": [
-            "laktose",
-            "gluten"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
+              "title": "Gluten",
+              "icon": "wheat"
+            }
           ],
           "_id": "61b22c9e07daa5dc7eb2b6ee",
+          "status": "active",
           "title": "Pizza Ankara",
           "description": "Tomatensauce und Sucuk, Schafskäse und Peperoni ",
-          "category": "61aa71f602fc57c3ee72ff9b",
+          "categoryId": "61aa71f602fc57c3ee72ff9b",
           "price": 750,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://www.ankararestoranlari.com/timthumb.php?src=https://www.ankararestoranlari.com/data/blog/1288/1288_1.jpg&w=523",
           "isAvailable": true
         }
       ]
     },
     {
       "_id": "61aa720902fc57c3ee72ff9c",
+      "status": "active",
       "title": "Calzone",
       "description": "Alle Calzonen werden mit Tomatensauce und Käse zubereitet.",
       "icon": "pizza-slice",
-      "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+      "image": "https://www.kuechengoetter.de/uploads/media/1800x1200/07/123687-calzone-mit-schinken-und-champignons-0.jpg?v=1-18",
       "choices": [
         {
           "id": 0,
@@ -481,102 +760,142 @@
           ]
         }
       ],
-      "menu": "aaaaaaaaaaaaaaaaaaaaaaaa",
+      "menuId": "aaaaaaaaaaaaaaaaaaaaaaaa",
       "dishes": [
         {
-          "labels": [
-            "vegetarian"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            }
           ],
-          "allergies": [
-            "laktose",
-            "gluten"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
+              "title": "Gluten",
+              "icon": "wheat"
+            }
           ],
           "_id": "61b22f7d07daa5dc7eb2b727",
+          "status": "active",
           "title": "Calzone (vegetarisch)",
           "description": "gefüllt mit Pilzen, Artischocken, Paprika und Tomatensauce ",
-          "category": "61aa720902fc57c3ee72ff9c",
+          "categoryId": "61aa720902fc57c3ee72ff9c",
           "price": 600,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://www.kuechengoetter.de/uploads/media/960x960/05/49935-calzone-mit-waldpilzen.jpg?v=2-18",
           "isAvailable": true
         },
         {
-          "labels": [
-            ""
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "",
+              "icon": ""
+            }
           ],
-          "allergies": [
-            "laktose",
-            "gluten"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
+              "title": "Gluten",
+              "icon": "wheat"
+            }
           ],
           "_id": "61b22fa307daa5dc7eb2b728",
+          "status": "active",
           "title": "Calzone mit Bolognese",
           "description": "gefüllt mit Bolognese",
-          "category": "61aa720902fc57c3ee72ff9c",
+          "categoryId": "61aa720902fc57c3ee72ff9c",
           "price": 700,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYj8WsjKq-tkBk2fpggqCtjyGS2yYtte7KEw&usqp=CAU",
           "isAvailable": true
         },
         {
-          "labels": [
-            ""
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "",
+              "icon": ""
+            }
           ],
-          "allergies": [
-            "laktose",
-            "gluten"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
+              "title": "Gluten",
+              "icon": "wheat"
+            }
           ],
           "_id": "61b22fb907daa5dc7eb2b729",
+          "status": "active",
           "title": "Calzone mit Tomatensauce",
           "description": "gefüllt mit Vorderschinken und Pilzen",
-          "category": "61aa720902fc57c3ee72ff9c",
+          "categoryId": "61aa720902fc57c3ee72ff9c",
           "price": 700,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "http://pizzaorder.pizzeria-piccobello-eppelheim.de/wp-content/uploads/2020/09/1600x900_pizza-calzone.jpg",
           "isAvailable": true
         }
       ]
     },
     {
       "_id": "61aa722602fc57c3ee72ff9d",
+      "status": "active",
       "title": "Pizzabrot",
       "description": "Selbstgemachter Pizzateig feinster Qualität.",
       "icon": "pizza-slice",
-      "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+      "image": "https://ais.kochbar.de/kbrezept/533085_986370/1500x1500/pizzabrot-mit-knoblauch-rezept-bild-nr-2.jpg",
       "choices": [
         {
           "id": 0,
-          "title": "size",
+          "title": "Knoblauchgehalt",
           "type": "radio",
           "default": 1,
           "options": [
             {
               "id": 0,
-              "name": "BIG",
+              "name": "Wenig",
               "price": -200
             },
             {
               "id": 1,
-              "name": "MASSIVE",
+              "name": "Normal",
               "price": 0
             }
           ]
         },
         {
           "id": 5,
-          "title": "nien",
+          "title": "Größe",
           "type": "radio",
           "default": 0,
           "options": [
             {
               "id": 0,
-              "name": "small",
+              "name": "Klein",
               "price": -200
             },
             {
               "id": 1,
-              "name": "normal",
+              "name": "Normal",
               "price": 0
             },
             {
               "id": 3,
-              "name": "unnormal groß",
+              "name": "Groß",
               "price": 0
             }
           ]
@@ -588,1137 +907,1157 @@
           "options": [
             {
               "id": 0,
-              "name": "salami",
+              "name": "Salami",
               "price": 100
             },
             {
               "id": 1,
-              "name": "poop",
+              "name": "Schinken",
               "price": 999
             }
           ]
         }
       ],
-      "menu": "aaaaaaaaaaaaaaaaaaaaaaaa",
+      "menuId": "aaaaaaaaaaaaaaaaaaaaaaaa",
       "dishes": [
         {
-          "labels": [
-            "vegetarian",
-            "vegan"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa2",
+              "title": "Vegan",
+              "icon": "apple"
+            }
           ],
-          "allergies": [
-            "gluten"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
+              "title": "Gluten",
+              "icon": "wheat"
+            }
           ],
           "_id": "61b231bd07daa5dc7eb2b762",
+          "status": "active",
           "title": "Pizzabrot mit Knoblauch",
           "description": "",
-          "category": "61aa722602fc57c3ee72ff9d",
+          "categoryId": "61aa722602fc57c3ee72ff9d",
           "price": 250,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://ais.kochbar.de/kbrezept/353920_1010193/1200x1200/pizzabrot-wie-beim-italiener-rezept-bild-nr-2.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian",
-            "vegan"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa2",
+              "title": "Vegan",
+              "icon": "apple"
+            }
           ],
-          "allergies": [
-            "gluten"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
+              "title": "Gluten",
+              "icon": "wheat"
+            }
           ],
           "_id": "61b231e007daa5dc7eb2b763",
+          "status": "active",
           "title": "Pizzabrot mit Olivenöl",
           "description": "",
-          "category": "61aa722602fc57c3ee72ff9d",
+          "categoryId": "61aa722602fc57c3ee72ff9d",
           "price": 250,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-          "isAvailable": true
-        }
-      ]
-    },
-    {
-      "_id": "61b20e3f07daa5dc7eb2b64f",
-      "title": "Pasta",
-      "description": "Alle Gerichte werden mit einer Nudelsorte Ihrer Wahl zubereitet.",
-      "icon": "pizza-slice",
-      "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-      "choices": [
-        {
-          "id": 0,
-          "title": "size",
-          "type": "radio",
-          "default": 1,
-          "options": [
-            {
-              "id": 0,
-              "name": "small",
-              "price": -200
-            },
-            {
-              "id": 1,
-              "name": "normal",
-              "price": 0
-            }
-          ]
-        },
-        {
-          "id": 1,
-          "title": "toppings",
-          "type": "checkbox",
-          "options": [
-            {
-              "id": 0,
-              "name": "salami",
-              "price": 100
-            },
-            {
-              "id": 1,
-              "name": "poop",
-              "price": 999
-            }
-          ]
-        }
-      ],
-      "menu": "aaaaaaaaaaaaaaaaaaaaaaaa",
-      "dishes": [
-        {
-          "labels": [
-            ""
-          ],
-          "allergies": [
-            "laktose",
-            "gluten"
-          ],
-          "_id": "61b233c207daa5dc7eb2b776",
-          "title": "Pasta Lachs",
-          "description": "mit Tomaten-Sahnesauce ",
-          "category": "61b20e3f07daa5dc7eb2b64f",
-          "price": 750,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-          "isAvailable": true
-        },
-        {
-          "labels": [
-            "fisch"
-          ],
-          "allergies": [
-            "laktose",
-            "gluten"
-          ],
-          "_id": "61b233e607daa5dc7eb2b777",
-          "title": "Pasta Thunfisch",
-          "description": "mit Tomatensauce ",
-          "category": "61b20e3f07daa5dc7eb2b64f",
-          "price": 700,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-          "isAvailable": true
-        },
-        {
-          "labels": [
-            ""
-          ],
-          "allergies": [
-            "laktose",
-            "gluten",
-            "krebstiere"
-          ],
-          "_id": "61b2341607daa5dc7eb2b778",
-          "title": "Pasta alla Giovanni",
-          "description": "mit Tomatensauce, Sahne, Shrimps und Spargel ",
-          "category": "61b20e3f07daa5dc7eb2b64f",
-          "price": 700,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-          "isAvailable": true
-        },
-        {
-          "labels": [
-            "vegetarian",
-            "vegan"
-          ],
-          "allergies": [
-            "laktose",
-            "gluten"
-          ],
-          "_id": "61b2346407daa5dc7eb2b779",
-          "title": "Pasta Broccoli",
-          "description": "mit Tomatensauce und Broccoli ",
-          "category": "61b20e3f07daa5dc7eb2b64f",
-          "price": 650,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-          "isAvailable": true
-        },
-        {
-          "labels": [],
-          "allergies": [
-            "laktose",
-            "gluten"
-          ],
-          "_id": "61b2349807daa5dc7eb2b77a",
-          "title": "Pasta Arrabbiata (scharf)",
-          "description": "mit Speck und Zwiebeln ",
-          "category": "61b20e3f07daa5dc7eb2b64f",
-          "price": 650,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-          "isAvailable": true
-        },
-        {
-          "labels": [],
-          "allergies": [
-            "laktose",
-            "gluten",
-            "krebstiere"
-          ],
-          "_id": "61b2359507daa5dc7eb2b77b",
-          "title": "Pasta Meeresfrüchten",
-          "description": "mit Meeresfrüchten und Tomatensauce",
-          "category": "61b20e3f07daa5dc7eb2b64f",
-          "price": 750,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-          "isAvailable": true
-        },
-        {
-          "labels": [],
-          "allergies": [
-            "laktose",
-            "gluten",
-            "krebstiere"
-          ],
-          "_id": "61b2361f07daa5dc7eb2b77c",
-          "title": "Pasta Vongole",
-          "description": "mit Tomatensauce und Muscheln",
-          "category": "61b20e3f07daa5dc7eb2b64f",
-          "price": 800,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-          "isAvailable": true
-        },
-        {
-          "labels": [],
-          "allergies": [
-            "laktose",
-            "gluten"
-          ],
-          "_id": "61b2397407daa5dc7eb2b77d",
-          "title": "Pasta Carbonara",
-          "description": "mit Vorderschinken, Ei und Sahnesauce",
-          "category": "61b20e3f07daa5dc7eb2b64f",
-          "price": 650,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-          "isAvailable": true
-        },
-        {
-          "labels": [],
-          "allergies": [
-            "laktose",
-            "gluten"
-          ],
-          "_id": "61b2399107daa5dc7eb2b77e",
-          "title": "Pasta Bolognese",
-          "description": "mit Hackfleischsauce",
-          "category": "61b20e3f07daa5dc7eb2b64f",
-          "price": 650,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-          "isAvailable": true
-        },
-        {
-          "labels": [
-            "vegetarian"
-          ],
-          "allergies": [
-            "laktose",
-            "gluten"
-          ],
-          "_id": "61b23a5007daa5dc7eb2b77f",
-          "title": "Pasta Tutti Gusti",
-          "description": "mit Erbsen, Karotten, Erbsen, Pilzen, Paprika und Sahne",
-          "category": "61b20e3f07daa5dc7eb2b64f",
-          "price": 650,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-          "isAvailable": true
-        }
-      ]
-    },
-    {
-      "_id": "61b20e6b07daa5dc7eb2b650",
-      "title": "Pasta al Forno",
-      "description": "Alle Gerichte werden mit Käse überbacken.",
-      "icon": "pizza-slice",
-      "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-      "choices": [
-        {
-          "id": 0,
-          "title": "size",
-          "type": "radio",
-          "default": 1,
-          "options": [
-            {
-              "id": 0,
-              "name": "small",
-              "price": -200
-            },
-            {
-              "id": 1,
-              "name": "normal",
-              "price": 0
-            }
-          ]
-        },
-        {
-          "id": 1,
-          "title": "toppings",
-          "type": "checkbox",
-          "options": [
-            {
-              "id": 0,
-              "name": "salami",
-              "price": 100
-            },
-            {
-              "id": 1,
-              "name": "poop",
-              "price": 999
-            }
-          ]
-        }
-      ],
-      "menu": "aaaaaaaaaaaaaaaaaaaaaaaa",
-      "dishes": [
-        {
-          "labels": [],
-          "allergies": [
-            "laktose",
-            "gluten"
-          ],
-          "_id": "61b23e5507daa5dc7eb2b795",
-          "title": "Hausgemachte Lasagne",
-          "description": "mit Hackfleischsauce",
-          "category": "61b20e6b07daa5dc7eb2b650",
-          "price": 750,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-          "isAvailable": true
-        },
-        {
-          "labels": [
-            "vegetarian"
-          ],
-          "allergies": [
-            "laktose",
-            "gluten"
-          ],
-          "_id": "61b23ec907daa5dc7eb2b796",
-          "title": "Hausgemachte Lasagne (vegetarisch)",
-          "description": "mit Napoli, frischen Pilzen ",
-          "category": "61b20e6b07daa5dc7eb2b650",
-          "price": 750,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-          "isAvailable": true
-        },
-        {
-          "labels": [
-            "vegetarian"
-          ],
-          "allergies": [
-            "laktose",
-            "gluten"
-          ],
-          "_id": "61b23f1907daa5dc7eb2b797",
-          "title": "Rigatoni (vegetarisch)",
-          "description": "mit Napoli, frischen Pilzenm frischer Paprika und Erbsen",
-          "category": "61b20e6b07daa5dc7eb2b650",
-          "price": 700,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-          "isAvailable": true
-        },
-        {
-          "labels": [
-            "vegetarian"
-          ],
-          "allergies": [
-            "laktose",
-            "gluten"
-          ],
-          "_id": "61b23f8907daa5dc7eb2b798",
-          "title": "Cannelloni",
-          "description": "mit Tomatensauce und Käseüberbacken",
-          "category": "61b20e6b07daa5dc7eb2b650",
-          "price": 700,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-          "isAvailable": true
-        },
-        {
-          "labels": [],
-          "allergies": [
-            "laktose",
-            "gluten"
-          ],
-          "_id": "61b23fd407daa5dc7eb2b799",
-          "title": "Rigatoni al Forno Napoli",
-          "description": "mit Schinken",
-          "category": "61b20e6b07daa5dc7eb2b650",
-          "price": 700,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-          "isAvailable": true
-        },
-        {
-          "labels": [
-            "vegetarian"
-          ],
-          "allergies": [
-            "laktose",
-            "gluten"
-          ],
-          "_id": "61b2402207daa5dc7eb2b79a",
-          "title": "Gnocchi della Casa Napoli",
-          "description": "mit Mozzarella",
-          "category": "61b20e6b07daa5dc7eb2b650",
-          "price": 700,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-          "isAvailable": true
-        },
-        {
-          "labels": [],
-          "allergies": [
-            "laktose",
-            "gluten"
-          ],
-          "_id": "61b2404007daa5dc7eb2b79b",
-          "title": "Tortellini al Forno",
-          "description": "mit Bolognese und Schinken",
-          "category": "61b20e6b07daa5dc7eb2b650",
-          "price": 700,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://www.heimgourmet.com/media/0242_crop.jpg/rh/pizzabrot.jpg",
           "isAvailable": true
         }
       ]
     },
     {
       "_id": "61b20eaf07daa5dc7eb2b651",
-      "title": "Kartoffelaufläufe",
-      "description": "Alle Kartoffelaufläufe werden mit Käse überbacken.",
-      "icon": "pizza-slice",
-      "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+      "status": "active",
+      "title": "Team",
+      "description": "Alle hot und zum anbeißen lecker",
+      "icon": "heart",
+      "image": "https://media.discordapp.net/attachments/895305475791401010/936288855752048660/4f9a7b14-e286-4b06-a4d4-9a6aeae39906.jpg?width=679&height=905",
       "choices": [
         {
           "id": 0,
-          "title": "size",
+          "title": "Größe",
           "type": "radio",
           "default": 1,
           "options": [
             {
               "id": 0,
-              "name": "small",
-              "price": -200
+              "name": "Klein",
+              "price": -100
             },
             {
               "id": 1,
-              "name": "normal",
+              "name": "Mittel",
               "price": 0
+            },
+            {
+              "id": 2,
+              "name": "Groß",
+              "price": 400
             }
           ]
         },
         {
           "id": 1,
-          "title": "toppings",
+          "title": "Profession",
           "type": "checkbox",
           "options": [
             {
               "id": 0,
-              "name": "salami",
+              "name": "Backend",
               "price": 100
             },
             {
               "id": 1,
-              "name": "poop",
-              "price": 999
+              "name": "Frontend",
+              "price": 900
+            },
+            {
+              "id": 2,
+              "name": "Full-Stack",
+              "price": 900
             }
           ]
         }
       ],
-      "menu": "aaaaaaaaaaaaaaaaaaaaaaaa",
+      "menuId": "aaaaaaaaaaaaaaaaaaaaaaaa",
       "dishes": [
         {
-          "labels": [
-            "vegetarian"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            }
           ],
-          "allergies": [
-            "laktose"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            }
           ],
           "_id": "61b2423307daa5dc7eb2b7a6",
-          "title": "Kartoffelauflauf mit Broccoli",
-          "description": "mit Sahnesauce und Käse überbacken",
-          "category": "61b20eaf07daa5dc7eb2b651",
-          "price": 750,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "status": "active",
+          "title": "Korbinian Kuhn",
+          "description": "Betreuer",
+          "categoryId": "61b20eaf07daa5dc7eb2b651",
+          "price": 950,
+          "image": "https://gitlab.mi.hdm-stuttgart.de/uploads/-/system/user/avatar/1790/avatar.png",
           "isAvailable": true
         },
         {
-          "labels": [],
-          "allergies": [
-            "laktose"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            }
+          ],
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            }
+          ],
+          "_id": "61b2423307daa5dc7eb2b7a6d",
+          "status": "active",
+          "title": "Michael Cabanis",
+          "description": "Full-Stack und hot",
+          "categoryId": "61b20eaf07daa5dc7eb2b651",
+          "price": 750,
+          "image": "https://media.discordapp.net/attachments/931896346288468028/944360735511830548/unknown.png",
+          "isAvailable": true
+        },
+        {
+          "labelIds": [],
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            }
           ],
           "_id": "61b2425b07daa5dc7eb2b7a7",
-          "title": "Kartoffelauflauf mit Vorderschinken",
-          "description": "mit Sahnesauce, Pilzen und Käse überbacken",
-          "category": "61b20eaf07daa5dc7eb2b651",
+          "status": "active",
+          "title": "Max Herkenhoff",
+          "description": "Vollblut Backendler und hot",
+          "categoryId": "61b20eaf07daa5dc7eb2b651",
           "price": 750,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://media.discordapp.net/attachments/931896346288468028/944360826792472606/unknown.png",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            }
           ],
-          "allergies": [
-            "laktose"
-          ],
-          "_id": "61b242a207daa5dc7eb2b7a8",
-          "title": "Kartoffelauflauf mit Pilzen",
-          "description": "mit Sahnesauce, Pilzen, Erbsen, Karotten und Käse überbacken",
-          "category": "61b20eaf07daa5dc7eb2b651",
-          "price": 750,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-          "isAvailable": true
-        },
-        {
-          "labels": [
-            "vegetarian"
-          ],
-          "allergies": [
-            "laktose"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            }
           ],
           "_id": "61b242c807daa5dc7eb2b7a9",
-          "title": "Kartoffelauflauf mit Gorgonzola",
-          "description": "mit Sahnesauce, Spinat und Käse überbacken",
-          "category": "61b20eaf07daa5dc7eb2b651",
+          "status": "active",
+          "title": "Joy-Jasmin Springer (Zoe)",
+          "description": "Frontend-Girl, Designerin und besitzt einen Septum",
+          "categoryId": "61b20eaf07daa5dc7eb2b651",
+          "price": 900,
+          "image": "https://media.discordapp.net/attachments/931896346288468028/944361131940651078/unknown.png",
+          "isAvailable": true
+        },
+        {
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            }
+          ],
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            }
+          ],
+          "_id": "61b242a207daa5dc7eb2b7a8",
+          "status": "active",
+          "title": "Ben  Häußermann",
+          "description": "Frontend-Girl und hot",
+          "categoryId": "61b20eaf07daa5dc7eb2b651",
+          "price": 750,
+          "image": "https://media.discordapp.net/attachments/717110491373371422/936290673307553922/46d58dc0-3525-44ef-ac6d-d4c384bd5ea6.jpg",
+          "isAvailable": true
+        },
+        {
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            }
+          ],
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            }
+          ],
+          "_id": "61b242a207daa5dc7eb2b7a8a",
+          "status": "active",
+          "title": "Maximilian Dolbaum",
+          "description": "Glücklicher Backendler und Testschreiber zieht den Durchschnitt NICHT runter ",
+          "categoryId": "61b20eaf07daa5dc7eb2b651",
           "price": 800,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://cdn.discordapp.com/attachments/717110491373371422/936292553467236362/46d58dc0-3525-44ef-ac6d-d4c384bd5ea6.jpg",
+          "isAvailable": true
+        },
+        {
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            }
+          ],
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            }
+          ],
+          "_id": "61b242a207daa5dc7eb2b7a8li",
+          "status": "active",
+          "title": "Lea Dannecker",
+          "description": "Frontend-Girl und hot außerdem größer als Man(n) denkt!",
+          "categoryId": "61b20eaf07daa5dc7eb2b651",
+          "price": 800,
+          "image": "https://media.discordapp.net/attachments/931896346288468028/944360921592135750/unknown.png",
+          "isAvailable": true
+        },
+        {
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            }
+          ],
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            }
+          ],
+          "_id": "61b242a207daa5dc7eb2b7a8po",
+          "status": "active",
+          "title": "Sarah Mauff",
+          "description": "Frontend-Girl und hot",
+          "categoryId": "61b20eaf07daa5dc7eb2b651",
+          "price": 800,
+          "image": "https://media.discordapp.net/attachments/931896346288468028/944361765213470760/unknown.png",
           "isAvailable": true
         }
       ]
     },
     {
       "_id": "61b20edf07daa5dc7eb2b652",
+      "status": "active",
       "title": "Chinesische Gerichte",
       "description": "Alle Gerichte werden mit Reis serviert.",
-      "icon": "pizza-slice",
-      "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+      "icon": "drumstick-bite",
+      "image": "https://static.takeaway.com/images/generic/categories/1_asian/asia_gerichte.png?timestamp=1638630215",
       "choices": [
         {
           "id": 0,
-          "title": "size",
+          "title": "Größe",
           "type": "radio",
           "default": 1,
           "options": [
             {
               "id": 0,
-              "name": "small",
+              "name": "Klein",
               "price": -200
             },
             {
               "id": 1,
-              "name": "normal",
+              "name": "Nomal",
               "price": 0
+            },
+            {
+              "id": 2,
+              "name": "Groß",
+              "price": 200
             }
           ]
         },
         {
           "id": 1,
-          "title": "toppings",
+          "title": "Beläge",
           "type": "checkbox",
           "options": [
             {
               "id": 0,
-              "name": "salami",
+              "name": "Pilze",
               "price": 100
             },
             {
               "id": 1,
-              "name": "poop",
-              "price": 999
+              "name": "Wasabi",
+              "price": 100
+            },
+            {
+              "id": 2,
+              "name": "Süs-Sauer Soße",
+              "price": 100
+            },
+            {
+              "id": 3,
+              "name": "Extra Reis",
+              "price": 100
             }
           ]
         }
       ],
-      "menu": "aaaaaaaaaaaaaaaaaaaaaaaa",
+      "menuId": "aaaaaaaaaaaaaaaaaaaaaaaa",
       "dishes": [
         {
-          "labels": [
-            "vegetarian"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            }
           ],
-          "allergies": [
-            "sojabeans"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Sojabohnen",
+              "icon": "soybean"
+            }
           ],
           "_id": "61b2438807daa5dc7eb2b7b0",
+          "status": "active",
           "title": "Gebratener Eierreis",
           "description": "mit verschiedenem Gemüse",
-          "category": "61b20edf07daa5dc7eb2b652",
+          "categoryId": "61b20edf07daa5dc7eb2b652",
           "price": 800,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoLDMW3UkQUvlNtdLYvO3I36B2FQx_wznvNA&usqp=CAU",
           "isAvailable": true
         },
         {
-          "labels": [],
-          "allergies": [
-            "sojabeans"
+          "labelIds": [],
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Sojabohnen",
+              "icon": "soybean"
+            }
           ],
           "_id": "61b243b807daa5dc7eb2b7b1",
+          "status": "active",
           "title": "Gebratener Eierreis mit Hühnerfleisch und Gemüse",
           "description": "mit verschiedenem Gemüsecund Hühnerfleisch",
-          "category": "61b20edf07daa5dc7eb2b652",
+          "categoryId": "61b20edf07daa5dc7eb2b652",
           "price": 850,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://img.chefkoch-cdn.de/rezepte/3716051562425483/bilder/1436708/crop-960x540/gebratener-reis-mit-huehnerbrust-ei-und-gemuese.jpg",
           "isAvailable": true
         },
         {
-          "labels": [],
-          "allergies": [
-            "sojabeans"
+          "labelIds": [],
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Sojabohnen",
+              "icon": "soybean"
+            }
           ],
           "_id": "61b243e907daa5dc7eb2b7b2",
+          "status": "active",
           "title": "Gebackenes Hühnerfleisch",
           "description": "smitüß-sauer mit Ananas",
-          "category": "61b20edf07daa5dc7eb2b652",
+          "categoryId": "61b20edf07daa5dc7eb2b652",
           "price": 1000,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://media-cdn.tripadvisor.com/media/photo-s/0a/82/83/7c/gebackenes-hahnchen.jpg",
           "isAvailable": true
         },
         {
-          "labels": [],
-          "allergies": [
-            "sojabeans",
-            "egg"
+          "labelIds": [],
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Sojabohnen",
+              "icon": "soybean"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Ei",
+              "icon": "egg"
+            }
           ],
           "_id": "61b2441707daa5dc7eb2b7b3",
+          "status": "active",
           "title": "Gebratene Nudeln",
           "description": "mit Hühnerfleisch und Ei",
-          "category": "61b20edf07daa5dc7eb2b652",
+          "categoryId": "61b20edf07daa5dc7eb2b652",
           "price": 800,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://www.gutekueche.ch/upload/rezept/292/gebratene-nudeln-mit-schweinefleisch.jpg",
           "isAvailable": true
         },
         {
-          "labels": [],
-          "allergies": [
-            "sojabeans"
+          "labelIds": [],
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Sojabohnen",
+              "icon": "soybean"
+            }
           ],
           "_id": "61b2447007daa5dc7eb2b7b4",
+          "status": "active",
           "title": "1/2 Hong Kong Ente",
           "description": "mit gebratenem Gemüse und Sojabohnen",
-          "category": "61b20edf07daa5dc7eb2b652",
+          "categoryId": "61b20edf07daa5dc7eb2b652",
           "price": 1100,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://i.ytimg.com/vi/vW3CNqzJFUE/hqdefault.jpg",
           "isAvailable": true
         },
         {
-          "labels": [],
-          "allergies": [
-            "sojabeans"
+          "labelIds": [],
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Sojabohnen",
+              "icon": "soybean"
+            }
           ],
           "_id": "61b2450807daa5dc7eb2b7b6",
+          "status": "active",
           "title": "1/2 Ente mit Gemüse",
           "description": "in Chop-Suey-Sauce",
-          "category": "61b20edf07daa5dc7eb2b652",
+          "categoryId": "61b20edf07daa5dc7eb2b652",
           "price": 1100,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://i.ytimg.com/vi/vW3CNqzJFUE/hqdefault.jpg",
           "isAvailable": true
         }
       ]
     },
     {
       "_id": "61b20f8b07daa5dc7eb2b653",
+      "status": "active",
       "title": "Dessert",
       "description": "Traditionelle italienische Desserts.",
-      "icon": "pizza-slice",
-      "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-      "choices": [
-        {
-          "id": 0,
-          "title": "size",
-          "type": "radio",
-          "default": 1,
-          "options": [
-            {
-              "id": 0,
-              "name": "small",
-              "price": -200
-            },
-            {
-              "id": 1,
-              "name": "normal",
-              "price": 0
-            }
-          ]
-        },
-        {
-          "id": 1,
-          "title": "toppings",
-          "type": "checkbox",
-          "options": [
-            {
-              "id": 0,
-              "name": "salami",
-              "price": 100
-            },
-            {
-              "id": 1,
-              "name": "poop",
-              "price": 999
-            }
-          ]
-        }
-      ],
-      "menu": "aaaaaaaaaaaaaaaaaaaaaaaa",
+      "icon": "cookie",
+      "image": "https://i.ytimg.com/vi/vW3CNqzJFUE/hqdefault.jpg",
+      "choices": [],
+      "menuId": "aaaaaaaaaaaaaaaaaaaaaaaa",
       "dishes": [
         {
-          "labels": [
-            "vegetarian"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            }
           ],
-          "allergies": [
-            "caffeine",
-            "egg",
-            "laktose"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Koffein",
+              "icon": "coffebean"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Ei",
+              "icon": "egg"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            }
           ],
           "_id": "61b34d0007daa5dc7eb2b7c9",
+          "status": "active",
           "title": "Hausgemachtes Tiramisu",
           "description": "",
-          "category": "61b20f8b07daa5dc7eb2b653",
+          "categoryId": "61b20f8b07daa5dc7eb2b653",
           "price": 400,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://pbs.twimg.com/profile_images/709675421126815744/X75RiK8__400x400.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            }
           ],
-          "allergies": [
-            "caffeine",
-            "laktose"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Koffein",
+              "icon": "coffebean"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            }
           ],
           "_id": "61b34d2807daa5dc7eb2b7ca",
+          "status": "active",
           "title": "Tiramisu Eis",
           "description": "",
-          "category": "61b20f8b07daa5dc7eb2b653",
+          "categoryId": "61b20f8b07daa5dc7eb2b653",
           "price": 350,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://www.galbani.de/wp-content/uploads/Tiramisu-Eis2.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            }
           ],
-          "allergies": [
-            "laktose"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            }
           ],
           "_id": "61b34d9907daa5dc7eb2b7cf",
+          "status": "active",
           "title": "Weißes Tartufo",
           "description": "Italienische Eisspezialität",
-          "category": "61b20f8b07daa5dc7eb2b653",
+          "categoryId": "61b20f8b07daa5dc7eb2b653",
           "price": 350,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://gelomare.it/218-large_default/tartufo-cuor-di-caffe-carte-d-or.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            }
           ],
-          "allergies": [
-            "laktose"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            }
           ],
           "_id": "61b34da807daa5dc7eb2b7d0",
+          "status": "active",
           "title": "Braunes Tartufo",
           "description": "Italienische Eisspezialität",
-          "category": "61b20f8b07daa5dc7eb2b653",
+          "categoryId": "61b20f8b07daa5dc7eb2b653",
           "price": 350,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://gelomare.it/217-large_default/tartufo-classico-carte-d-or.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            }
           ],
-          "allergies": [
-            "laktose"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Laktose",
+              "icon": "milk"
+            }
           ],
           "_id": "61b34dd607daa5dc7eb2b7d1",
+          "status": "active",
           "title": "Spaghetti-Eis",
           "description": "gefrorene Spaghetti",
-          "category": "61b20f8b07daa5dc7eb2b653",
+          "categoryId": "61b20f8b07daa5dc7eb2b653",
           "price": 300,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://optimise2.assets-servd.host/sordid-swan/production/s/spaghetti-eis-mit-erdbeersosse/featured-image/spaghetti-eis-mit-erdbeersauce.jpg?w=128&h=128&auto=compress%2Cformat&fit=crop&fp-x=0.5&fp-y=0.5&s=7c02651aaff79e5bfad6d4b9c7fe2681",
           "isAvailable": true
         }
       ]
     },
     {
       "_id": "61b2141807daa5dc7eb2b698",
+      "status": "active",
       "title": "Alkoholfreie Getränke",
       "description": "Getränke ohne Alkohol",
       "icon": "pizza-slice",
-      "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-      "choices": [
-        {
-          "id": 0,
-          "title": "size",
-          "type": "radio",
-          "default": 1,
-          "options": [
-            {
-              "id": 0,
-              "name": "small",
-              "price": -200
-            },
-            {
-              "id": 1,
-              "name": "normal",
-              "price": 0
-            }
-          ]
-        },
-        {
-          "id": 1,
-          "title": "toppings",
-          "type": "checkbox",
-          "options": [
-            {
-              "id": 0,
-              "name": "salami",
-              "price": 100
-            },
-            {
-              "id": 1,
-              "name": "poop",
-              "price": 999
-            }
-          ]
-        }
-      ],
-      "menu": "aaaaaaaaaaaaaaaaaaaaaaaa",
+      "image": "https://static.takeaway.com/images/generic/categories/drinks/soft_1321028849.png?timestamp=1642953226",
+      "choices": [],
+      "menuId": "aaaaaaaaaaaaaaaaaaaaaaaa",
       "dishes": [
         {
-          "labels": [
-            "vegetarian",
-            "vegan"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa2",
+              "title": "Vegan",
+              "icon": "apple"
+            }
           ],
-          "allergies": [],
+          "allergenIds": [],
           "_id": "61b34e2807daa5dc7eb2b7d6",
+          "status": "active",
           "title": "Mineralwasser 0,7l",
           "description": "",
-          "category": "61b2141807daa5dc7eb2b698",
+          "categoryId": "61b2141807daa5dc7eb2b698",
           "price": 150,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://static.takeaway.com/images/generic/categories/drinks/soft_1321028849.png?timestamp=1642953226",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian",
-            "vegan"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa2",
+              "title": "Vegan",
+              "icon": "apple"
+            }
           ],
-          "allergies": [],
+          "allergenIds": [],
           "_id": "61b34e4407daa5dc7eb2b7d7",
+          "status": "active",
           "title": "Sprudel süß 0,7l",
           "description": "",
-          "category": "61b2141807daa5dc7eb2b698",
+          "categoryId": "61b2141807daa5dc7eb2b698",
           "price": 200,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://static.takeaway.com/images/generic/categories/drinks/soft_1321028849.png?timestamp=1642953226",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian",
-            "vegan"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa2",
+              "title": "Vegan",
+              "icon": "apple"
+            }
           ],
-          "allergies": [],
+          "allergenIds": [],
           "_id": "61b34e6e07daa5dc7eb2b7d8",
+          "status": "active",
           "title": "Orangensaft 1,0l",
           "description": "",
-          "category": "61b2141807daa5dc7eb2b698",
+          "categoryId": "61b2141807daa5dc7eb2b698",
           "price": 350,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://static.takeaway.com/images/generic/categories/drinks/soft_1321028849.png?timestamp=1642953226",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian",
-            "vegan"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa2",
+              "title": "Vegan",
+              "icon": "apple"
+            }
           ],
-          "allergies": [],
+          "allergenIds": [],
           "_id": "61b34e8c07daa5dc7eb2b7d9",
+          "status": "active",
           "title": "Apfelsaft 1,0l",
           "description": "",
-          "category": "61b2141807daa5dc7eb2b698",
+          "categoryId": "61b2141807daa5dc7eb2b698",
           "price": 350,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://static.takeaway.com/images/generic/categories/drinks/soft_1321028849.png?timestamp=1642953226",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian",
-            "vegan"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa2",
+              "title": "Vegan",
+              "icon": "apple"
+            }
           ],
-          "allergies": [
-            "caffeine"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Koffein",
+              "icon": "coffebean"
+            }
           ],
           "_id": "61b34f8b07daa5dc7eb2b7da",
+          "status": "active",
           "title": "Coca-Cola 0,33l",
           "description": "",
-          "category": "61b2141807daa5dc7eb2b698",
+          "categoryId": "61b2141807daa5dc7eb2b698",
           "price": 300,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://static.takeaway.com/images/generic/categories/drinks/soft_1321028849.png?timestamp=1642953226",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian",
-            "vegan"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa2",
+              "title": "Vegan",
+              "icon": "apple"
+            }
           ],
-          "allergies": [
-            "caffeine"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Koffein",
+              "icon": "coffebean"
+            }
           ],
           "_id": "61b34fad07daa5dc7eb2b7db",
+          "status": "active",
           "title": "Coca-Cola Zero 0,33l",
           "description": "",
-          "category": "61b2141807daa5dc7eb2b698",
+          "categoryId": "61b2141807daa5dc7eb2b698",
           "price": 300,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://static.takeaway.com/images/generic/categories/drinks/soft_1321028849.png?timestamp=1642953226",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian",
-            "vegan"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa2",
+              "title": "Vegan",
+              "icon": "apple"
+            }
           ],
-          "allergies": [
-            "caffeine"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "title": "Koffein",
+              "icon": "coffebean"
+            }
           ],
           "_id": "61b3509b07daa5dc7eb2b7dc",
+          "status": "active",
           "title": "Coca-Cola light 0,33l",
           "description": "",
-          "category": "61b2141807daa5dc7eb2b698",
+          "categoryId": "61b2141807daa5dc7eb2b698",
           "price": 300,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://static.takeaway.com/images/generic/categories/drinks/soft_1321028849.png?timestamp=1642953226",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian",
-            "vegan"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa2",
+              "title": "Vegan",
+              "icon": "apple"
+            }
           ],
-          "allergies": [],
+          "allergenIds": [],
           "_id": "61b350f007daa5dc7eb2b7e1",
+          "status": "active",
           "title": "Fanta 0,33l",
           "description": "",
-          "category": "61b2141807daa5dc7eb2b698",
+          "categoryId": "61b2141807daa5dc7eb2b698",
           "price": 300,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://static.takeaway.com/images/generic/categories/drinks/soft_1321028849.png?timestamp=1642953226",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian",
-            "vegan"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa2",
+              "title": "Vegan",
+              "icon": "apple"
+            }
           ],
-          "allergies": [],
+          "allergenIds": [],
           "_id": "61b350f907daa5dc7eb2b7e2",
+          "status": "active",
           "title": "Sprite 0,33l",
           "description": "",
-          "category": "61b2141807daa5dc7eb2b698",
+          "categoryId": "61b2141807daa5dc7eb2b698",
           "price": 300,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://static.takeaway.com/images/generic/categories/drinks/soft_1321028849.png?timestamp=1642953226",
           "isAvailable": true
         }
       ]
     },
     {
       "_id": "61b2158f07daa5dc7eb2b69a",
+      "status": "active",
       "title": "Alkoholische Getränke",
-      "description": "Getränke ohne Alkohol",
-      "icon": "pizza-slice",
-      "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
-      "choices": [
-        {
-          "id": 0,
-          "title": "size",
-          "type": "radio",
-          "default": 1,
-          "options": [
-            {
-              "id": 0,
-              "name": "small",
-              "price": -200
-            },
-            {
-              "id": 1,
-              "name": "normal",
-              "price": 0
-            }
-          ]
-        },
-        {
-          "id": 1,
-          "title": "toppings",
-          "type": "checkbox",
-          "options": [
-            {
-              "id": 0,
-              "name": "salami",
-              "price": 100
-            },
-            {
-              "id": 1,
-              "name": "poop",
-              "price": 999
-            }
-          ]
-        }
-      ],
-      "menu": "aaaaaaaaaaaaaaaaaaaaaaaa",
+      "description": "Getränke mit Alkohol",
+      "icon": "cocktail",
+      "image": "https://static.takeaway.com/images/generic/categories/1_drinks/getraenke_bier3.png?timestamp=1642953226",
+      "choices": [],
+      "menuId": "aaaaaaaaaaaaaaaaaaaaaaaa",
       "dishes": [
         {
-          "labels": [
-            "vegetarian",
-            "vegan"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa2",
+              "title": "Vegan",
+              "icon": "apple"
+            }
           ],
-          "allergies": [],
+          "allergenIds": [],
           "_id": "61b3517907daa5dc7eb2b7e7",
+          "status": "active",
           "title": "Lambrusco 0,75l",
           "description": "",
-          "category": "61b2158f07daa5dc7eb2b69a",
+          "categoryId": "61b2158f07daa5dc7eb2b69a",
           "price": 1000,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://cdn.feinste-weine.de/item/images/1061/middle/40972-234411-1er.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian",
-            "vegan"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa2",
+              "title": "Vegan",
+              "icon": "apple"
+            }
           ],
-          "allergies": [],
+          "allergenIds": [],
           "_id": "61b3519807daa5dc7eb2b7e8",
+          "status": "active",
           "title": "Chianti 0,75l",
           "description": "",
-          "category": "61b2158f07daa5dc7eb2b69a",
+          "categoryId": "61b2158f07daa5dc7eb2b69a",
           "price": 1000,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://www.edeka24.de/out/pictures/generated/product/1/540_540_90/cecchi_chianti_docg_rotwein_2014.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian",
-            "vegan"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa2",
+              "title": "Vegan",
+              "icon": "apple"
+            }
           ],
-          "allergies": [],
+          "allergenIds": [],
           "_id": "61b351af07daa5dc7eb2b7e9",
+          "status": "active",
           "title": "Bardolino 0,75l",
           "description": "",
-          "category": "61b2158f07daa5dc7eb2b69a",
+          "categoryId": "61b2158f07daa5dc7eb2b69a",
           "price": 900,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://bonvino.de/wp-content/uploads/2010/10/Zenato-650-Bardolino-www.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian",
-            "vegan"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa2",
+              "title": "Vegan",
+              "icon": "apple"
+            }
           ],
-          "allergies": [],
+          "allergenIds": [],
           "_id": "61b351e207daa5dc7eb2b7ea",
+          "status": "active",
           "title": "Rose 0,75l",
           "description": "",
-          "category": "61b2158f07daa5dc7eb2b69a",
+          "categoryId": "61b2158f07daa5dc7eb2b69a",
           "price": 800,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://cdn.casamolina.de/media/image/ed/6f/7b/Casal-Mendes-Rose_04PVV001_600x600.png",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian",
-            "vegan"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa2",
+              "title": "Vegan",
+              "icon": "apple"
+            }
           ],
-          "allergies": [],
+          "allergenIds": [],
           "_id": "61b351f607daa5dc7eb2b7eb",
+          "status": "active",
           "title": "Prosecco 0,75l",
           "description": "",
-          "category": "61b2158f07daa5dc7eb2b69a",
+          "categoryId": "61b2158f07daa5dc7eb2b69a",
           "price": 1300,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://m.media-amazon.com/images/I/71my9L8kWvL._SX425_.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian",
-            "vegan"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa2",
+              "title": "Vegan",
+              "icon": "apple"
+            }
           ],
-          "allergies": [
-            "gluten"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
+              "title": "Gluten",
+              "icon": "wheat"
+            }
           ],
           "_id": "61b3524d07daa5dc7eb2b7ec",
+          "status": "active",
           "title": "Warsteiner Pils 0,5l",
           "description": "",
-          "category": "61b2158f07daa5dc7eb2b69a",
+          "categoryId": "61b2158f07daa5dc7eb2b69a",
           "price": 250,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://cdn02.plentymarkets.com/99cbvkn2wswt/item/images/1223/middle/Stoertebeker-Frei-Bier-0-5-l-Bierflasche-kaufen.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian",
-            "vegan"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa2",
+              "title": "Vegan",
+              "icon": "apple"
+            }
           ],
-          "allergies": [
-            "gluten"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
+              "title": "Gluten",
+              "icon": "wheat"
+            }
           ],
           "_id": "61b3526207daa5dc7eb2b7ed",
+          "status": "active",
           "title": "Weizen Kristall 0,5l",
           "description": "",
-          "category": "61b2158f07daa5dc7eb2b69a",
+          "categoryId": "61b2158f07daa5dc7eb2b69a",
           "price": 250,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://cdn02.plentymarkets.com/99cbvkn2wswt/item/images/1223/middle/Stoertebeker-Frei-Bier-0-5-l-Bierflasche-kaufen.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian",
-            "vegan"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa2",
+              "title": "Vegan",
+              "icon": "apple"
+            }
           ],
-          "allergies": [
-            "gluten"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
+              "title": "Gluten",
+              "icon": "wheat"
+            }
           ],
           "_id": "61b3528107daa5dc7eb2b7ee",
+          "status": "active",
           "title": "Hefeweizen Hell 0,5l",
           "description": "",
-          "category": "61b2158f07daa5dc7eb2b69a",
+          "categoryId": "61b2158f07daa5dc7eb2b69a",
           "price": 250,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://cdn02.plentymarkets.com/99cbvkn2wswt/item/images/1223/middle/Stoertebeker-Frei-Bier-0-5-l-Bierflasche-kaufen.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian",
-            "vegan"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa2",
+              "title": "Vegan",
+              "icon": "apple"
+            }
           ],
-          "allergies": [
-            "gluten"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
+              "title": "Gluten",
+              "icon": "wheat"
+            }
           ],
           "_id": "61b3533007daa5dc7eb2b7ef",
+          "status": "active",
           "title": "Beck's Bier 0,5l",
           "description": "",
-          "category": "61b2158f07daa5dc7eb2b69a",
+          "categoryId": "61b2158f07daa5dc7eb2b69a",
           "price": 250,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://cdn02.plentymarkets.com/99cbvkn2wswt/item/images/1223/middle/Stoertebeker-Frei-Bier-0-5-l-Bierflasche-kaufen.jpg",
           "isAvailable": true
         },
         {
-          "labels": [
-            "vegetarian",
-            "vegan"
+          "labelIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
+              "title": "Vegetarisch",
+              "icon": "leaf"
+            },
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa2",
+              "title": "Vegan",
+              "icon": "apple"
+            }
           ],
-          "allergies": [
-            "gluten"
+          "allergenIds": [
+            {
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
+              "title": "Gluten",
+              "icon": "wheat"
+            }
           ],
           "_id": "61b3537b07daa5dc7eb2b7f0",
+          "status": "active",
           "title": "Stuttgarter Hofbräu 0,5l",
           "description": "",
-          "category": "61b2158f07daa5dc7eb2b69a",
+          "categoryId": "61b2158f07daa5dc7eb2b69a",
           "price": 250,
-          "image": "https://images-ext-1.discordapp.net/external/ZLRa82Rnl7otJ1U1aqhgttI0hNFlfMPrfuFrb9Llrlo/https/www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg?width=823&height=549",
+          "image": "https://cdn02.plentymarkets.com/99cbvkn2wswt/item/images/1223/middle/Stoertebeker-Frei-Bier-0-5-l-Bierflasche-kaufen.jpg",
           "isAvailable": true
         }
       ]

@@ -7,61 +7,37 @@ before(() => {
 })
 describe("Dishbutton", () => {
     it('Exists', function () {
-        /* ==== Generated with Cypress Studio ==== */
-        cy.get('#section-2 > .px-5 > :nth-child(1) > #dishCard > .flex-2\\/4 > .text-xs').click();
-        cy.get(':nth-child(2) > .flex-col > :nth-child(1) > .flex > :nth-child(1)').should('have.text', 'Salami');
-        cy.get(':nth-child(2) > .flex-col > :nth-child(2) > .flex > :nth-child(1)').should('have.text', 'Ananas');
-        cy.get('.flex-col > :nth-child(1) > input').should('have.attr', 'type', 'checkbox');
-        cy.get(':nth-child(2) > input').should('have.attr', 'type', 'checkbox');
-        /* ==== End Cypress Studio ==== */
-        /* ==== Generated with Cypress Studio ==== */
+
+        cy.get('#section-0 > .px-5 > :nth-child(1) > #dishCard > .flex-2\\/4 > .text-xs').click();
+        cy.get('.h-14 > .flex > :nth-child(1) > .svg-inline--fa > path').should('be.visible');
+        cy.get('.h-14 > .flex > :nth-child(3) > .svg-inline--fa > path').should('be.visible');
+        cy.get('#orderButton > p').should('be.visible');
         cy.get('[style="height: 40rem;"]').click();
-        /* ==== End Cypress Studio ==== */
+
     });
 
+    it('Plus and Minus works', function () {
 
-
-    /* ==== Test Created with Cypress Studio ==== */
-    it('Can be checked and unchecked', function () {
-        /* ==== Generated with Cypress Studio ==== */
-        cy.get('#section-2 > .px-5 > :nth-child(1) > #dishCard > .flex-2\\/4 > .text-lg').click();
-        cy.get('.flex-col > :nth-child(1) > input').should('not.be.checked');
-        cy.get(':nth-child(2) > input').should('not.be.checked');
-        cy.get('.flex-col > :nth-child(1) > input').check();
-        cy.get(':nth-child(2) > input').check();
-        cy.get('.flex-col > :nth-child(1) > input').should('be.checked');
-        cy.get(':nth-child(2) > input').should('be.checked');
-        /* ==== End Cypress Studio ==== */
-        /* ==== Generated with Cypress Studio ==== */
+        cy.get('#section-0 > .px-5 > :nth-child(1) > #dishCard > .flex-2\\/4 > .text-xs').click();
+        cy.get('.flex > p').should('have.text', '1');
+        cy.get('.h-14 > .flex > :nth-child(3)').click();
+        cy.get('.flex > p').should('have.text', '2');
+        cy.get('.h-14 > .flex > :nth-child(1) > .svg-inline--fa > path').click();
+        cy.get('.flex > p').should('have.text', '1');
+        cy.get('.h-14 > .flex > :nth-child(1) > .svg-inline--fa').click();
+        cy.get('.h-14 > .flex > :nth-child(1) > .svg-inline--fa').click();
+        cy.get('.flex > p').should('have.text', '1');
+        cy.get('.h-14 > .flex > :nth-child(3) > .svg-inline--fa > path').click();
+        cy.get('.h-14 > .flex > :nth-child(3)').click();
+        cy.get('.h-14 > .flex > :nth-child(3)').click();
+        cy.get('.h-14 > .flex > :nth-child(3)').click();
+        cy.get('.h-14 > .flex > :nth-child(3)').click();
+        cy.get('.h-14 > .flex > :nth-child(3)').click();
+        cy.get('.flex > p').should('have.text', '7');
+        cy.get('#orderButton > p').should('have.text', 'Für 45,50 € hinzufügen');
         cy.get('[style="height: 40rem;"]').click();
-        /* ==== End Cypress Studio ==== */
+
     });
-
-    it('Calculates Price correctly', function () {
-        /* ==== Generated with Cypress Studio ==== */
-        cy.get('#section-2 > .px-5 > :nth-child(1) > #dishCard > .flex-2\\/4 > .text-lg').click();
-        cy.get('#orderButton > p').should('have.text', 'Für 5,50 € hinzufügen');
-        cy.get('.flex-col > :nth-child(1) > input').check();
-        cy.get('#orderButton > p').should('have.text', 'Für 6,50 € hinzufügen');
-        cy.get(':nth-child(2) > input').check();
-        cy.get('#orderButton > p').should('have.text', 'Für 7,50 € hinzufügen');
-        cy.get('.flex-col > :nth-child(1) > input').uncheck();
-        cy.get('#orderButton > p').should('have.text', 'Für 6,50 € hinzufügen');
-        cy.get(':nth-child(2) > input').uncheck();
-        cy.get('#orderButton > p').should('have.text', 'Für 5,50 € hinzufügen');
-        cy.get('#menu-button > .flex').click();
-        cy.get('.py-1 > :nth-child(3)').click();
-        cy.get('.flex-col > :nth-child(1) > input').check();
-        cy.get('#menu-button > .flex').click();
-        cy.get('.py-1 > :nth-child(1)').click();
-        cy.get('#orderButton > p').should('have.text', 'Für 4,50 € hinzufügen');
-        /* ==== End Cypress Studio ==== */
-        /* ==== Generated with Cypress Studio ==== */
-        cy.get('[style="height: 40rem;"]').click();
-        /* ==== End Cypress Studio ==== */
-    });
-
-
 })
 
 export { }

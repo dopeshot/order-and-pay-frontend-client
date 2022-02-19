@@ -30,10 +30,6 @@ export const putInBasket = ({ state }: Context, item: Item) => {
     return
 }
 
-export const removeFromBasket = ({ state }: Context, index: number) => {
-    state.basket.basket.items.splice(index, 1)
-}
-
 export const addCount = ({ state }: Context, index: number) => {
     state.basket.basket.items[index].count += 1
 
