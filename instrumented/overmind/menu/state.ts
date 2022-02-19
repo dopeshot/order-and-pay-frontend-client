@@ -1,8 +1,4 @@
 
-// export type Menu = {
-//     name: string,
-//     dishes: Dish[],
-//     categories: Category[]
 enum Status {
     ACTIVE = "active",
     DELETED = "deleted"
@@ -27,7 +23,6 @@ export enum ChoiceType {
 
 export type DishPopulated = Dish & { allergens: Allergen[], labels: Label[] }
 
-
 export type Dish = {
     _id: string,
     title: string,
@@ -39,7 +34,6 @@ export type Dish = {
     image: string,
     isAvailable: boolean
 }
-
 
 export type Choice = {
     id: number,
@@ -62,7 +56,6 @@ export type Category = {
     title: string,
     index: number,
     description: string,
-    dishesIndex: number[],
     icon: string,
     image: string,
     choices: Choice[],

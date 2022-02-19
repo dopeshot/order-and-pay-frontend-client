@@ -1,48 +1,53 @@
+
 import { Context } from ".."
+import { sortChoices } from "../../services/utilities"
+import { Item } from "./state"
 
-export const loadMenu = async ({ state, effects }: Context) => {
-    //const { menu } = useAppState().menu
-    state.menu.isLoadingMenu = false
+export const putInBasket = ({ state }: Context, item: Item) => {
 
-    try {
-        const response = await effects.menu.getMenu()
-        state.menu.MenuResponseObj = response.data
+    sortChoices(item)
+    const currentDishes = state.basket.basket.items
+
+    currentDishes.forEach(dish => sortChoices(dish))
+
+    const currentDishesWithoutCount = currentDishes.map(dish => {
+        const { count, ...rest } = dish
+        return rest
+    })
+
+    const { count, ...itemWithoutCount }: any = item
 
 
-        /* Pushes the indexes each dish has in the menu.dishes array
-        * into a separate array called dishesIndexArray that each category has.
-        * This array consisting of indexes is then used to properly display 
-        * all dishes in the category they belong to. */
-        // check if necessary        
-        // state.menu.menu.categories.forEach((category, index) => {
-        //     const dishesIndexArray: number[] = []
-        //     state.menu.menu.dishes.forEach((dish, index) => {
-        //         if (dish.choices) {
-        //             dish.choices.forEach(choice => {
-        //                 choice.options.forEach(option => {
-        //                     option.isChecked = false
-        //                     option.priceDish = 0
-        //                 })
-        //             })
-        //         }
-
-        //         if (dish.category === category._id) {
-        //             dishesIndexArray.push(index)
-        //         }
-        //     });
-        //     category.dishesIndex = dishesIndexArray
-        //     category.index = index
-        // });
-    } catch (error) {
-        console.log("Error at menu load", error)
+    const index = currentDishesWithoutCount.findIndex((o) => JSON.stringify(o) === JSON.stringify(itemWithoutCount))
+    if (index === -1) {
+        currentDishes.push(item)
+        console.log("item", currentDishes)
+        return
     }
+    currentDishes[index].count += item.count;
+    console.log("item", currentDishes)
+    return
 
-    state.menu.isLoadingMenu = false
+
 }
 
-export const priceHandler = ({ state }: Context, priceDish: number) => {
-    //currentPrice = priceDish + currentPrice
-    state.menu.sum = state.menu.sum + priceDish
-    console.log("end sum: " + state.menu.sum)
-    return state.menu.sum
+export const removeFromBasket = ({ state }: Context, index: number) => {
+
+    state.basket.basket.items.splice(index, 1)
+
+}
+
+export const addCount = ({ state }: Context, index: number) => {
+    state.basket.basket.items[index].count += 1
+
+}
+export const subCount = ({ state }: Context, index: number) => {
+
+    state.basket.basket.items[index].count += -1
+    if (state.basket.basket.items[index].count === 0) {
+        state.basket.basket.items.splice(index, 1)
+    }
+
+
+
 }

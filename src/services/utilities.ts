@@ -10,9 +10,6 @@ export const equalArray = <T>(array1: Array<T>, array2: Array<T>) => {
     return array1.length === array2.length && array1.every((value, index) => value === array2[index])
 }
 
-export const getCurrentPrice = (price: number, current: number) => {
-    return current = current + price
-}
 
 export const idToName = (dish: Dish, choice: (PickedRadio | PickedCheckbox), menu: MenuEditorResponse) => {
 

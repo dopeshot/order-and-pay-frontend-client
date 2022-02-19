@@ -8,23 +8,21 @@ before(() => {
     cy.wait("@getMenu")
 
 })
-describe("Exists", () => {
+describe("Basket", () => {
     it('Exists', () => {
-        /* ==== Generated with Cypress Studio ==== */
+
         cy.visit("/basket")
-        /* ==== Generated with Cypress Studio ==== */
+
         cy.get('#container > .font-bold').should('be.visible');
         cy.get('.text-xl > .font-bold').should('be.visible');
         cy.get('.text-xl > .font-bold').should('have.text', '0,00 €');
         cy.get('.w-full > .container').should('be.visible');
-        /* ==== End Cypress Studio ==== */
-        /* ==== Generated with Cypress Studio ==== */
+
         cy.get('#mainMenu > .svg-inline--fa').click();
-        /* ==== End Cypress Studio ==== */
+
     })
 
     it("Adds and removes simple Items", function () {
-        /* ==== Generated with Cypress Studio ==== */
         cy.get('#section-0 > .px-5 > :nth-child(1) > #dishCard > .flex-2\\/4 > .text-xs').click();
         cy.get('#orderButton > p').click();
         cy.get('#section-0 > .px-5 > :nth-child(2) > #dishCard > .flex-2\\/4 > .text-xs').click();
@@ -33,16 +31,21 @@ describe("Exists", () => {
         cy.get(':nth-child(3) > :nth-child(1) > :nth-child(1) > :nth-child(1)').should('have.text', 'Gebackener Mozzarella');
         cy.get(':nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(1)').should('have.text', 'Gemüseteller');
         cy.get('.font-thin').should('have.text', '2 Items');
-        cy.get(':nth-child(1) > .items-center > .bg-button-grey > .svg-inline--fa > path').click();
-        cy.get('.bg-button-grey > .svg-inline--fa > path').click();
+        cy.get(':nth-child(1) > .items-center > .bg-red > .svg-inline--fa > path').click();
+        cy.get(':nth-child(1) > .items-center > .bg-red > .svg-inline--fa').click();
+        cy.get('.font-thin').should('have.text', '4 Items');
+        cy.get(':nth-child(1) > .items-center > .bg-button-grey > .svg-inline--fa').click();
+        cy.get(':nth-child(1) > .items-center > .bg-button-grey > .svg-inline--fa').click();
+        cy.get(':nth-child(1) > .items-center > .bg-button-grey > .svg-inline--fa').click();
+        cy.get('.bg-button-grey').click();
         cy.get('.font-thin').should('have.text', '0 Items');
-        cy.get('#mainMenu > .svg-inline--fa').click();
-        /* ==== End Cypress Studio ==== */
+        cy.get('#mainMenu').click();
+
     })
 
-    /* ==== Test Created with Cypress Studio ==== */
+
     it('Adds Items correctly', function () {
-        /* ==== Generated with Cypress Studio ==== */
+
         cy.get('#section-2 > .px-5 > :nth-child(1) > #dishCard > .flex-2\\/4 > .text-xs').click();
         cy.get('#menu-button > .flex').click();
         cy.get('.py-1 > :nth-child(1)').click();
@@ -60,11 +63,11 @@ describe("Exists", () => {
         cy.get(':nth-child(1) > .items-center > .bg-button-grey > .svg-inline--fa').click();
         cy.get('.bg-button-grey > .svg-inline--fa').click();
         cy.get('#mainMenu > .svg-inline--fa').click();
-        /* ==== End Cypress Studio ==== */
+
     });
 
     it("Merges Equal Items together", function () {
-        /* ==== Generated with Cypress Studio ==== */
+
         cy.get('#section-0 > .px-5 > :nth-child(1) > #dishCard > .flex-2\\/4 > .text-xs').click();
         cy.get('.h-14 > .flex > :nth-child(3)').click();
         cy.get('.h-14 > .flex > :nth-child(3)').click();
@@ -108,7 +111,7 @@ describe("Exists", () => {
         cy.get('.bg-button-grey').click();
         cy.get('.font-thin').should('have.text', '0 Items');
         cy.get('#mainMenu > .svg-inline--fa').click();
-        /* ==== End Cypress Studio ==== */
+
     })
 });
 

@@ -10,6 +10,7 @@ module.exports = {
         md: '768px'
       }
     },
+
     fontFamily: {
       'sofia': ['sofia-pro']
     },

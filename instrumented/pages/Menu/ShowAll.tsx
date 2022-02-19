@@ -2,6 +2,7 @@ import { useAppState } from '../../overmind';
 import { HashLink } from 'react-router-hash-link';
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 export const ShowAll: React.FunctionComponent = () => {
 
@@ -9,10 +10,10 @@ export const ShowAll: React.FunctionComponent = () => {
 
     const categories = state.MenuResponseObj.categories.map((category, index) => (
 
-        <HashLink key={category._id + "_showAll"} id={"hashLink_" + index} to={`/menu#${'section-' + (index)}`} className="flex items-center block justify-between p-3 rounded-lg text-white bg-cover bg-gray-400 bg-blend-multiply bg-left shadow-whiteBox" style={{ backgroundImage: "url(https://www.experto.de/wp-content/uploads/2013/10/AdobeStock_109489490-1024x683.jpg)" }}>
+        <HashLink key={category._id + "_showAll"} id={"hashLink_" + index} to={`/menu#${'section-' + (index)}`} className="flex items-center justify-between p-3 rounded-lg text-white bg-cover bg-gray-400 bg-blend-multiply bg-left shadow-whiteBox" style={{ backgroundImage: "url(" + category.image + ")" }}>
             <div className="flex items-center min-w-0">
                 <div className="pr-2 text-2xl">
-                    <FontAwesomeIcon icon="hamburger" />
+                    <FontAwesomeIcon icon={category.icon as IconProp} />
                 </div>
                 <div className="min-w-0">
                     <p className="text-lg font-semibold">

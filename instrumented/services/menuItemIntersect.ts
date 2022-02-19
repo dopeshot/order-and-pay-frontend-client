@@ -11,7 +11,6 @@ export let useCheckMenuItem = (options: any, menuItemOpen: boolean) => {
         const observer = new IntersectionObserver(
             ([entry]) => {
 
-                let observerRerValue: HTMLInputElement | null = null
 
                 if (entry.isIntersecting) {
                     if (entry.intersectionRatio) { }
@@ -28,12 +27,13 @@ export let useCheckMenuItem = (options: any, menuItemOpen: boolean) => {
         );
         if (scrollRef.current && isVisible) {
             setTimeout(() => {
-                observer.observe(scrollRef.current)
+                if (scrollRef.current)
+                    observer.observe(scrollRef.current)
 
             }, 400)
         }
 
-    }, [scrollRef, options]);
+    }, [scrollRef, options, isVisible]);
 
     return [scrollRef, isVisible]
 }

@@ -30,7 +30,7 @@ export let useCheckMenuItem = (options: any, menuItemOpen: boolean) => {
                 if (scrollRef.current)
                     observer.observe(scrollRef.current)
 
-            }, 200)
+            }, 400)
         }
 
     }, [scrollRef, options, isVisible]);
