@@ -12,7 +12,7 @@ export const OrderButton: React.FunctionComponent = () => {
 
     return (
         <footer className="w-full h-14 bg-red shadow-category fixed bottom-0 ">
-            <button id="orderButton" className="container h-full flex justify-around items-center text-white font-bold">
+            <button id="basketButton" className="container h-full flex justify-around items-center text-white font-bold">
                 <p className="rounded-full w-7 h-7 bg-white text-red" style={{ lineHeight: '1.6rem' }}>{itemsCount}</p>
                 <Link id="basket" to="/basket" >Warenkorb anzeigen</Link>
                 <p>{priceToLocal(getBasketPrice(basket, menu))}</p>
