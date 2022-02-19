@@ -1,5 +1,4 @@
 import { useActions, useAppState } from '../../overmind';
-import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { getDish, getPrice, idToName, priceToLocal } from '../../services/utilities';
 import { FooterButton } from '../../components/UIComponents/FooterButton';

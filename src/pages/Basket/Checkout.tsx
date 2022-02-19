@@ -1,5 +1,5 @@
 import { useActions, useAppState } from '../../overmind';
-import { Link, useHistory } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { priceToLocal } from '../../services/utilities';
 import { FooterButton } from '../../components/UIComponents/FooterButton';
@@ -11,11 +11,8 @@ import { useState } from 'react';
 export const Checkout: React.FunctionComponent = () => {
 
     const history = useHistory()
-
-    const menu = useAppState().menu.MenuResponseObj
     const basket = useAppState().basket.basket
     const { sendOrder } = useActions().basket
-
     const [alert, setAlert] = useState("")
 
     const sendOrders = async () => {

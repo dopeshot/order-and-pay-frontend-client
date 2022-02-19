@@ -25,7 +25,6 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
     // const { checkboxHandler } = useActions().menu
 
     const { putInBasket } = useActions().basket
-    const [isClosing, setIsClosing] = useState(false)
 
     const close = () => {
 

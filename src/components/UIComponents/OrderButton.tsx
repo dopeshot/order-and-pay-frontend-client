@@ -6,7 +6,6 @@ export const OrderButton: React.FunctionComponent = () => {
 
     const { itemsCount } = useAppState().basket.basket
     const basket = useAppState().basket.basket
-    const menu = useAppState().menu.MenuResponseObj
 
 
     return (

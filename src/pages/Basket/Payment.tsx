@@ -1,9 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { FooterButton } from "../../components/UIComponents/FooterButton";
 import { useActions, useAppState } from "../../overmind"
-import { clearBasket } from "../../overmind/basket/actions";
 import { priceToLocal } from '../../services/utilities';
-import { Link, useHistory } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 
 
 export const Payment: React.FunctionComponent = () => {

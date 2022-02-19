@@ -1,5 +1,4 @@
-
-import { Basket, Item, PickedCheckbox, PickedRadio, SendBasket } from "../overmind/basket/state"
+import { Basket, Item, PickedCheckbox, PickedRadio } from "../overmind/basket/state"
 import { Category, Choice, ChoiceType, Dish, MenuEditorResponse } from "../overmind/menu/state"
 
 export const priceToLocal = (price: number) => {
