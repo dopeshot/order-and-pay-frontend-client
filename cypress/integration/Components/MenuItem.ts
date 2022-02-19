@@ -22,15 +22,6 @@ describe("MenuItem", () => {
 
 
 
-
-    it('Clicks Away', function () {
-        cy.get('#section-0 > .px-5 > :nth-child(1) > #dishCard > .flex-2\\/4 > .text-xs').click();
-        cy.get('#clickAway').click()
-        cy.get('#section-0 > .px-5 > :nth-child(5) > #dishCard > .flex-2\\/4 > .gap-1').click();
-        cy.get('#clickAway').click()
-    });
-
-
     it('Can Type', function () {
         cy.get('#section-0 > .px-5 > :nth-child(1) > #dishCard > .flex-2\\/4 > .text-xs').click();
         cy.get('#exampleFormControlTextarea1').type("Hier werden Wünsche Wahr...");
