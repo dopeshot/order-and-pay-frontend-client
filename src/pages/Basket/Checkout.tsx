@@ -6,27 +6,24 @@ import { faCcApplePay, faCcPaypal } from '@fortawesome/free-brands-svg-icons';
 import { PaymentMethod } from '../../components/UIComponents/PaymentMethod';
 import { Header } from '../../components/UIComponents/Header';
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 
 export const Checkout: React.FunctionComponent = () => {
 
     const history = useHistory()
     const basket = useAppState().basket.basket
     const { sendOrder } = useActions().basket
-    const [alert, setAlert] = useState("")
+    const [sendOrderfailed, setOrderStatus] = useState(false)
 
     const sendOrders = async () => {
         if (await sendOrder()) {
             // Send order worked!
-            setAlert("Order successful!")
             history.push('/orderConformation')
         } else {
-            // Send order failed!
-            setAlert("Order failed!")
-            console.log(basket)
+            setOrderStatus(true)
         }
     }
-
-
 
     return (
         <>
@@ -34,7 +31,7 @@ export const Checkout: React.FunctionComponent = () => {
                 <Header parentId="basket" parentLink="/basket" />
                 <div id="container" className="container p-5">
                     <h1 className="font-bold text-4xl pb-2">Zahlmethoden</h1>
-                    <p>{alert}</p>
+                    {sendOrderfailed ? <p className='text-xl text-red'> <FontAwesomeIcon icon={faExclamationCircle} className="mr-2" /> Hoppla! Etwas ist schief gelaufen, versuche es später noch einmal.</p> : ''}
                     <div className='pt-9'>
                         <PaymentMethod icon={faCcApplePay} name="ApplePay" id="applepay" />
                         <PaymentMethod icon={faCcPaypal} name="PayPal" id="paypal" />
