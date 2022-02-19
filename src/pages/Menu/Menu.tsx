@@ -83,7 +83,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
         const categoryTop = sectionRefs.current[index].current!.getBoundingClientRect().top
         //@ts-ignore
         const menuComponentTop = menuComponentRef.current.getBoundingClientRect().top
-        const offset = 250
+        const offset = 270
         //@ts-ignore
         pageRef.current!.scrollTo({
             top: categoryTop - menuComponentTop + offset,

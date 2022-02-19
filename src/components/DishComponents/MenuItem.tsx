@@ -148,7 +148,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
 
                                     <div className="h-full w-full pt-2 pr-2 flex flex-col">
                                         <button type='button' onClick={() => handler()} className="text-red self-end absolute pr-2 pt-1"><FontAwesomeIcon icon="edit" className="text-red" /></button>
-                                        <Field component='textarea' name='note' type='text' className={`h-24 form-control w-full px-3 py-1.5 text-gray-700 bg-clip-padding border border-solid border-gray-300 rounded focus:text-gray-700 focus:border-blue-600 focus:outline-none ${formik.errors.note && formik.touched.note ? 'bg-error-bg border border-error-text focus:border-error-text' : ''}`} id="exampleFormControlTextarea1" rows={3} placeholder="Hier werden Wünsche wahr..." />
+                                        <Field component='textarea' name='note' type='text' className={`h-24 form-control w-full px-3 py-1.5 text-gray-700 bg-clip-padding border border-solid border-gray-300 rounded focus:text-gray-700 focus:border-blue-600 focus:outline-none ${formik.errors.note && formik.touched.note ? 'bg-error-bg border border-error-text focus:border-error-text' : ''}`} id="noteFormInput" rows={3} placeholder="Hier werden Wünsche wahr..." />
                                     </div>
 
                                     <div className="mb-24">
