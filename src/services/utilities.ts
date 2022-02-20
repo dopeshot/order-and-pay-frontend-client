@@ -19,7 +19,6 @@ export const idToName = (dish: Dish, choice: (PickedRadio | PickedCheckbox), men
     else {
         let optionsPicked: string = ""
         choiceObj?.options.forEach((option) => {
-            //@ts-ignore
             choice.valueId.forEach(id => {
                 if (id === option.id) {
                     optionsPicked += (" " + option.title + ", ")
@@ -58,7 +57,6 @@ export const getPrice = (item: Item, menu: MenuEditorResponse) => {
         else {
             const choice = category?.choices.find(choice => choice.id === pChoice.id)
             choice!.options.forEach(option => {
-                //@ts-ignore
                 pChoice.valueId.forEach(value => {
                     if (option.id === value)
                         extra += option!.price

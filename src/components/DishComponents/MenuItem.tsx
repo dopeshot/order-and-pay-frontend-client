@@ -116,7 +116,6 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                             <div id="clickAway" data-cy="clickAway" className="w-full" style={{ height: "40rem" }} onClick={() => {
                                 close()
                             }} />
-                            {/*@ts-ignore*/}
                             <div ref={menuRef} className="bg-white shadow-md rounded-3xl" style={{ zIndex: -0 }} onClick={() => closAllDropDown()}>
                                 {dish.image !== "" && dish.image ?
                                     <div className="flex flex-col h-full w-full justify-items-center relative rounded-3xl pb-7">
