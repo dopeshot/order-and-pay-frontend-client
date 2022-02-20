@@ -7,58 +7,45 @@ before(() => {
 })
 describe("Checkboxes", () => {
     it('Exists', function () {
-        /* ==== Generated with Cypress Studio ==== */
-        cy.get('#section-2 > .px-5 > :nth-child(1) > #dishCard > .flex-2\\/4 > .text-xs').click();
-        cy.get(':nth-child(2) > .flex-col > :nth-child(1) > .flex > :nth-child(1)').should('have.text', 'Salami');
-        cy.get(':nth-child(2) > .flex-col > :nth-child(2) > .flex > :nth-child(1)').should('have.text', 'Ananas');
-        cy.get('.flex-col > :nth-child(1) > input').should('have.attr', 'type', 'checkbox');
-        cy.get(':nth-child(2) > input').should('have.attr', 'type', 'checkbox');
-        /* ==== End Cypress Studio ==== */
-        /* ==== Generated with Cypress Studio ==== */
-        cy.get('[style="height: 40rem;"]').click();
-        /* ==== End Cypress Studio ==== */
+        cy.get('[data-cy=cat-2_dish-0]').click();
+        cy.get('[data-cy=option-name-0]').should('have.text', 'Salami');
+        cy.get('[data-cy=option-name-1]').should('have.text', 'Ananas');
+        cy.get('[data-cy=checkbox-0]').should('have.attr', 'type', 'checkbox');
+        cy.get('[data-cy=checkbox-1]').should('have.attr', 'type', 'checkbox');
+        cy.get('[data-cy=clickAway]').click();
     });
-
-
-
-    /* ==== Test Created with Cypress Studio ==== */
     it('Can be checked and unchecked', function () {
-        /* ==== Generated with Cypress Studio ==== */
-        cy.get('#section-2 > .px-5 > :nth-child(1) > #dishCard > .flex-2\\/4 > .text-lg').click();
-        cy.get('.flex-col > :nth-child(1) > input').should('not.be.checked');
-        cy.get(':nth-child(2) > input').should('not.be.checked');
-        cy.get('.flex-col > :nth-child(1) > input').check();
-        cy.get(':nth-child(2) > input').check();
-        cy.get('.flex-col > :nth-child(1) > input').should('be.checked');
-        cy.get(':nth-child(2) > input').should('be.checked');
-        /* ==== End Cypress Studio ==== */
-        /* ==== Generated with Cypress Studio ==== */
-        cy.get('[style="height: 40rem;"]').click();
-        /* ==== End Cypress Studio ==== */
+        cy.get('[data-cy=cat-2_dish-0]').click();
+        cy.get('[data-cy=checkbox-0]').should('not.be.checked');
+        cy.get('[data-cy=checkbox-1]').should('not.be.checked');
+        cy.get('[data-cy=checkbox-0]').check();
+        cy.get('[data-cy=checkbox-1]').check();
+        cy.get('[data-cy=checkbox-0]').should('be.checked');
+        cy.get('[data-cy=checkbox-1]').should('be.checked');
+        cy.get('[data-cy=checkbox-0]').uncheck();
+        cy.get('[data-cy=checkbox-1]').uncheck();
+        cy.get('[data-cy=checkbox-0]').should('not.be.checked');
+        cy.get('[data-cy=checkbox-1]').should('not.be.checked');
+        cy.get('[data-cy=clickAway]').click();
     });
-
     it('Calculates Price correctly', function () {
-        /* ==== Generated with Cypress Studio ==== */
-        cy.get('#section-2 > .px-5 > :nth-child(1) > #dishCard > .flex-2\\/4 > .text-lg').click();
-        cy.get('#orderButton > p').should('have.text', 'Für 5,50 € hinzufügen');
-        cy.get('.flex-col > :nth-child(1) > input').check();
-        cy.get('#orderButton > p').should('have.text', 'Für 6,50 € hinzufügen');
-        cy.get(':nth-child(2) > input').check();
-        cy.get('#orderButton > p').should('have.text', 'Für 7,50 € hinzufügen');
-        cy.get('.flex-col > :nth-child(1) > input').uncheck();
-        cy.get('#orderButton > p').should('have.text', 'Für 6,50 € hinzufügen');
-        cy.get(':nth-child(2) > input').uncheck();
-        cy.get('#orderButton > p').should('have.text', 'Für 5,50 € hinzufügen');
-        cy.get('#menu-button > .flex').click();
-        cy.get('.py-1 > :nth-child(3)').click();
-        cy.get('.flex-col > :nth-child(1) > input').check();
-        cy.get('#menu-button > .flex').click();
-        cy.get('.py-1 > :nth-child(1)').click();
-        cy.get('#orderButton > p').should('have.text', 'Für 4,50 € hinzufügen');
-        /* ==== End Cypress Studio ==== */
-        /* ==== Generated with Cypress Studio ==== */
-        cy.get('[style="height: 40rem;"]').click();
-        /* ==== End Cypress Studio ==== */
+        cy.get('[data-cy=cat-2_dish-0]').click();
+        cy.get('[data-cy=orderButtonPrice]').should('have.text', 'Für 5,50 € hinzufügen');
+        cy.get('[data-cy=checkbox-0]').check();
+        cy.get('[data-cy=orderButtonPrice]').should('have.text', 'Für 6,50 € hinzufügen');
+        cy.get('[data-cy=checkbox-1]').check();
+        cy.get('[data-cy=orderButtonPrice]').should('have.text', 'Für 7,50 € hinzufügen');
+        cy.get('[data-cy=checkbox-0]').uncheck();
+        cy.get('[data-cy=orderButtonPrice]').should('have.text', 'Für 6,50 € hinzufügen');
+        cy.get('[data-cy=checkbox-1]').uncheck();
+        cy.get('[data-cy=orderButtonPrice]').should('have.text', 'Für 5,50 € hinzufügen');
+        cy.get('[data-cy=dropDown-0]').click();
+        cy.get('[data-cy=option-2]').click();
+        cy.get('[data-cy=checkbox-0]').check();
+        cy.get('[data-cy=dropDown-0]').click();
+        cy.get('[data-cy=option-0]').click();
+        cy.get('[data-cy=orderButtonPrice]').should('have.text', 'Für 4,50 € hinzufügen');
+        cy.get('[data-cy=clickAway]').click();
     });
 
 

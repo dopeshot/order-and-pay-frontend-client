@@ -13,7 +13,7 @@ export const FooterButton: React.FunctionComponent<PropTypes> = ({ text, link, m
 
 
     return (
-        <footer id={id} className="w-full h-14 bg-red shadow-category fixed bottom-0 " >
+        <footer id={id} data-cy={id} className="w-full h-14 bg-red shadow-category fixed bottom-0 " >
             {method ?
                 <button className="container h-full flex justify-around items-center text-white font-bold" onClick={() => method()}>
                     {text}

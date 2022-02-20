@@ -24,7 +24,7 @@ export const Search: React.FunctionComponent<PropTypes> = ({ setValue }: PropTyp
                 <FontAwesomeIcon icon={faSearch} />
             </button>
             {/* Searchbar object */}
-            <input autoFocus id="searchbar2" className="w-full bg-transparent text-sm text-grey focus:outline-none " placeholder="Search..." onChange={event => { handleChange(event.target.value) }}></input>
+            <input autoFocus id="searchbar2" data-cy="searchbar2" className="w-full bg-transparent text-sm text-grey focus:outline-none " placeholder="Search..." onChange={event => { handleChange(event.target.value) }}></input>
         </div>
     )
 }

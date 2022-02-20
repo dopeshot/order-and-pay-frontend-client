@@ -27,7 +27,7 @@ export const Checkout: React.FunctionComponent = () => {
 
     return (
         <>
-            <div id="page" className='container px-5'>
+            <div id="page" data-cy="page" className='container px-5'>
                 <Header parentId="basket" parentLink="/basket" />
                 <div id="container" className="container p-5">
                     <h1 className="font-bold text-4xl pb-2">Zahlmethoden</h1>

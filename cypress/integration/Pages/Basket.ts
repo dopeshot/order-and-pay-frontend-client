@@ -13,17 +13,17 @@ before(() => {
 
 describe("Adds Simple Items and Renders Basket correctly", () => {
     it("Adds and removes Simple Items", () => {
-        cy.get('#section-0 > .px-5 > :nth-child(1) > #dishCard > .flex-2\\/4 > .text-xs').click();
+        cy.get('[data-cy=cat-0_dish-0]').click();
         cy.wait(200)
-        cy.get('#orderButton > p').click();
+        cy.get('[data-cy=orderButton]').click();
         cy.wait(200)
         cy.get('#section-0 > .px-5 > :nth-child(4) > #dishCard > .flex-2\\/4 > .text-xs').click();
         cy.wait(200)
-        cy.get('#orderButton > p').click();
+        cy.get('[data-cy=orderButton]').click();
         cy.wait(200)
         cy.get('#section-0 > .px-5 > :nth-child(3) > #dishCard > .flex-2\\/4 > .text-xs').click();
         cy.wait(200)
-        cy.get('#orderButton > p').click();
+        cy.get('[data-cy=orderButton]').click();
         cy.get('.rounded-full').should('have.text', '3');
         cy.get('#basketButton').should('be.visible');
         cy.get('#basket').click();

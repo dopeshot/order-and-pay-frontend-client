@@ -15,7 +15,7 @@ export const CategoryButton: React.FunctionComponent<PropTypes> = ({ scrollToRef
 
     return (
 
-        <button onClick={() => scrollToRef(index)} key={category._id + "_button" + index} id={"categoryButton_" + index} className="text-red font-bold text-center m-1 h-16 w-20 shadow-md rounded-md overflow-hidden text-xs b-2" >
+        <button onClick={() => scrollToRef(index)} key={category._id + "_button" + index} id={"categoryButton_" + index} data-cy={"categoryButton_" + index} className="text-red font-bold text-center m-1 h-16 w-20 shadow-md rounded-md overflow-hidden text-xs b-2" >
             <div className="text-2xl ">
 
                 <FontAwesomeIcon icon={category.icon as IconProp} />

@@ -11,10 +11,11 @@ type PropTypes = {
     dropDownOpen: Map<any, any>
     setdropDownOpen: Dispatch<SetStateAction<Map<any, any>>>,
     formik: FormikProps<any>,
-    dish: Dish
+    dish: Dish,
+    index: number
 }
 
-export const Dropdown: React.FunctionComponent<PropTypes> = ({ choice, dropDownOpen, setdropDownOpen, formik }: PropTypes) => {
+export const Dropdown: React.FunctionComponent<PropTypes> = ({ choice, dropDownOpen, setdropDownOpen, formik, index }: PropTypes) => {
 
     const { priceHandler } = useActions().menu
 
@@ -43,7 +44,7 @@ export const Dropdown: React.FunctionComponent<PropTypes> = ({ choice, dropDownO
     return (
         <div className="text-left pr-4 pl-4" style={{ zIndex: 5 }} >
             <div>
-                <button type="button" className="flex w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700  hover:bg-gray-50 focus:outline-none " id="menu-button" onClick={(e) => handleClick2(e)}>
+                <button type="button" className="flex w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700  hover:bg-gray-50 focus:outline-none " id="menu-button" data-cy={"dropDown-" + index} onClick={(e) => handleClick2(e)}>
                     <div className="flex justify-between w-full pr-4">
 
                         <p> {choice.options.find(option => option.id === currentFormikChoice.valueId)!.name}</p>
@@ -56,10 +57,10 @@ export const Dropdown: React.FunctionComponent<PropTypes> = ({ choice, dropDownO
 
             {dropDownOpen.get(choice.id) && <div className="origin-top-right mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-y-auto h-32 scrollbar-hide focus:outline-none"                                                      >
                 <div className="py-1">
-                    {choice.options.map(option => (
-                        <div key={option.name} id={`${choice.id}`} className="flex justify-between text-gray-700 px-4 py-2 text-sm hover:bg-gray-100" onClick={(e) => { handleClick(option, e) }}>
-                            <p role="menuitem" id={option.name}>{option.name} </p>
-                            <p role="menuitem" id={option.name}> {priceToLocal(option.price)}</p>
+                    {choice.options.map((option, index) => (
+                        <div key={option.name} id={`${choice.id}`} data-cy={"option-" + index} className="flex justify-between text-gray-700 px-4 py-2 text-sm hover:bg-gray-100" onClick={(e) => { handleClick(option, e) }}>
+                            <p role="menuitem" id={option.name} data-cy={"option_name-" + index}>{option.name} </p>
+                            <p role="menuitem" id={option.name + "_price"} data-cy={"option_price-" + index}> {priceToLocal(option.price)}</p>
                         </div>
                     ))}
                 </div>

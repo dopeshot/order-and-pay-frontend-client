@@ -39,8 +39,8 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ openMenuItem }: 
   let foundDishes: Dish[] = search(value)
 
 
-  const foundDishesMapped = foundDishes.map(dish => (
-    <div className='p-5' onClick={() => {
+  const foundDishesMapped = foundDishes.map((dish, index) => (
+    <div className='p-5' data-cy={"result-" + index} onClick={() => {
       openMenuItem(dish, getCategoryFromId(dish.categoryId, menu)!)
       setsearchbarOpen(false)
     }}>
@@ -54,12 +54,12 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ openMenuItem }: 
         <FontAwesomeIcon icon={faSearch} />
       </button>
 
-      <input onFocus={(e) => setsearchbarOpen(true)} id="searchbar" className="w-full bg-transparent text-sm text-grey focus:outline-none " placeholder="Search..."></input>
+      <input onFocus={(e) => setsearchbarOpen(true)} id="searchbar" data-cy="searchbar" className="w-full bg-transparent text-sm text-grey focus:outline-none " placeholder="Search..."></input>
       {searchbarOpen &&
         <div className="flex justify-center overflow-y-auto  h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar" onClick={() => setsearchbarOpen(false)} >
-          <div id="searchContainer" className="container pt-3">
+          <div id="searchContainer" data-cy="searchContainer" className="container pt-3">
             <div className="mt-28 px-3"><Search setValue={setValue}></Search></div>
-            <div id="searchDropDown" className="bg-white mt-4 mx-3 h-3/5 rounded-xl overflow-y-scroll no-scrollbar">
+            <div id="searchDropDown" data-cy="searchDropDown" className="bg-white mt-4 mx-3 h-3/5 rounded-xl overflow-y-scroll no-scrollbar">
               {foundDishesMapped}
             </div>
           </div>

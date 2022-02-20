@@ -15,15 +15,15 @@ describe("Category Buttons", () => {
 
     it("Button Scolls work", function () {
 
-        cy.get("#categoryButton_2").click()
-        cy.get('#categoryButton_2').invoke('text').as('button2').then(() => {
-            cy.get("#menuComponent").contains(this.button2).should("be.visible")
+        cy.get('[data-cy=categoryButton_2]').click()
+        cy.get('[data-cy=categoryButton_2]').invoke('text').as('button2').then(() => {
+            cy.get('[data-cy=menuComponent]').contains(this.button2).should("be.visible")
         })
 
 
-        cy.get("#categoryButton_0").click()
-        cy.get('#categoryButton_0').invoke('text').as('button0').then(() => {
-            cy.get("#menuComponent").contains(this.button0).should("be.visible")
+        cy.get('[data-cy=categoryButton_0]').click()
+        cy.get('[data-cy=categoryButton_0]').invoke('text').as('button0').then(() => {
+            cy.get('[data-cy=menuComponent]').contains(this.button0).should("be.visible")
         })
     })
 });

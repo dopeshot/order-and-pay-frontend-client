@@ -43,12 +43,12 @@ export const Basket: React.FunctionComponent = () => {
 
     return (
         <>
-            <div id="page" className='container px-5 divide-y divide-dividergrey'>
+            <div id="page" data-cy="page" className='container px-5 divide-y divide-dividergrey'>
                 <div>
                     <Header parentId='mainMenu' parentLink="/menu" />
                     <div id="container" className="container p-5">
-                        <h1 className="font-bold text-4xl pb-2">Warenkorb</h1>
-                        <p className="font-thin text-grey mb-8">{itemsCount} Items</p>
+                        <h1 data-cy="title" className="font-bold text-4xl pb-2">Warenkorb</h1>
+                        <p data-cy="itemCount" className="font-thin text-grey mb-8">{itemsCount} Items</p>
                         <div>{itemList}</div>
                     </div>
                 </div>

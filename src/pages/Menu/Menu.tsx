@@ -98,7 +98,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
                 <div className="w-full">
                     {/*@ts-ignore*/}
                     <div ref={containerRef} ><Head scrollToRef={scrollToRef} openMenuItem={openMenuItem} /> </div>
-                    <div id="menuComponent" ref={menuComponentRef} className="pb-96" >
+                    <div id="menuComponent" data-cy="menuComponent" ref={menuComponentRef} className="pb-96" >
                         <MenuComponent sectionRefs={sectionRefs} openMenuItem={openMenuItem} menuItemOpen={menuItemOpen} />
                     </div>
                 </div>
