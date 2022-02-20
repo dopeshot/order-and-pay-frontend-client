@@ -12,23 +12,17 @@ type PropTypes = {
 }
 
 export const Searchbar: React.FunctionComponent<PropTypes> = ({ openMenuItem }: PropTypes) => {
-
-
   const [value, setValue] = useState("")
   const [searchbarOpen, setsearchbarOpen] = useState(false);
-
   const menu = useAppState().menu.MenuResponseObj
-
 
   const search = (value: string) => {
     let foundDishes: Dish[] = []
-
     if (value.length > 2) {
       menu.categories.forEach(category => {
         category.dishes.forEach(dish => {
           if (dish.title.toLocaleLowerCase().includes(value.toLocaleLowerCase())) {
             foundDishes.push(dish)
-
           }
         })
       })

@@ -3,10 +3,8 @@ import { priceToLocal } from '../../services/utilities';
 import { useAppState } from '../../overmind';
 
 export const OrderButton: React.FunctionComponent = () => {
-
     const { itemsCount } = useAppState().basket.basket
     const basket = useAppState().basket.basket
-
 
     return (
         <footer className="w-full h-14 bg-red shadow-category fixed bottom-0 ">

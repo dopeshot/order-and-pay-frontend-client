@@ -7,7 +7,6 @@ export const Navigation: React.FunctionComponent = () => {
                 <li>
                     <Link to="/">Home</Link>
                 </li>
-
             </ul>
         </div>
     )

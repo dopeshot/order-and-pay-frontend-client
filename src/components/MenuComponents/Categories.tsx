@@ -1,4 +1,3 @@
-
 import { useAppState } from '../../overmind'
 import { CategoryButton } from '../UIComponents/CategoryButton'
 
@@ -9,7 +8,6 @@ type PropTypes = {
 
 // Category buttons that scroll to specific points in the menu
 export const Categories: React.FunctionComponent<PropTypes> = ({ scrollToRef }: PropTypes) => {
-
     const { MenuResponseObj } = useAppState().menu
 
     return (

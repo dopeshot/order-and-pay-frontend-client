@@ -10,7 +10,6 @@ import * as yup from 'yup'
 import { useActions } from "../../overmind";
 import { Item, PickedCheckbox } from "../../overmind/basket/state";
 
-
 type PropTypes = {
     dish: Dish,
     category: Category,
@@ -22,21 +21,17 @@ type PropTypes = {
 }
 
 export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInViewport, dish, category, setMenuItemOpen, scrollRef }: PropTypes) => {
-    // const { checkboxHandler } = useActions().menu
-
     const { putInBasket } = useActions().basket
 
-    const close = () => {
 
+    const close = () => {
         priceReset()
         setMenuItemOpen(false)
     }
 
-
     useEffect(() => {
         if (!menuInViewport) {
             close()
-
         }
     })
 
@@ -48,8 +43,8 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                 {
                     id: choice.id,
                     type: ChoiceType.RADIO,
-                    valueId: choice.default!,
-                    currentPrice: choice.options.find(option => option.id === choice.default!)?.price!
+                    valueId: choice.isDefault!,
+                    currentPrice: choice.options.find(option => option.id === choice.isDefault!)?.price!
                 }
             )
         else {
@@ -76,14 +71,12 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
     })
 
     const submitForm = (values: any) => {
-
         const item: Item = {
             dishId: values.dishid,
             count: values.count,
             pickedChoices: values.choices,
             note: values.note,
         }
-
         putInBasket(item)
         close()
     }
@@ -142,10 +135,8 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                                     <div className="flex overflow-x-auto pb-2">
                                         {allergens}
                                     </div>
-
                                     <Choices dish={dish} category={category} dropDownOpen={dropDown} setdropDownOpen={setDropDown} currentPrice={currentPrice} setCurrentPrice={setCurrentPrice} formik={formik}></Choices>
                                     <p className="font-bold pb-4 pt-3">Notiz an die Küche</p>
-
                                     <div className="h-full w-full pt-2 pr-2 flex flex-col">
                                         <button type='button' data-cy="submitForm" onClick={() => handler()} className="text-red self-end absolute pr-2 pt-1"><FontAwesomeIcon icon="edit" className="text-red" /></button>
                                         <Field component='textarea' name='note' type='text' className={`h-24 form-control w-full px-3 py-1.5 text-gray-700 bg-clip-padding border border-solid border-gray-300 rounded focus:text-gray-700 focus:border-blue-600 focus:outline-none ${formik.errors.note && formik.touched.note ? 'bg-error-bg border border-error-text focus:border-error-text' : ''}`} data-cy="noteFormInput" id="noteFormInput" rows={3} placeholder="Hier werden Wünsche wahr..." />

@@ -12,7 +12,6 @@ export const LoadingMenu: React.FunctionComponent = () => {
         let mounted = true
         if (mounted) {
             loadMenu()
-
         }
         return () => { mounted = false }
     }, [loadMenu])

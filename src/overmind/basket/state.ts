@@ -30,7 +30,6 @@ export type PickedCheckbox = {
     valueId: number[]
 }
 
-
 export type SendBasket = {
     price: number,
     items: SendItem[],
@@ -50,11 +49,9 @@ export type PickedChoice = {
     valueId: number[]
 }
 
-
 export type State = {
     basket: Basket
 }
-
 
 export const state: State = {
     basket: {
@@ -62,7 +59,5 @@ export const state: State = {
         items: [],
         itemsCount: derived((state: Basket) => state.items.reduce((sum, dish) => sum + dish.count, 0)),
         tableId: `1`
-
-
     }
 }

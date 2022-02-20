@@ -7,7 +7,7 @@ before(() => {
 })
 describe("DishCard", () => {
     it('Exists', () => {
-        cy.get('[data-cy=cat-0_dish-0]').should("be.visible");
+        cy.get('[data-cy=cat-0_dish-0]').should("exist");
     })
 
     it("Renders Correctly", function () {

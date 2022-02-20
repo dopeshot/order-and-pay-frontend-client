@@ -5,12 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 export const ShowAll: React.FunctionComponent = () => {
-
     const state = useAppState().menu
 
     const categories = state.MenuResponseObj.categories.map((category, index) => (
-
-        <HashLink key={category._id + "_showAll"} id={"hashLink_" + index} data-cy={"hashLink-" + index} to={`/menu#${'section-' + (index)}`} className="flex items-center justify-between p-3 rounded-lg text-white bg-cover bg-gray-400 bg-blend-multiply bg-left shadow-whiteBox" style={{ backgroundImage: "url(" + category.image + ")" }}>
+        <HashLink key={category._id + "_showAll"} id={"hashLink_" + index} data-cy={"hashLink-" + index} to={`/menu#${'section-' + (index)}`}
+            className="flex items-center justify-between p-3 rounded-lg text-white bg-cover bg-gray-400 bg-blend-multiply bg-left shadow-whiteBox"
+            style={{ backgroundImage: "url(" + category.image + ")" }}>
             <div className="flex items-center min-w-0">
                 <div className="pr-2 text-2xl">
                     <FontAwesomeIcon icon={category.icon as IconProp} />

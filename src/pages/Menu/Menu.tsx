@@ -11,9 +11,7 @@ import { Category, Dish, MenuEditorResponse } from '../../overmind/menu/state';
 import { useCheckMenuItem } from '../../services/menuItemIntersect';
 
 export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ menu }) => {
-
     const basket = useAppState().basket.basket
-
     const [currentItem, setCurrentItem] = useState(menu.categories[0].dishes[0])
     const [currentCategory, setCurrentCategory] = useState(menu.categories[0])
     const [menuItemOpen, setMenuItemOpen] = useState(false)
@@ -65,13 +63,11 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
             behavior: 'smooth'
         });
         console.log(result)
-
     }
 
     const { priceHandler } = useActions().menu
 
     const openMenuItem = (dish: Dish, category: Category & { dishes: Dish[]; }) => {
-
         setCurrentItem(dish)
         setCurrentCategory(category)
         setMenuItemOpen(true)
@@ -105,7 +101,6 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
             </div>
             {/*@ts-ignore*/}
             {menuItemOpen && <MenuItem scrollRef={menuScrollRef} menuRef={menuRef} menuInViewport={menuInViewport} dish={currentItem} category={currentCategory} menuItemOpen={menuItemOpen} setMenuItemOpen={setMenuItemOpen} />}
-
             {(!menuItemOpen && basket.items.length > 0) && <OrderButton />}
         </>
     )
