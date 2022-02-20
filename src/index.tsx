@@ -6,6 +6,10 @@ import { App } from './components/App/App';
 import { config } from './overmind';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fas)
 
 const overmind = createOvermind(config, {
   devtools: false

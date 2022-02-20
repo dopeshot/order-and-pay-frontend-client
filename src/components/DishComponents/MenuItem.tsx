@@ -70,7 +70,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
     //Defines possible Error Codes
     const orderSchema = yup.object().shape({
         count: yup.number().min(1, "Die Gerichteanzahl muss mindestens 1 sein."),
-        note: yup.string().max(240, "Notiz darf nicht merh als 240 Zeichen enthalten.")
+        note: yup.string().max(240, "Notiz darf nicht mehr als 240 Zeichen enthalten.")
     })
 
     //Saves all picked choices, stores them in a basket item and adds it to the basket
