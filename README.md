@@ -30,6 +30,7 @@ oder
 ## Deploy
 
 Das gehostete Client Frontend ist [hier](https://dopeshot.coffee/menu) erreichbar
+(die Live-Version kann natürlich von der Submission-Version abweichen)
 
 
 ## Bekannte Einschränkungen
