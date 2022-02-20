@@ -351,21 +351,21 @@
           "id": 0,
           "title": "Wähle die Größe",
           "type": "radio",
-          "default": 1,
+          "isDefault": 1,
           "options": [
             {
               "id": 0,
-              "name": "Klein",
+              "title": "Klein",
               "price": -200
             },
             {
               "id": 1,
-              "name": "Mittel",
+              "title": "Mittel",
               "price": 0
             },
             {
               "id": 2,
-              "name": "Groß",
+              "title": "Groß",
               "price": 200
             }
           ]
@@ -377,12 +377,12 @@
           "options": [
             {
               "id": 0,
-              "name": "Salami",
+              "title": "Salami",
               "price": 100
             },
             {
               "id": 1,
-              "name": "Ananas",
+              "title": "Ananas",
               "price": 100
             }
           ]
@@ -728,16 +728,16 @@
           "id": 0,
           "title": "size",
           "type": "radio",
-          "default": 1,
+          "isDefault": 1,
           "options": [
             {
               "id": 0,
-              "name": "Normal",
+              "title": "Normal",
               "price": 0
             },
             {
               "id": 1,
-              "name": "Gigantisch",
+              "title": "Gigantisch",
               "price": 1400
             }
           ]
@@ -749,12 +749,12 @@
           "options": [
             {
               "id": 0,
-              "name": "Scharf",
+              "title": "Scharf",
               "price": 0
             },
             {
               "id": 1,
-              "name": "Vergrabener Schatz",
+              "title": "Vergrabener Schatz",
               "price": 100
             }
           ]
@@ -863,16 +863,16 @@
           "id": 0,
           "title": "Knoblauchgehalt",
           "type": "radio",
-          "default": 1,
+          "isDefault": 1,
           "options": [
             {
               "id": 0,
-              "name": "Wenig",
+              "title": "Wenig",
               "price": -200
             },
             {
               "id": 1,
-              "name": "Normal",
+              "title": "Normal",
               "price": 0
             }
           ]
@@ -881,21 +881,21 @@
           "id": 5,
           "title": "Größe",
           "type": "radio",
-          "default": 0,
+          "isDefault": 0,
           "options": [
             {
               "id": 0,
-              "name": "Klein",
+              "title": "Klein",
               "price": -200
             },
             {
               "id": 1,
-              "name": "Normal",
+              "title": "Normal",
               "price": 0
             },
             {
               "id": 3,
-              "name": "Groß",
+              "title": "Groß",
               "price": 0
             }
           ]
@@ -907,12 +907,12 @@
           "options": [
             {
               "id": 0,
-              "name": "Salami",
+              "title": "Salami",
               "price": 100
             },
             {
               "id": 1,
-              "name": "Schinken",
+              "title": "Schinken",
               "price": 999
             }
           ]
@@ -992,21 +992,21 @@
           "id": 0,
           "title": "Größe",
           "type": "radio",
-          "default": 1,
+          "isDefault": 1,
           "options": [
             {
               "id": 0,
-              "name": "Klein",
+              "title": "Klein",
               "price": -100
             },
             {
               "id": 1,
-              "name": "Mittel",
+              "title": "Mittel",
               "price": 0
             },
             {
               "id": 2,
-              "name": "Groß",
+              "title": "Groß",
               "price": 400
             }
           ]
@@ -1018,17 +1018,17 @@
           "options": [
             {
               "id": 0,
-              "name": "Backend",
+              "title": "Backend",
               "price": 100
             },
             {
               "id": 1,
-              "name": "Frontend",
+              "title": "Frontend",
               "price": 900
             },
             {
               "id": 2,
-              "name": "Full-Stack",
+              "title": "Full-Stack",
               "price": 900
             }
           ]
@@ -1236,21 +1236,21 @@
           "id": 0,
           "title": "Größe",
           "type": "radio",
-          "default": 1,
+          "isDefault": 1,
           "options": [
             {
               "id": 0,
-              "name": "Klein",
+              "title": "Klein",
               "price": -200
             },
             {
               "id": 1,
-              "name": "Nomal",
+              "title": "Nomal",
               "price": 0
             },
             {
               "id": 2,
-              "name": "Groß",
+              "title": "Groß",
               "price": 200
             }
           ]
@@ -1262,22 +1262,22 @@
           "options": [
             {
               "id": 0,
-              "name": "Pilze",
+              "title": "Pilze",
               "price": 100
             },
             {
               "id": 1,
-              "name": "Wasabi",
+              "title": "Wasabi",
               "price": 100
             },
             {
               "id": 2,
-              "name": "Süs-Sauer Soße",
+              "title": "Süs-Sauer Soße",
               "price": 100
             },
             {
               "id": 3,
-              "name": "Extra Reis",
+              "title": "Extra Reis",
               "price": 100
             }
           ]
@@ -1354,7 +1354,7 @@
               "icon": "soybean"
             },
             {
-              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa46",
               "title": "Ei",
               "icon": "egg"
             }
@@ -1426,12 +1426,12 @@
           ],
           "allergenIds": [
             {
-              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa45",
               "title": "Koffein",
               "icon": "coffebean"
             },
             {
-              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa46",
               "title": "Ei",
               "icon": "egg"
             },
@@ -1460,7 +1460,7 @@
           ],
           "allergenIds": [
             {
-              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa45",
               "title": "Koffein",
               "icon": "coffebean"
             },
@@ -1670,7 +1670,7 @@
           ],
           "allergenIds": [
             {
-              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa45",
               "title": "Koffein",
               "icon": "coffebean"
             }
@@ -1699,7 +1699,7 @@
           ],
           "allergenIds": [
             {
-              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa45",
               "title": "Koffein",
               "icon": "coffebean"
             }
@@ -1728,7 +1728,7 @@
           ],
           "allergenIds": [
             {
-              "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
+              "_id": "aaaaaaaaaaaaaaaaaaaaaaa45",
               "title": "Koffein",
               "icon": "coffebean"
             }

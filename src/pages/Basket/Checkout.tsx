@@ -25,10 +25,10 @@ export const Checkout: React.FunctionComponent = () => {
 
     return (
         <>
-            <div id="page" className='container px-5'>
+            <div id="page" data-cy="page" className='container px-5'>
                 <Header parentId="basket" parentLink="/basket" />
                 <div id="container" className="container p-5">
-                    <h1 className="font-bold text-4xl pb-2">Zahlmethoden</h1>
+                    <h1 data-cy="title" className="font-bold text-4xl pb-2">Zahlmethoden</h1>
                     {sendOrderfailed ? <p className='text-xl text-red'> <FontAwesomeIcon icon={faExclamationCircle} className="mr-2" /> Hoppla! Etwas ist schief gelaufen, versuche es später noch einmal.</p> : ''}
                     <div className='pt-9'>
                         <PaymentMethod icon={faCcApplePay} name="ApplePay" id="applepay" />
@@ -36,7 +36,7 @@ export const Checkout: React.FunctionComponent = () => {
                         <PaymentMethod icon="credit-card" name="Kreditkarte" id="credit" />
                         <PaymentMethod icon="money-bill-wave" name="Barzahlung" id="cash" />
                     </div>
-                    <p className='pt-16 text-sm'>Per Klick auf 'Jetzt bezahlen!' werden Sie auf die jeweilige Seite des Anbieters weitergeleitet!</p>
+                    <p data-cy="text" className='pt-16 text-sm'>Per Klick auf 'Jetzt bezahlen!' werden Sie auf die jeweilige Seite des Anbieters weitergeleitet!</p>
                     <p className='text-sm'>Im Falle der Barzahlung kommt in Kürze einer unserer Mitarbeiter zu Ihnen.</p>
                     <div className='pt-12'>
                         <p className="font-bold text-2xl text-right">{priceToLocal(basket.price)}</p>

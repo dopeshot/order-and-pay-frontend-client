@@ -7,36 +7,36 @@ before(() => {
 })
 describe("MenuItem", () => {
     it('Exists', () => {
-
-        cy.contains("Gebackener Mozzarella").click()
-        cy.get("#menuItem").should("be.visible")
-
+        cy.get('[data-cy=cat-0_dish-0]').click()
+        cy.get('[data-cy=menuItem]').should("be.visible")
     })
-
-
-
     it("Scrolls Away", function () {
-        cy.get("#menuItem").scrollTo(0, -3000)
-        cy.get("menuItem").should("not.exist")
+        cy.get('[data-cy=menuItem]').scrollTo(0, -3000)
+        cy.get('[data-cy=menuItem]').should("not.exist")
+    })
+    it("Clicks Away", function () {
+        cy.get('[data-cy=cat-0_dish-0]').click();
+        cy.get('[data-cy=clickAway]').click();
+        cy.get('[data-cy=menuItem]').should("not.exist")
     })
 
-    /* TODO: Needs fixing
+
 
     it('Can Type', function () {
-        cy.get('#section-0 > .px-5 > :nth-child(1) > #dishCard > .flex-2\\/4 > .text-xs').click();
         cy.wait(200)
-        cy.get('#noteFormInput').type("Hier werden Wünsche Wahr...");
-        cy.get('#clickAway').click()
+        cy.get('[data-cy=cat-2_dish-0]').click();
+        cy.get('[data-cy=noteFormInput]').type("Hier werden Wünsche Wahr...");
+
+        cy.get('[data-cy=clickAway]').click();
     });
     it('Displays Error Message', function () {
-        cy.get('#section-0 > .px-5 > :nth-child(1) > #dishCard > .flex-2\\/4 > .text-xs').click();
-        cy.wait(200)
-        cy.get('#noteFormInput').type("IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
-        cy.get('.h-full.pt-2 > .self-end > .svg-inline--fa > path').click();
-        cy.get('[data-cy=note-input-error] > .text-sm').should('be.visible');
-        cy.get('#clickAway').click()
+        cy.get('[data-cy=cat-2_dish-0]').click();
+        cy.get('[data-cy=noteFormInput]').type("IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
+        cy.get('[data-cy=submitForm]').click();
+        cy.get('[data-cy=note-input-error]').should('be.visible');
+        cy.get('[data-cy=clickAway]').click();
     })
-    */
+
 })
 
 export { }

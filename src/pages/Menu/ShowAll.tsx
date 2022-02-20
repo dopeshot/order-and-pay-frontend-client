@@ -8,7 +8,7 @@ export const ShowAll: React.FunctionComponent = () => {
     const state = useAppState().menu
 
     const categories = state.MenuResponseObj.categories.map((category, index) => (
-        <HashLink key={category._id + "_showAll"} id={"hashLink_" + index} to={`/menu#${'section-' + (index)}`}
+        <HashLink key={category._id + "_showAll"} id={"hashLink_" + index} data-cy={"hashLink-" + index} to={`/menu#${'section-' + (index)}`}
             className="flex items-center justify-between p-3 rounded-lg text-white bg-cover bg-gray-400 bg-blend-multiply bg-left shadow-whiteBox"
             style={{ backgroundImage: "url(" + category.image + ")" }}>
             <div className="flex items-center min-w-0">
@@ -31,7 +31,7 @@ export const ShowAll: React.FunctionComponent = () => {
     ))
 
     return (
-        <div id="page" className="container h-screen flex flex-col border-solid">
+        <div id="page" data-cy="page" className="container h-screen flex flex-col border-solid">
             <div className="">
                 <div className="flow-root">
                     <button className="float-left p-4 pl-4 text-2xl text-left">
@@ -45,7 +45,7 @@ export const ShowAll: React.FunctionComponent = () => {
                     <h1 className="text-4xl pl-4 font-bold">Kategorien</h1>
                 </div>
             </div>
-            <div id="categoryHashlinks" className="flex flex-col scrollbar-hide space-y-6 p-6 pt-2 pl-4">
+            <div id="categoryHashlinks" data-cy="categoryHashlinks" className="flex flex-col scrollbar-hide space-y-6 p-6 pt-2 pl-4">
                 {categories}
             </div>
         </div>

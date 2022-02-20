@@ -23,7 +23,7 @@ export const ScrollCats: React.FunctionComponent<PropTypes> = ({ sectionRefs, sh
             <button className="text-xl text-grey font-light pl-4 pr-4" onClick={() => { }} >
                 <FontAwesomeIcon icon="search" />
             </button>
-            <div id="scrollCats" ref={scrollCatRef} className='flex gap-0 scrollbar-hide $ overflow-x-auto'>
+            <div id="scrollCats" data-cy="scrollCats" ref={scrollCatRef} className='flex gap-0 scrollbar-hide $ overflow-x-auto'>
                 {sectionRefs.current.length > 0 && <Scrollspy offset={-60} sectionRefs={sectionRefs.current} rootSelector='#page'>
                     {({ currentElementIndexInViewport, elementsStatusInViewport }) => {
                         if (!equalArray(elementsStatusInViewport, prevStatuses)) {
@@ -32,7 +32,7 @@ export const ScrollCats: React.FunctionComponent<PropTypes> = ({ sectionRefs, sh
                         }
                         return <ul ref={scrollSpyRef} className="scrollspy flex gap-1 pl-2 pt-2 pb-1">{
                             categoryAndDishes.categories.map((category, index) => (
-                                <button onClick={() => scrollToRef(index)} key={category._id + "_scrollButton" + index} id={"categoryScroll_" + index} ref={el => catButtonRefs.current[index] = el}
+                                <button onClick={() => scrollToRef(index)} key={category._id + "_scrollButton" + index} data-cy={"categoryScroll-" + index} id={"categoryScroll_" + index} ref={el => catButtonRefs.current[index] = el}
                                     className={`font-bold text-center m-1 min-h-min h-8 shadow-md rounded-md text-xs b-2 w-20 min-w-min transition-colors duration-300 ${currentElementIndexInViewport === index
                                         ? `bg-red text-white pseudoActiveElement` : `text-red`}`} >
                                     {category.title}
