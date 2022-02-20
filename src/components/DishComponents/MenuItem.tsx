@@ -43,8 +43,8 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                 {
                     id: choice.id,
                     type: ChoiceType.RADIO,
-                    valueId: choice.default!,
-                    currentPrice: choice.options.find(option => option.id === choice.default!)?.price!
+                    valueId: choice.isDefault!,
+                    currentPrice: choice.options.find(option => option.id === choice.isDefault!)?.price!
                 }
             )
         else {
