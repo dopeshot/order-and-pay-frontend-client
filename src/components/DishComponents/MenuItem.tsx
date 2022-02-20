@@ -9,7 +9,6 @@ import { Field, Form, Formik } from "formik"
 import * as yup from 'yup'
 import { useActions } from "../../overmind";
 import { Item, PickedCheckbox } from "../../overmind/basket/state";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 type PropTypes = {
     dish: Dish,
@@ -94,7 +93,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
     const allergens = dish.allergenIds.map((allergen) => (
         <div key={allergen._id} className="m-3 flex flex-col items-center">
             <div className="h-7 w-7 bg-red text-center rounded-md">
-                <FontAwesomeIcon icon={allergen.icon as IconProp} className="text-white h-full w-full" />
+                <FontAwesomeIcon icon="hamburger" className="text-white h-full w-full" />
             </div>
             {allergen.title}
         </div>

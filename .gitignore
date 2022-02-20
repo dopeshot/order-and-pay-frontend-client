@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-/cypress/videos
+/cypress/videos/*
 /.nyc_output
 /instrumented
 /cypress/screenshots
@@ -28,3 +28,5 @@ yarn-error.log*
 
 #remove mirror from mirrored repo
 .github/workflows/mirror.yaml
+
+
