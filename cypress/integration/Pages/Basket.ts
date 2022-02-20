@@ -17,61 +17,52 @@ describe("Adds Simple Items and Renders Basket correctly", () => {
         cy.wait(200)
         cy.get('[data-cy=orderButton]').click();
         cy.wait(200)
-        cy.get('#section-0 > .px-5 > :nth-child(4) > #dishCard > .flex-2\\/4 > .text-xs').click();
+        cy.get('[data-cy=cat-0_dish-3]').click();
         cy.wait(200)
         cy.get('[data-cy=orderButton]').click();
         cy.wait(200)
-        cy.get('#section-0 > .px-5 > :nth-child(3) > #dishCard > .flex-2\\/4 > .text-xs').click();
+        cy.get('[data-cy=cat-0_dish-2]').click();
         cy.wait(200)
         cy.get('[data-cy=orderButton]').click();
-        cy.get('.rounded-full').should('have.text', '3');
-        cy.get('#basketButton').should('be.visible');
-        cy.get('#basket').click();
-        cy.get('.text-4xl').should('have.text', 'Warenkorb');
-        cy.get(':nth-child(3) > :nth-child(1) > :nth-child(1) > :nth-child(1)').should('have.text', 'Gebackener Mozzarella');
-        cy.get('.font-thin').should('have.text', '3 Items');
-        cy.get(':nth-child(1) > .items-center > .bg-red').click();
-        cy.get('.font-thin').should('have.text', '4 Items');
-        cy.get(':nth-child(1) > .items-center > .bg-button-grey > .svg-inline--fa > path').click();
-        cy.get(':nth-child(1) > .items-center > .bg-button-grey > .svg-inline--fa > path').click();
-        cy.get(':nth-child(1) > .items-center > .bg-button-grey > .svg-inline--fa > path').click();
-        cy.get('.bg-button-grey > .svg-inline--fa').click();
-        cy.get('#mainMenu').click();
+        cy.get('[data-cy=itemCount]').should('have.text', '3');
+        cy.get('[data-cy=basketButton]').should('be.visible');
+        cy.get('[data-cy=basketButton]').click();
+        cy.get('[data-cy=title]').should('have.text', 'Warenkorb');
+        cy.get('[data-cy=title-0]').should('have.text', 'Gebackener Mozzarella');
+        cy.get('[data-cy=itemCount]').should('have.text', '3 Items');
+        cy.get('[data-cy=plus-0]').click();
+        cy.get('[data-cy=itemCount]').should('have.text', '4 Items');
+        for (let n = 0; n < 4; n++) {
+            cy.get('[data-cy=minus-0]').click();
+        }
+        cy.get('[data-cy=back]').click();
     })
 
     it("Adds and merges Complex Items ", () => {
-        cy.get('#section-2 > .px-5 > :nth-child(1) > #dishCard > .flex-2\\/4 > .text-xs').click();
-        cy.get(':nth-child(1) > input').check();
-        cy.get('#menu-button > .flex').click();
-        cy.get('.py-1 > :nth-child(3)').click();
-        cy.wait(200)
-        cy.get('.h-14 > .flex > :nth-child(3) > .svg-inline--fa').click();
-        cy.wait(200)
-        cy.get('#orderButton > p').click();
-        cy.wait(200)
-        cy.get('#section-2 > .px-5 > :nth-child(4) > #dishCard > .flex-2\\/4 > .text-lg').click();
-        cy.wait(200)
-        cy.get('.h-14 > .flex > :nth-child(3) > .svg-inline--fa').click();
-        cy.wait(200)
-        cy.get('#orderButton > p').click();
-        cy.wait(200)
-        cy.get('#section-2 > .px-5 > :nth-child(1) > #dishCard > .flex-2\\/4 > .text-xs').click();
-        cy.wait(200)
-        cy.get(':nth-child(4) > .self-start').click();
-        cy.get('#menu-button > .flex').click();
-        cy.get('.py-1 > :nth-child(3)').click();
-        cy.get(':nth-child(1) > input').check();
-        cy.wait(200)
-        cy.get('#orderButton > p').click();
-        cy.get('#basket').click();
-        cy.get('.font-thin').should('have.text', '5 Items');
-        cy.get(':nth-child(1) > .items-center > .p-2').should('have.text', '3');
-        cy.get(':nth-child(1) > .items-center > .bg-button-grey > .svg-inline--fa').click();
-        cy.get(':nth-child(1) > .items-center > .bg-button-grey > .svg-inline--fa > path').click();
-        cy.get(':nth-child(1) > .items-center > .bg-button-grey > .svg-inline--fa > path').click();
-        cy.get('.bg-button-grey > .svg-inline--fa').click();
-        cy.get('.bg-button-grey > .svg-inline--fa > path').click();
-        cy.get('#mainMenu ').click();
+        for (let n = 0; n < 4; n++) {
+            cy.get('[data-cy=cat-2_dish-0]').click();
+            cy.get('[data-cy=checkbox-0]').check();
+            cy.get('[data-cy=checkbox-1]').check();
+            cy.get('[data-cy=dropDown-0]').click();
+            cy.get('[data-cy=option-2]').click();
+            cy.get('[data-cy=orderButton]').click();
+        }
+        cy.get('[data-cy=cat-2_dish-0]').click();
+        cy.get('[data-cy=checkbox-0]').check();
+        cy.get('[data-cy=checkbox-1]').check();
+        cy.get('[data-cy=dropDown-0]').click();
+        cy.get('[data-cy=option-1]').click();
+        cy.get('[data-cy=orderButton]').click();
+
+        cy.get('[data-cy=basketButton]').click();
+        cy.get('[data-cy=itemCount]').should('have.text', '5 Items');;
+        cy.get('[data-cy=count-0]').should('have.text', '4');
+        cy.get('[data-cy=count-1]').should('have.text', '1');
+        for (let n = 0; n < 5; n++) {
+            cy.get('[data-cy=minus-0]').click();
+        }
+        cy.get('[data-cy=back]').click();
+
     })
 })
 

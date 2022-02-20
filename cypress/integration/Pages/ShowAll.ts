@@ -13,16 +13,16 @@ before(() => {
 describe("Renders Categories Page", () => {
     it("Renders correctly", () => {
 
-        cy.get('#showAll').click();
+        cy.get('[data-cy=showAll]').click();
         cy.url().should('eq', baseUrl + '/categories')
 
-        cy.get("#page").should("be.visible")
-        cy.get("#categoryHashlinks").should("be.visible")
+        cy.get('[data-cy=page]').should("be.visible")
+        cy.get('[data-cy=categoryHashlinks]').should("be.visible")
 
     })
     it("Buttons work", () => {
 
-        cy.get("#hashLink_1").click()
+        cy.get('[data-cy=hashLink-1]').click()
         cy.url().should('eq', baseUrl + '/menu#section-1')
 
     })

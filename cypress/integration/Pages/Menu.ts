@@ -11,17 +11,17 @@ before(() => {
 
 describe("Renders homepage", () => {
     it("Renders correctly", () => {
-        cy.get("#page").should("be.visible")
-        cy.get("#searchbar").should("be.visible")
-        cy.get("#categories").should("be.visible")
-        cy.get("#menuComponent").should("be.visible")
+        cy.get('[data-cy=page]').should("be.visible")
+        cy.get('[data-cy=searchbar]').should("be.visible")
+        cy.get('[data-cy=categories]').should("be.visible")
+        cy.get('[data-cy=menuComponent]').should("be.visible")
 
-        cy.get("#head").contains("Menü")
-        cy.get("#head").contains("Kategorien")
-        cy.get("#head").contains("Alle Anzeigen")
+        cy.get('[data-cy=head]').contains("Menü")
+        cy.get('[data-cy=head]').contains("Kategorien")
+        cy.get('[data-cy=head]').contains("Alle Anzeigen")
     })
     it("Opens the 'Alles Anzeigen' page ", () => {
-        cy.get('#showAll').click();
+        cy.get('[data-cy=showAll]').click();
         cy.url().should('eq', baseUrl + '/categories')
         cy.visit("/menu");
     })
