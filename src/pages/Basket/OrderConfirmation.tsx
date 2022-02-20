@@ -3,7 +3,6 @@ import { useActions, useAppState } from "../../overmind"
 import { priceToLocal } from '../../services/utilities';
 import { useHistory } from "react-router-dom"
 
-
 export const OrderConfirmation: React.FunctionComponent = () => {
     const basket = useAppState().basket.basket
     const { clearBasket } = useActions().basket
@@ -13,8 +12,6 @@ export const OrderConfirmation: React.FunctionComponent = () => {
         clearBasket()
         history.push('/menu')
     }
-
-
 
     return (
         <>

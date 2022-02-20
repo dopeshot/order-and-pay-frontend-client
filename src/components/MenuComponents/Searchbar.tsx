@@ -12,23 +12,17 @@ type PropTypes = {
 }
 
 export const Searchbar: React.FunctionComponent<PropTypes> = ({ openMenuItem }: PropTypes) => {
-
-
   const [value, setValue] = useState("")
   const [searchbarOpen, setsearchbarOpen] = useState(false);
-
   const menu = useAppState().menu.MenuResponseObj
-
 
   const search = (value: string) => {
     let foundDishes: Dish[] = []
-
     if (value.length > 2) {
       menu.categories.forEach(category => {
         category.dishes.forEach(dish => {
           if (dish.title.toLocaleLowerCase().includes(value.toLocaleLowerCase())) {
             foundDishes.push(dish)
-
           }
         })
       })
@@ -37,7 +31,6 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ openMenuItem }: 
     return foundDishes
   }
   let foundDishes: Dish[] = search(value)
-
 
   const foundDishesMapped = foundDishes.map(dish => (
     <div className='p-5' onClick={() => {
@@ -53,7 +46,6 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ openMenuItem }: 
       <button type="submit" className="left-3 mr-4 text-grey font-light">
         <FontAwesomeIcon icon={faSearch} />
       </button>
-
       <input onFocus={(e) => setsearchbarOpen(true)} id="searchbar" className="w-full bg-transparent text-sm text-grey focus:outline-none " placeholder="Search..."></input>
       {searchbarOpen &&
         <div className="flex justify-center overflow-y-auto  h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar" onClick={() => setsearchbarOpen(false)} >

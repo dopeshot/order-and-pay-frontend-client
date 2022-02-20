@@ -11,9 +11,9 @@ export const FormError: React.FunctionComponent<FormErrorProps> = (props) => {
 
     return (
         <ErrorMessage name={props.field} >
-            {errorMessage => <div data-cy={props.dataCy} className="flex items-center text-error-text ">
+            {errorMessage => <div data-cy={props.dataCy} className="flex items-center text-error-text">
                 <FontAwesomeIcon icon={faExclamationCircle} className="mr-2" />
-                <span className="text-sm font-semibold  ">{errorMessage}</span>
+                <span className="text-sm font-semibold ">{errorMessage}</span>
             </div>}
         </ErrorMessage>
     )

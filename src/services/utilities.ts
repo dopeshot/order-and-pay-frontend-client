@@ -10,15 +10,11 @@ export const equalArray = <T>(array1: Array<T>, array2: Array<T>) => {
 }
 
 export const idToName = (dish: Dish, choice: (PickedRadio | PickedCheckbox), menu: MenuEditorResponse) => {
-
     const category: Category | undefined = menu.categories.find(category => category._id === dish.categoryId)
     const choiceObj: Choice | undefined = category!.choices.find(choiceObj => choiceObj.id === choice.id)
 
-
-
     if (choice.type === ChoiceType.RADIO) {
-
-        return choiceObj?.options.find(option => option.id === choice.valueId)?.name + ","
+        return choiceObj?.options.find(option => option.id === choice.valueId)?.title + ","
     }
     else {
         let optionsPicked: string = ""
@@ -26,11 +22,10 @@ export const idToName = (dish: Dish, choice: (PickedRadio | PickedCheckbox), men
             //@ts-ignore
             choice.valueId.forEach(id => {
                 if (id === option.id) {
-                    optionsPicked += (" " + option.name + ", ")
+                    optionsPicked += (" " + option.title + ", ")
                 }
             });
         })
-
         return optionsPicked
     }
 }
@@ -55,7 +50,6 @@ export const getPrice = (item: Item, menu: MenuEditorResponse) => {
     let category = getCategoryFromId(dish.categoryId, menu)
     let extra: number = 0
     item.pickedChoices.forEach((pChoice) => {
-
         if (pChoice.type === ChoiceType.RADIO) {
             const choice = category?.choices.find(choice => choice.id === pChoice.id)
             const option = choice!.options.find(option => option.id === pChoice.valueId)
@@ -71,7 +65,6 @@ export const getPrice = (item: Item, menu: MenuEditorResponse) => {
                 });
             });
         }
-
     })
     return item.count * (dish.price + extra)
 }
@@ -82,7 +75,6 @@ export const getBasketPrice = (basket: Basket, menu: MenuEditorResponse) => {
         sum += getPrice(item, menu)
     })
     return sum
-
 }
 
 export const sortChoices = (item: Item) => {
@@ -90,7 +82,6 @@ export const sortChoices = (item: Item) => {
     item.pickedChoices.forEach(choice => {
         if (choice.type === ChoiceType.CHECKBOX) {
             choice.valueId.sort((a, b) => (a - b))
-
         } return item
     })
 }

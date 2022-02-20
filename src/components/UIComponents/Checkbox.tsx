@@ -3,17 +3,13 @@ import { useActions } from "../../overmind"
 import { Choice, Option } from "../../overmind/menu/state"
 import { priceToLocal } from "../../services/utilities"
 
-
 type PropTypes = {
     choice: Choice
     formik: FormikProps<any>
 }
 
-
 export const Checkbox: React.FunctionComponent<PropTypes> = ({ choice, formik }: PropTypes) => {
-
     const { priceHandler } = useActions().menu
-
     const currentFormikChoiceIndex = formik.values.choices.findIndex((current: { id: any; }) => current.id === choice.id)
 
     const test = (e: any, option: Option) => {
@@ -32,7 +28,7 @@ export const Checkbox: React.FunctionComponent<PropTypes> = ({ choice, formik }:
                 <input type="checkbox" name="checked" value={`${option.id}`}
                     onChange={(e) => { test(e, option) }} />
                 <div className="flex justify-between w-full pl-3">
-                    <div>{option.name}</div>
+                    <div>{option.title}</div>
                     <div>{priceToLocal(option.price)}</div>
                 </div>
             </div>

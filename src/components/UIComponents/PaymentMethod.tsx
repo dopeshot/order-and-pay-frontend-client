@@ -11,7 +11,6 @@ type PropTypes = {
 export const PaymentMethod: React.FunctionComponent<PropTypes> = ({ name, icon, id }: PropTypes) => {
 
     return (
-
         <div className="flex items-center pl-3 pr-3 pt-3">
             <div className="flex w-full pl-3 text-xl items-center">
                 <FontAwesomeIcon icon={icon as IconProp} className='text-red' />
@@ -19,6 +18,5 @@ export const PaymentMethod: React.FunctionComponent<PropTypes> = ({ name, icon, 
             </div>
             <input type="radio" name="checked" value={id} defaultChecked={true} />
         </div>
-
     )
 }
