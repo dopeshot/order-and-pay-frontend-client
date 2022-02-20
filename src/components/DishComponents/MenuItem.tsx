@@ -107,13 +107,13 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
     const { priceReset } = useActions().menu
 
     return (
-        <div id="menuItem" ref={scrollRef} className="overflow-y-auto h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar" >
+        <div id="menuItem" data-cy="menuItem" ref={scrollRef} className="overflow-y-auto h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar" >
             <Formik initialValues={initialValues} validationSchema={orderSchema} onSubmit={submitForm}>
                 {(formik) => (
                     <Form>
                         <div className="bg-menu-bg bg-opacity-50 inset-0 w-full h-full fixed" style={{ zIndex: -1 }} onClick={() => setMenuItemOpen(false)} />
                         <div className="container flex flex-col margin75P">
-                            <div id="clickAway" className="w-full" style={{ height: "40rem" }} onClick={() => {
+                            <div id="clickAway" data-cy="clickAway" className="w-full" style={{ height: "40rem" }} onClick={() => {
                                 close()
                             }} />
                             {/*@ts-ignore*/}
@@ -138,8 +138,8 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                                     <Choices dish={dish} category={category} dropDownOpen={dropDown} setdropDownOpen={setDropDown} currentPrice={currentPrice} setCurrentPrice={setCurrentPrice} formik={formik}></Choices>
                                     <p className="font-bold pb-4 pt-3">Notiz an die Küche</p>
                                     <div className="h-full w-full pt-2 pr-2 flex flex-col">
-                                        <button type='button' onClick={() => handler()} className="text-red self-end absolute pr-2 pt-1"><FontAwesomeIcon icon="edit" className="text-red" /></button>
-                                        <Field component='textarea' name='note' type='text' className={`h-24 form-control w-full px-3 py-1.5 text-gray-700 bg-clip-padding border border-solid border-gray-300 rounded focus:text-gray-700 focus:border-blue-600 focus:outline-none ${formik.errors.note && formik.touched.note ? 'bg-error-bg border border-error-text focus:border-error-text' : ''}`} id="noteFormInput" rows={3} placeholder="Hier werden Wünsche wahr..." />
+                                        <button type='button' data-cy="submitForm" onClick={() => handler()} className="text-red self-end absolute pr-2 pt-1"><FontAwesomeIcon icon="edit" className="text-red" /></button>
+                                        <Field component='textarea' name='note' type='text' className={`h-24 form-control w-full px-3 py-1.5 text-gray-700 bg-clip-padding border border-solid border-gray-300 rounded focus:text-gray-700 focus:border-blue-600 focus:outline-none ${formik.errors.note && formik.touched.note ? 'bg-error-bg border border-error-text focus:border-error-text' : ''}`} data-cy="noteFormInput" id="noteFormInput" rows={3} placeholder="Hier werden Wünsche wahr..." />
                                     </div>
                                     <div className="mb-24">
                                         <FormError dataCy="note-input-error" field='note' />

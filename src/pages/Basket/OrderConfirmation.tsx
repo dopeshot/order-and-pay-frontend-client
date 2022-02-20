@@ -15,9 +15,9 @@ export const OrderConfirmation: React.FunctionComponent = () => {
 
     return (
         <>
-            <div id="page" className='container px-5'>
+            <div id="page" data-cy="page" className='container px-5'>
                 <div className="flex mt-96 flex-grow">
-                    <div className="">
+                    <div>
                         <p className="text-3xl text light-black">Ihre Bestellung war erfolgreich </p>
                         <p className="text-xl text light-black mt-4 font-bold">{priceToLocal(basket.price)} </p>
                     </div>

@@ -13,7 +13,7 @@ export const Header: React.FunctionComponent<PropTypes> = ({ parentLink, parentI
     return (
         <div className="flow-root">
             <button className="float-left p-4 pl-4 text-2xl text-left">
-                <Link id={parentId} to={parentLink} ><FontAwesomeIcon icon="chevron-left" /></Link>
+                <Link id={parentId} data-cy={"back"} to={parentLink} ><FontAwesomeIcon icon="chevron-left" /></Link>
             </button>
             <button className="float-right p-4 text-2xl pr-6 text-right">
                 <FontAwesomeIcon icon="bars" />

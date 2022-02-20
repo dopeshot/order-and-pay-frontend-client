@@ -90,11 +90,11 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
     return (
         <>
             <ScrollCats catButtonRefs={catButtonRefs} scrollSpyRef={scrollSpyRef} scrollCatRef={scrollCatRef} sectionRefs={sectionRefs} scrollToButton={scrollToButton} shouldDisplayCategoryNavbar={shouldDisplayCategoryNavbar} scrollToRef={scrollToRef} />
-            <div id="page" ref={pageRef} className={`container w-full border-solid h-screen  ${menuItemOpen ? `pointer-events-none overflow-hidden` : `scrollbar-hide overflow-scroll`} `}>
+            <div id="page" data-cy="page" ref={pageRef} className={`container w-full border-solid h-screen  ${menuItemOpen ? `pointer-events-none overflow-hidden` : `scrollbar-hide overflow-scroll`} `}>
                 <div className="w-full">
                     {/*@ts-ignore*/}
                     <div ref={containerRef} ><Head scrollToRef={scrollToRef} openMenuItem={openMenuItem} /> </div>
-                    <div id="menuComponent" ref={menuComponentRef} className="pb-96" >
+                    <div id="menuComponent" data-cy="menuComponent" ref={menuComponentRef} className="pb-96" >
                         <MenuComponent sectionRefs={sectionRefs} openMenuItem={openMenuItem} menuItemOpen={menuItemOpen} />
                     </div>
                 </div>

@@ -8,34 +8,32 @@ before(() => {
 describe("Dishbutton", () => {
     it('Exists', function () {
 
-        cy.get('#section-0 > .px-5 > :nth-child(1) > #dishCard > .flex-2\\/4 > .text-xs').click();
-        cy.get('.h-14 > .flex > :nth-child(1) > .svg-inline--fa > path').should('be.visible');
-        cy.get('.h-14 > .flex > :nth-child(3) > .svg-inline--fa > path').should('be.visible');
-        cy.get('#orderButton > p').should('be.visible');
-        cy.get('[style="height: 40rem;"]').click();
+        cy.get('[data-cy=cat-2_dish-0]').click();
+        cy.get('[data-cy=orderButtonMinus]').should('be.visible');
+        cy.get('[data-cy=orderButtonCount]').should('be.visible');
+        cy.get('[data-cy=orderButtonPlus]').should('be.visible');
+        cy.get('[data-cy=orderButton]').should('be.visible');
+        cy.get('[data-cy=clickAway]').click();
 
     });
 
     it('Plus and Minus works', function () {
 
-        cy.get('#section-0 > .px-5 > :nth-child(1) > #dishCard > .flex-2\\/4 > .text-xs').click();
-        cy.get('.flex > p').should('have.text', '1');
-        cy.get('.h-14 > .flex > :nth-child(3)').click();
-        cy.get('.flex > p').should('have.text', '2');
-        cy.get('.h-14 > .flex > :nth-child(1) > .svg-inline--fa > path').click();
-        cy.get('.flex > p').should('have.text', '1');
-        cy.get('.h-14 > .flex > :nth-child(1) > .svg-inline--fa').click();
-        cy.get('.h-14 > .flex > :nth-child(1) > .svg-inline--fa').click();
-        cy.get('.flex > p').should('have.text', '1');
-        cy.get('.h-14 > .flex > :nth-child(3) > .svg-inline--fa > path').click();
-        cy.get('.h-14 > .flex > :nth-child(3)').click();
-        cy.get('.h-14 > .flex > :nth-child(3)').click();
-        cy.get('.h-14 > .flex > :nth-child(3)').click();
-        cy.get('.h-14 > .flex > :nth-child(3)').click();
-        cy.get('.h-14 > .flex > :nth-child(3)').click();
-        cy.get('.flex > p').should('have.text', '7');
-        cy.get('#orderButton > p').should('have.text', 'Für 45,50 € hinzufügen');
-        cy.get('[style="height: 40rem;"]').click();
+        cy.get('[data-cy=cat-2_dish-0]').click();
+        cy.get('[data-cy=orderButtonCount]').should('have.text', '1');
+        cy.get('[data-cy=orderButtonPlus]').click();
+        cy.get('[data-cy=orderButtonCount]').should('have.text', '2');
+        cy.get('[data-cy=orderButtonMinus]').click();
+        cy.get('[data-cy=orderButtonCount]').should('have.text', '1');
+        cy.get('[data-cy=orderButtonMinus]').click();
+        cy.get('[data-cy=orderButtonMinus]').click();
+        cy.get('[data-cy=orderButtonCount]').should('have.text', '1');
+        for (let n = 0; n < 6; n++) {
+            cy.get('[data-cy=orderButtonPlus]').click();
+        }
+        cy.get('[data-cy=orderButtonCount]').should('have.text', '7');
+        cy.get('[data-cy=orderButtonPrice]').should('have.text', 'Für 38,50 € hinzufügen');
+        cy.get('[data-cy=clickAway]').click();
 
     });
 })
