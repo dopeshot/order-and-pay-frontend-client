@@ -17,6 +17,7 @@ type PropTypes = {
     formik: FormikProps<any>
 }
 
+//Helper Component to declutter the DishItem
 export const Choices: React.FunctionComponent<PropTypes> = ({ dish, category, dropDownOpen, setdropDownOpen, formik }: PropTypes) => {
 
     return (

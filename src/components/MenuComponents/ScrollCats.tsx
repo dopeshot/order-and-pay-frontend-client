@@ -13,7 +13,7 @@ type PropTypes = {
     catButtonRefs: React.MutableRefObject<(HTMLButtonElement | null)[]>
 }
 
-// Category buttons that scroll to specific points in the menu
+// Category buttons that scroll to specific points in the menu and only appear when scrolled down
 export const ScrollCats: React.FunctionComponent<PropTypes> = ({ sectionRefs, shouldDisplayCategoryNavbar, scrollToRef, scrollToButton, scrollCatRef, scrollSpyRef, catButtonRefs }: PropTypes) => {
     const { MenuResponseObj: categoryAndDishes } = useAppState().menu
     let prevStatuses: boolean[] = []

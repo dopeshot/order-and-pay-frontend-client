@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 
+
+//Hook for the Intersection observer that watches the scrolling category buttons
 export const useScrollToNav = (options: any) => {
 	const scrollRef = useRef<any>(null)
 	const [isVisible, setIsVisible] = useState(true)

@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 
+
+//checks if menuitem has been scrolled out of view
 export let useCheckMenuItem = (options: any, menuItemOpen: boolean) => {
     const scrollRef = useRef<any>(null)
     const [isVisible, setIsVisible] = useState(true)

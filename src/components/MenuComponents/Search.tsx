@@ -6,6 +6,7 @@ type PropTypes = {
     setValue: Dispatch<SetStateAction<string>>
 }
 
+//secondary searchbar drawn on top of transparent Background
 export const Search: React.FunctionComponent<PropTypes> = ({ setValue }: PropTypes) => {
     const handleChange = (value: string) => {
         setValue(value)

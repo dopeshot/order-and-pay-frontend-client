@@ -36,6 +36,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
     const scrollSpyRef = useRef<any>()
     const catButtonRefs = useRef<Array<HTMLButtonElement | null>>([])
 
+    //Scrolls to the correct category button in the scrollcats component
     const scrollToButton = async (index: number) => {
 
         const activeElements = catButtonRefs.current[index]
@@ -51,6 +52,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
             })
     }
 
+    //Animates scrolling in the menu item
     async function scrollInMenuItem() {
         const result = await new Promise(resolve => {
             setTimeout(() => {
@@ -77,6 +79,7 @@ export const Menu: React.FunctionComponent<{ menu: MenuEditorResponse }> = ({ me
         priceHandler(dish.price)
     }
 
+    //Scrolls to the correct section in the menucomponent
     const scrollToRef = (index: number) => {
         const categoryTop = sectionRefs.current[index].current!.getBoundingClientRect().top
 

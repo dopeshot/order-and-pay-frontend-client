@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 type PropTypes = {
-    //scrolling Function gets passed through
+
     text: string,
     link?: string,
     method?: () => void,
