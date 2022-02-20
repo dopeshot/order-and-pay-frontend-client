@@ -9,6 +9,7 @@ import { Field, Form, Formik } from "formik"
 import * as yup from 'yup'
 import { useActions } from "../../overmind";
 import { Item, PickedCheckbox } from "../../overmind/basket/state";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 type PropTypes = {
     dish: Dish,
@@ -37,6 +38,8 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
             close()
         }
     })
+    const hasLabels = useState(dish.labelIds.length > 0)
+    const hasAllergens = useState(dish.allergenIds.length > 0)
 
     //Initializes the avaible choices the dish has
     let initChoices: (FormikRadio | PickedCheckbox)[] = []
@@ -90,10 +93,19 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
     const [currentPrice, setCurrentPrice] = useState<number>(0)
 
 
+    const labels = dish.labelIds.map((label) => (
+        <div key={label._id} className="m-3 flex flex-col items-center">
+            <div className="h-7 w-7 bg-red text-center rounded-md">
+                <FontAwesomeIcon icon={label.icon as IconProp} className="text-white h-full w-full" />
+            </div>
+            {label.title}
+        </div>
+    ))
+
     const allergens = dish.allergenIds.map((allergen) => (
         <div key={allergen._id} className="m-3 flex flex-col items-center">
             <div className="h-7 w-7 bg-red text-center rounded-md">
-                <FontAwesomeIcon icon="hamburger" className="text-white h-full w-full" />
+                <FontAwesomeIcon icon={allergen.icon as IconProp} className="text-white h-full w-full" />
             </div>
             {allergen.title}
         </div>
@@ -135,10 +147,17 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
                                         </div>
                                         <div className="self-start text-gray-400">{dish.description}</div>
                                     </div>
-                                    <p className="pt-2 font-bold">Allergien</p>
-                                    <div className="flex overflow-x-auto pb-2">
-                                        {allergens}
-                                    </div>
+                                    {hasLabels[0] &&
+
+                                        <><p className="pt-2 font-bold">Labels</p><div className="flex overflow-x-auto pb-2">
+                                            {labels}
+                                        </div>
+                                        </>}
+                                    {hasAllergens[0] &&
+                                        <><p className="pt-2 font-bold">Allergien</p><div className="flex overflow-x-auto pb-2">
+                                            {allergens}
+                                        </div></>
+                                    }
                                     <Choices dish={dish} category={category} dropDownOpen={dropDown} setdropDownOpen={setDropDown} currentPrice={currentPrice} setCurrentPrice={setCurrentPrice} formik={formik}></Choices>
                                     <p className="font-bold pb-4 pt-3">Notiz an die Küche</p>
                                     <div className="h-full w-full pt-2 pr-2 flex flex-col">

@@ -28,12 +28,12 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
                 "title": "Gluten",
-                "icon": "wheat"
+                "icon": "seedling"
               },
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               }
             ],
             "_id": "617e6ccfb5661a79fd0d1a3d",
@@ -60,7 +60,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "glutenfree",
-                "icon": "wheat"
+                "icon": "seedling"
               }
             ],
             "allergenIds": [],
@@ -90,7 +90,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
                 "title": "Gluten",
-                "icon": "wheat"
+                "icon": "seedling"
               },
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
@@ -137,7 +137,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
                 "title": "Gluten",
-                "icon": "wheat"
+                "icon": "seedling"
               },
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
@@ -164,7 +164,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "glutenfree",
-                "icon": "wheat"
+                "icon": "seedling"
               },
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa2",
@@ -206,7 +206,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               }
             ],
             "_id": "617e801334566d98bebd7e96",
@@ -230,7 +230,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               }
             ],
             "_id": "61b21cac07daa5dc7eb2b6b5",
@@ -254,7 +254,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               }
             ],
             "_id": "61b21e4707daa5dc7eb2b6ba",
@@ -278,7 +278,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               }
             ],
             "_id": "61b21fbc07daa5dc7eb2b6cb",
@@ -302,7 +302,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               }
             ],
             "_id": "61b2288107daa5dc7eb2b6d0",
@@ -326,7 +326,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               }
             ],
             "_id": "61b2292107daa5dc7eb2b6d5",
@@ -392,23 +392,17 @@
         "menuId": "aaaaaaaaaaaaaaaaaaaaaaaa",
         "dishes": [
           {
-            "labelIds": [
-              {
-                "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
-                "title": "Vegetarisch",
-                "icon": "leaf"
-              }
-            ],
+            "labelIds": [],
             "allergenIds": [
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               },
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
                 "title": "Gluten",
-                "icon": "wheat"
+                "icon": "seedling"
               }
             ],
             "_id": "61b229d507daa5dc7eb2b6de",
@@ -421,23 +415,17 @@
             "isAvailable": true
           },
           {
-            "labelIds": [
-              {
-                "_id": "aaaaaaaaaaaaaaaaaaaaaaa1",
-                "title": "Vegetarisch",
-                "icon": "leaf"
-              }
-            ],
+            "labelIds": [],
             "allergenIds": [
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               },
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
                 "title": "Gluten",
-                "icon": "wheat"
+                "icon": "seedling"
               }
             ],
             "_id": "61b22a1907daa5dc7eb2b6e5",
@@ -450,23 +438,17 @@
             "isAvailable": true
           },
           {
-            "labelIds": [
-              {
-                "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
-                "title": "",
-                "icon": ""
-              }
-            ],
+            "labelIds": [],
             "allergenIds": [
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               },
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
                 "title": "Gluten",
-                "icon": "wheat"
+                "icon": "seedling"
               }
             ],
             "_id": "61b22a7407daa5dc7eb2b6e6",
@@ -479,23 +461,17 @@
             "isAvailable": true
           },
           {
-            "labelIds": [
-              {
-                "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
-                "title": "",
-                "icon": ""
-              }
-            ],
+            "labelIds": [],
             "allergenIds": [
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               },
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
                 "title": "Gluten",
-                "icon": "wheat"
+                "icon": "seedling"
               }
             ],
             "_id": "61b22aaf07daa5dc7eb2b6e7",
@@ -508,23 +484,17 @@
             "isAvailable": true
           },
           {
-            "labelIds": [
-              {
-                "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
-                "title": "",
-                "icon": ""
-              }
-            ],
+            "labelIds": [],
             "allergenIds": [
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               },
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
                 "title": "Gluten",
-                "icon": "wheat"
+                "icon": "seedling"
               }
             ],
             "_id": "61b22ad007daa5dc7eb2b6e8",
@@ -537,23 +507,17 @@
             "isAvailable": true
           },
           {
-            "labelIds": [
-              {
-                "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
-                "title": "",
-                "icon": ""
-              }
-            ],
+            "labelIds": [],
             "allergenIds": [
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               },
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
                 "title": "Gluten",
-                "icon": "wheat"
+                "icon": "seedling"
               }
             ],
             "_id": "61b22b1007daa5dc7eb2b6e9",
@@ -577,12 +541,12 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               },
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
                 "title": "Gluten",
-                "icon": "wheat"
+                "icon": "seedling"
               }
             ],
             "_id": "61b22b5d07daa5dc7eb2b6ea",
@@ -606,12 +570,12 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               },
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
                 "title": "Gluten",
-                "icon": "wheat"
+                "icon": "seedling"
               }
             ],
             "_id": "61b22b8907daa5dc7eb2b6eb",
@@ -624,23 +588,17 @@
             "isAvailable": true
           },
           {
-            "labelIds": [
-              {
-                "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
-                "title": "",
-                "icon": ""
-              }
-            ],
+            "labelIds": [],
             "allergenIds": [
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               },
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
                 "title": "Gluten",
-                "icon": "wheat"
+                "icon": "seedling"
               }
             ],
             "_id": "61b22bb307daa5dc7eb2b6ec",
@@ -653,23 +611,17 @@
             "isAvailable": true
           },
           {
-            "labelIds": [
-              {
-                "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
-                "title": "",
-                "icon": ""
-              }
-            ],
+            "labelIds": [],
             "allergenIds": [
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               },
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
                 "title": "Gluten",
-                "icon": "wheat"
+                "icon": "seedling"
               },
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
@@ -687,23 +639,17 @@
             "isAvailable": true
           },
           {
-            "labelIds": [
-              {
-                "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
-                "title": "",
-                "icon": ""
-              }
-            ],
+            "labelIds": [],
             "allergenIds": [
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               },
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
                 "title": "Gluten",
-                "icon": "wheat"
+                "icon": "seedling"
               }
             ],
             "_id": "61b22c9e07daa5dc7eb2b6ee",
@@ -775,12 +721,12 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               },
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
                 "title": "Gluten",
-                "icon": "wheat"
+                "icon": "seedling"
               }
             ],
             "_id": "61b22f7d07daa5dc7eb2b727",
@@ -793,23 +739,17 @@
             "isAvailable": true
           },
           {
-            "labelIds": [
-              {
-                "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
-                "title": "",
-                "icon": ""
-              }
-            ],
+            "labelIds": [],
             "allergenIds": [
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               },
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
                 "title": "Gluten",
-                "icon": "wheat"
+                "icon": "seedling"
               }
             ],
             "_id": "61b22fa307daa5dc7eb2b728",
@@ -822,23 +762,17 @@
             "isAvailable": true
           },
           {
-            "labelIds": [
-              {
-                "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
-                "title": "",
-                "icon": ""
-              }
-            ],
+            "labelIds": [],
             "allergenIds": [
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               },
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
                 "title": "Gluten",
-                "icon": "wheat"
+                "icon": "seedling"
               }
             ],
             "_id": "61b22fb907daa5dc7eb2b729",
@@ -938,7 +872,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
                 "title": "Gluten",
-                "icon": "wheat"
+                "icon": "seedling"
               }
             ],
             "_id": "61b231bd07daa5dc7eb2b762",
@@ -967,7 +901,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
                 "title": "Gluten",
-                "icon": "wheat"
+                "icon": "seedling"
               }
             ],
             "_id": "61b231e007daa5dc7eb2b763",
@@ -1049,7 +983,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               }
             ],
             "_id": "61b2423307daa5dc7eb2b7a6",
@@ -1073,7 +1007,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               }
             ],
             "_id": "61b2423307daa5dc7eb2b7a6d",
@@ -1091,7 +1025,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               }
             ],
             "_id": "61b2425b07daa5dc7eb2b7a7",
@@ -1115,7 +1049,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               }
             ],
             "_id": "61b242c807daa5dc7eb2b7a9",
@@ -1139,7 +1073,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               }
             ],
             "_id": "61b242a207daa5dc7eb2b7a8",
@@ -1163,7 +1097,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               }
             ],
             "_id": "61b242a207daa5dc7eb2b7a8a",
@@ -1187,7 +1121,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               }
             ],
             "_id": "61b242a207daa5dc7eb2b7a8li",
@@ -1211,7 +1145,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               }
             ],
             "_id": "61b242a207daa5dc7eb2b7a8po",
@@ -1439,7 +1373,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               }
             ],
             "_id": "61b34d0007daa5dc7eb2b7c9",
@@ -1468,7 +1402,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               }
             ],
             "_id": "61b34d2807daa5dc7eb2b7ca",
@@ -1492,7 +1426,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               }
             ],
             "_id": "61b34d9907daa5dc7eb2b7cf",
@@ -1516,7 +1450,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               }
             ],
             "_id": "61b34da807daa5dc7eb2b7d0",
@@ -1540,7 +1474,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa4",
                 "title": "Laktose",
-                "icon": "milk"
+                "icon": "glass-whiskey"
               }
             ],
             "_id": "61b34dd607daa5dc7eb2b7d1",
@@ -1933,7 +1867,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
                 "title": "Gluten",
-                "icon": "wheat"
+                "icon": "seedling"
               }
             ],
             "_id": "61b3524d07daa5dc7eb2b7ec",
@@ -1962,7 +1896,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
                 "title": "Gluten",
-                "icon": "wheat"
+                "icon": "seedling"
               }
             ],
             "_id": "61b3526207daa5dc7eb2b7ed",
@@ -1991,7 +1925,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
                 "title": "Gluten",
-                "icon": "wheat"
+                "icon": "seedling"
               }
             ],
             "_id": "61b3528107daa5dc7eb2b7ee",
@@ -2020,7 +1954,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
                 "title": "Gluten",
-                "icon": "wheat"
+                "icon": "seedling"
               }
             ],
             "_id": "61b3533007daa5dc7eb2b7ef",
@@ -2049,7 +1983,7 @@
               {
                 "_id": "aaaaaaaaaaaaaaaaaaaaaaa3",
                 "title": "Gluten",
-                "icon": "wheat"
+                "icon": "seedling"
               }
             ],
             "_id": "61b3537b07daa5dc7eb2b7f0",
