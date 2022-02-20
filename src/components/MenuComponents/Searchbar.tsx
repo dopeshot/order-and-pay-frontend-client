@@ -48,7 +48,7 @@ export const Searchbar: React.FunctionComponent<PropTypes> = ({ openMenuItem }: 
         <FontAwesomeIcon icon={faSearch} />
       </button>
 
-      <input onFocus={(e) => setsearchbarOpen(true)} id="searchbar" data-cy="searchbar" className="w-full bg-transparent text-sm text-grey focus:outline-none " placeholder="Search..."></input>
+      <input onFocus={(e) => setsearchbarOpen(true)} id="searchbar" data-cy="searchbar" className="w-full bg-transparent text-sm text-grey focus:outline-none " placeholder="Suchen..."></input>
       {searchbarOpen &&
         <div className="flex justify-center overflow-y-auto  h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar" onClick={() => setsearchbarOpen(false)} >
           <div id="searchContainer" data-cy="searchContainer" className="container pt-3">

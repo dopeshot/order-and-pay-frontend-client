@@ -7,6 +7,7 @@ type PropTypes = {
     formik: FormikProps<any>,
 }
 
+//Custom Footer to add a Dish to the Basket
 export const DishButton: React.FunctionComponent<PropTypes> = ({ formik }: PropTypes) => {
     let sum = useAppState().menu.sum
 

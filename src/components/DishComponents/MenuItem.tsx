@@ -20,10 +20,13 @@ type PropTypes = {
     scrollRef: MutableRefObject<any>
 }
 
+//Expandable dish detail view
 export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInViewport, dish, category, setMenuItemOpen, scrollRef }: PropTypes) => {
     const { putInBasket } = useActions().basket
+    const { priceReset } = useActions().menu
 
 
+    //closes the expanded view
     const close = () => {
         priceReset()
         setMenuItemOpen(false)
@@ -35,8 +38,8 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
         }
     })
 
+    //Initializes the avaible choices the dish has
     let initChoices: (FormikRadio | PickedCheckbox)[] = []
-
     category.choices.forEach((choice) => {
         if (choice.type === ChoiceType.RADIO)
             initChoices.push(
@@ -56,7 +59,6 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
         }
 
     })
-
     const initialValues = {
         dishid: dish._id,
         choices: initChoices,
@@ -65,11 +67,13 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
         tableid: 0
     }
 
+    //Defines possible Error Codes
     const orderSchema = yup.object().shape({
         count: yup.number().min(1, "Die Gerichteanzahl muss mindestens 1 sein."),
-        note: yup.string().max(240, "Notiz darf nicht merh als 240 Zeichen enthalten.")
+        note: yup.string().max(240, "Notiz darf nicht mehr als 240 Zeichen enthalten.")
     })
 
+    //Saves all picked choices, stores them in a basket item and adds it to the basket
     const submitForm = (values: any) => {
         const item: Item = {
             dishId: values.dishid,
@@ -84,6 +88,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
     const [dropDown, setDropDown] = useState(new Map());
     const [isTextArea, setisTextArea] = useState(false)
     const [currentPrice, setCurrentPrice] = useState<number>(0)
+
 
     const allergens = dish.allergenIds.map((allergen) => (
         <div key={allergen._id} className="m-3 flex flex-col items-center">
@@ -104,7 +109,7 @@ export const MenuItem: React.FunctionComponent<PropTypes> = ({ menuRef, menuInVi
         });
     }
 
-    const { priceReset } = useActions().menu
+
 
     return (
         <div id="menuItem" data-cy="menuItem" ref={scrollRef} className="overflow-y-auto h-full w-full left-0 fixed bottom-0 bgtrans no-scrollbar" >

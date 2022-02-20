@@ -3,13 +3,11 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core'
 
 
 type PropTypes = {
-    //scrolling Function gets passed through
     scrollToRef: (id: number) => void,
     index: number,
     category: any
 }
 
-// Category buttons that scroll to specific points in the menu
 export const CategoryButton: React.FunctionComponent<PropTypes> = ({ scrollToRef, index, category }: PropTypes) => {
 
     return (

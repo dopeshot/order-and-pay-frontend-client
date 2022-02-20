@@ -9,6 +9,7 @@ type PropTypes = {
     menuItemOpen: boolean
 }
 
+//Main Component listing all dishes and categories
 export const MenuComponent: React.FunctionComponent<PropTypes> = ({ sectionRefs, openMenuItem, menuItemOpen }: PropTypes) => {
     const { MenuResponseObj: categoryAndDishes } = useAppState().menu
 

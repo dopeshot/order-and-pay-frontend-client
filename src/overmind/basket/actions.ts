@@ -42,13 +42,9 @@ export const subCount = ({ state }: Context, index: number) => {
     }
 }
 export const clearBasket = ({ state }: Context) => {
-
-
     state.basket.basket.items = []
-    console.log(state.basket.basket)
-
 }
-
+//casts basket object into backend-friendly object and sends basket
 export const sendOrder = async ({ state, effects }: Context): Promise<boolean> => {
     const basket = state.basket.basket
 
