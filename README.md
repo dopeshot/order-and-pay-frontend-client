@@ -30,3 +30,10 @@ oder
 ## Deploy
 
 Das gehostete Client Frontend ist [hier](https://dopeshot.coffee/menu) erreichbar
+
+
+## Bekannte Einschränkungen
+
+Es gibt zwar einen Table im State und dieser wird auch in der Order mitgegeben, aber aktuell gibt es noch keine Möglichkeiten diesen zu setzen.
+Plan ist es diesen anhand von query parametern in der url (Siehe qr code generator im Backend) beim ersten Aufrufen des Client Frontends zu setzen.  
+(Es wird default von Tischnummer 1 verwendet)
