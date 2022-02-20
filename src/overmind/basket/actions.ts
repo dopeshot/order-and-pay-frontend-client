@@ -5,20 +5,21 @@ import { ChoiceType } from "../menu/state"
 import { Item, PickedChoice, SendBasket, SendItem } from "./state"
 
 export const putInBasket = ({ state }: Context, item: Item) => {
-
     sortChoices(item)
     const currentDishes = state.basket.basket.items
-
     currentDishes.forEach(dish => sortChoices(dish))
 
+    //delete the count value from the dishes in the basket
     const currentDishesWithoutCount = currentDishes.map(dish => {
         const { count, ...rest } = dish
         return rest
     })
-
+    //delete the count value from the item for a easier compare of the equality
     const { count, ...itemWithoutCount }: any = item
 
-
+    //compare from the items in the basket and the new item.
+    //if the item already exists the count will be decreased 
+    //if not a new items will be pushed in the basket 
     const index = currentDishesWithoutCount.findIndex((o) => JSON.stringify(o) === JSON.stringify(itemWithoutCount))
     if (index === -1) {
         currentDishes.push(item)

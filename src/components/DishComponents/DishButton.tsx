@@ -3,17 +3,12 @@ import { FormikProps } from 'formik';
 import { useAppState } from '../../overmind';
 import { priceToLocal } from '../../services/utilities';
 
-
-
 type PropTypes = {
     formik: FormikProps<any>,
-
 }
 
 export const DishButton: React.FunctionComponent<PropTypes> = ({ formik }: PropTypes) => {
-
     let sum = useAppState().menu.sum
-
 
     return (
         <footer className="w-full h-14  flex items-center justify-around bg-white flex-grow fixed bottom-0">

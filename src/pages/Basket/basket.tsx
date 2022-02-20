@@ -5,13 +5,10 @@ import { FooterButton } from '../../components/UIComponents/FooterButton';
 import { Header } from '../../components/UIComponents/Header';
 
 export const Basket: React.FunctionComponent = () => {
-
     const { addCount, subCount } = useActions().basket
     const { itemsCount } = useAppState().basket.basket
     const menu = useAppState().menu.MenuResponseObj
     const basket = useAppState().basket.basket
-
-
 
     const itemList = basket.items.map((item, index) => (
         <div className='mb-5 flex row justify-between' key={index} >
@@ -20,7 +17,6 @@ export const Basket: React.FunctionComponent = () => {
                 <div className="text-xs text-grey">{item.pickedChoices.map((choice, index) => (
                     <p key={choice.id} >{idToName(getDish(item, menu), choice, menu)} </p>
                 ))}
-
                     {item.note.length > 0 && <p> Notiz an die Küche: {item.note} </p>}
                 </div>
                 <div className="flex justify-between">
@@ -37,8 +33,6 @@ export const Basket: React.FunctionComponent = () => {
                 </button>
             </div>
         </div>
-
-
     ))
 
     return (

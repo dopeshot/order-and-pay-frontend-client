@@ -1,4 +1,3 @@
-
 enum Status {
     ACTIVE = "active",
     DELETED = "deleted"
@@ -45,7 +44,7 @@ export type Choice = {
 
 export type Option = {
     id: number,
-    name: string,
+    title: string,
     price: number,
     isChecked: boolean,
     priceDish: number

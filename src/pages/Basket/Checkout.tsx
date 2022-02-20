@@ -1,5 +1,5 @@
 import { useActions, useAppState } from '../../overmind';
-import { useHistory } from "react-router-dom"
+import { useHistory } from "react-router-dom";
 import { priceToLocal } from '../../services/utilities';
 import { FooterButton } from '../../components/UIComponents/FooterButton';
 import { faCcApplePay, faCcPaypal } from '@fortawesome/free-brands-svg-icons';
@@ -10,15 +10,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 
 export const Checkout: React.FunctionComponent = () => {
-
     const history = useHistory()
     const basket = useAppState().basket.basket
     const { sendOrder } = useActions().basket
     const [sendOrderfailed, setOrderStatus] = useState(false)
 
     const sendOrders = async () => {
-        if (await sendOrder()) {
-            // Send order worked!
+        if (await sendOrder() && basket.price > 0) {
             history.push('/orderConformation')
         } else {
             setOrderStatus(true)

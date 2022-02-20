@@ -1,17 +1,12 @@
 import { useState, useRef, useEffect } from 'react'
 
 export let useCheckMenuItem = (options: any, menuItemOpen: boolean) => {
-
     const scrollRef = useRef<any>(null)
     const [isVisible, setIsVisible] = useState(true)
-
-
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-
-
                 if (entry.isIntersecting) {
                     if (entry.intersectionRatio) { }
                 }
