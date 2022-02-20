@@ -1,22 +1,39 @@
-# Getting Started with Create React App
+# Frontend Client
 
-In the project directory, you can run:
+Das Clientfrontend zeigt die Sicht des Kunden und somit den Bestellablauf.
 
-1. `npm i`
-2. `npm run start`
+## Das Projekt starten
 
-To run the project using docker containers:<br> 
-`docker-compose -f docker-compose.dev.yaml up`<br>
-You might need to delete your node_modules folder beforehand.
-This will run both `npm run start` as well as `npm run test:watch`.
-To run these in the background add the -d argument to the docker compose command. 
-For attaching to running docker containers see the official docs.
+Im Docker:
 
-### Dependencies
-* Create React App
-* Overmind
-* React Router
-* TailwindCSS
-  * craco
-  * autoprefixer
-  * postcss
+    docker-compose up
+
+Das Clientfrontend ist dann erreichbar auf Port [4000](http://localhost:4000)
+
+Normal mit npm:
+
+    npm i
+    npm run start
+
+Das Clientfrontend ist dann erreichbar auf Port [3000](http://localhost:3000/login)
+
+Tests:
+(Setzen das laufende Frontend über npm voraus)
+    
+    npm run test
+
+oder
+
+    npm run cypress:open
+
+
+## Deploy
+
+Das gehostete Client Frontend ist [hier](https://dopeshot.coffee/menu) erreichbar
+
+
+## Bekannte Einschränkungen
+
+Es gibt zwar einen Table im State und dieser wird auch in der Order mitgegeben, aber aktuell gibt es noch keine Möglichkeiten diesen zu setzen.
+Plan ist es diesen anhand von query parametern in der url (Siehe qr code generator im Backend) beim ersten Aufrufen des Client Frontends zu setzen.  
+(Es wird default von Tischnummer 1 verwendet)
